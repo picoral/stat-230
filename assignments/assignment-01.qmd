@@ -1,0 +1,40 @@
+---
+title: "Module 1 - assignment 01"
+subtitle: "STAT 230 Spring 2025"
+author: "Add your name here"
+format:
+  html:
+    embed-resources: true
+---
+
+# Concepts
+
+## What are three types of quantitative research questions? Provide an example for each type.
+
+Enter your answer here.
+
+## What are the types of variables? Provide an example for each type.
+
+Enter your answer here.
+
+## What is a response variable?
+
+Enter your answer here.
+
+## What are explanatory variables?
+
+Enter your answer here.
+
+
+# Final Project
+
+These questions are meant to help you start thinking about your final project by connecting the concepts seen in class with planning what you want to do for your group project. Your answers for this assignment do not have to match what you end up doing for your final project. 
+
+## What research question are you interested in exploring?
+
+Type your answer here. Make sure to mention what type is your question (descriptive, comparative, relationship-based)
+
+## What data (variables) would you need to acquire to answer your question? If your question is relationship-based, what is your response variable?
+
+Type your answer here. Name your variables, say whether they are categorical (ordinal or not), numeric (continuous or discrete).
+
