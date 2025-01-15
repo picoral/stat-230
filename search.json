@@ -215,5 +215,68 @@
     "title": "Getting started with R",
     "section": "Data",
     "text": "Data\nCarrier On-Time Performance Data"
+  },
+  {
+    "objectID": "slides-01-00.html#who-am-i",
+    "href": "slides-01-00.html#who-am-i",
+    "title": "Course Introduction",
+    "section": "Who am I?",
+    "text": "Who am I?\n\nAdriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice:\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
+  },
+  {
+    "objectID": "slides-01-00.html#active-learning",
+    "href": "slides-01-00.html#active-learning",
+    "title": "Course Introduction",
+    "section": "Active Learning",
+    "text": "Active Learning\n\nI expect you to actively participate in class (that does not mean you have to speak to th entire group)\nLots of hands-on activities and discussions\nWe will be using Gradescope to submit in-class work and for homework assignments"
+  },
+  {
+    "objectID": "slides-01-00.html#course-overview",
+    "href": "slides-01-00.html#course-overview",
+    "title": "Course Introduction",
+    "section": "Course Overview",
+    "text": "Course Overview\nUnderstanding data is the primary focus of this course with emphasis on statistical techniques for gathering, analyzing, summarizing and communicating the results of these analyses.\nStatistical software is used.\nIn my sections that means we will be coding in R."
+  },
+  {
+    "objectID": "slides-01-00.html#ice-breaker",
+    "href": "slides-01-00.html#ice-breaker",
+    "title": "Course Introduction",
+    "section": "Ice Breaker",
+    "text": "Ice Breaker\n\nFind at least one person to talk to.\nIntroduce yourself (name, major/program, anything else you’d like to share)\nWhat is something you are good at and that took many hours of practice?"
+  },
+  {
+    "objectID": "slides-01-00.html#grade-distribution",
+    "href": "slides-01-00.html#grade-distribution",
+    "title": "Course Introduction",
+    "section": "Grade Distribution",
+    "text": "Grade Distribution\n\n\n\nAssessment Element\nPercentage of Final Grade\n\n\n\n\nIn-class Work\n10%\n\n\nHomework Assignments\n20%\n\n\nQuizzes (5)\n30%\n\n\nGroup Project\n30%\n\n\nFinal Portfolio\n10%"
+  },
+  {
+    "objectID": "slides-01-00.html#in-class-work-and-homework-assignments",
+    "href": "slides-01-00.html#in-class-work-and-homework-assignments",
+    "title": "Course Introduction",
+    "section": "In-class Work and Homework Assignments",
+    "text": "In-class Work and Homework Assignments\nIn-class work and homework will be submitted to Gradescope.\nSign up for gradescope (it’s free) and enter our course page (Entry Code: 6JBP27)"
+  },
+  {
+    "objectID": "slides-01-00.html#quizzes",
+    "href": "slides-01-00.html#quizzes",
+    "title": "Course Introduction",
+    "section": "Quizzes",
+    "text": "Quizzes\nQuizzes will take place during class (10 minutes)"
+  },
+  {
+    "objectID": "slides-01-00.html#group-project",
+    "href": "slides-01-00.html#group-project",
+    "title": "Course Introduction",
+    "section": "Group Project",
+    "text": "Group Project\n\n2-3 students\nTopic and research questions of your choosing"
+  },
+  {
+    "objectID": "slides-01-00.html#final-portfolio",
+    "href": "slides-01-00.html#final-portfolio",
+    "title": "Course Introduction",
+    "section": "Final Portfolio",
+    "text": "Final Portfolio\n\nGithub repo"
   }
 ]
