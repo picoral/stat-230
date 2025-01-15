@@ -282,77 +282,77 @@
   {
     "objectID": "slides-01-02.html#lets-collect-some-data",
     "href": "slides-01-02.html#lets-collect-some-data",
-    "title": "Data",
+    "title": "Variables",
     "section": "Let’s collect some data",
     "text": "Let’s collect some data\nAnswer this anonymous survey (1-2 minutes)"
   },
   {
     "objectID": "slides-01-02.html#types-of-variables",
     "href": "slides-01-02.html#types-of-variables",
-    "title": "Data",
+    "title": "Variables",
     "section": "Types of Variables",
     "text": "Types of Variables\n\ntypes of variables"
   },
   {
     "objectID": "slides-01-02.html#types-of-variables-1",
     "href": "slides-01-02.html#types-of-variables-1",
-    "title": "Data",
+    "title": "Variables",
     "section": "Types of Variables",
     "text": "Types of Variables\n\nWhat are the variables collected by the survey you just took?\nWhat are their types?"
   },
   {
     "objectID": "slides-01-02.html#types-of-variables-2",
     "href": "slides-01-02.html#types-of-variables-2",
-    "title": "Data",
+    "title": "Variables",
     "section": "Types of Variables",
     "text": "Types of Variables\n\npersonality: categorical\neye_color: categorical\nsiblings: numeric, discrete\nsleep_hours: numeric, continuous\nsleep_time: categorical, ordinal\nrating: categorical, ordinal or numeric, discrete"
   },
   {
     "objectID": "slides-01-02.html#checking-understanding",
     "href": "slides-01-02.html#checking-understanding",
-    "title": "Data",
+    "title": "Variables",
     "section": "Checking understanding",
     "text": "Checking understanding\nSign up for gradescope (it’s free) and enter our course page (Entry Code: 6JBP27)\nTake the Types of Variables quiz"
   },
   {
     "objectID": "slides-01-02.html#relationships-among-variables",
     "href": "slides-01-02.html#relationships-among-variables",
-    "title": "Data",
+    "title": "Variables",
     "section": "Relationships among variables",
     "text": "Relationships among variables\nGPA study hours data\nWhat question is this plot trying to answer?"
   },
   {
     "objectID": "slides-01-02.html#relationships-among-variables-1",
     "href": "slides-01-02.html#relationships-among-variables-1",
-    "title": "Data",
+    "title": "Variables",
     "section": "Relationships among variables",
     "text": "Relationships among variables\nGPA study hours data\nAnything weird?"
   },
   {
     "objectID": "slides-01-02.html#relationships-among-variables-2",
     "href": "slides-01-02.html#relationships-among-variables-2",
-    "title": "Data",
+    "title": "Variables",
     "section": "Relationships among variables",
     "text": "Relationships among variables\nGPA study hours data\n\n\n\n[1] 0.1330138"
   },
   {
     "objectID": "slides-01-02.html#explanatory-and-response-variables",
     "href": "slides-01-02.html#explanatory-and-response-variables",
-    "title": "Data",
+    "title": "Variables",
     "section": "Explanatory and response variables",
     "text": "Explanatory and response variables\n\nResponse variables are also known as dependent variables\nExplanatory variables are also knows as independent variables\nA response variable is the variable that is measured and is expected to change based on the manipulation of other variables (the explanatory variables)\nThe explanatory variables are expected to affect the response variable\nCorrelation does not imply causation"
   },
   {
     "objectID": "slides-01-02.html#section",
     "href": "slides-01-02.html#section",
-    "title": "Data",
+    "title": "Variables",
     "section": "",
     "text": "Disney Movies vs. Vehicle Thefts\n\nDisney Movies vs. Vehicle Thefts"
   },
   {
     "objectID": "slides-01-02.html#association-vs.-causation",
     "href": "slides-01-02.html#association-vs.-causation",
-    "title": "Data",
+    "title": "Variables",
     "section": "Association vs. causation",
     "text": "Association vs. causation\n\nAssociation: when two variables show some connection (like correlation) with one another\nAssociation does not imply causation\nCausation can only be inferred from a randomized experiment"
   },
@@ -376,5 +376,26 @@
     "title": "Why statistics?",
     "section": "Comparison",
     "text": "Comparison\nGo to the Bureau of Transportation Statistics website and try to answer the following question:\n\nWhich of the 4 largest airlines in the US (American, Delta, Southwest, United) has the best On-Time Arrival Performance between January and September 2024?"
+  },
+  {
+    "objectID": "slides-01-01.html#descriptive-research-questions",
+    "href": "slides-01-01.html#descriptive-research-questions",
+    "title": "Why statistics?",
+    "section": "Descriptive Research Questions",
+    "text": "Descriptive Research Questions\nExamples of how to start your descriptive question:\n\nHow many?\nHow often?\nHow frequently?\nHow much?\nWhat percentage?\nWhat proportion?"
+  },
+  {
+    "objectID": "slides-01-01.html#comparative-research-questions",
+    "href": "slides-01-01.html#comparative-research-questions",
+    "title": "Why statistics?",
+    "section": "Comparative research questions",
+    "text": "Comparative research questions\n\nWhat are the differences?"
+  },
+  {
+    "objectID": "slides-01-01.html#relationship-based-questions",
+    "href": "slides-01-01.html#relationship-based-questions",
+    "title": "Why statistics?",
+    "section": "Relationship-based questions?",
+    "text": "Relationship-based questions?\n\nWhat is the relationship between …?\nWhat is the effect of … on …?"
   }
 ]
