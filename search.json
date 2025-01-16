@@ -60,7 +60,7 @@
     "href": "index.html",
     "title": "STAT 230 Data Science and Statistics",
     "section": "",
-    "text": "Course modality: in-person (see next section for information of meeting days, time, and location)"
+    "text": "Course modality: in-person (see next section for information on meeting days, time, and location)"
   },
   {
     "objectID": "index.html#prerequisites",
@@ -81,7 +81,7 @@
     "href": "slides-01-00.html#active-learning",
     "title": "Course Introduction",
     "section": "Active Learning",
-    "text": "Active Learning\n\nI expect you to actively participate in class (that does not mean you have to speak to th entire group)\nLots of hands-on activities and discussions\nWe will be using Gradescope to submit in-class work and for homework assignments"
+    "text": "Active Learning\n\nI expect you to actively participate in class (that does not mean you have to speak to the entire group)\nLots of hands-on activities and discussions\nWe will be using Gradescope (more on this later) to submit in-class work and for homework assignments"
   },
   {
     "objectID": "slides-01-00.html#ice-breaker",
@@ -306,5 +306,12 @@
     "title": "Getting started with R",
     "section": "Data",
     "text": "Data\nCarrier On-Time Performance Data"
+  },
+  {
+    "objectID": "slides-01-00.html#course-overview-1",
+    "href": "slides-01-00.html#course-overview-1",
+    "title": "Course Introduction",
+    "section": "Course Overview",
+    "text": "Course Overview\n\nFocus on both concepts and examples\nFocus on hands-on, bring a laptop to class if you have one\nFocus on real data in assignments"
   }
 ]
