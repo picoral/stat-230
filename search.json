@@ -56,125 +56,6 @@
     "text": "This course website was created by Adriana Picoral and is licensed under the CC BY-NC-SA 4.0 Creative Commons License.\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format.\nAdapt — remix, transform, and build upon the material.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.\nNon Commercial — You may not use the material for commercial purposes. (Remove this line if commercial use is permitted.)\nShare Alike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. (Include this if Share Alike applies.)"
   },
   {
-    "objectID": "slides-01-01.html#what-is-statistics",
-    "href": "slides-01-01.html#what-is-statistics",
-    "title": "Why statistics?",
-    "section": "What is statistics?",
-    "text": "What is statistics?\ncollection, organization, analysis, interpretation, and presentation of data\nClaude’s answer"
-  },
-  {
-    "objectID": "slides-01-01.html#some-questions",
-    "href": "slides-01-01.html#some-questions",
-    "title": "Why statistics?",
-    "section": "Some Questions",
-    "text": "Some Questions\nHere are some questions we can answer using statistics:\n\nAre some airlines more likely to have delayed flights than others?\nOver the last five years, what is the average time to complete a degree for Montclair State undergrads?\nDoes a new drug reduce the number of deaths in patients with severe heart disease?"
-  },
-  {
-    "objectID": "slides-01-01.html#section",
-    "href": "slides-01-01.html#section",
-    "title": "Why statistics?",
-    "section": "",
-    "text": "Go to the Bureau of Transportation Statistics website and try to answer the following question:\n\nWhich of the 4 largest airlines in the US (American, Delta, Southwest, United) has the best On-Time Arrival Performance between January and September 2024?"
-  },
-  {
-    "objectID": "slides-01-01.html#descriptivesummary-statistics",
-    "href": "slides-01-01.html#descriptivesummary-statistics",
-    "title": "Why statistics?",
-    "section": "Descriptive/Summary statistics",
-    "text": "Descriptive/Summary statistics\n\nAmerican: 69.77%\nSouthwest: 76.78%\nUnited: 76.87%\nDelta: 80.36%\n\nCan these summary statistics help you make decisions about which airline to fly?"
-  },
-  {
-    "objectID": "slides-01-01.html#inferential-statistics",
-    "href": "slides-01-01.html#inferential-statistics",
-    "title": "Why statistics?",
-    "section": "Inferential Statistics",
-    "text": "Inferential Statistics\nAre the differences across groups “real”?"
-  },
-  {
-    "objectID": "slides-01-01.html#probability",
-    "href": "slides-01-01.html#probability",
-    "title": "Why statistics?",
-    "section": "Probability",
-    "text": "Probability\n\nIf you flip a coin 100 times, how many times will the coin land heads?\nSuppose it lands 51 heads – can we conclude that the coin is not fair?\n\nObserved differences may be real – or they may be a result of chance (natural variation)\nWe use statistics to determine if differences are large enough that we can reject the hypothesis that they are due to chance"
-  },
-  {
-    "objectID": "slides-01-01.html#lets-collect-some-data",
-    "href": "slides-01-01.html#lets-collect-some-data",
-    "title": "Why statistics?",
-    "section": "Let’s collect some data",
-    "text": "Let’s collect some data\nAnswer this anonymous survey (1-2 minutes)"
-  },
-  {
-    "objectID": "slides-01-01.html#types-of-variables",
-    "href": "slides-01-01.html#types-of-variables",
-    "title": "Why statistics?",
-    "section": "Types of Variables",
-    "text": "Types of Variables\n\ntypes of variables"
-  },
-  {
-    "objectID": "slides-01-01.html#types-of-variables-1",
-    "href": "slides-01-01.html#types-of-variables-1",
-    "title": "Why statistics?",
-    "section": "Types of Variables",
-    "text": "Types of Variables\n\nWhat are the variables collected by the survey you just took?\nWhat are their types?"
-  },
-  {
-    "objectID": "slides-01-01.html#types-of-variables-2",
-    "href": "slides-01-01.html#types-of-variables-2",
-    "title": "Why statistics?",
-    "section": "Types of Variables",
-    "text": "Types of Variables\n\npersonality: categorical\neye_color: categorical\nsiblings: numeric, discrete\nsleep_hours: numeric, continuous\nsleep_time: categorical, ordinal\nrating: categorical, ordinal or numeric, discrete"
-  },
-  {
-    "objectID": "slides-01-01.html#checking-understanding",
-    "href": "slides-01-01.html#checking-understanding",
-    "title": "Why statistics?",
-    "section": "Checking understanding",
-    "text": "Checking understanding\nSign up for gradescope (it’s free) and enter our course page (Entry Code: 6JBP27)\nTake the Types of Variables quiz"
-  },
-  {
-    "objectID": "slides-01-01.html#relationships-among-variables",
-    "href": "slides-01-01.html#relationships-among-variables",
-    "title": "Why statistics?",
-    "section": "Relationships among variables",
-    "text": "Relationships among variables\nGPA study hours data\nWhat question is this plot trying to answer?"
-  },
-  {
-    "objectID": "slides-01-01.html#relationships-among-variables-1",
-    "href": "slides-01-01.html#relationships-among-variables-1",
-    "title": "Why statistics?",
-    "section": "Relationships among variables",
-    "text": "Relationships among variables\nGPA study hours data\nAnything weird?"
-  },
-  {
-    "objectID": "slides-01-01.html#relationships-among-variables-2",
-    "href": "slides-01-01.html#relationships-among-variables-2",
-    "title": "Why statistics?",
-    "section": "Relationships among variables",
-    "text": "Relationships among variables\nGPA study hours data\n\n\n\n[1] 0.1330138"
-  },
-  {
-    "objectID": "slides-01-01.html#explanatory-and-response-variables",
-    "href": "slides-01-01.html#explanatory-and-response-variables",
-    "title": "Why statistics?",
-    "section": "Explanatory and response variables",
-    "text": "Explanatory and response variables\n\nResponse variables are also known as dependent variables\nExplanatory variables are also knows as independent variables\nA response variable is the variable that is measured and is expected to change based on the manipulation of other variables (the explanatory variables)\nThe explanatory variables are expected to affect the response variable\nCorrelation does not imply causation"
-  },
-  {
-    "objectID": "slides-01-01.html#section-1",
-    "href": "slides-01-01.html#section-1",
-    "title": "Why statistics?",
-    "section": "",
-    "text": "Disney Movies vs. Vehicle Thefts\n\nDisney Movies vs. Vehicle Thefts"
-  },
-  {
-    "objectID": "slides-01-01.html#association-vs.-causation",
-    "href": "slides-01-01.html#association-vs.-causation",
-    "title": "Why statistics?",
-    "section": "Association vs. causation",
-    "text": "Association vs. causation\n\nAssociation: when two variables show some connection (like correlation) with one another\nAssociation does not imply causation\nCausation can only be inferred from a randomized experiment"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "STAT 230 Data Science and Statistics",
@@ -187,34 +68,6 @@
     "title": "STAT 230 Data Science and Statistics",
     "section": "Prerequisites",
     "text": "Prerequisites\nMATH 111 with a grade of C- or higher or placement through the Montclair State University Placement Test (MSUPT) or MATH 122 with a grade of C- or higher or AMAT 120 with a grade of C- or higher"
-  },
-  {
-    "objectID": "slides-02-01.html#coding-environment",
-    "href": "slides-02-01.html#coding-environment",
-    "title": "Getting started with R",
-    "section": "Coding Environment",
-    "text": "Coding Environment\nWe will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud"
-  },
-  {
-    "objectID": "slides-02-01.html#working-within-projects",
-    "href": "slides-02-01.html#working-within-projects",
-    "title": "Getting started with R",
-    "section": "Working within Projects",
-    "text": "Working within Projects\nWe will always be working with projects in this class (reproducible research reasons)\nDemonstration on how to create a new project in RStudio"
-  },
-  {
-    "objectID": "slides-02-01.html#packages",
-    "href": "slides-02-01.html#packages",
-    "title": "Getting started with R",
-    "section": "Packages",
-    "text": "Packages\nThere are a number of packages for statistics in R.\nWe will be using tidyverse – widely used\nDemonstration on how to install packages"
-  },
-  {
-    "objectID": "slides-02-01.html#data",
-    "href": "slides-02-01.html#data",
-    "title": "Getting started with R",
-    "section": "Data",
-    "text": "Data\nCarrier On-Time Performance Data"
   },
   {
     "objectID": "slides-01-00.html#who-am-i",
@@ -231,18 +84,18 @@
     "text": "Active Learning\n\nI expect you to actively participate in class (that does not mean you have to speak to th entire group)\nLots of hands-on activities and discussions\nWe will be using Gradescope to submit in-class work and for homework assignments"
   },
   {
-    "objectID": "slides-01-00.html#course-overview",
-    "href": "slides-01-00.html#course-overview",
-    "title": "Course Introduction",
-    "section": "Course Overview",
-    "text": "Course Overview\nUnderstanding data is the primary focus of this course with emphasis on statistical techniques for gathering, analyzing, summarizing and communicating the results of these analyses.\nStatistical software is used.\nIn my sections that means we will be coding in R."
-  },
-  {
     "objectID": "slides-01-00.html#ice-breaker",
     "href": "slides-01-00.html#ice-breaker",
     "title": "Course Introduction",
     "section": "Ice Breaker",
     "text": "Ice Breaker\n\nFind at least one person to talk to.\nIntroduce yourself (name, major/program, anything else you’d like to share)\nWhat is something you are good at and that took many hours of practice?"
+  },
+  {
+    "objectID": "slides-01-00.html#course-overview",
+    "href": "slides-01-00.html#course-overview",
+    "title": "Course Introduction",
+    "section": "Course Overview",
+    "text": "Course Overview\nUnderstanding data is the primary focus of this course with emphasis on statistical techniques for gathering, analyzing, summarizing and communicating the results of these analyses.\nStatistical software is used.\nIn my sections that means we will be coding in R."
   },
   {
     "objectID": "slides-01-00.html#grade-distribution",
@@ -278,6 +131,76 @@
     "title": "Course Introduction",
     "section": "Final Portfolio",
     "text": "Final Portfolio\n\nGithub repo"
+  },
+  {
+    "objectID": "slides-01-01.html#what-is-statistics",
+    "href": "slides-01-01.html#what-is-statistics",
+    "title": "Why statistics?",
+    "section": "What is statistics?",
+    "text": "What is statistics?\ncollection, organization, analysis, interpretation, and presentation of data\nClaude’s answer"
+  },
+  {
+    "objectID": "slides-01-01.html#some-questions",
+    "href": "slides-01-01.html#some-questions",
+    "title": "Why statistics?",
+    "section": "Some Questions",
+    "text": "Some Questions\nHere are some questions we can answer using statistics:\n\nAre some airlines more likely to have delayed flights than others?\nOver the last five years, what is the average time to complete a degree for Montclair State undergrads?\nDoes a new drug reduce the number of deaths in patients with severe heart disease?"
+  },
+  {
+    "objectID": "slides-01-01.html#types-of-questions",
+    "href": "slides-01-01.html#types-of-questions",
+    "title": "Why statistics?",
+    "section": "Types of Questions",
+    "text": "Types of Questions\n\ndescriptive\ncomparative\nrelationship-based\n\nMatch each question in the previous slide with a question type"
+  },
+  {
+    "objectID": "slides-01-01.html#descriptive-research-questions",
+    "href": "slides-01-01.html#descriptive-research-questions",
+    "title": "Why statistics?",
+    "section": "Descriptive Research Questions",
+    "text": "Descriptive Research Questions\nExamples of how to start your descriptive question:\n\nHow many?\nHow often?\nHow frequently?\nHow much?\nWhat percentage?\nWhat proportion?"
+  },
+  {
+    "objectID": "slides-01-01.html#comparative-research-questions",
+    "href": "slides-01-01.html#comparative-research-questions",
+    "title": "Why statistics?",
+    "section": "Comparative research questions",
+    "text": "Comparative research questions\n\nWhat are the differences?"
+  },
+  {
+    "objectID": "slides-01-01.html#relationship-based-questions",
+    "href": "slides-01-01.html#relationship-based-questions",
+    "title": "Why statistics?",
+    "section": "Relationship-based questions?",
+    "text": "Relationship-based questions?\n\nWhat is the relationship between …?\nWhat is the effect of … on …?"
+  },
+  {
+    "objectID": "slides-01-01.html#comparison",
+    "href": "slides-01-01.html#comparison",
+    "title": "Why statistics?",
+    "section": "Comparison",
+    "text": "Comparison\nGo to the Bureau of Transportation Statistics website and try to answer the following question:\n\nWhich of the 4 largest airlines in the US (American, Delta, Southwest, United) has the best On-Time Arrival Performance between January and September 2024?"
+  },
+  {
+    "objectID": "slides-01-01.html#descriptivesummary-statistics",
+    "href": "slides-01-01.html#descriptivesummary-statistics",
+    "title": "Why statistics?",
+    "section": "Descriptive/Summary statistics",
+    "text": "Descriptive/Summary statistics\n\nAmerican: 69.77%\nSouthwest: 76.78%\nUnited: 76.87%\nDelta: 80.36%\n\nCan these summary statistics help you make decisions about which airline to fly?"
+  },
+  {
+    "objectID": "slides-01-01.html#inferential-statistics",
+    "href": "slides-01-01.html#inferential-statistics",
+    "title": "Why statistics?",
+    "section": "Inferential Statistics",
+    "text": "Inferential Statistics\nAre the differences across groups “real”?"
+  },
+  {
+    "objectID": "slides-01-01.html#probability",
+    "href": "slides-01-01.html#probability",
+    "title": "Why statistics?",
+    "section": "Probability",
+    "text": "Probability\n\nIf you flip a coin 100 times, how many times will the coin land heads?\nSuppose it lands 51 heads – can we conclude that the coin is not fair?\n\nObserved differences may be real – or they may be a result of chance (natural variation)\nWe use statistics to determine if differences are large enough that we can reject the hypothesis that they are due to chance"
   },
   {
     "objectID": "slides-01-02.html#lets-collect-some-data",
@@ -357,45 +280,31 @@
     "text": "Association vs. causation\n\nAssociation: when two variables show some connection (like correlation) with one another\nAssociation does not imply causation\nCausation can only be inferred from a randomized experiment"
   },
   {
-    "objectID": "slides-01-01.html",
-    "href": "slides-01-01.html",
-    "title": "Why statistics?",
-    "section": "",
-    "text": "collection, organization, analysis, interpretation, and presentation of data\nClaude’s answer"
+    "objectID": "slides-02-01.html#coding-environment",
+    "href": "slides-02-01.html#coding-environment",
+    "title": "Getting started with R",
+    "section": "Coding Environment",
+    "text": "Coding Environment\nWe will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud"
   },
   {
-    "objectID": "slides-01-01.html#types-of-questions",
-    "href": "slides-01-01.html#types-of-questions",
-    "title": "Why statistics?",
-    "section": "Types of Questions",
-    "text": "Types of Questions\n\ndescriptive\ncomparative\nrelationship-based\n\nMatch each question in the previous slide with a question type"
+    "objectID": "slides-02-01.html#working-within-projects",
+    "href": "slides-02-01.html#working-within-projects",
+    "title": "Getting started with R",
+    "section": "Working within Projects",
+    "text": "Working within Projects\nWe will always be working with projects in this class (reproducible research reasons)\nDemonstration on how to create a new project in RStudio"
   },
   {
-    "objectID": "slides-01-01.html#comparison",
-    "href": "slides-01-01.html#comparison",
-    "title": "Why statistics?",
-    "section": "Comparison",
-    "text": "Comparison\nGo to the Bureau of Transportation Statistics website and try to answer the following question:\n\nWhich of the 4 largest airlines in the US (American, Delta, Southwest, United) has the best On-Time Arrival Performance between January and September 2024?"
+    "objectID": "slides-02-01.html#packages",
+    "href": "slides-02-01.html#packages",
+    "title": "Getting started with R",
+    "section": "Packages",
+    "text": "Packages\nThere are a number of packages for statistics in R.\nWe will be using tidyverse – widely used\nDemonstration on how to install packages"
   },
   {
-    "objectID": "slides-01-01.html#descriptive-research-questions",
-    "href": "slides-01-01.html#descriptive-research-questions",
-    "title": "Why statistics?",
-    "section": "Descriptive Research Questions",
-    "text": "Descriptive Research Questions\nExamples of how to start your descriptive question:\n\nHow many?\nHow often?\nHow frequently?\nHow much?\nWhat percentage?\nWhat proportion?"
-  },
-  {
-    "objectID": "slides-01-01.html#comparative-research-questions",
-    "href": "slides-01-01.html#comparative-research-questions",
-    "title": "Why statistics?",
-    "section": "Comparative research questions",
-    "text": "Comparative research questions\n\nWhat are the differences?"
-  },
-  {
-    "objectID": "slides-01-01.html#relationship-based-questions",
-    "href": "slides-01-01.html#relationship-based-questions",
-    "title": "Why statistics?",
-    "section": "Relationship-based questions?",
-    "text": "Relationship-based questions?\n\nWhat is the relationship between …?\nWhat is the effect of … on …?"
+    "objectID": "slides-02-01.html#data",
+    "href": "slides-02-01.html#data",
+    "title": "Getting started with R",
+    "section": "Data",
+    "text": "Data\nCarrier On-Time Performance Data"
   }
 ]
