@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>STAT 230 Data Science and Statistics – Tidy Data</title>
+  <title>STAT 230 Data Science and Statistics – Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -126,14 +126,157 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Tidy Data</h1>
+  <h1 class="title">Data</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section class="slide level2">
-
+<section id="where-to-find-data" class="slide level2">
+<h2>Where to find data</h2>
+<p>Even before we start analyzing data, we have to acquire data</p>
+<p>There are a lot of data sets openly availabe on the internet, for example:</p>
+<ul>
+<li><a href="https://data.gov" class="uri">https://data.gov</a></li>
+<li><a href="https://data.europa.eu/en" class="uri">https://data.europa.eu/en</a></li>
+<li><a href="https://data.un.org" class="uri">https://data.un.org</a></li>
+<li><a href="https://data.worldbank.org" class="uri">https://data.worldbank.org</a></li>
+<li><a href="https://www.who.int/data" class="uri">https://www.who.int/data</a></li>
+</ul>
+</section>
+<section id="data-quality" class="slide level2">
+<h2>Data quality</h2>
+<p>Even before we start analyzing data, we need to make sure our data is tidy</p>
+<p>What to look for:</p>
+<ul>
+<li>a data dictionary</li>
+<li>information on how the data were collected</li>
+</ul>
+</section>
+<section id="data-format" class="slide level2">
+<h2>Data format</h2>
+<ul>
+<li>tabular – tables, rows and columns</li>
+<li>hierachical – values are nested (like a tree)</li>
+<li>raw text – just text, with no structure</li>
+</ul>
+</section>
+<section id="tabular-data" class="slide level2">
+<h2>Tabular Data</h2>
+<p>Rows and Columns</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Day</th>
+<th>High</th>
+<th>Low</th>
+<th>Wind</th>
+<th>Forecast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tuesday</td>
+<td>24</td>
+<td>15</td>
+<td>0 to 15 mph</td>
+<td>Sunny</td>
+</tr>
+<tr class="even">
+<td>Wednesday</td>
+<td>38</td>
+<td>17</td>
+<td>5 to 15 mph</td>
+<td>Mostly Sunny</td>
+</tr>
+<tr class="odd">
+<td>Thursday</td>
+<td>34</td>
+<td>13</td>
+<td>5 to 15 mph</td>
+<td>Mostly Sunny</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="hierachical-data" class="slide level2">
+<h2>Hierachical Data</h2>
+<pre><code>Tuesday:
+   ↳ Temperature:
+      ↳ Low: 15
+      ↳ High: 24
+   ↳ Wind:
+      ↳ Speed: 0 to 15 mph 
+      ↳ Direction: West
+Wednesday:
+   ↳ Temperature:
+      ↳ Low: 17
+      ↳ High: 38
+   ↳ Wind:
+      ↳ Speed: 5 to 15 mph
+      ↳ Direction: North West</code></pre>
+</section>
+<section id="data-format-file-type" class="slide level2">
+<h2>Data format – file type</h2>
+<ul>
+<li>Data can be stored in different types of files</li>
+<li>Some formats can be open only with specific software (for example, <code>.xlsx</code> files)</li>
+<li>Often data is stored in a plain text file, with values separated by a specific charater, for example
+<ul>
+<li>comma (<code>.csv</code> files, or comma separated values)</li>
+<li>tab (<code>.tsv</code> files, or comma separated values)</li>
+<li>JSON (JavaScript Object Notation, hierarchical name–value pairs) – <code>API</code>s often provide this type of data</li>
+</ul></li>
+</ul>
+</section>
+<section id="commatab-separated-values" class="slide level2">
+<h2>Comma/Tab Separated Values</h2>
+<p>Inspect <a href="data/penguins.csv">this data set</a>:</p>
+<ul>
+<li>What format is it?</li>
+<li>What are the variables (and types)?</li>
+</ul>
+<p>What about <a href="data/penguins.tsv">this data set</a></p>
+</section>
+<section id="json" class="slide level2">
+<h2>JSON</h2>
+<p>Inspect <a href="https://api.weather.gov/gridpoints/TOP/26,40/forecast">this weather data</a></p>
+<ul>
+<li>What are (some) the variables (and types)?</li>
+</ul>
+<p><small> These data were retrieved using <a href="https://www.weather.gov/documentation/services-web-api">the weather.gov api</a> </small></p>
+</section>
+<section id="data-format-1" class="slide level2">
+<h2>Data format</h2>
+<p>Get <a href="https://www.who.int/data/data-collection-tools/who-mortality-database">data on mortality by country</a></p>
+<ul>
+<li>What format is the data?</li>
+<li>What are the variables?</li>
+</ul>
+<p>The data you will be working with is often too large for excel.</p>
+</section>
+<section id="whats-tidy-data" class="slide level2">
+<h2>What’s tidy data?</h2>
+<p>Even before we start analyzing data, we need to make sure our data is tidy</p>
+<ul>
+<li>Each column is a variable</li>
+<li>Each row is an observation</li>
+</ul>
+<p>We can wrangle our <em>raw</em> data to make it tidy</p>
+</section>
+<section id="example-of-tidy-data" class="slide level2">
+<h2>Example of tidy data</h2>
+<p>Each column is a variable, each row is an observation</p>
+<p><a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2024/2024-06-04/cheeses.csv">Cheese data</a></p>
+</section>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
+<p>Take a look at the <a href="https://www.kaggle.com/datasets/ayushcx/apple-sales-dataset-2024">Apple Sales Dataset on Kaggle</a> and answer the following questions:</p>
+<ul>
+<li>What are the variables in the data?</li>
+<li>What are the variable types? (Categorical – ordinal or not, numeric – discrete or continuous)</li>
+<li>Is this data set tidy? Why (not)?</li>
+</ul>
 
 
 </section>

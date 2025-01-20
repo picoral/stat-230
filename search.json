@@ -25,7 +25,7 @@
     "href": "modules.html#assignments",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments\nComplete the quarto markdown file linked below with your answers, and submit it to canvas.\n\nAssignment 01"
+    "text": "Assignments\nComplete the quarto markdown file linked below with your answers, and submit it to canvas.\n\nAssignment 01\n\nTo open and edit this file, download and install R and RStudio or if you are unable to install software on your devise use Posit Cloud"
   },
   {
     "objectID": "modules.html#reading-1",
@@ -313,5 +313,96 @@
     "title": "STAT 230 – Course Introduction",
     "section": "Course Overview",
     "text": "Course Overview\n\nFocus on both concepts and examples\nFocus on hands-on, bring a laptop to class if you have one\nFocus on real data in assignments"
+  },
+  {
+    "objectID": "slides-01-03.html#most-data-is-messy-data",
+    "href": "slides-01-03.html#most-data-is-messy-data",
+    "title": "Tidy Data",
+    "section": "Most data is messy data",
+    "text": "Most data is messy data\nEven before we start analyzing data, we have to acquire data\nThere are a lot of data sets openly availabe on the internet, for example:\n\nhttps://data.gov\nhttps://data.europa.eu/en\nhttps://data.un.org\nhttps://data.worldbank.org\nhttps://www.who.int/data"
+  },
+  {
+    "objectID": "slides-01-03.html#where-to-find-data",
+    "href": "slides-01-03.html#where-to-find-data",
+    "title": "Data",
+    "section": "Where to find data",
+    "text": "Where to find data\nEven before we start analyzing data, we have to acquire data\nThere are a lot of data sets openly availabe on the internet, for example:\n\nhttps://data.gov\nhttps://data.europa.eu/en\nhttps://data.un.org\nhttps://data.worldbank.org\nhttps://www.who.int/data"
+  },
+  {
+    "objectID": "slides-01-03.html#data-quality",
+    "href": "slides-01-03.html#data-quality",
+    "title": "Data",
+    "section": "Data quality",
+    "text": "Data quality\nEven before we start analyzing data, we need to make sure our data is tidy\nWhat to look for:\n\na data dictionary\ninformation on how the data were collected"
+  },
+  {
+    "objectID": "slides-01-03.html#data-format",
+    "href": "slides-01-03.html#data-format",
+    "title": "Data",
+    "section": "Data format",
+    "text": "Data format\n\ntabular – tables, rows and columns\nhierachical – values are nested (like a tree)\nraw text – just text, with no structure"
+  },
+  {
+    "objectID": "slides-01-03.html#whats-tidy-data",
+    "href": "slides-01-03.html#whats-tidy-data",
+    "title": "Data",
+    "section": "What’s tidy data?",
+    "text": "What’s tidy data?\nEven before we start analyzing data, we need to make sure our data is tidy\n\nEach column is a variable\nEach row is an observation\n\nWe can wrangle our raw data to make it tidy"
+  },
+  {
+    "objectID": "slides-01-03.html#data-format-1",
+    "href": "slides-01-03.html#data-format-1",
+    "title": "Data",
+    "section": "Data format",
+    "text": "Data format\nGet data on mortality by country\n\nWhat format is the data?\nWhat are the variables?\n\nThe data you will be working with is often too large for excel."
+  },
+  {
+    "objectID": "slides-01-03.html#example-of-tidy-data",
+    "href": "slides-01-03.html#example-of-tidy-data",
+    "title": "Data",
+    "section": "Example of tidy data",
+    "text": "Example of tidy data\nEach column is a variable, each row is an observation\nCheese data"
+  },
+  {
+    "objectID": "slides-01-03.html#practice",
+    "href": "slides-01-03.html#practice",
+    "title": "Data",
+    "section": "Practice",
+    "text": "Practice\nTake a look at the Apple Sales Dataset on Kaggle and answer the following questions:\n\nWhat are the variables in the data?\nWhat are the variable types? (Categorical – ordinal or not, numeric – discrete or continuous)\nIs this data set tidy? Why (not)?"
+  },
+  {
+    "objectID": "slides-01-03.html#commatab-separated-values",
+    "href": "slides-01-03.html#commatab-separated-values",
+    "title": "Data",
+    "section": "Comma/Tab Separated Values",
+    "text": "Comma/Tab Separated Values\nInspect this data set:\n\nWhat format is it?\nWhat are the variables (and types)?\n\nWhat about this data set"
+  },
+  {
+    "objectID": "slides-01-03.html#json",
+    "href": "slides-01-03.html#json",
+    "title": "Data",
+    "section": "JSON",
+    "text": "JSON\nInspect this weather data\n\nWhat are (some) the variables (and types)?\n\n These data were retrieved using the weather.gov api"
+  },
+  {
+    "objectID": "slides-01-03.html#tabular-data",
+    "href": "slides-01-03.html#tabular-data",
+    "title": "Data",
+    "section": "Tabular Data",
+    "text": "Tabular Data\nRows and Columns\n\n\n\nDay\nHigh\nLow\nWind\nForecast\n\n\n\n\nTuesday\n24\n15\n0 to 15 mph\nSunny\n\n\nWednesday\n38\n17\n5 to 15 mph\nMostly Sunny\n\n\nThursday\n34\n13\n5 to 15 mph\nMostly Sunny"
+  },
+  {
+    "objectID": "slides-01-03.html#data-format-file-type",
+    "href": "slides-01-03.html#data-format-file-type",
+    "title": "Data",
+    "section": "Data format – file type",
+    "text": "Data format – file type\n\nData can be stored in different types of files\nSome formats can be open only with specific software (for example, .xlsx files)\nOften data is stored in a plain text file, with values separated by a specific charater, for example\n\ncomma (.csv files, or comma separated values)\ntab (.tsv files, or comma separated values)\nJSON (JavaScript Object Notation, hierarchical name–value pairs) – APIs often provide this type of data"
+  },
+  {
+    "objectID": "slides-01-03.html#hierachical-data",
+    "href": "slides-01-03.html#hierachical-data",
+    "title": "Data",
+    "section": "Hierachical Data",
+    "text": "Hierachical Data\nTuesday:\n   ↳ Temperature:\n      ↳ Low: 15\n      ↳ High: 24\n   ↳ Wind:\n      ↳ Speed: 0 to 15 mph \n      ↳ Direction: West\nWednesday:\n   ↳ Temperature:\n      ↳ Low: 17\n      ↳ High: 38\n   ↳ Wind:\n      ↳ Speed: 5 to 15 mph\n      ↳ Direction: North West"
   }
 ]
