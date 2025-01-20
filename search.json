@@ -340,7 +340,7 @@
     "href": "slides-01-03.html#data-format",
     "title": "Data",
     "section": "Data format",
-    "text": "Data format\n\ntabular – tables, rows and columns\nhierachical – values are nested (like a tree)\nraw text – just text, with no structure"
+    "text": "Data format\n\ntabular – tables, rows and columns\nhierachical – values are nested (like a tree)\nunstructured data – no structure, for example: emails, videos, pictures"
   },
   {
     "objectID": "slides-01-03.html#whats-tidy-data",
@@ -404,5 +404,12 @@
     "title": "Data",
     "section": "Hierachical Data",
     "text": "Hierachical Data\nTuesday:\n   ↳ Temperature:\n      ↳ Low: 15\n      ↳ High: 24\n   ↳ Wind:\n      ↳ Speed: 0 to 15 mph \n      ↳ Direction: West\nWednesday:\n   ↳ Temperature:\n      ↳ Low: 17\n      ↳ High: 38\n   ↳ Wind:\n      ↳ Speed: 5 to 15 mph\n      ↳ Direction: North West"
+  },
+  {
+    "objectID": "slides-01-03.html#unstructured-data",
+    "href": "slides-01-03.html#unstructured-data",
+    "title": "Data",
+    "section": "Unstructured Data",
+    "text": "Unstructured Data\nOne winter, I became very quiet\nand saw my life. It was February\n\nand outside in the city streets,\nsnow fell but would not collect.\n\nI bought snapdragons and thistle,\ngot some discount peach roses\n\nthat smelled off. I split them\nbetween vases and moved\n\nthe bouquets from room to room\nwhile a violin solo rang out.\nfull poem"
   }
 ]
