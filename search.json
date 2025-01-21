@@ -305,7 +305,7 @@
     "href": "slides-02-01.html#data",
     "title": "Getting started with R",
     "section": "Data",
-    "text": "Data\nCarrier On-Time Performance Data"
+    "text": "Data\nCheese Data"
   },
   {
     "objectID": "slides-01-00.html#course-overview-1",
@@ -418,5 +418,12 @@
     "title": "Data",
     "section": "Checking Understanding",
     "text": "Checking Understanding\nAnswer the gradescope questions on Data Formats\nRemember that you can click on save for each answer to get feedback on whether you got the answer correct before clicking on submit"
+  },
+  {
+    "objectID": "slides-02-01.html#creating-quarto-documents",
+    "href": "slides-02-01.html#creating-quarto-documents",
+    "title": "Getting started with R",
+    "section": "Creating Quarto Documents",
+    "text": "Creating Quarto Documents\nWe will be creating reproducible reports in this class.\nTo do so, we will be working with Quarto documents.\nDemonstration on how to create a new Quarto document"
   }
 ]
