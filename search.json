@@ -256,14 +256,14 @@
     "href": "slides-01-02.html#relationships-among-variables-2",
     "title": "Variables",
     "section": "Relationships among variables",
-    "text": "Relationships among variables\nGPA study hours data\n\n\n\n[1] 0.1330138"
+    "text": "Relationships among variables\nGPA study hours data\n\n\n\n[1] 0.1330138\n\n\n\nCorrelation does not imply causation"
   },
   {
     "objectID": "slides-01-02.html#explanatory-and-response-variables",
     "href": "slides-01-02.html#explanatory-and-response-variables",
     "title": "Variables",
     "section": "Explanatory and response variables",
-    "text": "Explanatory and response variables\n\nResponse variables are also known as dependent variables\nExplanatory variables are also knows as independent variables\nA response variable is the variable that is measured and is expected to change based on the manipulation of other variables (the explanatory variables)\nThe explanatory variables are expected to affect the response variable\nCorrelation does not imply causation"
+    "text": "Explanatory and response variables\n\nResponse variables are also known as dependent variables\nExplanatory variables are also known as independent variables\nA response variable is the variable that is measured and is expected to change based on the manipulation of other variables (the explanatory variables)\nThe explanatory variables are expected to affect the response variable"
   },
   {
     "objectID": "slides-01-02.html#section",
