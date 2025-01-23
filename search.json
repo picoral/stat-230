@@ -25,7 +25,7 @@
     "href": "modules.html#assignments",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments\nComplete the quarto markdown file linked below with your answers, and submit it to canvas.\n\nAssignment 01\n\nTo open and edit this file, download and install R and RStudio or if you are unable to install software on your devise use Posit Cloud"
+    "text": "Assignments\nComplete the quarto markdown file linked below with your answers, and submit it to canvas.\n\nAssignment 01\n\nTo open and edit this file, download and install R and RStudio or if you are unable to install software on your devise use Posit Cloud\nIf you need help with this, you can follow these instructions"
   },
   {
     "objectID": "modules.html#reading-1",
@@ -425,5 +425,12 @@
     "title": "Getting started with R",
     "section": "Creating Quarto Documents",
     "text": "Creating Quarto Documents\nWe will be creating reproducible reports in this class.\nTo do so, we will be working with Quarto documents.\nDemonstration on how to create a new Quarto document"
+  },
+  {
+    "objectID": "getting-started.html",
+    "href": "getting-started.html",
+    "title": "Using RStudio",
+    "section": "",
+    "text": "Posit Cloud\nUse Posit Cloud if you are unable to install software in your computer.\nVideo demostration (no audio)\nSteps:\n\nGo to Posit Cloud (sign up for a free account)\nClick on the New Project button on the top right\nWait for the project to open\nOn the bottom right panel you will see a list of files, with buttons – click on the upload button and then click on the Choose File button\nSelect the .qmd file you want to edit and the click on OK\nThe .qmd file should now be listed in the list of files in the bottom right panel – click on it to open it.\nEdit and save the file\nTo upload the edited .qmd file to canvas, you need to download it first – click on the checkbox next to the file name in the bottom right panel\nClick on the blue gear More icon at the top of that panel – and then choose the Export option. The file is now in your computer.\nGo to the assignment on canvas, start the assignment and upload the file you just downloaded from Posit Cloud\n\n\n\nRStudio Desktop\n\nOpen RStudio, go to File and then choose Open File...\nChoose the .qmd file you want to open and then click on Open\nEdit and save the file\nGo to the assignment on canvas, start the assign and upload the file you just edited and saved in RStudio."
   }
 ]
