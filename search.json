@@ -291,14 +291,14 @@
     "href": "slides-02-01.html#working-within-projects",
     "title": "Getting started with R",
     "section": "Working within Projects",
-    "text": "Working within Projects\nWe will always be working with projects in this class for several reasons:\n\nIt makes your statistical analysis reproducible – meaning, your tables and plots will come directly from your data. If your data changes, you can just render your report again (instead of having to click on a bunch of buttons and trying to remember which order you click on which button)\nIt makes it easier to organized your data, and to keep your original data un-altered (we never change our original data)\nIt allows a report to be run in any computer, instead of running just on your machine (we will be using relative paths to ensure that’s the case)\n\nVideo"
+    "text": "Working within Projects\nWe will always be working with projects in this class for several reasons:\n\nIt makes your statistical analysis reproducible – meaning, your tables and plots will come directly from your data. If your data changes, you can just render your report again (instead of having to click on a bunch of buttons and trying to remember which order you click on which button)\nIt makes it easier to organized your data, and to keep your original data un-altered (we never change our original data)\nIt allows a report to be run in any computer, instead of running just on your machine (we will be using relative paths to ensure that’s the case)"
   },
   {
     "objectID": "slides-02-01.html#packages",
     "href": "slides-02-01.html#packages",
     "title": "Getting started with R",
     "section": "Packages",
-    "text": "Packages\nThere are a number of packages for statistics in R.\nWe will be using tidyverse – which widely used in industry and research.\n\nIn your first.R document type library(tidyverse) and save the document.\nThe IDE will prompt you to install tidyverse – click on. install.\nYou can also run install.packages(\"tydverse\") in the terminal (lower left panel).\n\nVideo"
+    "text": "Packages\nThere are a number of packages for statistics in R.\nWe will be using tidyverse – which widely used in industry and research.\n\nIn your first.R document type library(tidyverse) and save the document.\nThe IDE will prompt you to install tidyverse – click on. install.\nYou can also run install.packages(\"tydverse\") in the console (lower left panel)."
   },
   {
     "objectID": "slides-02-01.html#data",
@@ -459,14 +459,14 @@
     "href": "slides-02-01.html#reading-data-in-r",
     "title": "Getting started with R",
     "section": "Reading data in R",
-    "text": "Reading data in R\nLet’s start with a data file that contains two numeric variables – GPA vs. Study Hours.\nYou should be familiar with this data set, since we discussed it in class.\nIn your first.R document type the following:\n\ngpa_data &lt;- read_csv(\"https://www.openintro.org/data/csv/gpa_study_hours.csv\")\n\nNote a few things:\n\nWe are using the read_csv function to load our data because the data file we are reading in is a comma separated value text file\nWe are reading the file directly from a web address\nAfter reading the file, R will assign a name to the data – in this case the name is gpa_data. You can name your data frame (what we call the data that has been loaded into R) anything you want, but you should choose meaningful names.\n\nWe will often save the data file to our computer first, and then read the data in from the file you have in our project. That way if the file does not exist anymore at that web address, you can still used.\nHere’s how we go about doing that:\n\nCreate a new folder in your project called data – you can do that by clicking on the New Folder icon at the top of the Files panel\nDownload the data and drag and drop the gpa_study_hours.csv file into the data folder you created\nChange the read_csv function call in your first.R document to: gpa_data &lt;- read_csv(\"data/gpa_study_hours.csv\")\n\nVideo"
+    "text": "Reading data in R\nLet’s start with a data file that contains two numeric variables – GPA vs. Study Hours.\nYou should be familiar with this data set, since we discussed it in class.\nIn your first.R document type the following:\n\ngpa_data &lt;- read_csv(\"https://www.openintro.org/data/csv/gpa_study_hours.csv\")\n\nNote a few things:\n\nWe are using the read_csv function to load our data because the data file we are reading in is a comma separated value text file\nWe are reading the file directly from a web address\nAfter reading the file, R will assign a name to the data – in this case the name is gpa_data. You can name your data frame (what we call the data that has been loaded into R) anything you want, but you should choose meaningful names.\n\nWe will often save the data file to our computer first, and then read the data in from the file you have in our project. That way if the file does not exist anymore at that web address, you can still used.\nHere’s how we go about doing that:\n\nCreate a new folder in your project called data – you can do that by clicking on the New Folder icon at the top of the Files panel\nDownload the data and drag and drop the gpa_study_hours.csv file into the data folder you created\nChange the read_csv function call in your first.R document to: gpa_data &lt;- read_csv(\"data/gpa_study_hours.csv\")"
   },
   {
     "objectID": "slides-02-01.html#summary-statistics",
     "href": "slides-02-01.html#summary-statistics",
     "title": "Getting started with R",
     "section": "Summary Statistics",
-    "text": "Summary Statistics\nNow that we have the data loaded in R, and we have a name for the data frame (gpa_data), let’s run some summary statistics on it.\nThe goal here is to answer these descriptive questions:\n\nWhat is the average GPA in the data?\n\n\nWhat is the average number of hours studied by the students in the data?\n\n\ngpa_data |&gt;\n  summarize(mean_gpa = mean(gpa),\n            mean_hours = mean(study_hours))\n\n\n  \n\n\n\nSome things to note:\n\nWe start with the data frame name – gpa_data and then we call functions on the data\nThe |&gt; operator is called a pipe and we read it as and then\nTo read in English the code we just ran to get the mean (average) of the numeric variables gpa and study_hours we say:\n\n\nstart with the gpa_data and then summarize by creating two values, mean_gpa and mean_gpa – mean_gpa will have the results from calling the mean() function on the gpa column, and mean_hours will have the results from calling mean() on study_hours\n\nVideo"
+    "text": "Summary Statistics\nNow that we have the data loaded in R, and we have a name for the data frame (gpa_data), let’s run some summary statistics on it.\nThe goal here is to answer these descriptive questions:\n\nWhat is the average GPA in the data?\n\n\nWhat is the average number of hours studied by the students in the data?\n\n\ngpa_data |&gt;\n  summarize(mean_gpa = mean(gpa),\n            mean_hours = mean(study_hours))\n\n\n  \n\n\n\nSome things to note:\n\nWe start with the data frame name – gpa_data and then we call functions on the data\nThe |&gt; operator is called a pipe and we read it as and then\nTo read in English the code we just ran to get the mean (average) of the numeric variables gpa and study_hours we say:\n\n\nstart with the gpa_data and then summarize by creating two values, mean_gpa and mean_gpa – mean_gpa will have the results from calling the mean() function on the gpa column, and mean_hours will have the results from calling mean() on study_hours"
   },
   {
     "objectID": "slides-02-01.html#what-is-a-mean",
@@ -480,7 +480,7 @@
     "href": "slides-02-01.html#creating-an-r-file",
     "title": "Getting started with R",
     "section": "Creating an R file",
-    "text": "Creating an R file\nWe will start by writing a .R file where we will type in our code, and run the script for our data analysis.\nThese instructions work for both RStudio desktop and Posit Cloud (the IDE is the same):\n\nOn the top menu, click on File then select New File and R Script\nThat will open a file on the top left panel called Untitled1\nGo to File and then click on Save to save the .R file – named if first.R\n\nVideo"
+    "text": "Creating an R file\nWe will start by writing a .R file where we will type in our code, and run the script for our data analysis.\nThese instructions work for both RStudio desktop and Posit Cloud (the IDE is the same):\n\nOn the top menu, click on File then select New File and R Script\nThat will open a file on the top left panel called Untitled1\nGo to File and then click on Save to save the .R file – named if first.R"
   },
   {
     "objectID": "slides-02-01.html#plotting-the-data",
@@ -551,5 +551,26 @@
     "title": "Modules",
     "section": "Tutorials",
     "text": "Tutorials\n\nGetting Started with R\nCase Study 1"
+  },
+  {
+    "objectID": "slides-02-01.html#video-demonstration-part-1",
+    "href": "slides-02-01.html#video-demonstration-part-1",
+    "title": "Getting started with R",
+    "section": "Video Demonstration – Part 1",
+    "text": "Video Demonstration – Part 1\nVideo Demonstration of Project to Packages"
+  },
+  {
+    "objectID": "slides-02-01.html#video-demonstration-part-2",
+    "href": "slides-02-01.html#video-demonstration-part-2",
+    "title": "Getting started with R",
+    "section": "Video Demonstration – Part 2",
+    "text": "Video Demonstration – Part 2\nReading Data in R Video"
+  },
+  {
+    "objectID": "slides-02-01.html#video-demonstration-part-3",
+    "href": "slides-02-01.html#video-demonstration-part-3",
+    "title": "Getting started with R",
+    "section": "Video Demonstration – Part 3",
+    "text": "Video Demonstration – Part 3\nMeans and Scatterplot Video"
   }
 ]

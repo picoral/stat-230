@@ -184,11 +184,14 @@ window.Quarto = {
   <li><a href="#working-within-projects" id="toc-working-within-projects" class="nav-link" data-scroll-target="#working-within-projects">Working within Projects</a></li>
   <li><a href="#creating-an-r-file" id="toc-creating-an-r-file" class="nav-link" data-scroll-target="#creating-an-r-file">Creating an R file</a></li>
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#video-demonstration-part-1" id="toc-video-demonstration-part-1" class="nav-link" data-scroll-target="#video-demonstration-part-1">Video Demonstration – Part 1</a></li>
   <li><a href="#reading-data-in-r" id="toc-reading-data-in-r" class="nav-link" data-scroll-target="#reading-data-in-r">Reading data in R</a></li>
+  <li><a href="#video-demonstration-part-2" id="toc-video-demonstration-part-2" class="nav-link" data-scroll-target="#video-demonstration-part-2">Video Demonstration – Part 2</a></li>
   <li><a href="#summary-statistics" id="toc-summary-statistics" class="nav-link" data-scroll-target="#summary-statistics">Summary Statistics</a></li>
   <li><a href="#what-is-a-mean" id="toc-what-is-a-mean" class="nav-link" data-scroll-target="#what-is-a-mean">What is a mean?</a></li>
   <li><a href="#plotting-the-data" id="toc-plotting-the-data" class="nav-link" data-scroll-target="#plotting-the-data">Plotting the Data</a></li>
   <li><a href="#commenting-your-first.r-script" id="toc-commenting-your-first.r-script" class="nav-link" data-scroll-target="#commenting-your-first.r-script">Commenting your <code>first.R</code> script</a></li>
+  <li><a href="#video-demonstration-part-3" id="toc-video-demonstration-part-3" class="nav-link" data-scroll-target="#video-demonstration-part-3">Video Demonstration – Part 3</a></li>
   </ul>
 </nav>
     </div>
@@ -232,7 +235,6 @@ window.Quarto = {
 <li>It makes it easier to organized your data, and to keep your original data un-altered (we never change our original data)</li>
 <li>It allows a report to be run in any computer, instead of running just on your machine (we will be using relative paths to ensure that’s the case)</li>
 </ul>
-<p>Video</p>
 </section>
 <section id="creating-an-r-file" class="level2">
 <h2 class="anchored" data-anchor-id="creating-an-r-file">Creating an R file</h2>
@@ -243,7 +245,6 @@ window.Quarto = {
 <li>That will open a file on the top left panel called <code>Untitled1</code></li>
 <li>Go to <code>File</code> and then click on <code>Save</code> to save the <code>.R</code> file – named if <code>first.R</code></li>
 </ol>
-<p>Video</p>
 </section>
 <section id="packages" class="level2">
 <h2 class="anchored" data-anchor-id="packages">Packages</h2>
@@ -252,9 +253,12 @@ window.Quarto = {
 <ol type="1">
 <li>In your <code>first.R</code> document type <code>library(tidyverse)</code> and save the document.</li>
 <li>The IDE will prompt you to install <code>tidyverse</code> – click on. <code>install</code>.</li>
-<li>You can also run <code>install.packages("tydverse")</code> in the terminal (lower left panel).</li>
+<li>You can also run <code>install.packages("tydverse")</code> in the console (lower left panel).</li>
 </ol>
-<p>Video</p>
+</section>
+<section id="video-demonstration-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="video-demonstration-part-1">Video Demonstration – Part 1</h2>
+<p><a href="https://montclair.zoom.us/rec/share/vHkqkVfF3cF911Kd-KxBX9gk4mMLxSDoxpnRlucq-tEy0e0DXesTYIFjLQmRA4wZ.MYHw5peRXv8wJOyg?startTime=1737913344000%20Passcode:%20@3HLA%sf">Video Demonstration of Project to Packages</a></p>
 </section>
 <section id="reading-data-in-r" class="level2">
 <h2 class="anchored" data-anchor-id="reading-data-in-r">Reading data in R</h2>
@@ -277,7 +281,10 @@ window.Quarto = {
 <li>Download <a href="https://www.openintro.org/data/csv/gpa_study_hours.csv">the data</a> and drag and drop the <code>gpa_study_hours.csv</code> file into the <code>data</code> folder you created</li>
 <li>Change the <code>read_csv</code> function call in your <code>first.R</code> document to: <code>gpa_data &lt;- read_csv("data/gpa_study_hours.csv")</code></li>
 </ol>
-<p>Video</p>
+</section>
+<section id="video-demonstration-part-2" class="level2">
+<h2 class="anchored" data-anchor-id="video-demonstration-part-2">Video Demonstration – Part 2</h2>
+<p><a href="https://montclair.zoom.us/rec/share/txbOJZQzt5T8lwVcQm7Kjl-4mFyrtar3Z9OTJMHsOkXJoOn642NaiBgOI0Ku-HI7.aiwioDKn6XYBGouh?startTime=1737914536000%20Passcode:%20zF96h$us">Reading Data in R Video</a></p>
 </section>
 <section id="summary-statistics" class="level2">
 <h2 class="anchored" data-anchor-id="summary-statistics">Summary Statistics</h2>
@@ -310,7 +317,6 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>start with the gpa_data and then summarize by creating two values, mean_gpa and mean_gpa – mean_gpa will have the results from calling the mean() function on the gpa column, and mean_hours will have the results from calling mean() on study_hours</p>
 </blockquote>
-<p>Video</p>
 </section>
 <section id="what-is-a-mean" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-mean">What is a mean?</h2>
@@ -383,6 +389,10 @@ window.Quarto = {
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> gpa, <span class="at">x =</span> study_hours)) <span class="sc">+</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="video-demonstration-part-3" class="level2">
+<h2 class="anchored" data-anchor-id="video-demonstration-part-3">Video Demonstration – Part 3</h2>
+<p><a href="https://montclair.zoom.us/rec/share/A3r5SrbUUe8ybVUARfoMdcgBOAgZM8YdQddiKFtl3pIkk2H0VI07TB0m6DDSL7XW.fsK-d9caJSNeqNAk?startTime=1737916490000%20Passcode:%205s.?2m%X">Means and Scatterplot Video</a></p>
 
 
 </section>
