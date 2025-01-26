@@ -283,22 +283,22 @@
     "objectID": "slides-02-01.html#coding-environment",
     "href": "slides-02-01.html#coding-environment",
     "title": "Getting started with R",
-    "section": "Coding Environment",
-    "text": "Coding Environment\nWe will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud"
+    "section": "",
+    "text": "We will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud\nIf you need help with using RStudio or Posit cloud follow these instructions"
   },
   {
     "objectID": "slides-02-01.html#working-within-projects",
     "href": "slides-02-01.html#working-within-projects",
     "title": "Getting started with R",
     "section": "Working within Projects",
-    "text": "Working within Projects\nWe will always be working with projects in this class (reproducible research reasons)\nDemonstration on how to create a new project in RStudio"
+    "text": "Working within Projects\nWe will always be working with projects in this class for several reasons:\n\nIt makes your statistical analysis reproducible – meaning, your tables and plots will come directly from your data. If your data changes, you can just render your report again (instead of having to click on a bunch of buttons and trying to remember which order you click on which button)\nIt makes it easier to organized your data, and to keep your original data un-altered (we never change our original data)\nIt allows a report to be run in any computer, instead of running just on your machine (we will be using relative paths to ensure that’s the case)\n\nVideo"
   },
   {
     "objectID": "slides-02-01.html#packages",
     "href": "slides-02-01.html#packages",
     "title": "Getting started with R",
     "section": "Packages",
-    "text": "Packages\nThere are a number of packages for statistics in R.\nWe will be using tidyverse – widely used\nDemonstration on how to install packages"
+    "text": "Packages\nThere are a number of packages for statistics in R.\nWe will be using tidyverse – which widely used in industry and research.\n\nIn your first.R document type library(tidyverse) and save the document.\nThe IDE will prompt you to install tidyverse – click on. install.\nYou can also run install.packages(\"tydverse\") in the terminal (lower left panel).\n\nVideo"
   },
   {
     "objectID": "slides-02-01.html#data",
@@ -432,5 +432,124 @@
     "title": "Using RStudio",
     "section": "",
     "text": "Posit Cloud\nUse Posit Cloud if you are unable to install software in your computer.\nVideo demostration (no audio)\nSteps:\n\nGo to Posit Cloud (sign up for a free account)\nClick on the New Project button on the top right\nWait for the project to open\nOn the bottom right panel you will see a list of files, with buttons – click on the upload button and then click on the Choose File button\nSelect the .qmd file you want to edit and the click on OK\nThe .qmd file should now be listed in the list of files in the bottom right panel – click on it to open it.\nEdit and save the file\nTo upload the edited .qmd file to canvas, you need to download it first – click on the checkbox next to the file name in the bottom right panel\nClick on the blue gear More icon at the top of that panel – and then choose the Export option. The file is now in your computer.\nGo to the assignment on canvas, start the assignment and upload the file you just downloaded from Posit Cloud\n\n\n\nRStudio Desktop\n\nOpen RStudio, go to File and then choose Open File...\nChoose the .qmd file you want to open and then click on Open\nEdit and save the file\nGo to the assignment on canvas, start the assign and upload the file you just edited and saved in RStudio."
+  },
+  {
+    "objectID": "slides-02-01.html",
+    "href": "slides-02-01.html",
+    "title": "Getting started with R",
+    "section": "",
+    "text": "We will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud\nIf you need help with using RStudio or Posit cloud follow these instructions"
+  },
+  {
+    "objectID": "slides-02-01.html#setting-up-your-coding-environment",
+    "href": "slides-02-01.html#setting-up-your-coding-environment",
+    "title": "Getting started with R",
+    "section": "",
+    "text": "We will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud\nIf you need help with using RStudio or Posit cloud follow these instructions"
+  },
+  {
+    "objectID": "slides-02-01.html#creating-a-r-file",
+    "href": "slides-02-01.html#creating-a-r-file",
+    "title": "Getting started with R",
+    "section": "Creating a R file",
+    "text": "Creating a R file\nWe will start by writing a .R file where we will type in our code, and run the script for our data analysis.\nThese instructions work for both RStudio desktop and Posit Cloud (the IDE is the same):\n\nOn the top menu, click on File then select New File and R Script\nThat will open a file on the top left panel called Untitled1\nGo to File and then click on Save to save the .R file – named if first.R\n\nVideo"
+  },
+  {
+    "objectID": "slides-02-01.html#reading-data-in-r",
+    "href": "slides-02-01.html#reading-data-in-r",
+    "title": "Getting started with R",
+    "section": "Reading data in R",
+    "text": "Reading data in R\nLet’s start with a data file that contains two numeric variables – GPA vs. Study Hours.\nYou should be familiar with this data set, since we discussed it in class.\nIn your first.R document type the following:\n\ngpa_data &lt;- read_csv(\"https://www.openintro.org/data/csv/gpa_study_hours.csv\")\n\nNote a few things:\n\nWe are using the read_csv function to load our data because the data file we are reading in is a comma separated value text file\nWe are reading the file directly from a web address\nAfter reading the file, R will assign a name to the data – in this case the name is gpa_data. You can name your data frame (what we call the data that has been loaded into R) anything you want, but you should choose meaningful names.\n\nWe will often save the data file to our computer first, and then read the data in from the file you have in our project. That way if the file does not exist anymore at that web address, you can still used.\nHere’s how we go about doing that:\n\nCreate a new folder in your project called data – you can do that by clicking on the New Folder icon at the top of the Files panel\nDownload the data and drag and drop the gpa_study_hours.csv file into the data folder you created\nChange the read_csv function call in your first.R document to: gpa_data &lt;- read_csv(\"data/gpa_study_hours.csv\")\n\nVideo"
+  },
+  {
+    "objectID": "slides-02-01.html#summary-statistics",
+    "href": "slides-02-01.html#summary-statistics",
+    "title": "Getting started with R",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\nNow that we have the data loaded in R, and we have a name for the data frame (gpa_data), let’s run some summary statistics on it.\nThe goal here is to answer these descriptive questions:\n\nWhat is the average GPA in the data?\n\n\nWhat is the average number of hours studied by the students in the data?\n\n\ngpa_data |&gt;\n  summarize(mean_gpa = mean(gpa),\n            mean_hours = mean(study_hours))\n\n\n  \n\n\n\nSome things to note:\n\nWe start with the data frame name – gpa_data and then we call functions on the data\nThe |&gt; operator is called a pipe and we read it as and then\nTo read in English the code we just ran to get the mean (average) of the numeric variables gpa and study_hours we say:\n\n\nstart with the gpa_data and then summarize by creating two values, mean_gpa and mean_gpa – mean_gpa will have the results from calling the mean() function on the gpa column, and mean_hours will have the results from calling mean() on study_hours\n\nVideo"
+  },
+  {
+    "objectID": "slides-02-01.html#what-is-a-mean",
+    "href": "slides-02-01.html#what-is-a-mean",
+    "title": "Getting started with R",
+    "section": "What is a mean?",
+    "text": "What is a mean?\nWe calculate the mean (or average) but summing all the values we have for a numeric variable and dividing the resulting sum by the number of observations we have.\n\nConsider we have the following observations for a discrete numeric variable: 10, 8, 9, 10\nWe sum all the four values we have: \\(10 + 8 + 9 + 10 = 37\\)\nFinally we divide the sum by the number of observations: \\(37 / 4 = 9.25\\)\nOur mean is 9.25\n\nThe mean is a measure of central tendency – we will be using two other measure of central tendency: mode and median. (more on this later)"
+  },
+  {
+    "objectID": "slides-02-01.html#creating-an-r-file",
+    "href": "slides-02-01.html#creating-an-r-file",
+    "title": "Getting started with R",
+    "section": "Creating an R file",
+    "text": "Creating an R file\nWe will start by writing a .R file where we will type in our code, and run the script for our data analysis.\nThese instructions work for both RStudio desktop and Posit Cloud (the IDE is the same):\n\nOn the top menu, click on File then select New File and R Script\nThat will open a file on the top left panel called Untitled1\nGo to File and then click on Save to save the .R file – named if first.R\n\nVideo"
+  },
+  {
+    "objectID": "slides-02-01.html#plotting-the-data",
+    "href": "slides-02-01.html#plotting-the-data",
+    "title": "Getting started with R",
+    "section": "Plotting the Data",
+    "text": "Plotting the Data\nFor plotting the data, we will be using ggplot, which is part of the tidyverse package.\nWe will start with the data, like we did when calling the summarize function. But this time around we will call the plotting function, ggplot. We will specify the aesthetics using aes to map a variable to the x axis and another variable to the y axis.\n\ngpa_data |&gt;\n  ggplot(aes(y = gpa, x = study_hours))\n\n\n\n\n\n\n\n\nNote that the axes were created with the appropriate labels, but there are no data points shown on the plot yet. That’s because we haven’t specified the geometrics – you haven’t told ggplot how to plot the data. We will do so by adding geom_point() to our code. Make sure you use the + operator. Here’s what the final code block looks like:\n\ngpa_data |&gt;\n  ggplot(aes(y = gpa, x = study_hours)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-02-01.html#commenting-your-first.r-script",
+    "href": "slides-02-01.html#commenting-your-first.r-script",
+    "title": "Getting started with R",
+    "section": "Commenting your first.R script",
+    "text": "Commenting your first.R script\nHere’s what your first.R should look like:\n\nlibrary(tidyverse)\n\ngpa_data |&gt;\n  summarize(mean_gpa = mean(gpa),\n            mean_hours = mean(study_hours))\n\ngpa_data |&gt;\n  ggplot(aes(y = gpa, x = study_hours)) +\n  geom_point()\n\nFor now, we have only R code with no comments. Comments are very important, not only to other people who will be reading your script but also for yourself (your present-self and future-self).\nYou can add comments (meaning, words that will not be parsed as R code) to your script by using the # symbol.\nHere’s what the script looks like with comments:\n\n# load libraries\nlibrary(tidyverse)\n\n# get the mean for gpa and study_hours\ngpa_data |&gt;\n  summarize(mean_gpa = mean(gpa),\n            mean_hours = mean(study_hours))\n\n# create a scatter plot of study_hours and gpa\ngpa_data |&gt;\n  ggplot(aes(y = gpa, x = study_hours)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-02-02.html",
+    "href": "slides-02-02.html",
+    "title": "Case Study 1 – getting started with R",
+    "section": "",
+    "text": "Let’s practice what you have learned so far, which is the following:"
+  },
+  {
+    "objectID": "slides-02-02.html#the-data",
+    "href": "slides-02-02.html#the-data",
+    "title": "Case Study 1 – getting started with R",
+    "section": "The Data",
+    "text": "The Data\nWe will be working with data on water insecurity, more specifically the 2023 data"
+  },
+  {
+    "objectID": "slides-02-02.html#load-and-inspect-the-data",
+    "href": "slides-02-02.html#load-and-inspect-the-data",
+    "title": "Case Study 1 – getting started with R",
+    "section": "Load and inspect the data",
+    "text": "Load and inspect the data\nAfter you created a new R script – I named my script water_insecurity.R, we need to load tidyverse and read the data in. I saved the .csv file in my data folder in my project.\n\n# load packages\nlibrary(tidyverse)\n\n# read data in\nwater_data &lt;- read_csv(\"data/water_insecurity_2023.csv\")\n\nLet’s inspect the data to understand what variables we are dealing with.\nWe can run glimpse() on the data to get information about how many observations and what columns we have in our data:\n\nwater_data |&gt;\n  glimpse()\n\nRows: 854\nColumns: 7\n$ geoid                    &lt;chr&gt; \"01003\", \"01069\", \"06037\", \"06087\", \"06097\", …\n$ name                     &lt;chr&gt; \"Baldwin County, Alabama\", \"Houston County, A…\n$ year                     &lt;dbl&gt; 2023, 2023, 2023, 2023, 2023, 2023, 2023, 202…\n$ geometry                 &lt;chr&gt; \"list(list(c(765297.99052762, 765703.76567671…\n$ total_pop                &lt;dbl&gt; 253507, 108462, 9663345, 261547, 481812, 1155…\n$ plumbing                 &lt;dbl&gt; 271, 30, 5248, 187, 308, 517, 4, 198, 1269, 8…\n$ percent_lacking_plumbing &lt;dbl&gt; 0.106900401, 0.027659457, 0.054308317, 0.0714…\n\n\nWhen we see &lt;chr&gt; next to values that means R read that column values as character (or string) – meaning, it is a categorical variable. When you see &lt;dbl&gt; that means the colum values are double (or float) – meaning, it is a continuous numeric variable."
+  },
+  {
+    "objectID": "slides-02-02.html#descriptive-question",
+    "href": "slides-02-02.html#descriptive-question",
+    "title": "Case Study 1 – getting started with R",
+    "section": "Descriptive question",
+    "text": "Descriptive question\nLet’s answer this question:\n\nWhat’s the average percentage of homes lacking plumbing in the US?\n\n\nwater_data |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing))\n\n\n  \n\n\n\nOh oh – we got a NA for the mean (Not Available). That means there are missing values in the data. We can ignore the missing values by setting the na.rm parameter (remove NAs) to TRUE:\n\nwater_data |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing, na.rm = TRUE))\n\n\n  \n\n\n\n\nThe average percentage of American homes lacking pumbling is around 10.2%"
+  },
+  {
+    "objectID": "slides-02-02.html#plotting-numeric-variables",
+    "href": "slides-02-02.html#plotting-numeric-variables",
+    "title": "Case Study 1 – getting started with R",
+    "section": "Plotting numeric variables",
+    "text": "Plotting numeric variables\nLet’s create a scatter plot of The total owner occupied households lacking plumbing facilities and The total population – the plumbing and total_pop variables.\n\nwater_data |&gt;\n  ggplot(aes(y = plumbing, x = total_pop)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-02-02.html#comparative-questions",
+    "href": "slides-02-02.html#comparative-questions",
+    "title": "Case Study 1 – getting started with R",
+    "section": "Comparative questions",
+    "text": "Comparative questions\nWe can try to answer the following question with these data:\n\nWhat is the average percentage of homes lacking pumbling across different US states?\n\nNote that we do not have a state variable in our data – we have a name column that contains a county name, a comma, and the state name.\nWe can create a separate state name column by using the separate() function:\n\n\n\n  \n\n\n\n\nwater_data |&gt;\n  separate(name, into = c(\"county\", \"state\"), sep = \", \")\n\nThat seemed to have worked – but my water_data hasn’t changed. We need to overwrite the data, by assigning the results of our separate to our data frame name, by adding water_data &lt;- before our code block:\n\nwater_data &lt;- water_data |&gt;\n  separate(name, into = c(\"county\", \"state\"), sep = \", \")\n\nWe can now summarize the mean of percent_lacking_plumbing by our newly created column state (remember to remove NAs).\nFor this, we will add group_by(state) before our summarize call:\n\nwater_data |&gt;\n  group_by(state) |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing, na.rm = TRUE))\n\n\n  \n\n\n\nLet’s sort our results, so we do comparisons more easily. We will add arrange(mean_lacking_pumbling) to the end of our code block:\n\nwater_data |&gt;\n  group_by(state) |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing, na.rm = TRUE)) |&gt;\n  arrange(mean_lacking_pumbling)"
+  },
+  {
+    "objectID": "slides-02-02.html#plotting-results",
+    "href": "slides-02-02.html#plotting-results",
+    "title": "Case Study 1 – getting started with R",
+    "section": "Plotting results",
+    "text": "Plotting results\nThat is a quite a wide range of percentages.\nLet’s plot our results.\nTo do so, we will create a new data frame with our results. I wil name this new data frame by_state:\n\nby_state &lt;- water_data |&gt;\n  group_by(state) |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing, na.rm = TRUE)) |&gt;\n  arrange(mean_lacking_pumbling)\n\nLet’s create a column plot, with state on the y axis and mean_lacking_pumbling on the x axis:\n\nby_state |&gt;\n  ggplot(aes(y = state, x = mean_lacking_pumbling))\n\n\n\n\n\n\n\n\nWe need a geometrics, in this case we will use geom_col():\n\nby_state |&gt;\n  ggplot(aes(y = state, x = mean_lacking_pumbling)) +\n  geom_col()\n\n\n\n\n\n\n\n\nThe variable state is a categorical variable, nominal (meaning, there’s no order to it) – let’s order state by our numeric variable so it’s easier the plot is more meaningful:\n\nby_state |&gt;\n  ggplot(aes(y = reorder(state, mean_lacking_pumbling), \n             x = mean_lacking_pumbling)) +\n  geom_col()"
+  },
+  {
+    "objectID": "modules.html#tutorials",
+    "href": "modules.html#tutorials",
+    "title": "Modules",
+    "section": "Tutorials",
+    "text": "Tutorials\n\nGetting Started with R\nCase Study 1"
   }
 ]
