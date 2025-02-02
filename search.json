@@ -39,7 +39,7 @@
     "href": "modules.html#slides-1",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nGetting Started with R"
+    "text": "Slides\n\nDescriptive Statistics"
   },
   {
     "objectID": "modules.html#reading-2",
@@ -572,5 +572,173 @@
     "title": "Getting started with R",
     "section": "Video Demonstration – Part 3",
     "text": "Video Demonstration – Part 3\nPasscode: 5s.?2m%X\nMeans and Scatterplot Video"
+  },
+  {
+    "objectID": "slides-03-01.html#what-is-descriptive-statistics",
+    "href": "slides-03-01.html#what-is-descriptive-statistics",
+    "title": "Descriptive Statistics",
+    "section": "What is descriptive statistics?",
+    "text": "What is descriptive statistics?\n\nsummarize a given data set\nmeasures of:\n\ndistribution (how data is spread out and how frequently different values occur)\ncentral tendency (mean, median, mode)\nvariability (range, standard deviation, variance, interquartile range – IQR)"
+  },
+  {
+    "objectID": "slides-03-01.html#the-data",
+    "href": "slides-03-01.html#the-data",
+    "title": "Descriptive Statistics",
+    "section": "The data",
+    "text": "The data\nWe will be using US demographic data for our exploratory analyses.\nYou can download the csv file and add it to your RStudio (or Posit Cloud) project.\nCreate a new R script file and save it as county-data-analysis.R and load the tidyverse package and the data.\n\nlibrary(tidyverse)\ncounty &lt;- read_csv(\"data/county.csv\")"
+  },
+  {
+    "objectID": "slides-03-01.html#review-of-steps",
+    "href": "slides-03-01.html#review-of-steps",
+    "title": "Descriptive Statistics",
+    "section": "Review of steps",
+    "text": "Review of steps\nLet’s practice what we have covered so far, which is the following:\n\nSummarize the data by calculating the mean of the numeric variables\nCreate a scatter plot of two numeric variables\n\n\ncounty |&gt;\n  summarize(mean_poverty = mean(poverty, na.rm = TRUE))"
+  },
+  {
+    "objectID": "slides-03-01.html#scatterplot",
+    "href": "slides-03-01.html#scatterplot",
+    "title": "Descriptive Statistics",
+    "section": "Scatterplot",
+    "text": "Scatterplot\n\ncounty |&gt;\n  ggplot(aes(y = poverty, x = unemployment_rate)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-03-01.html#distribution",
+    "href": "slides-03-01.html#distribution",
+    "title": "Descriptive Statistics",
+    "section": "Distribution",
+    "text": "Distribution\nHow data is spread out and how frequently different values occur.\nHistogram: the frequency distribution of a continuous variable\n\ncounty |&gt;\n  ggplot(aes(x = unemployment_rate)) + \n  geom_histogram()"
+  },
+  {
+    "objectID": "slides-03-01.html#histogram",
+    "href": "slides-03-01.html#histogram",
+    "title": "Descriptive Statistics",
+    "section": "Histogram",
+    "text": "Histogram\n\nProvides a view of the data density\nDescribes the sahpe of the data distribution\nHigher bars represent where what values are more common"
+  },
+  {
+    "objectID": "slides-03-01.html#histogram-1",
+    "href": "slides-03-01.html#histogram-1",
+    "title": "Descriptive Statistics",
+    "section": "Histogram",
+    "text": "Histogram\n\nx-axis shows the data ranges (bins)\ny-axis shows the frequency (count or percentage)\nbins: intervals the data range is divided into, each bin displays one bar\nthe height of each bar shows how many data points fall within that bin\nthe shape shows the distribution pattern (normal, skewed, bimodal, etc.)\nthe width of the bins can be manipulated"
+  },
+  {
+    "objectID": "slides-03-01.html#positive-skew",
+    "href": "slides-03-01.html#positive-skew",
+    "title": "Descriptive Statistics",
+    "section": "Positive Skew",
+    "text": "Positive Skew\nOr right-skewed\n\nMost values cluster on the left\nSome high values pull the mean up\nThe mean is greater than the median\n\n\ncounty |&gt;\n  summarize(mean_unemployment = mean(unemployment_rate, na.rm = TRUE),\n            median_unemployment = median(unemployment_rate, na.rm = TRUE))"
+  },
+  {
+    "objectID": "slides-03-01.html#histogram-2",
+    "href": "slides-03-01.html#histogram-2",
+    "title": "Descriptive Statistics",
+    "section": "Histogram",
+    "text": "Histogram\nThe defaul number of bins for geom_histogram() is 30, but we can change that.\n\ncounty |&gt;\n  ggplot(aes(x = unemployment_rate)) + \n  geom_histogram(bins = 100)\n\n\nThis distribution is skewed to the right, with a long tail to the right"
+  },
+  {
+    "objectID": "slides-03-01.html#mean",
+    "href": "slides-03-01.html#mean",
+    "title": "Descriptive Statistics",
+    "section": "Mean",
+    "text": "Mean\nThe mean is the sum of the terms divided by the number of terms.\nHere’s the formula for the sample (the observations) mean:\n\\(\\bar{x} = \\frac{x_1 + x_2 ... + x_n}{n}\\)\nwhere \\(x_1, x_2, ..., x_n\\) represent the observed values\nOr:\n\\(\\bar{x } = \\frac{ \\sum_{i=1}^n x_i}{n}\\)"
+  },
+  {
+    "objectID": "slides-03-01.html#median",
+    "href": "slides-03-01.html#median",
+    "title": "Descriptive Statistics",
+    "section": "Median",
+    "text": "Median\nThe sample median is the middle value when data is arranged in order from lowest to highest.\nFor odd n:\n\nOrder the data from smallest to largest\nMedian = value in position \\((n+1)/2\\)\n\nFor even n:\n\nOrder the data from smallest to largest\nMedian = average of values in positions \\(n/2\\) and \\((n/2)+1\\)"
+  },
+  {
+    "objectID": "slides-03-01.html#measures-of-central-tendency",
+    "href": "slides-03-01.html#measures-of-central-tendency",
+    "title": "Descriptive Statistics",
+    "section": "Measures of Central Tendency",
+    "text": "Measures of Central Tendency\n\nMean\nMedian\nMode"
+  },
+  {
+    "objectID": "slides-03-01.html#mode",
+    "href": "slides-03-01.html#mode",
+    "title": "Descriptive Statistics",
+    "section": "Mode",
+    "text": "Mode\n\nvalue(s) that appears most frequently in the data\n\nIt’s the only measure of central tendency that can be used with categorical data.\nA dataset can have:\n\nOne mode (unimodal)\nTwo modes (bimodal)\nMore than two modes (multimodal)\nNo mode (if all values occur exactly once)"
+  },
+  {
+    "objectID": "slides-03-01.html#measures-of-central-tendency-1",
+    "href": "slides-03-01.html#measures-of-central-tendency-1",
+    "title": "Descriptive Statistics",
+    "section": "Measures of Central Tendency",
+    "text": "Measures of Central Tendency\n\ncounty |&gt;\n  count(unemployment_rate, sort = TRUE)"
+  },
+  {
+    "objectID": "slides-03-01.html#variability-range",
+    "href": "slides-03-01.html#variability-range",
+    "title": "Descriptive Statistics",
+    "section": "Variability – range",
+    "text": "Variability – range\n\nsimplest measure of variability\nthe difference between the largest and smallest values\nsensitive to outliers (uses two values)\nnothing about how values are distributed between the min and max\n\n\ncounty |&gt;\n  summarize(min_unemployment = min(unemployment_rate, na.rm = TRUE),\n            max_unemployment = max(unemployment_rate, na.rm = TRUE)) |&gt;\n  mutate(range_unemployment = max_unemployment - min_unemployment)"
+  },
+  {
+    "objectID": "slides-03-01.html#variability-variance",
+    "href": "slides-03-01.html#variability-variance",
+    "title": "Descriptive Statistics",
+    "section": "Variability – variance",
+    "text": "Variability – variance\n\naverage quared differences from the mean\n\n\\(s^2 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})^2}{n-1}\\)\nWhy do we use the squared deviation in the calculation of variance?\n\nTo get rid of negatives so that observations equally distant from the mean are weighed equally\nTo weigh larger deviations more heavily"
+  },
+  {
+    "objectID": "slides-03-01.html#variability-standard-deviation",
+    "href": "slides-03-01.html#variability-standard-deviation",
+    "title": "Descriptive Statistics",
+    "section": "Variability – standard deviation",
+    "text": "Variability – standard deviation\n\nsquare root of the variance\nis interpreted as the average distance of each data point from sample mean\nthe degree of dispersion of the data points relative to its mean\n\n\\(s = \\sqrt{s^2}\\)\nOr:\n\\(s = \\sqrt{ \\frac{\\sum_{i=1}^n (x_i - \\bar{x})^2}{n-1}}\\)"
+  },
+  {
+    "objectID": "slides-03-01.html#variability-standard-deviation-1",
+    "href": "slides-03-01.html#variability-standard-deviation-1",
+    "title": "Descriptive Statistics",
+    "section": "Variability – standard deviation",
+    "text": "Variability – standard deviation\n\nsquare root of the variance\nis interpreted as the average distance of each data point from sample mean\nthe degree of dispersion of the data points relative to its mean\n\n\ncounty |&gt;\n  summarize(sd_unemployment = sd(unemployment_rate, na.rm = TRUE))"
+  },
+  {
+    "objectID": "slides-03-01.html#interquartile-range-iqr",
+    "href": "slides-03-01.html#interquartile-range-iqr",
+    "title": "Descriptive Statistics",
+    "section": "Interquartile Range – IQR",
+    "text": "Interquartile Range – IQR\n\nquartiles are the partitioned values that divide the values into 4 equal parts (3 quartiles)\nIQR is difference between the third and the first quartile So, there are\nthe first quartile (or 25th percentile) is denoted by \\(Q1\\) and known as the lower quartile\nthe second quartile (or 50th percentile) is denoted by \\(Q2\\) and known as the median\nthe third quartile (or 75th percentile) is denoted by \\(Q3\\) and known as the upper quartile"
+  },
+  {
+    "objectID": "slides-03-01.html#interquartile-range-iqr-1",
+    "href": "slides-03-01.html#interquartile-range-iqr-1",
+    "title": "Descriptive Statistics",
+    "section": "Interquartile Range – IQR",
+    "text": "Interquartile Range – IQR\n\nthe interquartile range is equal to the upper quartile minus lower quartile\nbetween \\(Q1\\) and \\(Q2\\) is the middle 50% of the data\n\n\\(IQR = Q3 - Q1\\)"
+  },
+  {
+    "objectID": "slides-03-01.html#box-plot",
+    "href": "slides-03-01.html#box-plot",
+    "title": "Descriptive Statistics",
+    "section": "Box plot",
+    "text": "Box plot\n\nthe box represents the middle 50% of the data\nthe thick line in the middle is the median\ntop box line is \\(Q3\\)\nbottom box line is \\(Q1\\)\nwhiskers:\n\nmax upper whisker reach = \\(Q3 + 1.5 * IQR\\)\nmax upper whisker reach = \\(Q1 - 1.5 * IQR\\)"
+  },
+  {
+    "objectID": "slides-03-01.html#box-plot-1",
+    "href": "slides-03-01.html#box-plot-1",
+    "title": "Descriptive Statistics",
+    "section": "Box plot",
+    "text": "Box plot\n\ncounty |&gt;\n  ggplot(aes(y = unemployment_rate)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides-03-01.html#outliers",
+    "href": "slides-03-01.html#outliers",
+    "title": "Descriptive Statistics",
+    "section": "Outliers",
+    "text": "Outliers\n\npotential outliers are shown in the box plot as dots\nan outlier is an observation that:\n\nis beyond the maximun reach of the whiskers\nappears extreme, relative to the rest of the data"
+  },
+  {
+    "objectID": "slides-03-01.html",
+    "href": "slides-03-01.html",
+    "title": "Descriptive Statistics",
+    "section": "",
+    "text": "summarize a given data set\nmeasures of:\n\ndistribution (how data is spread out and how frequently different values occur)\ncentral tendency (mean, median, mode)\nvariability (range, standard deviation, variance, interquartile range – IQR)"
   }
 ]
