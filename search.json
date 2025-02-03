@@ -683,21 +683,21 @@
     "href": "slides-03-01.html#variability-variance",
     "title": "Descriptive Statistics",
     "section": "Variability – variance",
-    "text": "Variability – variance\n\naverage quared differences from the mean\n\n\\(s^2 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})^2}{n-1}\\)\nWhy do we use the squared deviation in the calculation of variance?\n\nTo get rid of negatives so that observations equally distant from the mean are weighed equally\nTo weigh larger deviations more heavily"
+    "text": "Variability – variance\n\naverage squared distances from observations to the mean\n\n\\(s^2 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})^2}{n-1}\\)\nWhy do we use the squared deviation in the calculation of variance?\n\nTo get rid of negative values so that observations equally distant from the mean are weighed equally\nTo weigh larger deviations more heavily"
   },
   {
     "objectID": "slides-03-01.html#variability-standard-deviation",
     "href": "slides-03-01.html#variability-standard-deviation",
     "title": "Descriptive Statistics",
     "section": "Variability – standard deviation",
-    "text": "Variability – standard deviation\n\nsquare root of the variance\nis interpreted as the average distance of each data point from sample mean\nthe degree of dispersion of the data points relative to its mean\n\n\\(s = \\sqrt{s^2}\\)\nOr:\n\\(s = \\sqrt{ \\frac{\\sum_{i=1}^n (x_i - \\bar{x})^2}{n-1}}\\)"
+    "text": "Variability – standard deviation\n\nsquare root of the variance\ninterpreted as the average distance of each data point from sample mean\nthe degree of dispersion of the data points relative to its mean\n\n\\(s = \\sqrt{s^2}\\)\nOr:\n\\(s = \\sqrt{ \\frac{\\sum_{i=1}^n (x_i - \\bar{x})^2}{n-1}}\\)"
   },
   {
     "objectID": "slides-03-01.html#variability-standard-deviation-1",
     "href": "slides-03-01.html#variability-standard-deviation-1",
     "title": "Descriptive Statistics",
     "section": "Variability – standard deviation",
-    "text": "Variability – standard deviation\n\nsquare root of the variance\nis interpreted as the average distance of each data point from sample mean\nthe degree of dispersion of the data points relative to its mean\n\n\ncounty |&gt;\n  summarize(sd_unemployment = sd(unemployment_rate, na.rm = TRUE))"
+    "text": "Variability – standard deviation\n\nsquare root of the variance\ninterpreted as the average distance of each data point from sample mean\nthe degree of dispersion of the data points relative to its mean\n\n\ncounty |&gt;\n  summarize(sd_unemployment = sd(unemployment_rate, na.rm = TRUE))"
   },
   {
     "objectID": "slides-03-01.html#interquartile-range-iqr",
