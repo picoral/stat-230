@@ -39,7 +39,7 @@
     "href": "modules.html#slides-1",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nDescriptive Statistics"
+    "text": "Slides\n\nDescriptive Statistics\nExploring Categorical Data"
   },
   {
     "objectID": "modules.html#reading-2",
@@ -740,5 +740,61 @@
     "title": "Descriptive Statistics",
     "section": "",
     "text": "summarize a given data set\nmeasures of:\n\ndistribution (how data is spread out and how frequently different values occur)\ncentral tendency (mean, median, mode)\nvariability (range, standard deviation, variance, interquartile range – IQR)"
+  },
+  {
+    "objectID": "slides-03-02.html#descriptive-statistics",
+    "href": "slides-03-02.html#descriptive-statistics",
+    "title": "Exploring Categorical Data",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\ndistribution (histogram)\ncentral tendency (mean, median, mode)\nvariability (range, standard deviation, variance, interquartile range – IQR)"
+  },
+  {
+    "objectID": "slides-03-02.html#data",
+    "href": "slides-03-02.html#data",
+    "title": "Exploring Categorical Data",
+    "section": "Data",
+    "text": "Data\nWe will be working with the same US demographic data for our exploratory analyses.\nYou can download the csv file and add it to your RStudio (or Posit Cloud) project if you have not done that yet.\nCreate a new R script file and save it as county-categorical-data-analysis.R and load the tidyverse package and the data.\n\nlibrary(tidyverse)\ncounty &lt;- read_csv(\"data/county.csv\")"
+  },
+  {
+    "objectID": "slides-03-02.html#distribution-adding-categorical-variable",
+    "href": "slides-03-02.html#distribution-adding-categorical-variable",
+    "title": "Exploring Categorical Data",
+    "section": "Distribution – adding categorical variable",
+    "text": "Distribution – adding categorical variable\nHistogram: the frequency distribution of a continuous variable across different groups\n\ncounty |&gt;\n  ggplot(aes(x = unemployment_rate)) + \n  geom_histogram() +\n  facet_wrap(~median_edu)"
+  },
+  {
+    "objectID": "slides-03-02.html#inspect-categorical-variable",
+    "href": "slides-03-02.html#inspect-categorical-variable",
+    "title": "Exploring Categorical Data",
+    "section": "Inspect categorical variable",
+    "text": "Inspect categorical variable\n\ncounty |&gt;\n  count(median_edu)"
+  },
+  {
+    "objectID": "slides-03-02.html#distribution-with-filtered-data",
+    "href": "slides-03-02.html#distribution-with-filtered-data",
+    "title": "Exploring Categorical Data",
+    "section": "Distribution – with filtered data",
+    "text": "Distribution – with filtered data\n\ncounty |&gt;\n  filter(median_edu != \"below_hs\",\n         !is.na(median_edu)) |&gt;\n  ggplot(aes(x = unemployment_rate)) + \n  geom_histogram() +\n  facet_wrap(~median_edu)"
+  },
+  {
+    "objectID": "slides-03-02.html#measures-of-central-tendency",
+    "href": "slides-03-02.html#measures-of-central-tendency",
+    "title": "Exploring Categorical Data",
+    "section": "Measures of Central Tendency",
+    "text": "Measures of Central Tendency\nMean and median – add group_by with categorical variable\n\ncounty |&gt;\n  group_by(median_edu) |&gt;\n  summarize(mean = mean(unemployment_rate, na.rm = TRUE),\n            median = median(unemployment_rate, na.rm = TRUE))"
+  },
+  {
+    "objectID": "slides-03-02.html#variability",
+    "href": "slides-03-02.html#variability",
+    "title": "Exploring Categorical Data",
+    "section": "Variability",
+    "text": "Variability\nRange, standard deviation – add group_by with categorical variable\n\ncounty |&gt;\n  group_by(median_edu) |&gt;\n  summarize(min = min(unemployment_rate, na.rm = TRUE),\n            max = max(unemployment_rate, na.rm = TRUE),\n            sd = sd(unemployment_rate, na.rm = TRUE)) |&gt;\n  mutate(range = max - min)"
+  },
+  {
+    "objectID": "slides-03-02.html#variability-box-plot-iqr",
+    "href": "slides-03-02.html#variability-box-plot-iqr",
+    "title": "Exploring Categorical Data",
+    "section": "Variability – Box plot (IQR)",
+    "text": "Variability – Box plot (IQR)\n\ncounty |&gt;\n  ggplot(aes(y = unemployment_rate,\n             x = median_edu)) +\n  geom_boxplot()"
   }
 ]
