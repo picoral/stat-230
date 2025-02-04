@@ -796,5 +796,12 @@
     "title": "Exploring Categorical Data",
     "section": "Variability – Box plot (IQR)",
     "text": "Variability – Box plot (IQR)\n\ncounty |&gt;\n  ggplot(aes(y = unemployment_rate,\n             x = median_edu)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "modules.html#practice",
+    "href": "modules.html#practice",
+    "title": "Modules",
+    "section": "Practice",
+    "text": "Practice\n\nModule 3 Practice"
   }
 ]
