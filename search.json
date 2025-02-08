@@ -810,5 +810,124 @@
     "title": "Modules",
     "section": "Assignment",
     "text": "Assignment\n\nAssignment 2"
+  },
+  {
+    "objectID": "slides-04-01.html#the-data",
+    "href": "slides-04-01.html#the-data",
+    "title": "Summarizing Data",
+    "section": "",
+    "text": "We will be working with global surface temperature (1940-2024)\nFirst, download the data and set it into your project folder.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntemperatures &lt;- read_csv(\"data/average-monthly-surface-temperature.csv\")\n\nRows: 198900 Columns: 6\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (2): country_name, country_code\ndbl  (3): year, daily_average, monthly_average\ndate (1): day\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+  },
+  {
+    "objectID": "slides-04-01.html#variables",
+    "href": "slides-04-01.html#variables",
+    "title": "Summarizing Data",
+    "section": "Variables",
+    "text": "Variables\n\ncountry_name\ncountry_code\nyear\nday\ndaily_average\nmonthly_average"
+  },
+  {
+    "objectID": "slides-04-01.html#variables-1",
+    "href": "slides-04-01.html#variables-1",
+    "title": "Summarizing Data",
+    "section": "Variables",
+    "text": "Variables\n\nDomestic – Number of internal air passengers in thousands for a country, obtained from official statistics\nInternational – Number of international air passengers in thousands, obtained from official statistics\nTotal_OS – Total number of air passengers in thousands, obtained from other openly available data sources"
+  },
+  {
+    "objectID": "slides-04-01.html#inspect-the-data",
+    "href": "slides-04-01.html#inspect-the-data",
+    "title": "Summarizing Data",
+    "section": "Inspect the data",
+    "text": "Inspect the data\n\ntemperatures |&gt;\n  glimpse()\n\nRows: 198,900\nColumns: 6\n$ country_name    &lt;chr&gt; \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"Afghanis…\n$ country_code    &lt;chr&gt; \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\"…\n$ year            &lt;dbl&gt; 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, …\n$ day             &lt;date&gt; 1940-01-15, 1940-02-15, 1940-03-15, 1940-04-15, 1940-…\n$ daily_average   &lt;dbl&gt; -2.0324936, -0.7335030, 1.9991340, 10.1997540, 17.9421…\n$ monthly_average &lt;dbl&gt; 11.32770, 11.32770, 11.32770, 11.32770, 11.32770, 11.3…"
+  },
+  {
+    "objectID": "slides-04-01.html#inspect-the-data-1",
+    "href": "slides-04-01.html#inspect-the-data-1",
+    "title": "Summarizing Data",
+    "section": "Inspect the data",
+    "text": "Inspect the data\n\ntemperatures |&gt;\n  summary()\n\n country_name       country_code            year           day            \n Length:198900      Length:198900      Min.   :1940   Min.   :1940-01-15  \n Class :character   Class :character   1st Qu.:1961   1st Qu.:1961-04-07  \n Mode  :character   Mode  :character   Median :1982   Median :1982-06-30  \n                                       Mean   :1982   Mean   :1982-06-30  \n                                       3rd Qu.:2003   3rd Qu.:2003-09-22  \n                                       Max.   :2024   Max.   :2024-12-15  \n daily_average    monthly_average \n Min.   :-36.24   Min.   :-21.53  \n 1st Qu.: 12.30   1st Qu.: 10.57  \n Median : 22.06   Median : 21.86  \n Mean   : 18.07   Mean   : 18.07  \n 3rd Qu.: 25.32   3rd Qu.: 25.14  \n Max.   : 39.89   Max.   : 29.79"
+  },
+  {
+    "objectID": "slides-04-01.html#questions",
+    "href": "slides-04-01.html#questions",
+    "title": "Summarizing Data",
+    "section": "Questions",
+    "text": "Questions\nWhat questions would you be interested in answering, based on this data set?"
+  },
+  {
+    "objectID": "slides-04-01.html#plots",
+    "href": "slides-04-01.html#plots",
+    "title": "Summarizing Data",
+    "section": "Plots",
+    "text": "Plots\n\ntemperatures |&gt;\n  ggplot(aes(x = daily_average)) +\n  geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+  },
+  {
+    "objectID": "slides-04-01.html#plots-1",
+    "href": "slides-04-01.html#plots-1",
+    "title": "Summarizing Data",
+    "section": "Plots",
+    "text": "Plots\nToo much data to visualize – we need to filter and/or summarize the data.\n\ntemperatures |&gt;\n  ggplot(aes(x = year, y = monthly_average)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-04-01.html#filtering-the-data-by-country",
+    "href": "slides-04-01.html#filtering-the-data-by-country",
+    "title": "Summarizing Data",
+    "section": "Filtering the data by country",
+    "text": "Filtering the data by country\n\ntemperatures |&gt;\n  filter(country_code == \"USA\") |&gt;\n  ggplot(aes(x = year, y = monthly_average)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-04-01.html#filtering-the-data-by-countries",
+    "href": "slides-04-01.html#filtering-the-data-by-countries",
+    "title": "Summarizing Data",
+    "section": "Filtering the data by countries",
+    "text": "Filtering the data by countries\n\ncountries &lt;- c(\"USA\", \"BRA\")\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = year, y = monthly_average)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-04-01.html#adding-color",
+    "href": "slides-04-01.html#adding-color",
+    "title": "Summarizing Data",
+    "section": "Adding color",
+    "text": "Adding color\n\ncountries &lt;- c(\"USA\", \"BRA\")\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = year, y = monthly_average, color = country_code)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-04-01.html#extracting-month",
+    "href": "slides-04-01.html#extracting-month",
+    "title": "Summarizing Data",
+    "section": "Extracting month",
+    "text": "Extracting month\n\ntemperatures |&gt;\n  mutate(month = month(day))\n\n# A tibble: 198,900 × 7\n   country_name country_code  year day        daily_average monthly_average\n   &lt;chr&gt;        &lt;chr&gt;        &lt;dbl&gt; &lt;date&gt;             &lt;dbl&gt;           &lt;dbl&gt;\n 1 Afghanistan  AFG           1940 1940-01-15        -2.03             11.3\n 2 Afghanistan  AFG           1940 1940-02-15        -0.734            11.3\n 3 Afghanistan  AFG           1940 1940-03-15         2.00             11.3\n 4 Afghanistan  AFG           1940 1940-04-15        10.2              11.3\n 5 Afghanistan  AFG           1940 1940-05-15        17.9              11.3\n 6 Afghanistan  AFG           1940 1940-06-15        23.2              11.3\n 7 Afghanistan  AFG           1940 1940-07-15        24.4              11.3\n 8 Afghanistan  AFG           1940 1940-08-15        22.1              11.3\n 9 Afghanistan  AFG           1940 1940-09-15        17.7              11.3\n10 Afghanistan  AFG           1940 1940-10-15        13.7              11.3\n# ℹ 198,890 more rows\n# ℹ 1 more variable: month &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides-04-01.html#extracting-month-save-to-data-frame",
+    "href": "slides-04-01.html#extracting-month-save-to-data-frame",
+    "title": "Summarizing Data",
+    "section": "Extracting month – save to data frame",
+    "text": "Extracting month – save to data frame\n\ntemperatures &lt;- temperatures |&gt;\n  mutate(month = month(day))"
+  },
+  {
+    "objectID": "slides-04-01.html#plot",
+    "href": "slides-04-01.html#plot",
+    "title": "Summarizing Data",
+    "section": "Plot",
+    "text": "Plot\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = month, y = daily_average, color = country_code)) +\n  geom_point()"
+  },
+  {
+    "objectID": "modules.html#slides-2",
+    "href": "modules.html#slides-2",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nSummarizing Data"
+  },
+  {
+    "objectID": "slides-04-01.html",
+    "href": "slides-04-01.html",
+    "title": "Summarizing Data",
+    "section": "",
+    "text": "We will be working with global surface temperature (1940-2024)\nFirst, download the data and set it into your project folder.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntemperatures &lt;- read_csv(\"data/average-monthly-surface-temperature.csv\")\n\nRows: 198900 Columns: 6\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (2): country_name, country_code\ndbl  (3): year, daily_average, monthly_average\ndate (1): day\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+  },
+  {
+    "objectID": "slides-04-01.html#plot-1",
+    "href": "slides-04-01.html#plot-1",
+    "title": "Summarizing Data",
+    "section": "Plot",
+    "text": "Plot\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = month, y = daily_average, color = country_code)) +\n  geom_point() +\n  scale_x_continuous(breaks = c(1:12))"
   }
 ]
