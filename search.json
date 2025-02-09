@@ -929,5 +929,26 @@
     "title": "Summarizing Data",
     "section": "Plot",
     "text": "Plot\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = month, y = daily_average, color = country_code)) +\n  geom_point() +\n  scale_x_continuous(breaks = c(1:12))"
+  },
+  {
+    "objectID": "slides-04-01.html#descriptive-statistics",
+    "href": "slides-04-01.html#descriptive-statistics",
+    "title": "Summarizing Data",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\ntemperatures |&gt;\n  group_by(year) |&gt;\n  summarize(mean = mean(daily_average),\n            median = median(daily_average),\n            sd = sd(daily_average),\n            min = min(daily_average),\n            max = max(daily_average)) |&gt;\n  mutate(range = max - min,\n         lower = mean - sd,\n         upper = mean + sd)"
+  },
+  {
+    "objectID": "slides-04-01.html#descriptive-statistics-save-results",
+    "href": "slides-04-01.html#descriptive-statistics-save-results",
+    "title": "Summarizing Data",
+    "section": "Descriptive Statistics – save results",
+    "text": "Descriptive Statistics – save results\n\ntemp_desc &lt;- temperatures |&gt;\n  group_by(year) |&gt;\n  summarize(mean = mean(daily_average),\n            median = median(daily_average),\n            sd = sd(daily_average),\n            min = min(daily_average),\n            max = max(daily_average)) |&gt;\n  mutate(range = max - min,\n         lower = mean - sd,\n         upper = mean + sd)"
+  },
+  {
+    "objectID": "slides-04-01.html#visualizing-statistics",
+    "href": "slides-04-01.html#visualizing-statistics",
+    "title": "Summarizing Data",
+    "section": "Visualizing Statistics",
+    "text": "Visualizing Statistics\n\ntemp_desc |&gt;\n  ggplot(aes(x = year, y = mean)) +\n  geom_point()"
   }
 ]

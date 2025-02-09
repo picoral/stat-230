@@ -283,45 +283,91 @@ $ monthly_average &lt;dbl&gt; 11.32770, 11.32770, 11.32770, 11.32770, 11.32770, 
 
 </div>
 <img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="filtering-the-data-by-country" class="slide level2">
-<h2>Filtering the data by country</h2>
+<section id="descriptive-statistics" class="slide level2">
+<h2>Descriptive Statistics</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>temperatures <span class="sc">|&gt;</span></span>
-<span id="cb8-2"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">==</span> <span class="st">"USA"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> monthly_average)) <span class="sc">+</span></span>
-<span id="cb8-4"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<span id="cb8-2"><a></a>  <span class="fu">group_by</span>(year) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(daily_average),</span>
+<span id="cb8-4"><a></a>            <span class="at">median =</span> <span class="fu">median</span>(daily_average),</span>
+<span id="cb8-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(daily_average),</span>
+<span id="cb8-6"><a></a>            <span class="at">min =</span> <span class="fu">min</span>(daily_average),</span>
+<span id="cb8-7"><a></a>            <span class="at">max =</span> <span class="fu">max</span>(daily_average)) <span class="sc">|&gt;</span></span>
+<span id="cb8-8"><a></a>  <span class="fu">mutate</span>(<span class="at">range =</span> max <span class="sc">-</span> min,</span>
+<span id="cb8-9"><a></a>         <span class="at">lower =</span> mean <span class="sc">-</span> sd,</span>
+<span id="cb8-10"><a></a>         <span class="at">upper =</span> mean <span class="sc">+</span> sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["median"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sd"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["min"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["max"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["range"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["lower"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["upper"],"name":[9],"type":["dbl"],"align":["right"]}],"data":[{"1":"1940","2":"17.24140","3":"21.45012","4":"10.766849","5":"-30.45012","6":"37.19891","7":"67.64903","8":"6.474550","9":"28.00825"},{"1":"1941","2":"17.55540","3":"21.72130","4":"10.602514","5":"-27.46886","6":"37.16483","7":"64.63370","8":"6.952882","9":"28.15791"},{"1":"1942","2":"17.39751","3":"21.76003","4":"10.633327","5":"-27.95186","6":"37.41322","7":"65.36507","8":"6.764182","9":"28.03084"},{"1":"1943","2":"17.47135","3":"21.50496","4":"10.083574","5":"-36.24003","6":"38.02807","7":"74.26810","8":"7.387775","9":"27.55492"},{"1":"1944","2":"17.61162","3":"21.80277","4":"10.276341","5":"-31.89362","6":"36.62342","7":"68.51705","8":"7.335283","9":"27.88797"},{"1":"1945","2":"17.43157","3":"21.66587","4":"10.476562","5":"-32.05021","6":"37.57186","7":"69.62207","8":"6.955003","9":"27.90813"},{"1":"1946","2":"17.65614","3":"21.89196","4":"10.334921","5":"-29.17749","6":"36.82945","7":"66.00694","8":"7.321221","9":"27.99106"},{"1":"1947","2":"17.66990","3":"21.73088","4":"10.446685","5":"-28.69009","6":"38.50167","7":"67.19176","8":"7.223215","9":"28.11658"},{"1":"1948","2":"17.54380","3":"21.47728","4":"10.152462","5":"-32.56439","6":"37.92364","7":"70.48803","8":"7.391335","9":"27.69626"},{"1":"1949","2":"17.54422","3":"21.44456","4":"10.132940","5":"-32.57711","6":"34.99027","7":"67.56738","8":"7.411275","9":"27.67716"},{"1":"1950","2":"17.45580","3":"21.64838","4":"10.202771","5":"-30.93112","6":"35.12175","7":"66.05286","8":"7.253031","9":"27.65857"},{"1":"1951","2":"17.69187","3":"21.56095","4":"10.155822","5":"-31.78984","6":"36.76398","7":"68.55382","8":"7.536049","9":"27.84769"},{"1":"1952","2":"17.66943","3":"21.81644","4":"10.279751","5":"-29.32724","6":"36.11005","7":"65.43728","8":"7.389677","9":"27.94918"},{"1":"1953","2":"17.64990","3":"21.61232","4":"10.196020","5":"-31.06910","6":"36.20284","7":"67.27194","8":"7.453884","9":"27.84592"},{"1":"1954","2":"17.43685","3":"21.60020","4":"10.414131","5":"-29.95995","6":"36.62146","7":"66.58141","8":"7.022722","9":"27.85098"},{"1":"1955","2":"17.53219","3":"21.46439","4":"10.129313","5":"-30.34676","6":"35.18557","7":"65.53233","8":"7.402878","9":"27.66150"},{"1":"1956","2":"17.17549","3":"21.34383","4":"10.552759","5":"-31.65159","6":"37.25009","7":"68.90168","8":"6.622730","9":"27.72825"},{"1":"1957","2":"17.65570","3":"21.65765","4":"10.154554","5":"-30.97213","6":"36.17716","7":"67.14929","8":"7.501144","9":"27.81025"},{"1":"1958","2":"17.89191","3":"21.86695","4":"10.238088","5":"-27.84106","6":"36.19281","7":"64.03386","8":"7.653819","9":"28.13000"},{"1":"1959","2":"17.72793","3":"21.62489","4":"10.163357","5":"-30.47743","6":"36.24725","7":"66.72468","8":"7.564572","9":"27.89129"},{"1":"1960","2":"17.85337","3":"21.65776","4":"10.086432","5":"-29.71238","6":"37.39314","7":"67.10552","8":"7.766939","9":"27.93980"},{"1":"1961","2":"17.86825","3":"21.71057","4":"10.036019","5":"-32.25715","6":"37.60120","7":"69.85835","8":"7.832227","9":"27.90426"},{"1":"1962","2":"17.64138","3":"21.74351","4":"10.290245","5":"-30.19636","6":"38.32365","7":"68.52001","8":"7.351137","9":"27.93163"},{"1":"1963","2":"17.63982","3":"21.69736","4":"10.529581","5":"-27.89131","6":"36.99310","7":"64.88441","8":"7.110236","9":"28.16940"},{"1":"1964","2":"17.56440","3":"21.58503","4":"10.424480","5":"-28.34299","6":"36.82785","7":"65.17084","8":"7.139920","9":"27.98888"},{"1":"1965","2":"17.46563","3":"21.45487","4":"10.350243","5":"-29.76298","6":"36.69082","7":"66.45379","8":"7.115386","9":"27.81587"},{"1":"1966","2":"17.85891","3":"21.71903","4":"10.314936","5":"-31.62234","6":"37.07362","7":"68.69596","8":"7.543977","9":"28.17385"},{"1":"1967","2":"17.60741","3":"21.61736","4":"10.209408","5":"-31.28954","6":"35.69445","7":"66.98399","8":"7.398006","9":"27.81682"},{"1":"1968","2":"17.63608","3":"21.51985","4":"10.215206","5":"-31.67621","6":"36.58018","7":"68.25639","8":"7.420876","9":"27.85129"},{"1":"1969","2":"17.75913","3":"21.82445","4":"10.627651","5":"-28.81044","6":"35.12700","7":"63.93744","8":"7.131483","9":"28.38679"},{"1":"1970","2":"17.82116","3":"21.76974","4":"10.305216","5":"-28.42282","6":"35.77766","7":"64.20048","8":"7.515942","9":"28.12637"},{"1":"1971","2":"17.61423","3":"21.59181","4":"10.082055","5":"-32.85033","6":"36.00873","7":"68.85906","8":"7.532170","9":"27.69628"},{"1":"1972","2":"17.67389","3":"21.67141","4":"10.335666","5":"-30.51590","6":"35.66697","7":"66.18287","8":"7.338226","9":"28.00956"},{"1":"1973","2":"17.87457","3":"21.93156","4":"10.340352","5":"-34.27658","6":"36.49528","7":"70.77186","8":"7.534222","9":"28.21493"},{"1":"1974","2":"17.58426","3":"21.50068","4":"10.017684","5":"-34.65836","6":"35.81672","7":"70.47508","8":"7.566572","9":"27.60194"},{"1":"1975","2":"17.71665","3":"21.55097","4":"10.018514","5":"-33.02259","6":"36.59178","7":"69.61437","8":"7.698137","9":"27.73516"},{"1":"1976","2":"17.42483","3":"21.47777","4":"10.248711","5":"-30.59684","6":"35.23687","7":"65.83370","8":"7.176116","9":"27.67354"},{"1":"1977","2":"17.88809","3":"21.72989","4":"10.140417","5":"-27.09593","6":"36.75831","7":"63.85424","8":"7.747672","9":"28.02851"},{"1":"1978","2":"17.69974","3":"21.81824","4":"10.282505","5":"-31.00838","6":"36.40969","7":"67.41806","8":"7.417233","9":"27.98224"},{"1":"1979","2":"17.91292","3":"21.97121","4":"10.292989","5":"-28.16274","6":"36.64651","7":"64.80924","8":"7.619929","9":"28.20591"},{"1":"1980","2":"17.86942","3":"22.04596","4":"10.476435","5":"-29.59805","6":"37.80919","7":"67.40724","8":"7.392986","9":"28.34586"},{"1":"1981","2":"17.91888","3":"21.87802","4":"10.233788","5":"-31.62724","6":"37.64896","7":"69.27621","8":"7.685089","9":"28.15267"},{"1":"1982","2":"17.84584","3":"21.67580","4":"10.247708","5":"-29.56418","6":"37.31364","7":"66.87783","8":"7.598132","9":"28.09355"},{"1":"1983","2":"18.10956","3":"22.08444","4":"10.272700","5":"-33.64811","6":"38.35428","7":"72.00239","8":"7.836861","9":"28.38226"},{"1":"1984","2":"17.75924","3":"21.88605","4":"10.306912","5":"-32.17710","6":"37.97562","7":"70.15272","8":"7.452331","9":"28.06615"},{"1":"1985","2":"17.69926","3":"21.86822","4":"10.539541","5":"-30.11681","6":"37.47423","7":"67.59104","8":"7.159718","9":"28.23880"},{"1":"1986","2":"17.81795","3":"21.89640","4":"10.351516","5":"-28.77840","6":"38.51928","7":"67.29768","8":"7.466436","9":"28.16947"},{"1":"1987","2":"18.09941","3":"22.42634","4":"10.586231","5":"-29.73443","6":"38.71498","7":"68.44940","8":"7.513180","9":"28.68564"},{"1":"1988","2":"18.16562","3":"22.34425","4":"10.258576","5":"-31.03500","6":"38.22169","7":"69.25668","8":"7.907049","9":"28.42420"},{"1":"1989","2":"18.10131","3":"21.89640","4":"9.945564","5":"-33.17722","6":"38.40119","7":"71.57841","8":"8.155742","9":"28.04687"},{"1":"1990","2":"18.37557","3":"22.21079","4":"9.971368","5":"-32.36852","6":"38.09628","7":"70.46480","8":"8.404205","9":"28.34694"},{"1":"1991","2":"18.03109","3":"22.15146","4":"10.276772","5":"-29.44348","6":"36.91386","7":"66.35734","8":"7.754321","9":"28.30787"},{"1":"1992","2":"17.94404","3":"22.12731","4":"10.154906","5":"-31.43452","6":"36.14902","7":"67.58354","8":"7.789133","9":"28.09894"},{"1":"1993","2":"17.96486","3":"22.04638","4":"10.323123","5":"-33.61424","6":"37.98335","7":"71.59759","8":"7.641737","9":"28.28798"},{"1":"1994","2":"18.27841","3":"22.27313","4":"10.139103","5":"-31.33968","6":"36.52920","7":"67.86888","8":"8.139312","9":"28.41752"},{"1":"1995","2":"18.26853","3":"22.39239","4":"10.187766","5":"-32.38098","6":"37.34193","7":"69.72291","8":"8.080761","9":"28.45629"},{"1":"1996","2":"17.95340","3":"22.05159","4":"10.427863","5":"-25.75603","6":"38.62159","7":"64.37762","8":"7.525541","9":"28.38127"},{"1":"1997","2":"18.21515","3":"22.13874","4":"10.175509","5":"-30.11496","6":"37.43399","7":"67.54895","8":"8.039637","9":"28.39066"},{"1":"1998","2":"18.63425","3":"22.67918","4":"10.317360","5":"-31.61769","6":"39.47286","7":"71.09055","8":"8.316890","9":"28.95161"},{"1":"1999","2":"18.37285","3":"22.24351","4":"10.028858","5":"-29.50895","6":"38.53935","7":"68.04830","8":"8.343996","9":"28.40171"},{"1":"2000","2":"18.33408","3":"22.17063","4":"9.987323","5":"-29.49941","6":"39.26550","7":"68.76492","8":"8.346759","9":"28.32141"},{"1":"2001","2":"18.40824","3":"22.29013","4":"10.169505","5":"-28.67033","6":"38.35102","7":"67.02135","8":"8.238737","9":"28.57775"},{"1":"2002","2":"18.58601","3":"22.48967","4":"10.088699","5":"-33.95551","6":"38.69859","7":"72.65410","8":"8.497309","9":"28.67471"},{"1":"2003","2":"18.51935","3":"22.73652","4":"10.294418","5":"-27.28817","6":"37.78121","7":"65.06938","8":"8.224935","9":"28.81377"},{"1":"2004","2":"18.46051","3":"22.37280","4":"10.085764","5":"-30.97393","6":"38.16478","7":"69.13871","8":"8.374749","9":"28.54628"},{"1":"2005","2":"18.52154","3":"22.46389","4":"10.305174","5":"-26.95446","6":"38.71077","7":"65.66523","8":"8.216369","9":"28.82672"},{"1":"2006","2":"18.57061","3":"22.45367","4":"10.208592","5":"-29.16007","6":"38.81483","7":"67.97489","8":"8.362016","9":"28.77920"},{"1":"2007","2":"18.67347","3":"22.68330","4":"9.994655","5":"-28.29099","6":"38.36906","7":"66.66005","8":"8.678815","9":"28.66813"},{"1":"2008","2":"18.51103","3":"22.34009","4":"10.003188","5":"-30.78852","6":"37.92770","7":"68.71622","8":"8.507845","9":"28.51422"},{"1":"2009","2":"18.63233","3":"22.52935","4":"10.165238","5":"-29.68082","6":"37.40055","7":"67.08137","8":"8.467096","9":"28.79757"},{"1":"2010","2":"18.77259","3":"22.90907","4":"10.445104","5":"-25.89394","6":"38.49649","7":"64.39043","8":"8.327485","9":"29.21769"},{"1":"2011","2":"18.50545","3":"22.40443","4":"10.198232","5":"-30.40628","6":"38.17959","7":"68.58587","8":"8.307220","9":"28.70368"},{"1":"2012","2":"18.55735","3":"22.81244","4":"10.426630","5":"-27.69367","6":"39.00491","7":"66.69858","8":"8.130717","9":"28.98398"},{"1":"2013","2":"18.64176","3":"22.62947","4":"10.139803","5":"-28.05673","6":"38.01136","7":"66.06809","8":"8.501957","9":"28.78156"},{"1":"2014","2":"18.81176","3":"22.55623","4":"9.933546","5":"-28.42831","6":"38.27609","7":"66.70440","8":"8.878216","9":"28.74531"},{"1":"2015","2":"18.97277","3":"23.00611","4":"10.048489","5":"-33.02875","6":"39.28819","7":"72.31695","8":"8.924283","9":"29.02126"},{"1":"2016","2":"19.06073","3":"23.10123","4":"10.106319","5":"-27.74615","6":"39.11295","7":"66.85910","8":"8.954414","9":"29.16705"},{"1":"2017","2":"18.92421","3":"22.88855","4":"10.154545","5":"-29.19773","6":"39.88937","7":"69.08711","8":"8.769662","9":"29.07875"},{"1":"2018","2":"18.95305","3":"22.77872","4":"10.092800","5":"-28.50149","6":"38.96035","7":"67.46184","8":"8.860248","9":"29.04585"},{"1":"2019","2":"19.12996","3":"22.97107","4":"10.019721","5":"-29.51828","6":"38.56292","7":"68.08119","8":"9.110241","9":"29.14968"},{"1":"2020","2":"19.11415","3":"23.00397","4":"9.942844","5":"-31.09820","6":"39.72348","7":"70.82168","8":"9.171309","9":"29.05700"},{"1":"2021","2":"18.95375","3":"22.99714","4":"10.174851","5":"-25.92356","6":"39.87753","7":"65.80109","8":"8.778903","9":"29.12860"},{"1":"2022","2":"18.98123","3":"22.91727","4":"9.954836","5":"-30.12734","6":"38.70838","7":"68.83572","8":"9.026394","9":"28.93607"},{"1":"2023","2":"19.39592","3":"23.16877","4":"9.982829","5":"-29.82013","6":"39.22704","7":"69.04718","8":"9.413096","9":"29.37875"},{"1":"2024","2":"19.59496","3":"23.52617","4":"10.052676","5":"-29.47201","6":"39.33851","7":"68.81052","8":"9.542281","9":"29.64763"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="filtering-the-data-by-countries" class="slide level2">
-<h2>Filtering the data by countries</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"USA"</span>, <span class="st">"BRA"</span>)</span>
-<span id="cb9-2"><a></a></span>
-<span id="cb9-3"><a></a>temperatures <span class="sc">|&gt;</span></span>
-<span id="cb9-4"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
-<span id="cb9-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> monthly_average)) <span class="sc">+</span></span>
-<span id="cb9-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
 </div>
-<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="adding-color" class="slide level2">
-<h2>Adding color</h2>
+</div>
+</section>
+<section id="descriptive-statistics-save-results" class="slide level2">
+<h2>Descriptive Statistics – save results</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"USA"</span>, <span class="st">"BRA"</span>)</span>
-<span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a>temperatures <span class="sc">|&gt;</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
-<span id="cb10-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> monthly_average, <span class="at">color =</span> country_code)) <span class="sc">+</span></span>
-<span id="cb10-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>temp_desc <span class="ot">&lt;-</span> temperatures <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">group_by</span>(year) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(daily_average),</span>
+<span id="cb9-4"><a></a>            <span class="at">median =</span> <span class="fu">median</span>(daily_average),</span>
+<span id="cb9-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(daily_average),</span>
+<span id="cb9-6"><a></a>            <span class="at">min =</span> <span class="fu">min</span>(daily_average),</span>
+<span id="cb9-7"><a></a>            <span class="at">max =</span> <span class="fu">max</span>(daily_average)) <span class="sc">|&gt;</span></span>
+<span id="cb9-8"><a></a>  <span class="fu">mutate</span>(<span class="at">range =</span> max <span class="sc">-</span> min,</span>
+<span id="cb9-9"><a></a>         <span class="at">lower =</span> mean <span class="sc">-</span> sd,</span>
+<span id="cb9-10"><a></a>         <span class="at">upper =</span> mean <span class="sc">+</span> sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualizing-statistics" class="slide level2">
+<h2>Visualizing Statistics</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>temp_desc <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> mean)) <span class="sc">+</span></span>
+<span id="cb10-3"><a></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="filtering-the-data-by-country" class="slide level2">
+<h2>Filtering the data by country</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>temperatures <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">==</span> <span class="st">"USA"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> monthly_average)) <span class="sc">+</span></span>
+<span id="cb11-4"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="filtering-the-data-by-countries" class="slide level2">
+<h2>Filtering the data by countries</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"USA"</span>, <span class="st">"BRA"</span>)</span>
+<span id="cb12-2"><a></a></span>
+<span id="cb12-3"><a></a>temperatures <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> monthly_average)) <span class="sc">+</span></span>
+<span id="cb12-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="adding-color" class="slide level2">
+<h2>Adding color</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"USA"</span>, <span class="st">"BRA"</span>)</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a>temperatures <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
+<span id="cb13-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> monthly_average, <span class="at">color =</span> country_code)) <span class="sc">+</span></span>
+<span id="cb13-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
 <section id="extracting-month" class="slide level2">
 <h2>Extracting month</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>temperatures <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(day))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>temperatures <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(day))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -334,33 +380,33 @@ $ monthly_average &lt;dbl&gt; 11.32770, 11.32770, 11.32770, 11.32770, 11.32770, 
 <section id="extracting-month-save-to-data-frame" class="slide level2">
 <h2>Extracting month – save to data frame</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>temperatures <span class="ot">&lt;-</span> temperatures <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(day))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>temperatures <span class="ot">&lt;-</span> temperatures <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(day))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="plot" class="slide level2">
 <h2>Plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>temperatures <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
-<span id="cb13-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> daily_average, <span class="at">color =</span> country_code)) <span class="sc">+</span></span>
-<span id="cb13-4"><a></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>temperatures <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> daily_average, <span class="at">color =</span> country_code)) <span class="sc">+</span></span>
+<span id="cb16-4"><a></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
 <section id="plot-1" class="slide level2">
 <h2>Plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>temperatures <span class="sc">|&gt;</span></span>
-<span id="cb14-2"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
-<span id="cb14-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> daily_average, <span class="at">color =</span> country_code)) <span class="sc">+</span></span>
-<span id="cb14-4"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb14-5"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>temperatures <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">filter</span>(country_code <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> daily_average, <span class="at">color =</span> country_code)) <span class="sc">+</span></span>
+<span id="cb17-4"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb17-5"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 
 
-<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<img data-src="slides-04-01_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
