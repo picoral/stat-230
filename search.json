@@ -950,5 +950,19 @@
     "title": "Summarizing Data",
     "section": "Visualizing Statistics",
     "text": "Visualizing Statistics\n\ntemp_desc |&gt;\n  ggplot(aes(x = year, y = mean)) +\n  geom_point()"
+  },
+  {
+    "objectID": "modules.html#assignment-1",
+    "href": "modules.html#assignment-1",
+    "title": "Modules",
+    "section": "Assignment",
+    "text": "Assignment\n\nAssignment 3"
+  },
+  {
+    "objectID": "assignments/assignment-03.html",
+    "href": "assignments/assignment-03.html",
+    "title": "Assignment 03",
+    "section": "",
+    "text": "Group members\nWhat are your group members (up to 3 people)?\nENTER YOUR ANSWER HERE\n\n\nData\nWhat data set are you using?\nENTER YOUR ANSWER HERE: DESCRIBE THE DATA (WHERE IT IS FROM? WHAT WEBSITE/API?) PROVIDE A DATA DICTIONARY WITH EACH VARIABLE IN THE DATA, THE TYPE OF VARIABLE (CATEGORICAL, CATEGORICAL ORDINAL, NUMERIC CONTINUOUS, NUMERIC DISCRETE) AND A SHORT DESCRIPTION OF EACH VARIABLE\nRead data in:\n\n\nQuestions\nWhat questions are you going to answer with this data set?\nPROVIDE AT LEAST TWO QUESTIONS – ONE DESCRIPTIVE (FOR AT LEAST ONE NUMERIC VARIABLE) AND ONE CATEGORICAL (ADD A GROUP TO THE ANALYSIS OF YOUR CHOSEN NUMERIC VARIABLE)\n\n\nPlots\nDistribution of one numeric variable: plot a histogram of one numeric variable\nBox plot of one numeric variable by one categorical variable: create a box plot of one numeric variable vs. one categorical variable"
   }
 ]
