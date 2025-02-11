@@ -1,0 +1,118 @@
+personality,eye_color,siblings,hours_sleep,bed_time,course_rating
+Introverted,Brown,0,8,Before 8 pm,5
+Introverted,Green,1,7.01,Between 8pm and 10pm,5
+Introverted,Brown,5,8,Before 8 pm,5
+Extroverted,Brown,1,8,After 10pm,5
+Introverted,Brown,3,7.02,After 10pm,5
+Introverted,Brown,0,8.99,Between 8pm and 10pm,5
+Introverted,Brown,0,6.5,After 10pm,5
+Extroverted,Blue,1,7,After 10pm,5
+Extroverted,Brown,1,6,After 10pm,5
+Extroverted,Brown,1,9.5,Between 8pm and 10pm,4
+Introverted,Brown,1,7,After 10pm,5
+Extroverted,Brown,0,7.5,After 10pm,4
+Extroverted,Brown,1,7.24,After 10pm,4
+Introverted,Brown,3,6.01,After 10pm,4
+Extroverted,Brown,3,5.06,After 10pm,4
+Extroverted,Brown,3,6.03,After 10pm,5
+Introverted,Brown,5,6.01,Between 8pm and 10pm,4
+Extroverted,Black,2,6.09,After 10pm,5
+Introverted,Brown,4,6.29,After 10pm,4
+Introverted,Green,1,7.5,Between 8pm and 10pm,4
+Introverted,Brown,2,6.04,After 10pm,3
+Introverted,Black,1,7.02,Between 8pm and 10pm,4
+Extroverted,Brown,3,7,After 10pm,5
+Introverted,Black,1,6.5,After 10pm,4
+Introverted,Brown,2,8,After 10pm,3
+Introverted,Brown,1,8,After 10pm,4
+Introverted,Brown,1,8,After 10pm,4
+Introverted,Brown,1,5.02,After 10pm,3
+Introverted,Brown,5,6.07,After 10pm,3
+Extroverted,Brown,2,5.01,After 10pm,3
+Introverted,Brown,2,9.94,After 10pm,5
+Introverted,Brown,2,6.95,After 10pm,3
+Introverted,Brown,0,5.01,After 10pm,1
+Extroverted,Black,4,7.78,After 10pm,4
+Introverted,Brown,2,5.01,After 10pm,4
+Introverted,Brown,3,6.33,After 10pm,3
+Extroverted,Green,3,7,After 10pm,3
+Introverted,Brown,2,9,After 10pm,4
+Introverted,Brown,2,6.5,After 10pm,5
+Extroverted,Brown,2,5.470000000000001,After 10pm,4
+Introverted,Brown,1,5.88,After 10pm,4
+Introverted,Green,2,6.01,After 10pm,4
+Introverted,Black,1,5.75,After 10pm,3
+Introverted,Brown,2,7.58,After 10pm,1
+Introverted,Black,1,6.99,After 10pm,4
+Introverted,Brown,1,5.359999999999999,After 10pm,3
+Introverted,Brown,2,8.02,Between 8pm and 10pm,4
+Introverted,Brown,2,6.05,After 10pm,4
+Extroverted,Black,1,6.05,Between 8pm and 10pm,4
+Extroverted,Black,1,6.5,After 10pm,3
+Introverted,Blue,1,7.98,After 10pm,5
+Extroverted,Brown,1,7,After 10pm,5
+Introverted,Green,3,7.5,After 10pm,2
+Extroverted,Brown,3,7,Between 8pm and 10pm,4
+Introverted,Black,4,5.01,After 10pm,4
+Introverted,Brown,1,7.609999999999999,After 10pm,5
+Introverted,Brown,1,8,After 10pm,4
+Extroverted,Black,3,7.5,After 10pm,5
+Introverted,Blue,3,5.3,After 10pm,4
+Extroverted,Brown,2,5.02,After 10pm,4
+Introverted,Brown,1,6.02,After 10pm,4
+Introverted,Brown,1,5.99,After 10pm,4
+Introverted,Brown,2,7,After 10pm,4
+Introverted,Brown,4,8.02,Between 8pm and 10pm,1
+Introverted,Brown,3,5.25,After 10pm,3
+Extroverted,Brown,4,7.02,After 10pm,4
+Extroverted,Brown,2,8.02,After 10pm,3
+Introverted,Brown,2,7.5,After 10pm,4
+Introverted,Brown,2,8.02,After 10pm,3
+Introverted,Brown,0,6.05,After 10pm,4
+Introverted,Black,3,6.94,After 10pm,4
+Introverted,Brown,3,7,After 10pm,4
+Introverted,Black,3,8.15,After 10pm,4
+Introverted,Brown,3,7,After 10pm,4
+Extroverted,Brown,2,6.85,After 10pm,4
+Introverted,Brown,4,7.02,After 10pm,3
+Introverted,Green,2,7.31,After 10pm,4
+Extroverted,Brown,0,7.1,After 10pm,4
+Extroverted,Black,3,7,After 10pm,5
+Introverted,Brown,1,7,After 10pm,3
+Introverted,Brown,0,7.05,After 10pm,5
+Extroverted,Brown,2,6.970000000000001,After 10pm,4
+Introverted,Brown,2,7,After 10pm,3
+Introverted,Brown,1,7.5,Between 8pm and 10pm,4
+Introverted,Brown,1,6.52,After 10pm,3
+Introverted,Brown,0,4.01,After 10pm,4
+Introverted,Brown,4,6.970000000000001,After 10pm,4
+Introverted,Brown,2,9.07,After 10pm,4
+Introverted,Brown,1,7.5,After 10pm,3
+Extroverted,Brown,1,6.859999999999999,After 10pm,5
+Extroverted,Brown,1,5.51,After 10pm,5
+Introverted,Brown,3,7.39,After 10pm,4
+Introverted,Black,3,9,After 10pm,4
+Introverted,Brown,1,13,After 10pm,4
+Extroverted,Blue,2,7,After 10pm,4
+Extroverted,Brown,3,2,After 10pm,5
+Introverted,Brown,1,6.5,After 10pm,4
+Extroverted,Blue,1,6.659999999999999,After 10pm,4
+Introverted,Brown,2,5.18,Between 8pm and 10pm,4
+Introverted,Black,1,6.5,After 10pm,5
+Introverted,Brown,1,7.02,After 10pm,4
+Introverted,Brown,5,6.78,After 10pm,5
+Extroverted,Black,0,6.5,After 10pm,4
+Introverted,Black,4,7.819999999999999,After 10pm,4
+Introverted,Black,1,6.05,After 10pm,3
+Extroverted,Blue,1,7,After 10pm,4
+Extroverted,Black,2,8.450000000000001,After 10pm,4
+Extroverted,Black,3,6.87,After 10pm,4
+Extroverted,Blue,2,8.5,After 10pm,5
+Introverted,Brown,2,6.78,Before 8 pm,4
+Extroverted,Black,3,5.99,After 10pm,4
+Extroverted,Black,2,8,Between 8pm and 10pm,5
+Extroverted,Brown,0,7.05,After 10pm,5
+Extroverted,Brown,4,7,After 10pm,3
+Introverted,Brown,3,7.1,After 10pm,1
+Extroverted,Brown,2,8,After 10pm,3
+Extroverted,Brown,0,6.88,After 10pm,5

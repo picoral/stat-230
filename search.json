@@ -53,7 +53,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This course website was created by Adriana Picoral and is licensed under the CC BY-NC-SA 4.0 Creative Commons License.\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format.\nAdapt — remix, transform, and build upon the material.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.\nNon Commercial — You may not use the material for commercial purposes. (Remove this line if commercial use is permitted.)\nShare Alike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. (Include this if Share Alike applies.)"
+    "text": "This course website was created by Adriana Picoral and is licensed under the CC BY-NC-SA 4.0 Creative Commons License.\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format.\nAdapt — remix, transform, and build upon the material.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.\nNon Commercial — You may not use the material for commercial purposes. (Remove this line if commercial use is permitted.)\nShare Alike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. (Include this if Share Alike applies.)\n\nI have based some of my materials on materials created by Mine Çetinkaya-Rundel."
   },
   {
     "objectID": "index.html",
@@ -914,7 +914,7 @@
     "href": "modules.html#slides-2",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nSummarizing Data"
+    "text": "Slides\n\nSummarizing Data\nCounting Categorical Data"
   },
   {
     "objectID": "slides-04-01.html",
@@ -964,5 +964,117 @@
     "title": "Assignment 03",
     "section": "",
     "text": "Group members\nWhat are your group members (up to 3 people)?\nENTER YOUR ANSWER HERE\n\n\nData\nWhat data set are you using?\nENTER YOUR ANSWER HERE: DESCRIBE THE DATA (WHERE IT IS FROM? WHAT WEBSITE/API?) PROVIDE A DATA DICTIONARY WITH EACH VARIABLE IN THE DATA, THE TYPE OF VARIABLE (CATEGORICAL, CATEGORICAL ORDINAL, NUMERIC CONTINUOUS, NUMERIC DISCRETE) AND A SHORT DESCRIPTION OF EACH VARIABLE\nRead data in:\n\n\nQuestions\nWhat questions are you going to answer with this data set?\nPROVIDE AT LEAST TWO QUESTIONS – ONE DESCRIPTIVE (FOR AT LEAST ONE NUMERIC VARIABLE) AND ONE CATEGORICAL (ADD A GROUP TO THE ANALYSIS OF YOUR CHOSEN NUMERIC VARIABLE)\n\n\nPlots\nDistribution of one numeric variable: plot a histogram of one numeric variable\nBox plot of one numeric variable by one categorical variable: create a box plot of one numeric variable vs. one categorical variable"
+  },
+  {
+    "objectID": "slides-04-02.html#categorical-data",
+    "href": "slides-04-02.html#categorical-data",
+    "title": "Counting Categorical Data",
+    "section": "Categorical Data",
+    "text": "Categorical Data\nWe will be working with the survey data from the beginning of the semester.\nDownload the data and set it up in your coding environment.\n\nlibrary(tidyverse)\n\nsurvey &lt;- read_csv(\"data/student-data.csv\")"
+  },
+  {
+    "objectID": "slides-04-02.html#counting-variables",
+    "href": "slides-04-02.html#counting-variables",
+    "title": "Counting Categorical Data",
+    "section": "Counting variables",
+    "text": "Counting variables\nWe can use the count() function to count how many of each value (level) we have in a categorical variable.\n\nsurvey |&gt;\n  count(eye_color)"
+  },
+  {
+    "objectID": "slides-04-02.html#contingency-tables",
+    "href": "slides-04-02.html#contingency-tables",
+    "title": "Counting Categorical Data",
+    "section": "Contingency Tables",
+    "text": "Contingency Tables\nWhen we count how many observations across two categorical variables, we are creating a cross-tab, cross-tabulation, or a contingency table.\n\ntable that displays the frequency distribution of multiple variables\nshows how two or more categorical variables relate to each other\ncommonly used in statistics for analyzing relationships between categorical data"
+  },
+  {
+    "objectID": "slides-04-02.html#contingency-tables-1",
+    "href": "slides-04-02.html#contingency-tables-1",
+    "title": "Counting Categorical Data",
+    "section": "Contingency Tables",
+    "text": "Contingency Tables\n\nsurvey |&gt;\n  count(personality, eye_color)"
+  },
+  {
+    "objectID": "slides-04-02.html#contingency-tables-2",
+    "href": "slides-04-02.html#contingency-tables-2",
+    "title": "Counting Categorical Data",
+    "section": "Contingency Tables",
+    "text": "Contingency Tables\n\nsurvey |&gt;\n  count(personality, eye_color) |&gt;\n  pivot_wider(names_from = personality, values_from = n)\n\n\n  \n\n\n\nEach cell shows the count (frequency) of individuals that fall into both categories."
+  },
+  {
+    "objectID": "slides-04-02.html#contingency-tables-3",
+    "href": "slides-04-02.html#contingency-tables-3",
+    "title": "Counting Categorical Data",
+    "section": "Contingency Tables",
+    "text": "Contingency Tables\nFrom contingency tables, we can:\n\nCalculate proportions and percentages\nPerform statistical tests like chi-square tests to determine if there’s a significant relationship between variables\nIdentify patterns or trends in categorical data\nCompute measures of association"
+  },
+  {
+    "objectID": "slides-04-02.html#bar-plot",
+    "href": "slides-04-02.html#bar-plot",
+    "title": "Counting Categorical Data",
+    "section": "Bar plot",
+    "text": "Bar plot\nA bar plot is a common way to display a single categorical variable.\n\nsurvey |&gt;\n  ggplot(aes(x = eye_color)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides-04-02.html#proportions",
+    "href": "slides-04-02.html#proportions",
+    "title": "Counting Categorical Data",
+    "section": "Proportions",
+    "text": "Proportions\nWe can combine group_by(), summarize(), and mutate() to get proportions\n\nsurvey |&gt;\n  group_by(eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total)"
+  },
+  {
+    "objectID": "slides-04-02.html#relative-frequency-bar-plot",
+    "href": "slides-04-02.html#relative-frequency-bar-plot",
+    "title": "Counting Categorical Data",
+    "section": "Relative Frequency Bar Plot",
+    "text": "Relative Frequency Bar Plot\nA bar plot where proportions instead of frequencies are shown is called a relative frequency bar plot.\n\nsurvey |&gt;\n  group_by(eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = eye_color, y = percent)) +\n  geom_col()"
+  },
+  {
+    "objectID": "slides-04-02.html#how-are-bar-plots-different-than-histograms",
+    "href": "slides-04-02.html#how-are-bar-plots-different-than-histograms",
+    "title": "Counting Categorical Data",
+    "section": "How are bar plots different than histograms?",
+    "text": "How are bar plots different than histograms?\n\nBar plots are used for displaying distributions of categorical variables, while histograms are used for numerical variables.\nThe x-axis in a histogram is a number line, hence the order of the bars cannot be changed\nIn a bar plot the categories can be listed in any order (though some orderings make more sense than others, especially for ordinal variables)"
+  },
+  {
+    "objectID": "slides-04-02.html#ordering-a-bar-plot",
+    "href": "slides-04-02.html#ordering-a-bar-plot",
+    "title": "Counting Categorical Data",
+    "section": "Ordering a bar plot",
+    "text": "Ordering a bar plot\n\nsurvey |&gt;\n  group_by(eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  ggplot(aes(x = reorder(eye_color, -n), y = n)) +\n  geom_col() +\n  labs(x = \"eye color\")"
+  },
+  {
+    "objectID": "slides-04-02.html#proportions-in-contingency-tables",
+    "href": "slides-04-02.html#proportions-in-contingency-tables",
+    "title": "Counting Categorical Data",
+    "section": "Proportions in contingency tables",
+    "text": "Proportions in contingency tables\nWhat is the personality split for each eye color?\n\nsurvey |&gt;\n  group_by(eye_color, personality) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total)"
+  },
+  {
+    "objectID": "slides-04-02.html#proportions-in-contingency-tables-1",
+    "href": "slides-04-02.html#proportions-in-contingency-tables-1",
+    "title": "Counting Categorical Data",
+    "section": "Proportions in contingency tables",
+    "text": "Proportions in contingency tables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total)"
+  },
+  {
+    "objectID": "slides-04-02.html#bar-plots-with-two-variables",
+    "href": "slides-04-02.html#bar-plots-with-two-variables",
+    "title": "Counting Categorical Data",
+    "section": "Bar plots with two variables",
+    "text": "Bar plots with two variables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = personality, y = n, fill = eye_color)) +\n  geom_col()"
+  },
+  {
+    "objectID": "slides-04-02.html#bar-plots-with-two-variables-1",
+    "href": "slides-04-02.html#bar-plots-with-two-variables-1",
+    "title": "Counting Categorical Data",
+    "section": "Bar plots with two variables",
+    "text": "Bar plots with two variables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = personality, y = n, fill = eye_color)) +\n  geom_col(position = \"dodge\")"
+  },
+  {
+    "objectID": "slides-04-02.html#bar-plots-with-two-variables-2",
+    "href": "slides-04-02.html#bar-plots-with-two-variables-2",
+    "title": "Counting Categorical Data",
+    "section": "Bar plots with two variables",
+    "text": "Bar plots with two variables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = personality, y = n, fill = eye_color)) +\n  geom_col(position = \"fill\")"
   }
 ]
