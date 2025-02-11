@@ -1076,5 +1076,19 @@
     "title": "Counting Categorical Data",
     "section": "Bar plots with two variables",
     "text": "Bar plots with two variables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = personality, y = n, fill = eye_color)) +\n  geom_col(position = \"fill\")"
+  },
+  {
+    "objectID": "slides-04-02.html#practice",
+    "href": "slides-04-02.html#practice",
+    "title": "Counting Categorical Data",
+    "section": "Practice",
+    "text": "Practice\nWhat other questions can you answer with this data?\n\nCreate contingency tables\nCreate bar plots based on your tables"
+  },
+  {
+    "objectID": "slides-04-02.html#gradescope-activity",
+    "href": "slides-04-02.html#gradescope-activity",
+    "title": "Counting Categorical Data",
+    "section": "Gradescope activity",
+    "text": "Gradescope activity\nGo to gradescope and click on summarizing data and answer the questions about the survey data we have been working on"
   }
 ]
