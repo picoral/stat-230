@@ -1272,5 +1272,12 @@
     "title": "Case Study",
     "section": "Line plot",
     "text": "Line plot\n\nhappiness |&gt;\n  group_by(regional_indicator, year) |&gt;\n  summarize(mean_score = mean(ladder_score)) |&gt;\n  ggplot(aes(x = year, y = mean_score, color = regional_indicator)) + \n  geom_point() +\n  geom_line()"
+  },
+  {
+    "objectID": "slides-05-01.html#population-vs.-sample",
+    "href": "slides-05-01.html#population-vs.-sample",
+    "title": "Sampling Concepts",
+    "section": "Population vs. Sample",
+    "text": "Population vs. Sample\n\nTarget population:\n\nthe entire group that you want to draw conclusions about\ndefined in terms of age, job, political afilitation, geographical location, age, income\n\nSample: the specific group of individuals that you will collect data from"
   }
 ]
