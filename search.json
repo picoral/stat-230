@@ -1090,5 +1090,187 @@
     "title": "Counting Categorical Data",
     "section": "Gradescope activity",
     "text": "Gradescope activity\nGo to gradescope and click on summarizing data and answer the questions about the survey data we have been working on"
+  },
+  {
+    "objectID": "slides-05-01.html#what-is-sampling",
+    "href": "slides-05-01.html#what-is-sampling",
+    "title": "Sampling Concepts",
+    "section": "What is sampling?",
+    "text": "What is sampling?\n\nSampling is the process of selecting a subset of individuals from a larger population to estimate characteristics of the whole population\nIt’s like tasting a spoonful of soup to judge how the entire pot tastes.\nThe goal is to make inferences about a large population when studying every member would be impractical or impossible\nIt is also used to reduce costs and time while still getting reliable information"
+  },
+  {
+    "objectID": "slides-05-01.html#random-sampling",
+    "href": "slides-05-01.html#random-sampling",
+    "title": "Sampling Concepts",
+    "section": "Random Sampling",
+    "text": "Random Sampling\n\nSimple random sampling: Every member of the population has an equal chance of being selected\nSystematic sampling: Selecting every nth member from a population\nStratified sampling: Dividing the population into subgroups (strata) and sampling from each\nCluster Sampling: Dividing the population into subgroups or clusters, and then some of these clusters are randomly selected for study – all members within those chosen clusters are included in the sample."
+  },
+  {
+    "objectID": "slides-05-01.html#examples",
+    "href": "slides-05-01.html#examples",
+    "title": "Sampling Concepts",
+    "section": "Examples",
+    "text": "Examples\nA high school wants to survey students about cafeteria food. They have 1,000 students.\n\nSimple random sample: a computer randomly selects 100 student ID numbers (every student has an equal chance of being selected)\nStratified sampling: 25 students of each grade level is randomly selected\nSystematic sampling: every 10th student in the school roster is selected\nCluster sampling: homerooms are randomly selected, every student in the homeroom is selected"
+  },
+  {
+    "objectID": "slides-05-01.html#other-types-of-sampling",
+    "href": "slides-05-01.html#other-types-of-sampling",
+    "title": "Sampling Concepts",
+    "section": "Other types of sampling",
+    "text": "Other types of sampling\n\nConvenience sampling: Selecting easily accessible subjects\nPurposive sampling: Choosing subjects based on specific characteristics\nQuota sampling: Selecting subjects based on predetermined proportions"
+  },
+  {
+    "objectID": "slides-05-01.html#consideration-re-samplings",
+    "href": "slides-05-01.html#consideration-re-samplings",
+    "title": "Sampling Concepts",
+    "section": "Consideration re samplings",
+    "text": "Consideration re samplings\n\nSample Size: Larger samples generally provide more accurate estimates but require more resources\nRepresentativeness: The sample should reflect the key characteristics of the population\nSampling Error: The difference between the sample estimate and the true population value\nBias: Systematic errors that can occur due to poor sampling method"
+  },
+  {
+    "objectID": "slides-05-01.html#examples-1",
+    "href": "slides-05-01.html#examples-1",
+    "title": "Sampling Concepts",
+    "section": "Examples",
+    "text": "Examples\nA city wants to study household energy usage. Instead of sampling random houses across the entire city, they randomly select 20 neighborhoods and study all houses within those neighborhoods\nA quality control inspector at a candy factory checks every 50th chocolate bar coming off the production line. If they start with the 5th bar, they would check bars #5, #55, #105, and so on."
+  },
+  {
+    "objectID": "slides-05-01.html#examples-2",
+    "href": "slides-05-01.html#examples-2",
+    "title": "Sampling Concepts",
+    "section": "Examples",
+    "text": "Examples\nA city wants to study household energy usage. Instead of sampling random houses across the entire city, they randomly select 20 neighborhoods and study all houses within those neighborhoods – cluster sampling\nA quality control inspector at a candy factory checks every 50th chocolate bar coming off the production line. If they start with the 5th bar, they would check bars #5, #55, #105, and so on – systematic sampling"
+  },
+  {
+    "objectID": "slides-05-01.html#examples-3",
+    "href": "slides-05-01.html#examples-3",
+    "title": "Sampling Concepts",
+    "section": "Examples",
+    "text": "Examples\nA high school wants to survey students about cafeteria food. They have 1,000 students.\n\nConvenience sampling: students who happen to be at the cafeteria on a Tuesday are selected\nPurposive sampling: students who eat at the cafeteria at least three days a week are selected\nQuota Sampling: quotas by age group are determined, with 60% of students between 16-17 years old, and 50% of students 18 or older – they continue sampling until they meet these quotas"
+  },
+  {
+    "objectID": "slides-05-01.html#examples-4",
+    "href": "slides-05-01.html#examples-4",
+    "title": "Sampling Concepts",
+    "section": "Examples",
+    "text": "Examples\nA researcher studying the effects of marathon running on the body specifically selects participants who have completed at least three marathons in the past year.\nA researcher studying shopping habits interviews customers who happen to be at the mall on a Tuesday afternoon. They’re chosen simply because they’re conveniently available."
+  },
+  {
+    "objectID": "slides-05-01.html#examples-5",
+    "href": "slides-05-01.html#examples-5",
+    "title": "Sampling Concepts",
+    "section": "Examples",
+    "text": "Examples\nA researcher studying the effects of marathon running on the body specifically selects participants who have completed at least three marathons in the past year – purposive sampling\nA researcher studying shopping habits interviews customers who happen to be at the mall on a Tuesday afternoon. They’re chosen simply because they’re conveniently available – covenience sampling"
+  },
+  {
+    "objectID": "slides-05-01.html#simulation",
+    "href": "slides-05-01.html#simulation",
+    "title": "Sampling Concepts",
+    "section": "Simulation",
+    "text": "Simulation\nWe will be working with simulated data for practing sampling.\n\nlibrary(tidyverse)\n\ndata &lt;- read_csv(\"data/simulated-data.csv\")"
+  },
+  {
+    "objectID": "slides-05-01.html#distribution",
+    "href": "slides-05-01.html#distribution",
+    "title": "Sampling Concepts",
+    "section": "Distribution",
+    "text": "Distribution\n\ndata |&gt;\n  ggplot(aes(x = length_cm)) +\n  geom_histogram(bins = 100) +\n  facet_wrap(~color)"
+  },
+  {
+    "objectID": "slides-05-01.html#random-sampling-1",
+    "href": "slides-05-01.html#random-sampling-1",
+    "title": "Sampling Concepts",
+    "section": "Random Sampling",
+    "text": "Random Sampling\n\nrandom_sample &lt;- data |&gt;\n  slice_sample(n = 1000)\n\nrandom_sample |&gt;\n  ggplot(aes(x = length_cm)) +\n  geom_histogram() +\n  facet_wrap(~color)"
+  },
+  {
+    "objectID": "slides-05-01.html#measures-of-centrality",
+    "href": "slides-05-01.html#measures-of-centrality",
+    "title": "Sampling Concepts",
+    "section": "Measures of Centrality",
+    "text": "Measures of Centrality\n\ndata |&gt;\n  group_by(color) |&gt;\n  summarize(n = n(),\n            mean = mean(length_cm),\n            median = median(length_cm))"
+  },
+  {
+    "objectID": "slides-05-01.html#measures-of-centrality-1",
+    "href": "slides-05-01.html#measures-of-centrality-1",
+    "title": "Sampling Concepts",
+    "section": "Measures of Centrality",
+    "text": "Measures of Centrality\n\nrandom_sample |&gt;\n  group_by(color) |&gt;\n  summarize(n = n(),\n            mean = mean(length_cm),\n            median = median(length_cm))"
+  },
+  {
+    "objectID": "slides-05-01.html#systematic-sampling",
+    "href": "slides-05-01.html#systematic-sampling",
+    "title": "Sampling Concepts",
+    "section": "Systematic sampling",
+    "text": "Systematic sampling\n\nsystematic_sample &lt;- data |&gt;\n  slice(seq(1, 1000000, by = 1000))\n\nsystematic_sample |&gt;\n  ggplot(aes(x = length_cm)) +\n  geom_histogram() +\n  facet_wrap(~color)"
+  },
+  {
+    "objectID": "slides-05-01.html#measures-of-centrality-2",
+    "href": "slides-05-01.html#measures-of-centrality-2",
+    "title": "Sampling Concepts",
+    "section": "Measures of Centrality",
+    "text": "Measures of Centrality\n\nsystematic_sample |&gt;\n  group_by(color) |&gt;\n  summarize(n = n(),\n            mean = mean(length_cm),\n            median = median(length_cm))"
+  },
+  {
+    "objectID": "slides-05-02.html#data",
+    "href": "slides-05-02.html#data",
+    "title": "Case Study",
+    "section": "",
+    "text": "We will be using data from the World Happiness Report for this case study.\nDownload the data and set it up in your working environment.\n\nlibrary(tidyverse)\n\nhappiness &lt;- read_csv(\"data/world-happiness-2020-2024.csv\")"
+  },
+  {
+    "objectID": "slides-05-02.html#questions",
+    "href": "slides-05-02.html#questions",
+    "title": "Case Study",
+    "section": "Questions",
+    "text": "Questions\nWhat questions can you ask base don the data?"
+  },
+  {
+    "objectID": "slides-05-02.html#distribution",
+    "href": "slides-05-02.html#distribution",
+    "title": "Case Study",
+    "section": "Distribution",
+    "text": "Distribution\n\nhappiness |&gt;\n  ggplot(aes(x = ladder_score)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "slides-05-02.html#distribution-1",
+    "href": "slides-05-02.html#distribution-1",
+    "title": "Case Study",
+    "section": "Distribution",
+    "text": "Distribution\n\nhappiness |&gt;\n  ggplot(aes(x = ladder_score)) +\n  geom_histogram() +\n  facet_wrap(~regional_indicator)"
+  },
+  {
+    "objectID": "slides-05-02.html#measures-of-centrality-and-variability",
+    "href": "slides-05-02.html#measures-of-centrality-and-variability",
+    "title": "Case Study",
+    "section": "Measures of centrality and variability",
+    "text": "Measures of centrality and variability\n\nhappiness |&gt;\n  group_by(regional_indicator) |&gt;\n  summarize(mean_score = mean(ladder_score),\n            sd_score = sd(ladder_score))\n\n# A tibble: 10 × 3\n   regional_indicator                 mean_score sd_score\n   &lt;chr&gt;                                   &lt;dbl&gt;    &lt;dbl&gt;\n 1 Central and Eastern Europe               6.05    0.503\n 2 Commonwealth of Independent States       5.50    0.445\n 3 East Asia                                5.85    0.397\n 4 Latin America and Caribbean              5.99    0.523\n 5 Middle East and North Africa             5.16    1.13 \n 6 North America and ANZ                    7.07    0.149\n 7 South Asia                               4.25    1.05 \n 8 Southeast Asia                           5.44    0.659\n 9 Sub-Saharan Africa                       4.43    0.662\n10 Western Europe                           6.89    0.607"
+  },
+  {
+    "objectID": "modules.html#slides-3",
+    "href": "modules.html#slides-3",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nSampling\nCase Study"
+  },
+  {
+    "objectID": "slides-05-02.html",
+    "href": "slides-05-02.html",
+    "title": "Case Study",
+    "section": "",
+    "text": "We will be using data from the World Happiness Report for this case study.\nDownload the data and set it up in your working environment.\n\nlibrary(tidyverse)\n\nhappiness &lt;- read_csv(\"data/world-happiness-2020-2024.csv\")"
+  },
+  {
+    "objectID": "slides-05-02.html#bar-plot",
+    "href": "slides-05-02.html#bar-plot",
+    "title": "Case Study",
+    "section": "Bar plot",
+    "text": "Bar plot\n\nhappiness |&gt;\n  group_by(regional_indicator) |&gt;\n  summarize(mean_score = mean(ladder_score),\n            sd_score = sd(ladder_score)) |&gt;\n  ggplot(aes(x = mean_score, \n             y = reorder(regional_indicator, mean_score))) +\n  geom_col() +\n  geom_errorbar(aes(xmin = mean_score-sd_score, xmax = mean_score+sd_score))"
+  },
+  {
+    "objectID": "slides-05-02.html#line-plot",
+    "href": "slides-05-02.html#line-plot",
+    "title": "Case Study",
+    "section": "Line plot",
+    "text": "Line plot\n\nhappiness |&gt;\n  group_by(regional_indicator, year) |&gt;\n  summarize(mean_score = mean(ladder_score)) |&gt;\n  ggplot(aes(x = year, y = mean_score, color = regional_indicator)) + \n  geom_point() +\n  geom_line()"
   }
 ]
