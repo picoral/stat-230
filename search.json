@@ -1327,7 +1327,7 @@
     "href": "slides-05-03.html#hypothesis-testing-t-test",
     "title": "Introduction to Inference",
     "section": "Hypothesis testing: t-test",
-    "text": "Hypothesis testing: t-test\n\nstatistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂\nThe variability in the data (variance, standard deviation)\nThe sample size"
+    "text": "Hypothesis testing: t-test\n\nstatistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂)\nThe variability in the data (variance, standard deviation)\nThe sample size"
   },
   {
     "objectID": "slides-05-03.html#welch-two-sample-t-test",
@@ -1419,5 +1419,12 @@
     "title": "Introduction to Inference",
     "section": "Absence of evidence is not evidence of absence",
     "text": "Absence of evidence is not evidence of absence\n“Absence of evidence is not evidence of absence” means that the fact that we haven’t found evidence for something doesn’t prove that it doesn’t exist.\n\nWhen we fail to reject the null hypothesis, we shouldn’t conclude that the null hypothesis is true - we can only say we don’t have enough evidence to reject it."
+  },
+  {
+    "objectID": "slides-05-03.html#p-value",
+    "href": "slides-05-03.html#p-value",
+    "title": "Introduction to Inference",
+    "section": "p-value",
+    "text": "p-value\n\nthe probability of obtaining test results by chance\nlower the p-value is, the lower the probability of getting that result if the null hypothesis were true\nalpha level α is usually 0.05 (often the alpha level is adjusted if more than one statistical test is run)\n\n“p-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone” – American Statistical Association (ASA)"
   }
 ]
