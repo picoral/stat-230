@@ -1145,7 +1145,7 @@
     "href": "slides-05-01.html#examples-3",
     "title": "Sampling Concepts",
     "section": "Examples",
-    "text": "Examples\nA high school wants to survey students about cafeteria food. They have 1,000 students.\n\nConvenience sampling: students who happen to be at the cafeteria on a Tuesday are selected\nPurposive sampling: students who eat at the cafeteria at least three days a week are selected\nQuota Sampling: quotas by age group are determined, with 60% of students between 16-17 years old, and 50% of students 18 or older – they continue sampling until they meet these quotas"
+    "text": "Examples\nA high school wants to survey students about cafeteria food. They have 1,000 students.\n\nConvenience sampling: students who happen to be at the cafeteria on a Tuesday are selected\nPurposive sampling: students who eat at the cafeteria at least three days a week are selected\nQuota Sampling: quotas by age group are determined, with 50% of students between 16-17 years old, and 50% of students 18 or older – they continue sampling until they meet these quotas"
   },
   {
     "objectID": "slides-05-01.html#examples-4",
@@ -1222,7 +1222,7 @@
     "href": "slides-05-02.html#questions",
     "title": "Case Study",
     "section": "Questions",
-    "text": "Questions\nWhat questions can you ask base don the data?"
+    "text": "Questions\nWhat questions can you ask based on the data?"
   },
   {
     "objectID": "slides-05-02.html#distribution",
