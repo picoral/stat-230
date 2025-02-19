@@ -1425,6 +1425,6 @@
     "href": "slides-05-03.html#p-value",
     "title": "Introduction to Inference",
     "section": "p-value",
-    "text": "p-value\n\nthe probability of obtaining test results by chance\nlower the p-value is, the lower the probability of getting that result if the null hypothesis were true\nalpha level α is usually 0.05 (often the alpha level is adjusted if more than one statistical test is run)\n\n“p-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone” – American Statistical Association (ASA)"
+    "text": "p-value\n\nthe probability of type I error\nlower the p-value is, the lower the probability of getting that result if the null hypothesis were true\nalpha level α is usually 0.05 (often the alpha level is adjusted if more than one statistical test is run)\n\n“p-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone” – American Statistical Association (ASA)"
   }
 ]
