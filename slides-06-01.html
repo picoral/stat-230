@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>STAT 230 Data Science and Statistics – Introduction to Inference</title>
+  <title>STAT 230 Data Science and Statistics – Hypothesis Testing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +27,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-d57132fb69bd09b8e16d42784450680f.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -126,57 +191,197 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introduction to Inference</h1>
+  <h1 class="title">Hypothesis Testing</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
+<section id="hypothesis-testing-t-test" class="slide level2">
+<h2>Hypothesis testing: t-test</h2>
+<ul>
+<li>statistical test used to determine if there’s a significant difference <strong>between the means of two groups</strong></li>
+<li>it helps us decide whether to reject the null hypothesis that any observed difference is just due to chance</li>
+</ul>
+<p>The test looks at:</p>
+<ul>
+<li>The difference between the group means (x̄₁ - x̄₂)</li>
+<li>The variability in the data (variance, standard deviation)</li>
+<li>The sample size</li>
+</ul>
+</section>
+<section id="welch-two-sample-t-test" class="slide level2">
+<h2>Welch Two Sample t-test</h2>
+<p>The Welch t-test formula (also called Welch’s unequal variances t-test) is:</p>
+<p>t = (x̄₁ - x̄₂) / √(s₁²/n₁ + s₂²/n₂)</p>
+<p>Where:</p>
+<ul>
+<li>x̄₁ and x̄₂ are the sample means</li>
+<li>s₁² and s₂² are the sample variances</li>
+<li>n₁ and n₂ are the sample sizes</li>
+</ul>
+</section>
+<section id="the-data" class="slide level2">
+<h2>The data</h2>
+<p>We will be using data <a href="https://worldhappiness.report/faq/">from the World Happiness Report</a> for this case study.</p>
+<p><a href="data/world-happiness-2020-2024.csv">Download the data</a> and set it up in your coding environment.</p>
+<p>If you have already set the data up, then you can reuse the project you had going.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a>happiness <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/world-happiness-2020-2024.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="null-hypothesis" class="slide level2">
 <h2>Null Hypothesis</h2>
-<ul>
-<li>a statistical statement that assumes there is no effect, no difference, or no relationship between variables being studied</li>
-<li>the default position that any observed difference is due to random chance rather than a real effect</li>
-<li>the question is whether there is enough evidence to <strong>reject the null hypothesis</strong></li>
-</ul>
+<p><span class="math inline">\(H_0\)</span> (Null Hypothesis): The difference in mean happiness score between Western Europe and South Asia is due to natural variability inherent in the population.</p>
+<p><span class="math inline">\(H_1\)</span> (Alternative Hypothesis): The difference in mean happiness score between Western Europe and South Asia is real (not due to natural variability).</p>
 </section>
-<section id="hypothesis-testing" class="slide level2">
-<h2>Hypothesis Testing</h2>
-<ul>
-<li>goal: reject the null hypothesis in favor of an alternative hypothesis that suggests there is a real effect</li>
-<li>We only reject the null hypothesis if we find strong statistical evidence against it</li>
-</ul>
-<p>Think of it like a criminal trial - the defendant is presumed innocent (null hypothesis) until proven guilty beyond a reasonable doubt. Similarly, we assume no effect exists until we have strong statistical evidence suggesting otherwise.</p>
+<section id="hypothesis-testing-t-test-1" class="slide level2">
+<h2>Hypothesis testing – t-test</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>two_regions <span class="ot">&lt;-</span> happiness <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a></a>  <span class="fu">filter</span>(regional_indicator <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Western Europe"</span>, <span class="st">"South Asia"</span>))</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="fu">t.test</span>(ladder_score <span class="sc">~</span> regional_indicator, <span class="at">data =</span> two_regions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  ladder_score by regional_indicator
+t = -13.546, df = 37.636, p-value = 4.762e-16
+alternative hypothesis: true difference in means between group South Asia and group Western Europe is not equal to 0
+95 percent confidence interval:
+ -3.037035 -2.247082
+sample estimates:
+    mean in group South Asia mean in group Western Europe 
+                    4.247478                     6.889537 </code></pre>
+</div>
+</div>
+<p>Since the p-value is less than 0.05, we can reject the null hypothesis</p>
 </section>
 <section id="null-hypothesis-1" class="slide level2">
+<h2>Null Hypothesis</h2>
+<p><span class="math inline">\(H_0\)</span> (Null Hypothesis): The difference in mean happiness score between the years of 2020 and 2024 is due to natural variability inherent in the population.</p>
+<p><span class="math inline">\(H_1\)</span> (Alternative Hypothesis): The difference in mean happiness score between the years of 2020 and 2024 is real (not due to natural variability).</p>
+</section>
+<section id="hypothesis-testing-t-test-2" class="slide level2">
+<h2>Hypothesis testing – t-test</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>two_years <span class="ot">&lt;-</span> happiness <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2020</span>, <span class="dv">2024</span>))</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="fu">t.test</span>(ladder_score <span class="sc">~</span> year, <span class="at">data =</span> two_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  ladder_score by year
+t = -0.31048, df = 288.86, p-value = 0.7564
+alternative hypothesis: true difference in means between group 2020 and group 2024 is not equal to 0
+95 percent confidence interval:
+ -0.3023198  0.2199362
+sample estimates:
+mean in group 2020 mean in group 2024 
+          5.486380           5.527572 </code></pre>
+</div>
+</div>
+<p>Since the p-value is greater than 0.05, we are unable to reject the null hypothesis</p>
+</section>
+<section id="absence-of-evidence-is-not-evidence-of-absence" class="slide level2">
+<h2>Absence of evidence is not evidence of absence</h2>
+<p>“Absence of evidence is not evidence of absence” means that the fact that we haven’t found evidence for something doesn’t prove that it doesn’t exist.</p>
+<ul>
+<li>When we fail to reject the null hypothesis, we shouldn’t conclude that the null hypothesis is true - we can only say we don’t have enough evidence to reject it.</li>
+</ul>
+</section>
+<section id="effect-size" class="slide level2">
+<h2>Effect size</h2>
+<ul>
+<li>measure of the <strong>strength</strong> or <strong>magnitude</strong> of a relationship</li>
+<li>unlike statistical significance (p-values), effect size tells you how meaningful or important a difference is in practical terms</li>
+<li>for differences in group means, we use Cohen’s d:</li>
+</ul>
+<center>
+d = (x̄₁ - x̄₂) / √(s₁² + s₂²)/2
+</center>
+<p>Where:</p>
+<ul>
+<li>x̄₁ and x̄₂ are the sample means</li>
+<li>s₁² and s₂² are the sample variances</li>
+</ul>
+</section>
+<section id="effect-size-cohens-d" class="slide level2">
+<h2>Effect size – Cohen’s d</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(lsr)</span>
+<span id="cb6-2"><a></a>western_europe <span class="ot">&lt;-</span> happiness <span class="sc">|&gt;</span> </span>
+<span id="cb6-3"><a></a>  <span class="fu">filter</span>(regional_indicator <span class="sc">==</span> <span class="st">"Western Europe"</span>)</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>south_asia <span class="ot">&lt;-</span> happiness <span class="sc">|&gt;</span> </span>
+<span id="cb6-6"><a></a>  <span class="fu">filter</span>(regional_indicator <span class="sc">==</span> <span class="st">"South Asia"</span>)</span>
+<span id="cb6-7"><a></a></span>
+<span id="cb6-8"><a></a></span>
+<span id="cb6-9"><a></a><span class="fu">cohensD</span>(western_europe<span class="sc">$</span>ladder_score, south_asia<span class="sc">$</span>ladder_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.597635</code></pre>
+</div>
+</div>
+</section>
+<section id="effect-size-cohens-d-1" class="slide level2">
+<h2>Effect size – Cohen’s d</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(lsr)</span>
+<span id="cb8-2"><a></a>year_2020 <span class="ot">&lt;-</span> happiness <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>)</span>
+<span id="cb8-4"><a></a></span>
+<span id="cb8-5"><a></a>year_2024 <span class="ot">&lt;-</span> happiness <span class="sc">|&gt;</span> </span>
+<span id="cb8-6"><a></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2024</span>)</span>
+<span id="cb8-7"><a></a></span>
+<span id="cb8-8"><a></a></span>
+<span id="cb8-9"><a></a><span class="fu">cohensD</span>(year_2020<span class="sc">$</span>ladder_score, year_2024<span class="sc">$</span>ladder_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.03623506</code></pre>
+</div>
+</div>
+</section>
+<section id="hypothesis-testing-anova" class="slide level2">
+<h2>Hypothesis testing – ANOVA</h2>
+<p>ANalysis Of VAriance (ANOVA):</p>
+<ul>
+<li>a statistical test to determine whether <strong>two or more population means</strong> are different</li>
+</ul>
+<p>The core concept is comparing:</p>
+<ul>
+<li>Variation between groups (how different the group means are from each other)</li>
+<li>Variation within groups (how spread out the data is within each group)</li>
+</ul>
+</section>
+<section id="hypothesis-testing-anova-1" class="slide level2">
+<h2>Hypothesis testing – ANOVA</h2>
+<ul>
+<li>ANOVA calculates an F-statistic: the ratio of between-group variance to within-group variance.</li>
+<li>A large F-value suggests the differences between groups are meaningful rather than due to chance.</li>
+</ul>
+</section>
+<section id="null-hypothesis-2" class="slide level2">
 <h2>Null Hypothesis</h2>
 <p><span class="math inline">\(H_0\)</span> (Null Hypothesis): The variables region and happiness score are independent. The difference in scores across different regions was due to natural variability inherent in the population.</p>
 <p><span class="math inline">\(H_1\)</span> (Alternative Hypothesis): The variables region and happiness score are not independent. The difference in scores across different regions was not due to natural variability.</p>
 </section>
-<section id="type-i-and-type-ii-errors" class="slide level2">
-<h2>Type I and Type II errors</h2>
-<p>Type I Error (False Positive):</p>
-<ul>
-<li>Rejecting the null hypothesis when the null hypothesis should not have been rejected</li>
-</ul>
-<p>Type II Error (False Negative):</p>
-<ul>
-<li>Failing to reject the null hypothesis when it should have been rejected</li>
-</ul>
-<p>A courtroom analogy:</p>
-<ul>
-<li>Type I Error: Convicting an innocent person</li>
-<li>Type II Error: Letting a guilty person go free</li>
-</ul>
-</section>
-<section id="p-value" class="slide level2">
-<h2>p-value</h2>
-<ul>
-<li>the probability of type I error</li>
-<li>lower the p-value is, the lower the probability of getting that result if the null hypothesis were true</li>
-<li>alpha level α is usually 0.05 (often the alpha level is adjusted if more than one statistical test is run)</li>
-</ul>
-<p>“p-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone” – American Statistical Association (ASA)</p>
+<section id="hypothesis-testing-one-way-anova" class="slide level2">
+<h2>Hypothesis testing – one-way ANOVA</h2>
+<p>One-way ANOVA: Examines the effect of one independent variable on the response (dependent) variable</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(ladder_score <span class="sc">~</span> regional_indicator, <span class="at">data =</span> happiness)</span>
+<span id="cb10-2"><a></a><span class="fu">summary</span>(anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                    Df Sum Sq Mean Sq F value Pr(&gt;F)    
+regional_indicator   9  562.6   62.51   133.8 &lt;2e-16 ***
+Residuals          717  335.1    0.47                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -395,6 +600,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
