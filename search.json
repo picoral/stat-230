@@ -4,336 +4,182 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Introduction to Modern Statistics 2nd Edition\nR for Data Science"
+    "text": "Topic: Introduction\n\n\n\nSet up your coding environment\nWhat Is Machine Learning?\n\n\n\n\n\nCourse Introduction\nAdvanced Methods Intro\nData\n\n\n\n\n\nBeginning of semester survey"
   },
   {
     "objectID": "modules.html#reading",
     "href": "modules.html#reading",
     "title": "Modules",
-    "section": "Reading",
-    "text": "Reading\n\nChapter 1. Introduction to Data"
+    "section": "",
+    "text": "Set up your coding environment\nWhat Is Machine Learning?"
   },
   {
     "objectID": "modules.html#slides",
     "href": "modules.html#slides",
     "title": "Modules",
-    "section": "Slides",
-    "text": "Slides\n\nCourse Introduction\nWhy statistics?\nVariables\nData"
-  },
-  {
-    "objectID": "modules.html#assignments",
-    "href": "modules.html#assignments",
-    "title": "Modules",
-    "section": "Assignments",
-    "text": "Assignments\nComplete the quarto markdown file linked below with your answers, and submit it to canvas.\n\nAssignment 01\n\nTo open and edit this file, download and install R and RStudio or if you are unable to install software on your devise use Posit Cloud\nIf you need help with this, you can follow these instructions"
-  },
-  {
-    "objectID": "modules.html#reading-1",
-    "href": "modules.html#reading-1",
-    "title": "Modules",
-    "section": "Reading",
-    "text": "Reading\n\nData visualisation"
-  },
-  {
-    "objectID": "modules.html#slides-1",
-    "href": "modules.html#slides-1",
-    "title": "Modules",
-    "section": "Slides",
-    "text": "Slides\n\nDescriptive Statistics – code\nExploring Categorical Data"
-  },
-  {
-    "objectID": "modules.html#reading-2",
-    "href": "modules.html#reading-2",
-    "title": "Modules",
-    "section": "Reading",
-    "text": "Reading\n\nExploring categorical data\nExploring numerical data\nExploratory Data Analysis in R"
+    "section": "",
+    "text": "Course Introduction\nAdvanced Methods Intro\nData"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This course website was created by Adriana Picoral and is licensed under the CC BY-NC-SA 4.0 Creative Commons License.\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format.\nAdapt — remix, transform, and build upon the material.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.\nNon Commercial — You may not use the material for commercial purposes. (Remove this line if commercial use is permitted.)\nShare Alike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. (Include this if Share Alike applies.)\n\nI have based some of my materials on materials created by Mine Çetinkaya-Rundel."
+    "text": "This course website was created by Adriana Picoral and is licensed under the CC BY-NC-SA 4.0 Creative Commons License.\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format.\nAdapt — remix, transform, and build upon the material.\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.\nNon Commercial — You may not use the material for commercial purposes. (Remove this line if commercial use is permitted.)\nShare Alike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. (Include this if Share Alike applies.)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STAT 230 Data Science and Statistics",
-    "section": "",
-    "text": "Course modality: in-person (see next section for information on meeting days, time, and location)"
+    "objectID": "slides-01-01.html#hello",
+    "href": "slides-01-01.html#hello",
+    "title": "Introduction",
+    "section": "Hello",
+    "text": "Hello\n\nAdriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice: Schmitt 374\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
   },
   {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
-    "title": "STAT 230 Data Science and Statistics",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nMATH 111 with a grade of C- or higher or placement through the Montclair State University Placement Test (MSUPT) or MATH 122 with a grade of C- or higher or AMAT 120 with a grade of C- or higher"
-  },
-  {
-    "objectID": "slides-01-00.html#who-am-i",
-    "href": "slides-01-00.html#who-am-i",
-    "title": "STAT 230 – Course Introduction",
-    "section": "Who am I?",
-    "text": "Who am I?\n\nAdriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice: Schmitt 374\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
-  },
-  {
-    "objectID": "slides-01-00.html#active-learning",
-    "href": "slides-01-00.html#active-learning",
-    "title": "STAT 230 – Course Introduction",
+    "objectID": "slides-01-01.html#active-learning",
+    "href": "slides-01-01.html#active-learning",
+    "title": "Introduction",
     "section": "Active Learning",
     "text": "Active Learning\n\nI expect you to actively participate in class (that does not mean you have to speak to the entire group)\nLots of hands-on activities and discussions\nWe will be using Gradescope (more on this later) to submit in-class work and for homework assignments"
   },
   {
-    "objectID": "slides-01-00.html#ice-breaker",
-    "href": "slides-01-00.html#ice-breaker",
-    "title": "STAT 230 – Course Introduction",
+    "objectID": "slides-01-01.html#ice-breaker",
+    "href": "slides-01-01.html#ice-breaker",
+    "title": "Introduction",
     "section": "Ice Breaker",
     "text": "Ice Breaker\n\nFind at least one person to talk to.\nIntroduce yourself (name, major/program, anything else you’d like to share)\nWhat is something you are good at and that took many hours of practice?"
   },
   {
-    "objectID": "slides-01-00.html#course-overview",
-    "href": "slides-01-00.html#course-overview",
-    "title": "STAT 230 – Course Introduction",
+    "objectID": "slides-01-01.html#course-overview",
+    "href": "slides-01-01.html#course-overview",
+    "title": "Introduction",
     "section": "Course Overview",
-    "text": "Course Overview\nUnderstanding data is the primary focus of this course with emphasis on statistical techniques for gathering, analyzing, summarizing and communicating the results of these analyses.\nStatistical software is used.\nIn my sections that means we will be coding in R."
+    "text": "Course Overview\n\nIntroduction to advanced techniques in Data Science\nFocus on both concepts and examples\nFocus on hands-on, bring a laptop to class if you have one\nFocus on real data in assignments"
   },
   {
-    "objectID": "slides-01-00.html#grade-distribution",
-    "href": "slides-01-00.html#grade-distribution",
-    "title": "STAT 230 – Course Introduction",
-    "section": "Grade Distribution",
-    "text": "Grade Distribution\n\n\n\nAssessment Element\nPercentage of Final Grade\n\n\n\n\nIn-class Work\n10%\n\n\nHomework Assignments\n20%\n\n\nQuizzes (5)\n30%\n\n\nGroup Project\n30%\n\n\nFinal Portfolio\n10%"
-  },
-  {
-    "objectID": "slides-01-00.html#in-class-work-and-homework-assignments",
-    "href": "slides-01-00.html#in-class-work-and-homework-assignments",
-    "title": "STAT 230 – Course Introduction",
-    "section": "In-class Work and Homework Assignments",
-    "text": "In-class Work and Homework Assignments\nIn-class work and homework will be submitted to Gradescope.\nSign up for gradescope (it’s free) and enter our course page (Entry Code: 6JBP27)\nUse your @montclair.edu email to sign up for gradescope, so I can match it to your email on canvas"
-  },
-  {
-    "objectID": "slides-01-00.html#quizzes",
-    "href": "slides-01-00.html#quizzes",
-    "title": "STAT 230 – Course Introduction",
-    "section": "Quizzes",
-    "text": "Quizzes\nQuizzes will take place during class (10 minutes)"
-  },
-  {
-    "objectID": "slides-01-00.html#group-project",
-    "href": "slides-01-00.html#group-project",
-    "title": "STAT 230 – Course Introduction",
-    "section": "Group Project",
-    "text": "Group Project\n\n2-3 students\nTopic and research questions of your choosing"
-  },
-  {
-    "objectID": "slides-01-00.html#final-portfolio",
-    "href": "slides-01-00.html#final-portfolio",
-    "title": "STAT 230 – Course Introduction",
-    "section": "Final Portfolio",
-    "text": "Final Portfolio\n\nGithub repo"
-  },
-  {
-    "objectID": "slides-01-01.html#what-is-statistics",
-    "href": "slides-01-01.html#what-is-statistics",
-    "title": "Why statistics?",
-    "section": "What is statistics?",
-    "text": "What is statistics?\ncollection, organization, analysis, interpretation, and presentation of data\nClaude’s answer"
-  },
-  {
-    "objectID": "slides-01-01.html#some-questions",
-    "href": "slides-01-01.html#some-questions",
-    "title": "Why statistics?",
-    "section": "Some Questions",
-    "text": "Some Questions\nHere are some questions we can answer using statistics:\n\nAre some airlines more likely to have delayed flights than others?\nOver the last five years, what is the average time to complete a degree for Montclair State undergrads?\nDoes a new drug reduce the number of deaths in patients with severe heart disease?"
-  },
-  {
-    "objectID": "slides-01-01.html#types-of-questions",
-    "href": "slides-01-01.html#types-of-questions",
-    "title": "Why statistics?",
-    "section": "Types of Questions",
-    "text": "Types of Questions\n\ndescriptive\ncomparative\nrelationship-based\n\nMatch each question in the previous slide with a question type"
-  },
-  {
-    "objectID": "slides-01-01.html#descriptive-research-questions",
-    "href": "slides-01-01.html#descriptive-research-questions",
-    "title": "Why statistics?",
-    "section": "Descriptive Research Questions",
-    "text": "Descriptive Research Questions\nExamples of how to start your descriptive question:\n\nHow many?\nHow often?\nHow frequently?\nHow much?\nWhat percentage?\nWhat proportion?"
-  },
-  {
-    "objectID": "slides-01-01.html#comparative-research-questions",
-    "href": "slides-01-01.html#comparative-research-questions",
-    "title": "Why statistics?",
-    "section": "Comparative research questions",
-    "text": "Comparative research questions\n\nWhat are the differences?"
-  },
-  {
-    "objectID": "slides-01-01.html#relationship-based-questions",
-    "href": "slides-01-01.html#relationship-based-questions",
-    "title": "Why statistics?",
-    "section": "Relationship-based questions?",
-    "text": "Relationship-based questions?\n\nWhat is the relationship between …?\nWhat is the effect of … on …?"
-  },
-  {
-    "objectID": "slides-01-01.html#comparison",
-    "href": "slides-01-01.html#comparison",
-    "title": "Why statistics?",
-    "section": "Comparison",
-    "text": "Comparison\nGo to the Bureau of Transportation Statistics website and try to answer the following question:\n\nWhich of the 4 largest airlines in the US (American, Delta, Southwest, United) has the best On-Time Arrival Performance between January and September 2024?"
-  },
-  {
-    "objectID": "slides-01-01.html#descriptivesummary-statistics",
-    "href": "slides-01-01.html#descriptivesummary-statistics",
-    "title": "Why statistics?",
-    "section": "Descriptive/Summary statistics",
-    "text": "Descriptive/Summary statistics\n\nAmerican: 69.77%\nSouthwest: 76.78%\nUnited: 76.87%\nDelta: 80.36%\n\nCan these summary statistics help you make decisions about which airline to fly?"
-  },
-  {
-    "objectID": "slides-01-01.html#inferential-statistics",
-    "href": "slides-01-01.html#inferential-statistics",
-    "title": "Why statistics?",
-    "section": "Inferential Statistics",
-    "text": "Inferential Statistics\nAre the differences across groups “real”?"
-  },
-  {
-    "objectID": "slides-01-01.html#probability",
-    "href": "slides-01-01.html#probability",
-    "title": "Why statistics?",
-    "section": "Probability",
-    "text": "Probability\n\nIf you flip a coin 100 times, how many times will the coin land heads?\nSuppose it lands 51 heads – can we conclude that the coin is not fair?\n\nObserved differences may be real – or they may be a result of chance (natural variation)\nWe use statistics to determine if differences are large enough that we can reject the hypothesis that they are due to chance"
-  },
-  {
-    "objectID": "slides-01-02.html#lets-collect-some-data",
-    "href": "slides-01-02.html#lets-collect-some-data",
-    "title": "Variables",
-    "section": "Let’s collect some data",
-    "text": "Let’s collect some data\nAnswer this anonymous survey (1-2 minutes)"
-  },
-  {
-    "objectID": "slides-01-02.html#types-of-variables",
-    "href": "slides-01-02.html#types-of-variables",
-    "title": "Variables",
-    "section": "Types of Variables",
-    "text": "Types of Variables\n\ntypes of variables"
-  },
-  {
-    "objectID": "slides-01-02.html#types-of-variables-1",
-    "href": "slides-01-02.html#types-of-variables-1",
-    "title": "Variables",
-    "section": "Types of Variables",
-    "text": "Types of Variables\n\nWhat are the variables collected by the survey you just took?\nWhat are their types?"
-  },
-  {
-    "objectID": "slides-01-02.html#types-of-variables-2",
-    "href": "slides-01-02.html#types-of-variables-2",
-    "title": "Variables",
-    "section": "Types of Variables",
-    "text": "Types of Variables\n\npersonality: categorical\neye_color: categorical\nsiblings: numeric, discrete\nsleep_hours: numeric, continuous\nsleep_time: categorical, ordinal\nrating: categorical, ordinal or numeric, discrete"
-  },
-  {
-    "objectID": "slides-01-02.html#checking-understanding",
-    "href": "slides-01-02.html#checking-understanding",
-    "title": "Variables",
-    "section": "Checking understanding",
-    "text": "Checking understanding\nSign up for gradescope (it’s free) and enter our course page (Entry Code: 6JBP27)\nUse your @montclair.edu email to sign up for gradescope, so I can match it to your email on canvas\nTake the Types of Variables quiz"
-  },
-  {
-    "objectID": "slides-01-02.html#relationships-among-variables",
-    "href": "slides-01-02.html#relationships-among-variables",
-    "title": "Variables",
-    "section": "Relationships among variables",
-    "text": "Relationships among variables\nGPA study hours data\nWhat question is this plot trying to answer?"
-  },
-  {
-    "objectID": "slides-01-02.html#relationships-among-variables-1",
-    "href": "slides-01-02.html#relationships-among-variables-1",
-    "title": "Variables",
-    "section": "Relationships among variables",
-    "text": "Relationships among variables\nGPA study hours data\nAnything weird?"
-  },
-  {
-    "objectID": "slides-01-02.html#relationships-among-variables-2",
-    "href": "slides-01-02.html#relationships-among-variables-2",
-    "title": "Variables",
-    "section": "Relationships among variables",
-    "text": "Relationships among variables\nGPA study hours data\n\n\n\n[1] 0.1330138\n\n\n\nCorrelation does not imply causation"
-  },
-  {
-    "objectID": "slides-01-02.html#explanatory-and-response-variables",
-    "href": "slides-01-02.html#explanatory-and-response-variables",
-    "title": "Variables",
-    "section": "Explanatory and response variables",
-    "text": "Explanatory and response variables\n\nResponse variables are also known as dependent variables\nExplanatory variables are also known as independent variables\nA response variable is the variable that is measured and is expected to change based on the manipulation of other variables (the explanatory variables)\nThe explanatory variables are expected to affect the response variable"
-  },
-  {
-    "objectID": "slides-01-02.html#section",
-    "href": "slides-01-02.html#section",
-    "title": "Variables",
-    "section": "",
-    "text": "Disney Movies vs. Vehicle Thefts\n\nDisney Movies vs. Vehicle Thefts"
-  },
-  {
-    "objectID": "slides-01-02.html#association-vs.-causation",
-    "href": "slides-01-02.html#association-vs.-causation",
-    "title": "Variables",
-    "section": "Association vs. causation",
-    "text": "Association vs. causation\n\nAssociation: when two variables show some connection (like correlation) with one another\nAssociation does not imply causation\nCausation can only be inferred from a randomized experiment"
-  },
-  {
-    "objectID": "slides-02-01.html#coding-environment",
-    "href": "slides-02-01.html#coding-environment",
-    "title": "Getting started with R",
-    "section": "",
-    "text": "We will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud\nIf you need help with using RStudio or Posit cloud follow these instructions"
-  },
-  {
-    "objectID": "slides-02-01.html#working-within-projects",
-    "href": "slides-02-01.html#working-within-projects",
-    "title": "Getting started with R",
-    "section": "Working within Projects",
-    "text": "Working within Projects\nWe will always be working with projects in this class for several reasons:\n\nIt makes your statistical analysis reproducible – meaning, your tables and plots will come directly from your data. If your data changes, you can just render your report again (instead of having to click on a bunch of buttons and trying to remember which order you click on which button)\nIt makes it easier to organized your data, and to keep your original data un-altered (we never change our original data)\nIt allows a report to be run in any computer, instead of running just on your machine (we will be using relative paths to ensure that’s the case)\n\nHere’s how to create a new R project on RStudio Desktop:\n\nClick on File on the top menu, then choose New Project\nOn the pop-up window, click on New Directory and then New Project\nType in a Directory name (for example STAT-230) and choose where your project folder will live in your computer\nClick the Create Project folder\n\nOn Posit Cloud, click on the blue New Project button on the top right, and then click on New RStudio Project"
-  },
-  {
-    "objectID": "slides-02-01.html#packages",
-    "href": "slides-02-01.html#packages",
-    "title": "Getting started with R",
-    "section": "Packages",
-    "text": "Packages\nThere are a number of packages for statistics in R.\nWe will be using tidyverse – which widely used in industry and research.\n\nIn your first.R document type library(tidyverse) and save the document.\nThe IDE will prompt you to install tidyverse – click on. install.\nYou can also run install.packages(\"tydverse\") in the console (lower left panel)."
-  },
-  {
-    "objectID": "slides-02-01.html#data",
-    "href": "slides-02-01.html#data",
-    "title": "Getting started with R",
-    "section": "Data",
-    "text": "Data\nCheese Data"
-  },
-  {
-    "objectID": "slides-01-00.html#course-overview-1",
-    "href": "slides-01-00.html#course-overview-1",
-    "title": "STAT 230 – Course Introduction",
+    "objectID": "slides-01-01.html#course-overview-1",
+    "href": "slides-01-01.html#course-overview-1",
+    "title": "Introduction",
     "section": "Course Overview",
-    "text": "Course Overview\n\nFocus on both concepts and examples\nFocus on hands-on, bring a laptop to class if you have one\nFocus on real data in assignments"
+    "text": "Course Overview\nWhat is missing in this image?"
   },
   {
-    "objectID": "slides-01-03.html#most-data-is-messy-data",
-    "href": "slides-01-03.html#most-data-is-messy-data",
-    "title": "Tidy Data",
-    "section": "Most data is messy data",
-    "text": "Most data is messy data\nEven before we start analyzing data, we have to acquire data\nThere are a lot of data sets openly availabe on the internet, for example:\n\nhttps://data.gov\nhttps://data.europa.eu/en\nhttps://data.un.org\nhttps://data.worldbank.org\nhttps://www.who.int/data"
+    "objectID": "slides-01-01.html#course-overview-2",
+    "href": "slides-01-01.html#course-overview-2",
+    "title": "Introduction",
+    "section": "Course Overview",
+    "text": "Course Overview\nTopics:\n\nReview the cycle of data science: data wrangling, and visualization\nMajor topics: how to make data-driven inferences and decisions by using fundamental techniques in machine learning and neural networks"
   },
   {
-    "objectID": "slides-01-03.html#where-to-find-data",
-    "href": "slides-01-03.html#where-to-find-data",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CSIT-360-557 Syllabus",
+    "section": "",
+    "text": "Course Information\n\nMonday and Wednesday, 12:00 – 1:25pm\nMode: in-person, at School of Business 011\n\n\n\nCourse Description\nThis course provides the advanced techniques in Data Science. After learning data manipulating, processing, cleaning, and visualization, the major goals of this course are to learn how to make data-driven inferences and decisions by using fundamental techniques in machine learning, in Python language.\n\n\nInstructor\n\nAdriana Picoral, PhD\nOffice: Schmitt 374\nemail: picorala@montclair.edu\nOffice Hours (open door/drop in):\n\nTuesdays and Thursdays, 1:45pm to 3:30pm\n\n\n\n\nCourse Outcomes\nUpon completion of the course, students should be able to:\n\nCO1: understand the concepts and various phases of Data Science\nCO2: understand how to use Python data science libraries to demonstrate the data science skills and visualize data\nCO3: understand the concepts of fundamental techniques in machine learning and neural networks\nCO4: implement techniques of machine learning algorithms on data analysis using advanced libraries such as sci-kit learn and TensorFlow in Python\nCO5: apply data science concepts and skills to solve problems with real-world data sets\n\n\n\nCourse Schedule\n\n\n\n\n\n\nWeek\nStart Date\nTopic\n\n\n\n\n01\nJanuary 22\nIntroduction\n\n\n02\nJanuary 29\nPython Review\n\n\n03\nFeb 05\nNumpy & Pandas\n\n\n04\nFebruary 12\nData Wrangling\n\n\n05\nFebruary 19\nSupervised Learning\n\n\n06\nFebruary 26\nSupervised Learning\n\n\n07\nMarch 05\nSupervised Learning\n\n\n08\nMarch 17\nSupervised Learning\n\n\n09\nMarch 24\nSupervised Learning\n\n\n10\nMarch 31\nUnsupervised Learning\n\n\n11\nApril 07\nUnsupervised Learning\n\n\n12\nApril 14\nUnsupervised Learning\n\n\n13\nApril 21\nOther Advanced Techniques\n\n\n14\nApril 28\nFinal Project Presentations\n\n\n\n\n\n\n\n\nGrading Breakdown\n\n\n\nAssessment Element\nPercentage of Final Grade\n\n\n\n\nIn-class Activities\n10%\n\n\nProjects\n30%\n\n\nQuizzes (5)\n30%\n\n\nGroup Project\n20%\n\n\nProject Presentation\n10%\n\n\n\n\n\nLate Work Policy\nStudents are expected to complete work on schedule. The late policy for all assignments is as follows:\n\n20% points off if submitted within 24 hours after the due date\n30% off if submitted 24-48 hours after the due date\nNo credit if submitted two days or more days after the due date unless prior arrangements are made with the instructor with acceptable reasons.\n\nNote: This is a firm policy and it will be automatically applied\n\n\nAttendance Policy\nAttendance is mandatory. All students must sign an attendance sheet at the beginning of class. Excused absences include illness or a serious personal crisis (a letter from the Dean of students is required). If you are missing class and have a reasonable excuse, contact me before lecture if you want to make up missed assessments.\n\n\nGrading Scale\n\n\n\nLetter Grade\nGrade Percentage\n\n\n\n\nA\n94-100%\n\n\nA-\n90-93%\n\n\nB+\n87-89%\n\n\nB\n84-86%\n\n\nB-\n80-83%\n\n\nC+\n77-79%\n\n\nC\n74-76%\n\n\nC-\n70-73%\n\n\nD+ (undergraduate only)\n67-69%\n\n\nD (undergraduate only)\n64-66%\n\n\nD- (undergraduate only)\n60-63%\n\n\nF\n0-59%\n\n\n\n\n\nAcademic Honesty and Integrity\nAcademic Honesty is a core University value. Take time to understand the University’s policy. Your questions about academic honesty are always welcome.\nAll work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. I recommend that when talking with others about the assignment, do not write anything down.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).\nSharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well.\n\n\nLand Acknowledgement\nWe respectfully acknowledge that Montclair State University occupies land in Lenapehoking, the traditional and expropriated territory of the Lenape. As a state institution, we recognize and support the sovereignty of New Jersey’s three state-recognized tribes: the Ramapough Lenape, Nanticoke Lenni-Lenape, and Powhatan Renape nations.\nWe recognize the sovereign nations of the Lenape diaspora elsewhere in North America, as well as other Indigenous individuals and communities now residing in New Jersey. By offering this land acknowledgement, we commit to addressing the historical legacies of Indigenous dispossession and dismantling practices of erasure that persist today. We recognize the resilience and persistence of contemporary Indigenous communities and their role in educating all of us about justice, equity, and the stewardship of the land throughout the generations.\n\n\nSubject to Change\nChanges may be made to this syllabus as needed to support student learning. Any updates will be announced in class or through course materials with advance notice."
+  },
+  {
+    "objectID": "environment.html",
+    "href": "environment.html",
+    "title": "Coding Environment",
+    "section": "",
+    "text": "We will be applying the concepts in this course to hands-on coding applications using real world data. For this, you need to have Python 3.8+ installed in your computer (or a computer that you have access to). I also recommend using Visual Studio Code for your development environment. That is what I will be using during class demonstrations and lecture materials.\nAfter installing and opening VS code, go to the File menu option and then select the Open Folder... option. Open an empty folder that you created, and that you know the location of in your computer. Create a new file that ends with the .py extension. If you do not have Python install in your machine, VS code will prompt you to install it.\nFor the next step you will need to have bash in your machine. If you have a windows machine, you will have to install bash – I recommend you install git bash.\nNext step is to install sckit-learn, one of the packages that we will be working with in this course. To do this, you can open a bash terminal in your VS code and type the following:\npip install -U scikit-learn\nWait and read the terminal standard output to check if the installation was completed successfully."
+  },
+  {
+    "objectID": "slides-01-01.html#coding-tools",
+    "href": "slides-01-01.html#coding-tools",
+    "title": "Introduction",
+    "section": "Coding tools",
+    "text": "Coding tools\n\nWe will be coding in Python for this class.\nFor next lecture (Monday) you are expected to have set up your coding environment."
+  },
+  {
+    "objectID": "slides-01-01.html#what-is-machine-learning",
+    "href": "slides-01-01.html#what-is-machine-learning",
+    "title": "Introduction",
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\n\nsubfield of computer science + statistics\nbuilding algorithms/models based on data (i.e. collection of examples of some phenomenon)"
+  },
+  {
+    "objectID": "slides-01-01.html#types-of-machine-learning",
+    "href": "slides-01-01.html#types-of-machine-learning",
+    "title": "Introduction",
+    "section": "Types of Machine Learning",
+    "text": "Types of Machine Learning\n\nsupervised (labeled data)\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required"
+  },
+  {
+    "objectID": "slides-01-02.html#tidy-data",
+    "href": "slides-01-02.html#tidy-data",
     "title": "Data",
-    "section": "Where to find data",
-    "text": "Where to find data\nEven before we start analyzing data, we have to acquire data\nThere are a lot of data sets openly availabe on the internet, for example:\n\nhttps://data.gov\nhttps://data.europa.eu/en\nhttps://data.un.org\nhttps://data.worldbank.org\nhttps://www.who.int/data"
+    "section": "Tidy Data",
+    "text": "Tidy Data\nThe data we will be working with contains variables as columns and observations as rows"
+  },
+  {
+    "objectID": "slides-01-02.html#matrices-and-vectors",
+    "href": "slides-01-02.html#matrices-and-vectors",
+    "title": "Data",
+    "section": "Matrices and Vectors",
+    "text": "Matrices and Vectors\nFor machine learning, we have a feature matrix that contains all of our predictor variables, and a target vector that contains the label or target for each observation."
+  },
+  {
+    "objectID": "slides-01-02.html#what-is-machine-learning",
+    "href": "slides-01-02.html#what-is-machine-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\n\nsubfield of computer science + statistics\nbuilding algorithms/models based on data (i.e. collection of examples of some phenomenon)"
+  },
+  {
+    "objectID": "slides-01-02.html#types-of-machine-learning",
+    "href": "slides-01-02.html#types-of-machine-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "Types of Machine Learning",
+    "text": "Types of Machine Learning\n\nsupervised (labeled data)\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required – one important step is feature engineering (how to transform data into feature – more on this later)\nDepending on the target type, classification or regression"
+  },
+  {
+    "objectID": "slides-01-02.html#supervised-learning",
+    "href": "slides-01-02.html#supervised-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\n\nLabeled data – input (features), output (target, response)\n\nCan you think of examples of supervised learning?"
+  },
+  {
+    "objectID": "slides-01-02.html#supervised-learning-1",
+    "href": "slides-01-02.html#supervised-learning-1",
+    "title": "Advanced Methods in Data Science",
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\n\nExample: spam vs. not spam\n\nWhat features can we use?"
+  },
+  {
+    "objectID": "slides-01-02.html#supervised-learning-algorithms",
+    "href": "slides-01-02.html#supervised-learning-algorithms",
+    "title": "Advanced Methods in Data Science",
+    "section": "Supervised Learning Algorithms",
+    "text": "Supervised Learning Algorithms\n\nSupport Vector Machines (SVM)\nDecision Tree/Random Forest\nLogistic Regression\nLinear Regression\nNaive Bayes\nK-Nearest Neighbors\n\nHow to decide?"
+  },
+  {
+    "objectID": "slides-01-02.html#unsupervised-learning",
+    "href": "slides-01-02.html#unsupervised-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "Unsupervised Learning",
+    "text": "Unsupervised Learning\n\nClustering (K-Means)\nPrincipal Component Analysis (Dimensionality Reduction)"
+  },
+  {
+    "objectID": "slides-01-02.html#reinforcement-learning",
+    "href": "slides-01-02.html#reinforcement-learning",
+    "title": "Advanced Methods in Data Science",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nRecommendation Systems (users give feed on whether a recommendation was good or not)\nAutomated Robots\nAutonomous Driving\nNatural Language Processing – text prediction, translation"
+  },
+  {
+    "objectID": "slides-01-03.html#data",
+    "href": "slides-01-03.html#data",
+    "title": "Data",
+    "section": "Data",
+    "text": "Data\nThe data we will be working with contains variables as columns and observations as rows (often called tidy data)\nFeature engineering: data –&gt; features\nRemember the spam vs not spam example? How do we go from words to features?"
   },
   {
     "objectID": "slides-01-03.html#data-quality",
     "href": "slides-01-03.html#data-quality",
     "title": "Data",
     "section": "Data quality",
-    "text": "Data quality\nEven before we start analyzing data, we need to make sure our data is tidy\nWhat to look for:\n\na data dictionary\ninformation on how the data were collected"
+    "text": "Data quality\nWhat to look for:\n\na data dictionary\ninformation on how the data were collected"
   },
   {
     "objectID": "slides-01-03.html#data-format",
@@ -343,60 +189,11 @@
     "text": "Data format\n\ntabular – tables, rows and columns\nhierachical – values are nested (like a tree)\nunstructured data – no structure, for example: emails, videos, pictures"
   },
   {
-    "objectID": "slides-01-03.html#whats-tidy-data",
-    "href": "slides-01-03.html#whats-tidy-data",
-    "title": "Data",
-    "section": "What’s tidy data?",
-    "text": "What’s tidy data?\nEven before we start analyzing data, we need to make sure our data is tidy\n\nEach column is a variable\nEach row is an observation\n\nWe can wrangle our raw data to make it tidy"
-  },
-  {
-    "objectID": "slides-01-03.html#data-format-1",
-    "href": "slides-01-03.html#data-format-1",
-    "title": "Data",
-    "section": "Data format",
-    "text": "Data format\nGet data on mortality by country\n\nWhat format is the data?\nWhat are the variables?\n\nThe data you will be working with is often too large for excel."
-  },
-  {
-    "objectID": "slides-01-03.html#example-of-tidy-data",
-    "href": "slides-01-03.html#example-of-tidy-data",
-    "title": "Data",
-    "section": "Example of tidy data",
-    "text": "Example of tidy data\nEach column is a variable, each row is an observation\nCheese data"
-  },
-  {
-    "objectID": "slides-01-03.html#practice",
-    "href": "slides-01-03.html#practice",
-    "title": "Data",
-    "section": "Practice",
-    "text": "Practice\nTake a look at the Apple Sales Dataset on Kaggle and answer the following questions:\n\nWhat are the variables in the data?\nWhat are the variable types? (Categorical – ordinal or not, numeric – discrete or continuous)\nIs this data set tidy? Why (not)?"
-  },
-  {
-    "objectID": "slides-01-03.html#commatab-separated-values",
-    "href": "slides-01-03.html#commatab-separated-values",
-    "title": "Data",
-    "section": "Comma/Tab Separated Values",
-    "text": "Comma/Tab Separated Values\nInspect this data set:\n\nWhat format is it?\nWhat are the variables (and types)?\n\nWhat about this data set"
-  },
-  {
-    "objectID": "slides-01-03.html#json",
-    "href": "slides-01-03.html#json",
-    "title": "Data",
-    "section": "JSON",
-    "text": "JSON\nInspect this weather data\n\nWhat are (some) the variables (and types)?\n\n These data were retrieved using the weather.gov api"
-  },
-  {
     "objectID": "slides-01-03.html#tabular-data",
     "href": "slides-01-03.html#tabular-data",
     "title": "Data",
     "section": "Tabular Data",
     "text": "Tabular Data\nRows and Columns\n\n\n\nDay\nHigh\nLow\nWind\nForecast\n\n\n\n\nTuesday\n24\n15\n0 to 15 mph\nSunny\n\n\nWednesday\n38\n17\n5 to 15 mph\nMostly Sunny\n\n\nThursday\n34\n13\n5 to 15 mph\nMostly Sunny"
-  },
-  {
-    "objectID": "slides-01-03.html#data-format-file-type",
-    "href": "slides-01-03.html#data-format-file-type",
-    "title": "Data",
-    "section": "Data format – file type",
-    "text": "Data format – file type\n\nData can be stored in different types of files\nSome formats can be open only with specific software (for example, .xlsx files)\nOften data is stored in a plain text file, with values separated by a specific charater, for example\n\ncomma (.csv files, or comma separated values)\ntab (.tsv files, or comma separated values)\nJSON (JavaScript Object Notation, hierarchical name–value pairs) – APIs often provide this type of data"
   },
   {
     "objectID": "slides-01-03.html#hierachical-data",
@@ -413,1130 +210,990 @@
     "text": "Unstructured Data\nOne winter, I became very quiet\nand saw my life. It was February\n\nand outside in the city streets,\nsnow fell but would not collect.\n\nI bought snapdragons and thistle,\ngot some discount peach roses\n\nthat smelled off. I split them\nbetween vases and moved\n\nthe bouquets from room to room\nwhile a violin solo rang out.\nfull poem"
   },
   {
-    "objectID": "slides-01-03.html#checking-understanding",
-    "href": "slides-01-03.html#checking-understanding",
+    "objectID": "slides-01-03.html#matrices-and-vectors",
+    "href": "slides-01-03.html#matrices-and-vectors",
     "title": "Data",
-    "section": "Checking Understanding",
-    "text": "Checking Understanding\nAnswer the gradescope questions on Data Formats\nRemember that you can click on save for each answer to get feedback on whether you got the answer correct before clicking on submit"
+    "section": "Matrices and Vectors",
+    "text": "Matrices and Vectors\nFor machine learning, we have a feature matrix that contains all of our predictor variables, and a target vector that contains the label or target for each observation."
   },
   {
-    "objectID": "slides-02-01.html#creating-quarto-documents",
-    "href": "slides-02-01.html#creating-quarto-documents",
-    "title": "Getting started with R",
-    "section": "Creating Quarto Documents",
-    "text": "Creating Quarto Documents\nWe will be creating reproducible reports in this class.\nTo do so, we will be working with Quarto documents.\nDemonstration on how to create a new Quarto document"
+    "objectID": "slides-01-03.html#training-validation-and-testing",
+    "href": "slides-01-03.html#training-validation-and-testing",
+    "title": "Data",
+    "section": "Training, Validation and Testing",
+    "text": "Training, Validation and Testing\nWe usually need enough data to split it into training and validation (and testing)\n\nMost of our data will be used to build our model (training)\nWe never predict data that was in our training data set\nOur validation data set is used to fine tune our model (we can also do cross-validation)\nThe test data set is used to assess the final mode that has been selected during the validation process\n\nThe goal is to not overfit our data to our model"
   },
   {
-    "objectID": "getting-started.html",
-    "href": "getting-started.html",
-    "title": "Using RStudio",
+    "objectID": "slides-01-02.html",
+    "href": "slides-01-02.html",
+    "title": "Advanced Methods in Data Science",
     "section": "",
-    "text": "Posit Cloud\nUse Posit Cloud if you are unable to install software in your computer.\nVideo demostration (no audio)\nSteps:\n\nGo to Posit Cloud (sign up for a free account)\nClick on the New Project button on the top right\nWait for the project to open\nOn the bottom right panel you will see a list of files, with buttons – click on the upload button and then click on the Choose File button\nSelect the .qmd file you want to edit and the click on OK\nThe .qmd file should now be listed in the list of files in the bottom right panel – click on it to open it.\nEdit and save the file\nTo upload the edited .qmd file to canvas, you need to download it first – click on the checkbox next to the file name in the bottom right panel\nClick on the blue gear More icon at the top of that panel – and then choose the Export option. The file is now in your computer.\nGo to the assignment on canvas, start the assignment and upload the file you just downloaded from Posit Cloud\n\n\n\nRStudio Desktop\n\nOpen RStudio, go to File and then choose Open File...\nChoose the .qmd file you want to open and then click on Open\nEdit and save the file\nGo to the assignment on canvas, start the assign and upload the file you just edited and saved in RStudio."
+    "text": "What is it? (discuss)\n\n\n\nsubfield of computer science + statistics\nbuilding algorithms/models based on data (i.e. collection of examples of some phenomenon)\n\n\n\n\n\nsupervised (labeled data) – classification and regression\nsemi-supervised (both labeled and unlabeled data)\nunsupervised (unlabeled data)\nreinforcement (reward system, with the goal of learning a policy)\n\nFor all of these, data is required – one important step is feature engineering (how to transform data into feature – more on this later)\n\n\n\n\nLabeled data – input (features), output (target, response)\n\nCan you think of examples of supervised learning?\n\n\n\n\nExample: spam vs. not spam\n\nWhat features can we use?\n\n\n\n\nSupport Vector Machines (SVM)\nDecision Tree/Random Forest\nLogistic Regression\nLinear Regression\nNaive Bayes\nK-Nearest Neighbors\n\nHow to decide?\n\n\n\n\nClustering (K-Means)\nPrincipal Component Analysis (Dimensionality Reduction)\n\n\n\n\n\nRecommendation Systems (users give feed on whether a recommendation was good or not)\nAutomated Robots\nAutonomous Driving\nNatural Language Processing – text prediction, translation"
+  },
+  {
+    "objectID": "slides-01-01.html",
+    "href": "slides-01-01.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Adriana Picoral (PhD, you can call me Adriana)\npicorala@montclair.edu\nOffice:\nOffice hours: Tuesdays and Thursdays, 1:45pm to 3:30pm"
+  },
+  {
+    "objectID": "environment.html#trouble-shooting",
+    "href": "environment.html#trouble-shooting",
+    "title": "Coding Environment",
+    "section": "Trouble Shooting",
+    "text": "Trouble Shooting\n\nRun where python and which python to find which Python installation your terminal has associated with different python aliases.\nYou can install a package to a specific python installation by running something like this: /usr/local/bin/python3 -m pip install statsmodels"
+  },
+  {
+    "objectID": "environment.html#troubleshooting",
+    "href": "environment.html#troubleshooting",
+    "title": "Coding Environment",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nRun where python and which python to find which Python installation your terminal has associated with different python aliases.\nYou can install a package to a specific python installation by running something like this: /usr/local/bin/python3 -m pip install statsmodels"
+  },
+  {
+    "objectID": "modules.html#assignments",
+    "href": "modules.html#assignments",
+    "title": "Modules",
+    "section": "",
+    "text": "Beginning of semester survey"
+  },
+  {
+    "objectID": "slides-01-03.html#practice",
+    "href": "slides-01-03.html#practice",
+    "title": "Data",
+    "section": "Practice",
+    "text": "Practice\n\nAccess this kaggle dataset on house prices\nWhat are the variables in the data? (is there a data dictionary?)\nWhat is this data set from? What’s its source?\nAny problems you see with it?\nWhich variable could we use as target (response)?\nWhich variables would you use as features? Any feature engineering you can think of?"
+  },
+  {
+    "objectID": "modules.html#video-lessons",
+    "href": "modules.html#video-lessons",
+    "title": "Modules",
+    "section": "Video Lessons",
+    "text": "Video Lessons\n\nOpening data files in VS Code Passcode: Uu5.@XE*"
+  },
+  {
+    "objectID": "pandas-reference.html",
+    "href": "pandas-reference.html",
+    "title": "Pandas – reference sheet",
+    "section": "",
+    "text": "Import the package\n\nimport pandas\n\nYou can provide a shorter alias, which makes it easier to type\n\nimport pandas as pd\n\n\n\nLoad Data"
   },
   {
     "objectID": "slides-02-01.html",
     "href": "slides-02-01.html",
-    "title": "Getting started with R",
+    "title": "Intro to Pandas",
     "section": "",
-    "text": "We will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud\nIf you need help with using RStudio or Posit cloud follow these instructions"
+    "text": "Open a folder (that you have created, with the data we are going to be using) in VS code"
+  },
+  {
+    "objectID": "slides-02-01.html#import-the-package",
+    "href": "slides-02-01.html#import-the-package",
+    "title": "Intro to Pandas",
+    "section": "Import the package",
+    "text": "Import the package\n\nimport pandas\n\nYou can provide a shorter alias, which makes it easier to type\n\nimport pandas as pd"
+  },
+  {
+    "objectID": "slides-02-01.html#load-data",
+    "href": "slides-02-01.html#load-data",
+    "title": "Intro to Pandas",
+    "section": "Load Data",
+    "text": "Load Data\nLet’s use this kaggle dataset on house prices as an example. I downloaded the data and saved it in a folder called data.\n\ndata_frame = pd.read_csv(\"data/US houuse price of 10 states.csv\")"
+  },
+  {
+    "objectID": "slides-02-01.html#inspect-the-data",
+    "href": "slides-02-01.html#inspect-the-data",
+    "title": "Intro to Pandas",
+    "section": "Inspect the data",
+    "text": "Inspect the data\n\ndata_frame.head()\ndata_frame.info()\ndata_frame.describe()\ndata_frame.shape\ndata_frame.columns\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 12075 entries, 0 to 12074\nData columns (total 10 columns):\n #   Column      Non-Null Count  Dtype \n---  ------      --------------  ----- \n 0   date        12075 non-null  object\n 1   house_size  11107 non-null  object\n 2   bed         11410 non-null  object\n 3   bath        11410 non-null  object\n 4   price       11009 non-null  object\n 5   broker      9569 non-null   object\n 6   street      12075 non-null  object\n 7   city        12075 non-null  object\n 8   state_name  12075 non-null  object\n 9   zip_code    12075 non-null  int64 \ndtypes: int64(1), object(9)\nmemory usage: 943.5+ KB\n\n\nIndex(['date', 'house_size', 'bed', 'bath', 'price', 'broker', 'street',\n       'city', 'state_name', 'zip_code'],\n      dtype='object')"
   },
   {
     "objectID": "slides-02-01.html#setting-up-your-coding-environment",
     "href": "slides-02-01.html#setting-up-your-coding-environment",
-    "title": "Getting started with R",
-    "section": "",
-    "text": "We will be applying the statistical concepts we learn in this class using the programming language R.\nI will be using RStudio Desktop during class demonstrations.\n\nInstall R and Download RStudio\n\nAlternatively (if you are unable to download and install software in your computer), you can use Posit Cloud\nIf you need help with using RStudio or Posit cloud follow these instructions"
+    "title": "Intro to Pandas",
+    "section": "Setting up your coding environment",
+    "text": "Setting up your coding environment\nOpen a folder (that you have created, with the data we are going to be using) in VS code"
   },
   {
-    "objectID": "slides-02-01.html#creating-a-r-file",
-    "href": "slides-02-01.html#creating-a-r-file",
-    "title": "Getting started with R",
-    "section": "Creating a R file",
-    "text": "Creating a R file\nWe will start by writing a .R file where we will type in our code, and run the script for our data analysis.\nThese instructions work for both RStudio desktop and Posit Cloud (the IDE is the same):\n\nOn the top menu, click on File then select New File and R Script\nThat will open a file on the top left panel called Untitled1\nGo to File and then click on Save to save the .R file – named if first.R\n\nVideo"
+    "objectID": "slides-02-01.html#inspect-variables",
+    "href": "slides-02-01.html#inspect-variables",
+    "title": "Intro to Pandas",
+    "section": "Inspect variables",
+    "text": "Inspect variables\n\ndata_frame[\"bed\"].head()\ndata_frame[[\"bed\", \"bath\"]].head()\n\n\n\n\n\n\n\n\nbed\nbath\n\n\n\n\n0\n4bd\n4bd\n\n\n1\n2bd\n2bd\n\n\n2\n3bd\n3bd\n\n\n3\nStudio\nStudio\n\n\n4\n3bd\n3bd"
   },
   {
-    "objectID": "slides-02-01.html#reading-data-in-r",
-    "href": "slides-02-01.html#reading-data-in-r",
-    "title": "Getting started with R",
-    "section": "Reading data in R",
-    "text": "Reading data in R\nLet’s start with a data file that contains two numeric variables – GPA vs. Study Hours.\nYou should be familiar with this data set, since we discussed it in class.\nIn your first.R document type the following:\n\ngpa_data &lt;- read_csv(\"https://www.openintro.org/data/csv/gpa_study_hours.csv\")\n\nNote a few things:\n\nWe are using the read_csv function to load our data because the data file we are reading in is a comma separated value text file\nWe are reading the file directly from a web address\nAfter reading the file, R will assign a name to the data – in this case the name is gpa_data. You can name your data frame (what we call the data that has been loaded into R) anything you want, but you should choose meaningful names.\n\nWe will often save the data file to our computer first, and then read the data in from the file you have in our project. That way if the file does not exist anymore at that web address, you can still used.\nHere’s how we go about doing that:\n\nCreate a new folder in your project called data – you can do that by clicking on the New Folder icon at the top of the Files panel\nDownload the data and drag and drop the gpa_study_hours.csv file into the data folder you created\nChange the read_csv function call in your first.R document to: gpa_data &lt;- read_csv(\"data/gpa_study_hours.csv\")"
+    "objectID": "slides-02-01.html#inspect-variables-1",
+    "href": "slides-02-01.html#inspect-variables-1",
+    "title": "Intro to Pandas",
+    "section": "Inspect variables",
+    "text": "Inspect variables\n\ndata_frame[\"bed\"].count() # number of non-null values\ndata_frame[\"bed\"].nunique() # count of unique values\ndata_frame[\"bed\"].value_counts() # count for each unique value\n\nbed\n3bd       5172\n4bd       2998\n2bd       1797\n5bd        762\n1bd        290\nStudio     153\n6bd        150\n7bd         31\n8bd         31\n9bd          9\n12bd         4\n10bd         3\n14bd         2\n21bd         2\n15bd         2\n11bd         2\n16bd         1\n13bd         1\nName: count, dtype: int64"
   },
   {
-    "objectID": "slides-02-01.html#summary-statistics",
-    "href": "slides-02-01.html#summary-statistics",
-    "title": "Getting started with R",
-    "section": "Summary Statistics",
-    "text": "Summary Statistics\nNow that we have the data loaded in R, and we have a name for the data frame (gpa_data), let’s run some summary statistics on it.\nThe goal here is to answer these descriptive questions:\n\nWhat is the average GPA in the data?\n\n\nWhat is the average number of hours studied by the students in the data?\n\n\ngpa_data |&gt;\n  summarize(mean_gpa = mean(gpa),\n            mean_hours = mean(study_hours))\n\n\n  \n\n\n\nSome things to note:\n\nWe start with the data frame name – gpa_data and then we call functions on the data\nThe |&gt; operator is called a pipe and we read it as and then\nTo read in English the code we just ran to get the mean (average) of the numeric variables gpa and study_hours we say:\n\n\nstart with the gpa_data and then summarize by creating two values, mean_gpa and mean_gpa – mean_gpa will have the results from calling the mean() function on the gpa column, and mean_hours will have the results from calling mean() on study_hours"
+    "objectID": "slides-02-01.html#pandas.series.str",
+    "href": "slides-02-01.html#pandas.series.str",
+    "title": "Intro to Pandas",
+    "section": "pandas.Series.str",
+    "text": "pandas.Series.str\nA pandas.Series is one column in our data frame\nRead the documentation on pandas.Series.str – how can we create a numeric variable based on the \"bed\" column?"
   },
   {
-    "objectID": "slides-02-01.html#what-is-a-mean",
-    "href": "slides-02-01.html#what-is-a-mean",
-    "title": "Getting started with R",
-    "section": "What is a mean?",
-    "text": "What is a mean?\nWe calculate the mean (or average) but summing all the values we have for a numeric variable and dividing the resulting sum by the number of observations we have.\n\nConsider we have the following observations for a discrete numeric variable: 10, 8, 9, 10\nWe sum all the four values we have: \\(10 + 8 + 9 + 10 = 37\\)\nFinally we divide the sum by the number of observations: \\(37 / 4 = 9.25\\)\nOur mean is 9.25\n\nThe mean is a measure of central tendency – we will be using two other measure of central tendency: mode and median. (more on this later)"
+    "objectID": "modules.html#video-lesson",
+    "href": "modules.html#video-lesson",
+    "title": "Modules",
+    "section": "Video Lesson",
+    "text": "Video Lesson\n\nOpening data files in VS Code Passcode: Uu5.@XE*"
   },
   {
-    "objectID": "slides-02-01.html#creating-an-r-file",
-    "href": "slides-02-01.html#creating-an-r-file",
-    "title": "Getting started with R",
-    "section": "Creating an R file",
-    "text": "Creating an R file\nWe will start by writing a .R file where we will type in our code, and run the script for our data analysis.\nThese instructions work for both RStudio desktop and Posit Cloud (the IDE is the same):\n\nOn the top menu, click on File then select New File and R Script\nThat will open a file on the top left panel called Untitled1\nGo to File and then click on Save to save the .R file – named if first.R"
+    "objectID": "modules.html#slides-1",
+    "href": "modules.html#slides-1",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nIntro to Pandas\nIntro to Seaborn\nRegular Expressions"
   },
   {
-    "objectID": "slides-02-01.html#plotting-the-data",
-    "href": "slides-02-01.html#plotting-the-data",
-    "title": "Getting started with R",
-    "section": "Plotting the Data",
-    "text": "Plotting the Data\nFor plotting the data, we will be using ggplot, which is part of the tidyverse package.\nWe will start with the data, like we did when calling the summarize function. But this time around we will call the plotting function, ggplot. We will specify the aesthetics using aes to map a variable to the x axis and another variable to the y axis.\n\ngpa_data |&gt;\n  ggplot(aes(y = gpa, x = study_hours))\n\n\n\n\n\n\n\n\nNote that the axes were created with the appropriate labels, but there are no data points shown on the plot yet. That’s because we haven’t specified the geometrics – you haven’t told ggplot how to plot the data. We will do so by adding geom_point() to our code. Make sure you use the + operator. Here’s what the final code block looks like:\n\ngpa_data |&gt;\n  ggplot(aes(y = gpa, x = study_hours)) +\n  geom_point()"
+    "objectID": "slides-02-02.html#set-up-your-coding-environment",
+    "href": "slides-02-02.html#set-up-your-coding-environment",
+    "title": "Intro to Seaborn",
+    "section": "Set up your coding environment",
+    "text": "Set up your coding environment\n\nCreate a new .ipynb in your VS code folder.\nYou might need to run pip install notebook (python3 -m pip install notebook)\nYou also might need to run pip install jupyterlab"
   },
   {
-    "objectID": "slides-02-01.html#commenting-your-first.r-script",
-    "href": "slides-02-01.html#commenting-your-first.r-script",
-    "title": "Getting started with R",
-    "section": "Commenting your first.R script",
-    "text": "Commenting your first.R script\nHere’s what your first.R should look like:\n\nlibrary(tidyverse)\n\ngpa_data |&gt;\n  summarize(mean_gpa = mean(gpa),\n            mean_hours = mean(study_hours))\n\ngpa_data |&gt;\n  ggplot(aes(y = gpa, x = study_hours)) +\n  geom_point()\n\nFor now, we have only R code with no comments. Comments are very important, not only to other people who will be reading your script but also for yourself (your present-self and future-self).\nYou can add comments (meaning, words that will not be parsed as R code) to your script by using the # symbol.\nHere’s what the script looks like with comments:\n\n# load libraries\nlibrary(tidyverse)\n\n# get the mean for gpa and study_hours\ngpa_data |&gt;\n  summarize(mean_gpa = mean(gpa),\n            mean_hours = mean(study_hours))\n\n# create a scatter plot of study_hours and gpa\ngpa_data |&gt;\n  ggplot(aes(y = gpa, x = study_hours)) +\n  geom_point()"
+    "objectID": "slides-02-02.html#import-the-libraries-we-will-be-using",
+    "href": "slides-02-02.html#import-the-libraries-we-will-be-using",
+    "title": "Intro to Seaborn",
+    "section": "Import the libraries we will be using",
+    "text": "Import the libraries we will be using\n\nimport seaborn as sns\n\nMake sure you import pandas and read the data in:\n\nimport pandas as pd\ndata_frame = pd.read_csv(\"data/US houuse price of 10 states.csv\")"
+  },
+  {
+    "objectID": "slides-02-02.html#scatter-plot",
+    "href": "slides-02-02.html#scatter-plot",
+    "title": "Intro to Seaborn",
+    "section": "Scatter plot",
+    "text": "Scatter plot\n\nsns.scatterplot(data = data_frame, x = \"bed_numeric\", y = \"price_numeric\")"
   },
   {
     "objectID": "slides-02-02.html",
     "href": "slides-02-02.html",
-    "title": "Case Study 1 – getting started with R",
+    "title": "Intro to Seaborn",
     "section": "",
-    "text": "Let’s practice what you have learned so far, which is the following:"
+    "text": "Create a new .ipynb in your VS code folder.\nYou might need to run pip install notebook (python3 -m pip install notebook)\nYou also might need to run pip install jupyterlab"
   },
   {
-    "objectID": "slides-02-02.html#the-data",
-    "href": "slides-02-02.html#the-data",
-    "title": "Case Study 1 – getting started with R",
-    "section": "The Data",
-    "text": "The Data\nWe will be working with data on water insecurity, more specifically the 2023 data"
+    "objectID": "slides-02-01.html#filtering-the-data",
+    "href": "slides-02-01.html#filtering-the-data",
+    "title": "Intro to Pandas",
+    "section": "Filtering the data",
+    "text": "Filtering the data\n\ndata_frame[data_frame[\"bed\"] == \"3bd\"]\n\n\n\n\n\n\n\n\ndate\nhouse_size\nbed\nbath\nprice\nbroker\nstreet\ncity\nstate_name\nzip_code\n\n\n\n\n2\nAUG 29, 2024\n1,926 sqft (on 0.45 acres)\n3bd\n3bd\n$375,000\nColdwell Banker Hartung\n6761 Landover Cir\nTallahassee\nFlorida\n32317\n\n\n4\nAUG 29, 2024\n1,205 sqft\n3bd\n3bd\n$233,900\nD R Horton Realty of NW Florida, LLC\n6274 June Bug Dr\nMilton\nFlorida\n32583\n\n\n14\nAUG 28, 2024\n1,820 sqft\n3bd\n3bd\n$330,500\nEXP Realty, LLC\n8564 Westview Ln\nPensacola\nFlorida\n32514\n\n\n15\nAUG 28, 2024\n1,370 sqft\n3bd\n3bd\n$173,000\nBetter Homes And Gardens Real Estate Main Stre...\n6905 Woodley Dr\nPensacola\nFlorida\n32503\n\n\n17\nAUG 28, 2024\n2,681 sqft (on 1.82 acres)\n3bd\n3bd\n$525,000\nAmerican Valor Realty LLC\n8021 Quiet Dr\nPensacola\nFlorida\n32526\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n12059\nAUG 30, 2024\n2,610 sqft\n3bd\n3bd\n$1,143,909\nBALBOA REAL ESTATE, INC.\n50525 Spyglass Hill Dr\nLa Quinta\nCA\n92253\n\n\n12063\nAUG 30, 2024\n1,983 sqft (on 1 acre)\n3bd\n3bd\n$1,385,000\nCompass\n10241 McBroom St\nSunland\nCA\n91040\n\n\n12065\nAUG 30, 2024\n1,757 sqft\n3bd\n3bd\n$568,000\nBerkshire Hathaway Home Serv.\n26848 Hanford St\nMenifee\nCA\n92584\n\n\n12069\nAUG 30, 2024\n2,000 sqft\n3bd\n3bd\n$1,880,000\nReal Estate Legends USA\n16 Riveroaks\nIrvine\nCA\n92602\n\n\n12074\nAUG 30, 2024\n1,615 sqft\n3bd\n3bd\n$508,000\nStarlitloan&Realty\n1668 Ravenswood Rd\nBeaumont\nCA\n92223\n\n\n\n\n5172 rows × 10 columns"
   },
   {
-    "objectID": "slides-02-02.html#load-and-inspect-the-data",
-    "href": "slides-02-02.html#load-and-inspect-the-data",
-    "title": "Case Study 1 – getting started with R",
-    "section": "Load and inspect the data",
-    "text": "Load and inspect the data\nAfter you created a new R script – I named my script water_insecurity.R, we need to load tidyverse and read the data in. I saved the .csv file in my data folder in my project.\n\n# load packages\nlibrary(tidyverse)\n\n# read data in\nwater_data &lt;- read_csv(\"data/water_insecurity_2023.csv\")\n\nLet’s inspect the data to understand what variables we are dealing with.\nWe can run glimpse() on the data to get information about how many observations and what columns we have in our data:\n\nwater_data |&gt;\n  glimpse()\n\nRows: 854\nColumns: 7\n$ geoid                    &lt;chr&gt; \"01003\", \"01069\", \"06037\", \"06087\", \"06097\", …\n$ name                     &lt;chr&gt; \"Baldwin County, Alabama\", \"Houston County, A…\n$ year                     &lt;dbl&gt; 2023, 2023, 2023, 2023, 2023, 2023, 2023, 202…\n$ geometry                 &lt;chr&gt; \"list(list(c(765297.99052762, 765703.76567671…\n$ total_pop                &lt;dbl&gt; 253507, 108462, 9663345, 261547, 481812, 1155…\n$ plumbing                 &lt;dbl&gt; 271, 30, 5248, 187, 308, 517, 4, 198, 1269, 8…\n$ percent_lacking_plumbing &lt;dbl&gt; 0.106900401, 0.027659457, 0.054308317, 0.0714…\n\n\nWhen we see &lt;chr&gt; next to values that means R read that column values as character (or string) – meaning, it is a categorical variable. When you see &lt;dbl&gt; that means the colum values are double (or float) – meaning, it is a continuous numeric variable."
+    "objectID": "slides-02-01.html#handling-missing-data-drop-missing-data",
+    "href": "slides-02-01.html#handling-missing-data-drop-missing-data",
+    "title": "Intro to Pandas",
+    "section": "Handling Missing Data – drop missing data",
+    "text": "Handling Missing Data – drop missing data\nDocumentation on .dropna()\n\ndata_frame.dropna()\n\n\n\n\n\n\n\n\ndate\nhouse_size\nbed\nbath\nprice\nbroker\nstreet\ncity\nstate_name\nzip_code\n\n\n\n\n2\nAUG 29, 2024\n1,926 sqft (on 0.45 acres)\n3bd\n3bd\n$375,000\nColdwell Banker Hartung\n6761 Landover Cir\nTallahassee\nFlorida\n32317\n\n\n3\nAUG 29, 2024\n1,132 sqft\nStudio\nStudio\n$190,000\nEXP Realty, LLC\n1701 S Fairfield Dr\nPerdido Key\nFlorida\n32507\n\n\n4\nAUG 29, 2024\n1,205 sqft\n3bd\n3bd\n$233,900\nD R Horton Realty of NW Florida, LLC\n6274 June Bug Dr\nMilton\nFlorida\n32583\n\n\n5\nAUG 29, 2024\n3,044 sqft (on 0.34 acres)\n4bd\n4bd\n$416,402\nADAMS HOME REALTY, INC\n6528 Benelli Dr\nMilton\nFlorida\n32570\n\n\n13\nAUG 28, 2024\n1,254 sqft\n2bd\n2bd\n$250,000\nJANET COULTER REALTY\n520 Richard Jackson Blvd #2810\nPanama City Beach\nFlorida\n32407\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n12067\nAUG 30, 2024\n2,352 sqft\n4bd\n4bd\n$795,000\nRealty Masters\n12549 Navel Ct\nRiverside\nCA\n92503\n\n\n12069\nAUG 30, 2024\n2,000 sqft\n3bd\n3bd\n$1,880,000\nReal Estate Legends USA\n16 Riveroaks\nIrvine\nCA\n92602\n\n\n12070\nAUG 30, 2024\n3,835 sqft\n5bd\n5bd\n$1,935,000\nRealty ONE Group Pacific\n1154 Via Vera Cruz\nSan Marcos\nCA\n92078\n\n\n12072\nAUG 30, 2024\n2,616 sqft\n4bd\n4bd\n$685,000\nAnderson Real Estate Group\n5509 W Modoc Avenue\nVisalia\nCA\n93291\n\n\n12074\nAUG 30, 2024\n1,615 sqft\n3bd\n3bd\n$508,000\nStarlitloan&Realty\n1668 Ravenswood Rd\nBeaumont\nCA\n92223\n\n\n\n\n8068 rows × 10 columns"
   },
   {
-    "objectID": "slides-02-02.html#descriptive-question",
-    "href": "slides-02-02.html#descriptive-question",
-    "title": "Case Study 1 – getting started with R",
-    "section": "Descriptive question",
-    "text": "Descriptive question\nLet’s answer this question:\n\nWhat’s the average percentage of homes lacking plumbing in the US?\n\n\nwater_data |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing))\n\n\n  \n\n\n\nOh oh – we got a NA for the mean (Not Available). That means there are missing values in the data. We can ignore the missing values by setting the na.rm parameter (remove NAs) to TRUE:\n\nwater_data |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing, na.rm = TRUE))\n\n\n  \n\n\n\n\nThe average percentage of American homes lacking pumbling is around 10.2%"
+    "objectID": "slides-02-01.html#handling-missing-data-fill-missing-data",
+    "href": "slides-02-01.html#handling-missing-data-fill-missing-data",
+    "title": "Intro to Pandas",
+    "section": "Handling Missing Data – fill missing data",
+    "text": "Handling Missing Data – fill missing data\nDocumentation on .fillna()\n\ndata_frame.fillna(0)\ndata_frame.ffill()\ndata_frame.bfill()\ndata_frame.fillna(data_frame.mean())\ndata_frame[\"bed_numeric\"].fillna(data_frame[\"bed_numeric\"].mean())"
   },
   {
-    "objectID": "slides-02-02.html#plotting-numeric-variables",
-    "href": "slides-02-02.html#plotting-numeric-variables",
-    "title": "Case Study 1 – getting started with R",
-    "section": "Plotting numeric variables",
-    "text": "Plotting numeric variables\nLet’s create a scatter plot of The total owner occupied households lacking plumbing facilities and The total population – the plumbing and total_pop variables.\n\nwater_data |&gt;\n  ggplot(aes(y = plumbing, x = total_pop)) +\n  geom_point()"
+    "objectID": "slides-02-03.html#regex",
+    "href": "slides-02-03.html#regex",
+    "title": "Regular Expressions",
+    "section": "Regex",
+    "text": "Regex\nRegular expressions are:\n\npatterns used to match and manipulate text strings"
   },
   {
-    "objectID": "slides-02-02.html#comparative-questions",
-    "href": "slides-02-02.html#comparative-questions",
-    "title": "Case Study 1 – getting started with R",
-    "section": "Comparative questions",
-    "text": "Comparative questions\nWe can try to answer the following question with these data:\n\nWhat is the average percentage of homes lacking pumbling across different US states?\n\nNote that we do not have a state variable in our data – we have a name column that contains a county name, a comma, and the state name.\nWe can create a separate state name column by using the separate() function:\n\n\n\n  \n\n\n\n\nwater_data |&gt;\n  separate(name, into = c(\"county\", \"state\"), sep = \", \")\n\nThat seemed to have worked – but my water_data hasn’t changed. We need to overwrite the data, by assigning the results of our separate to our data frame name, by adding water_data &lt;- before our code block:\n\nwater_data &lt;- water_data |&gt;\n  separate(name, into = c(\"county\", \"state\"), sep = \", \")\n\nWe can now summarize the mean of percent_lacking_plumbing by our newly created column state (remember to remove NAs).\nFor this, we will add group_by(state) before our summarize call:\n\nwater_data |&gt;\n  group_by(state) |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing, na.rm = TRUE))\n\n\n  \n\n\n\nLet’s sort our results, so we do comparisons more easily. We will add arrange(mean_lacking_pumbling) to the end of our code block:\n\nwater_data |&gt;\n  group_by(state) |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing, na.rm = TRUE)) |&gt;\n  arrange(mean_lacking_pumbling)"
+    "objectID": "slides-02-03.html#other-syntax",
+    "href": "slides-02-03.html#other-syntax",
+    "title": "Regular Expressions",
+    "section": "Other syntax",
+    "text": "Other syntax\n\n\\d - matches any digit (0-9)\n\\w - matches any word character (a-z, A-Z, 0-9, _)\n\\s - matches any whitespace character (space, tab, newline)\n[] used to indicate a set of characters.\n{m} matches m times\n{m,n} matches m to n times\n\ne.g., lower case letters: [a-z], upper case letters: [A-Z]"
   },
   {
-    "objectID": "slides-02-02.html#plotting-results",
-    "href": "slides-02-02.html#plotting-results",
-    "title": "Case Study 1 – getting started with R",
-    "section": "Plotting results",
-    "text": "Plotting results\nThat is a quite a wide range of percentages.\nLet’s plot our results.\nTo do so, we will create a new data frame with our results. I wil name this new data frame by_state:\n\nby_state &lt;- water_data |&gt;\n  group_by(state) |&gt;\n  summarize(mean_lacking_pumbling = mean(percent_lacking_plumbing, na.rm = TRUE)) |&gt;\n  arrange(mean_lacking_pumbling)\n\nLet’s create a column plot, with state on the y axis and mean_lacking_pumbling on the x axis:\n\nby_state |&gt;\n  ggplot(aes(y = state, x = mean_lacking_pumbling))\n\n\n\n\n\n\n\n\nWe need a geometrics, in this case we will use geom_col():\n\nby_state |&gt;\n  ggplot(aes(y = state, x = mean_lacking_pumbling)) +\n  geom_col()\n\n\n\n\n\n\n\n\nThe variable state is a categorical variable, nominal (meaning, there’s no order to it) – let’s order state by our numeric variable so it’s easier the plot is more meaningful:\n\nby_state |&gt;\n  ggplot(aes(y = reorder(state, mean_lacking_pumbling), \n             x = mean_lacking_pumbling)) +\n  geom_col()"
+    "objectID": "slides-02-03.html#python-examples",
+    "href": "slides-02-03.html#python-examples",
+    "title": "Regular Expressions",
+    "section": "Python examples",
+    "text": "Python examples\nEmail validation pattern:\n\npattern = r'^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$'\n\nPhone number pattern (US format):\n\npattern = r'\\d{3}-\\d{3}-\\d{4}'"
   },
   {
-    "objectID": "modules.html#tutorials",
-    "href": "modules.html#tutorials",
-    "title": "Modules",
-    "section": "Tutorials",
-    "text": "Tutorials\n\nGetting Started with R\nCase Study 1"
+    "objectID": "slides-02-03.html#basic-patterns",
+    "href": "slides-02-03.html#basic-patterns",
+    "title": "Regular Expressions",
+    "section": "Basic Patterns",
+    "text": "Basic Patterns\n\nLiteral characters match themselves (“cat” matches “cat”)\nSpecial characters have specific meanings:\n\n. (dot) - matches any single character except newline\n* matches 0 or more of the previous character\n+ matches 1 or more of the previous character\n? - matches 0 or 1 of the previous character\n^ - matches start of line\n$ - matches end of line"
   },
   {
-    "objectID": "slides-02-01.html#video-demonstration-part-1",
-    "href": "slides-02-01.html#video-demonstration-part-1",
-    "title": "Getting started with R",
-    "section": "Video Demonstration – Part 1",
-    "text": "Video Demonstration – Part 1\nPasscode: @3HLA%sf\nVideo Demonstration of Project to Packages"
-  },
-  {
-    "objectID": "slides-02-01.html#video-demonstration-part-2",
-    "href": "slides-02-01.html#video-demonstration-part-2",
-    "title": "Getting started with R",
-    "section": "Video Demonstration – Part 2",
-    "text": "Video Demonstration – Part 2\nPasscode: zF96h$us\nReading Data in R Video"
-  },
-  {
-    "objectID": "slides-02-01.html#video-demonstration-part-3",
-    "href": "slides-02-01.html#video-demonstration-part-3",
-    "title": "Getting started with R",
-    "section": "Video Demonstration – Part 3",
-    "text": "Video Demonstration – Part 3\nPasscode: 5s.?2m%X\nMeans and Scatterplot Video"
-  },
-  {
-    "objectID": "slides-03-01.html#what-is-descriptive-statistics",
-    "href": "slides-03-01.html#what-is-descriptive-statistics",
-    "title": "Descriptive Statistics",
-    "section": "What is descriptive statistics?",
-    "text": "What is descriptive statistics?\n\nsummarize a given data set\nmeasures of:\n\ndistribution (how data is spread out and how frequently different values occur)\ncentral tendency (mean, median, mode)\nvariability (range, standard deviation, variance, interquartile range – IQR)"
-  },
-  {
-    "objectID": "slides-03-01.html#the-data",
-    "href": "slides-03-01.html#the-data",
-    "title": "Descriptive Statistics",
-    "section": "The data",
-    "text": "The data\nWe will be using US demographic data for our exploratory analyses.\nYou can download the csv file and add it to your RStudio (or Posit Cloud) project.\nCreate a new R script file and save it as county-data-analysis.R and load the tidyverse package and the data.\n\nlibrary(tidyverse)\ncounty &lt;- read_csv(\"data/county.csv\")"
-  },
-  {
-    "objectID": "slides-03-01.html#review-of-steps",
-    "href": "slides-03-01.html#review-of-steps",
-    "title": "Descriptive Statistics",
-    "section": "Review of steps",
-    "text": "Review of steps\nLet’s practice what we have covered so far, which is the following:\n\nSummarize the data by calculating the mean of the numeric variables\nCreate a scatter plot of two numeric variables\n\n\ncounty |&gt;\n  summarize(mean_poverty = mean(poverty, na.rm = TRUE))"
-  },
-  {
-    "objectID": "slides-03-01.html#scatterplot",
-    "href": "slides-03-01.html#scatterplot",
-    "title": "Descriptive Statistics",
-    "section": "Scatterplot",
-    "text": "Scatterplot\n\ncounty |&gt;\n  ggplot(aes(y = poverty, x = unemployment_rate)) +\n  geom_point()"
-  },
-  {
-    "objectID": "slides-03-01.html#distribution",
-    "href": "slides-03-01.html#distribution",
-    "title": "Descriptive Statistics",
-    "section": "Distribution",
-    "text": "Distribution\nHow data is spread out and how frequently different values occur.\nHistogram: the frequency distribution of a continuous variable\n\ncounty |&gt;\n  ggplot(aes(x = unemployment_rate)) + \n  geom_histogram()"
-  },
-  {
-    "objectID": "slides-03-01.html#histogram",
-    "href": "slides-03-01.html#histogram",
-    "title": "Descriptive Statistics",
-    "section": "Histogram",
-    "text": "Histogram\n\nProvides a view of the data density\nDescribes the sahpe of the data distribution\nHigher bars represent where what values are more common"
-  },
-  {
-    "objectID": "slides-03-01.html#histogram-1",
-    "href": "slides-03-01.html#histogram-1",
-    "title": "Descriptive Statistics",
-    "section": "Histogram",
-    "text": "Histogram\n\nx-axis shows the data ranges (bins)\ny-axis shows the frequency (count or percentage)\nbins: intervals the data range is divided into, each bin displays one bar\nthe height of each bar shows how many data points fall within that bin\nthe shape shows the distribution pattern (normal, skewed, bimodal, etc.)\nthe width of the bins can be manipulated"
-  },
-  {
-    "objectID": "slides-03-01.html#positive-skew",
-    "href": "slides-03-01.html#positive-skew",
-    "title": "Descriptive Statistics",
-    "section": "Positive Skew",
-    "text": "Positive Skew\nOr right-skewed\n\nMost values cluster on the left\nSome high values pull the mean up\nThe mean is greater than the median\n\n\ncounty |&gt;\n  summarize(mean_unemployment = mean(unemployment_rate, na.rm = TRUE),\n            median_unemployment = median(unemployment_rate, na.rm = TRUE))"
-  },
-  {
-    "objectID": "slides-03-01.html#histogram-2",
-    "href": "slides-03-01.html#histogram-2",
-    "title": "Descriptive Statistics",
-    "section": "Histogram",
-    "text": "Histogram\nThe defaul number of bins for geom_histogram() is 30, but we can change that.\n\ncounty |&gt;\n  ggplot(aes(x = unemployment_rate)) + \n  geom_histogram(bins = 100)\n\n\nThis distribution is skewed to the right, with a long tail to the right"
-  },
-  {
-    "objectID": "slides-03-01.html#mean",
-    "href": "slides-03-01.html#mean",
-    "title": "Descriptive Statistics",
-    "section": "Mean",
-    "text": "Mean\nThe mean is the sum of the terms divided by the number of terms.\nHere’s the formula for the sample (the observations) mean:\n\\(\\bar{x} = \\frac{x_1 + x_2 ... + x_n}{n}\\)\nwhere \\(x_1, x_2, ..., x_n\\) represent the observed values\nOr:\n\\(\\bar{x } = \\frac{ \\sum_{i=1}^n x_i}{n}\\)"
-  },
-  {
-    "objectID": "slides-03-01.html#median",
-    "href": "slides-03-01.html#median",
-    "title": "Descriptive Statistics",
-    "section": "Median",
-    "text": "Median\nThe sample median is the middle value when data is arranged in order from lowest to highest.\nFor odd n:\n\nOrder the data from smallest to largest\nMedian = value in position \\((n+1)/2\\)\n\nFor even n:\n\nOrder the data from smallest to largest\nMedian = average of values in positions \\(n/2\\) and \\((n/2)+1\\)"
-  },
-  {
-    "objectID": "slides-03-01.html#measures-of-central-tendency",
-    "href": "slides-03-01.html#measures-of-central-tendency",
-    "title": "Descriptive Statistics",
-    "section": "Measures of Central Tendency",
-    "text": "Measures of Central Tendency\n\nMean\nMedian\nMode"
-  },
-  {
-    "objectID": "slides-03-01.html#mode",
-    "href": "slides-03-01.html#mode",
-    "title": "Descriptive Statistics",
-    "section": "Mode",
-    "text": "Mode\n\nvalue(s) that appears most frequently in the data\n\nIt’s the only measure of central tendency that can be used with categorical data.\nA dataset can have:\n\nOne mode (unimodal)\nTwo modes (bimodal)\nMore than two modes (multimodal)\nNo mode (if all values occur exactly once)"
-  },
-  {
-    "objectID": "slides-03-01.html#measures-of-central-tendency-1",
-    "href": "slides-03-01.html#measures-of-central-tendency-1",
-    "title": "Descriptive Statistics",
-    "section": "Measures of Central Tendency",
-    "text": "Measures of Central Tendency\n\ncounty |&gt;\n  count(unemployment_rate, sort = TRUE)"
-  },
-  {
-    "objectID": "slides-03-01.html#variability-range",
-    "href": "slides-03-01.html#variability-range",
-    "title": "Descriptive Statistics",
-    "section": "Variability – range",
-    "text": "Variability – range\n\nsimplest measure of variability\nthe difference between the largest and smallest values\nsensitive to outliers (uses two values)\nnothing about how values are distributed between the min and max\n\n\ncounty |&gt;\n  summarize(min_unemployment = min(unemployment_rate, na.rm = TRUE),\n            max_unemployment = max(unemployment_rate, na.rm = TRUE)) |&gt;\n  mutate(range_unemployment = max_unemployment - min_unemployment)"
-  },
-  {
-    "objectID": "slides-03-01.html#variability-variance",
-    "href": "slides-03-01.html#variability-variance",
-    "title": "Descriptive Statistics",
-    "section": "Variability – variance",
-    "text": "Variability – variance\n\naverage squared distances from observations to the mean\n\n\\(s^2 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})^2}{n-1}\\)\nWhy do we use the squared deviation in the calculation of variance?\n\nTo get rid of negative values so that observations equally distant from the mean are weighed equally\nTo weigh larger deviations more heavily"
-  },
-  {
-    "objectID": "slides-03-01.html#variability-standard-deviation",
-    "href": "slides-03-01.html#variability-standard-deviation",
-    "title": "Descriptive Statistics",
-    "section": "Variability – standard deviation",
-    "text": "Variability – standard deviation\n\nsquare root of the variance\ninterpreted as the average distance of each data point from sample mean\nthe degree of dispersion of the data points relative to its mean\n\n\\(s = \\sqrt{s^2}\\)\nOr:\n\\(s = \\sqrt{ \\frac{\\sum_{i=1}^n (x_i - \\bar{x})^2}{n-1}}\\)"
-  },
-  {
-    "objectID": "slides-03-01.html#variability-standard-deviation-1",
-    "href": "slides-03-01.html#variability-standard-deviation-1",
-    "title": "Descriptive Statistics",
-    "section": "Variability – standard deviation",
-    "text": "Variability – standard deviation\n\nsquare root of the variance\ninterpreted as the average distance of each data point from sample mean\nthe degree of dispersion of the data points relative to its mean\n\n\ncounty |&gt;\n  summarize(sd_unemployment = sd(unemployment_rate, na.rm = TRUE))"
-  },
-  {
-    "objectID": "slides-03-01.html#interquartile-range-iqr",
-    "href": "slides-03-01.html#interquartile-range-iqr",
-    "title": "Descriptive Statistics",
-    "section": "Interquartile Range – IQR",
-    "text": "Interquartile Range – IQR\n\nquartiles are the partitioned values that divide the values into 4 equal parts (3 quartiles)\nIQR is difference between the third and the first quartile So, there are\nthe first quartile (or 25th percentile) is denoted by \\(Q1\\) and known as the lower quartile\nthe second quartile (or 50th percentile) is denoted by \\(Q2\\) and known as the median\nthe third quartile (or 75th percentile) is denoted by \\(Q3\\) and known as the upper quartile"
-  },
-  {
-    "objectID": "slides-03-01.html#interquartile-range-iqr-1",
-    "href": "slides-03-01.html#interquartile-range-iqr-1",
-    "title": "Descriptive Statistics",
-    "section": "Interquartile Range – IQR",
-    "text": "Interquartile Range – IQR\n\nthe interquartile range is equal to the upper quartile minus lower quartile\nbetween \\(Q1\\) and \\(Q2\\) is the middle 50% of the data\n\n\\(IQR = Q3 - Q1\\)"
-  },
-  {
-    "objectID": "slides-03-01.html#box-plot",
-    "href": "slides-03-01.html#box-plot",
-    "title": "Descriptive Statistics",
-    "section": "Box plot",
-    "text": "Box plot\n\nthe box represents the middle 50% of the data\nthe thick line in the middle is the median\ntop box line is \\(Q3\\)\nbottom box line is \\(Q1\\)\nwhiskers:\n\nmax upper whisker reach = \\(Q3 + 1.5 * IQR\\)\nmax upper whisker reach = \\(Q1 - 1.5 * IQR\\)"
-  },
-  {
-    "objectID": "slides-03-01.html#box-plot-1",
-    "href": "slides-03-01.html#box-plot-1",
-    "title": "Descriptive Statistics",
-    "section": "Box plot",
-    "text": "Box plot\n\ncounty |&gt;\n  ggplot(aes(y = unemployment_rate)) +\n  geom_boxplot()"
-  },
-  {
-    "objectID": "slides-03-01.html#outliers",
-    "href": "slides-03-01.html#outliers",
-    "title": "Descriptive Statistics",
-    "section": "Outliers",
-    "text": "Outliers\n\npotential outliers are shown in the box plot as dots\nan outlier is an observation that:\n\nis beyond the maximun reach of the whiskers\nappears extreme, relative to the rest of the data"
-  },
-  {
-    "objectID": "slides-03-01.html",
-    "href": "slides-03-01.html",
-    "title": "Descriptive Statistics",
-    "section": "",
-    "text": "summarize a given data set\nmeasures of:\n\ndistribution (how data is spread out and how frequently different values occur)\ncentral tendency (mean, median, mode)\nvariability (range, standard deviation, variance, interquartile range – IQR)"
-  },
-  {
-    "objectID": "slides-03-02.html#descriptive-statistics",
-    "href": "slides-03-02.html#descriptive-statistics",
-    "title": "Exploring Categorical Data",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\ndistribution (histogram)\ncentral tendency (mean, median, mode)\nvariability (range, standard deviation, variance, interquartile range – IQR)"
-  },
-  {
-    "objectID": "slides-03-02.html#data",
-    "href": "slides-03-02.html#data",
-    "title": "Exploring Categorical Data",
-    "section": "Data",
-    "text": "Data\nWe will be working with the same US demographic data for our exploratory analyses.\nYou can download the csv file and add it to your RStudio (or Posit Cloud) project if you have not done that yet.\nCreate a new R script file and save it as county-categorical-data-analysis.R and load the tidyverse package and the data.\n\nlibrary(tidyverse)\ncounty &lt;- read_csv(\"data/county.csv\")"
-  },
-  {
-    "objectID": "slides-03-02.html#distribution-adding-categorical-variable",
-    "href": "slides-03-02.html#distribution-adding-categorical-variable",
-    "title": "Exploring Categorical Data",
-    "section": "Distribution – adding categorical variable",
-    "text": "Distribution – adding categorical variable\nHistogram: the frequency distribution of a continuous variable across different groups\n\ncounty |&gt;\n  ggplot(aes(x = unemployment_rate)) + \n  geom_histogram() +\n  facet_wrap(~median_edu)"
-  },
-  {
-    "objectID": "slides-03-02.html#inspect-categorical-variable",
-    "href": "slides-03-02.html#inspect-categorical-variable",
-    "title": "Exploring Categorical Data",
-    "section": "Inspect categorical variable",
-    "text": "Inspect categorical variable\n\ncounty |&gt;\n  count(median_edu)"
-  },
-  {
-    "objectID": "slides-03-02.html#distribution-with-filtered-data",
-    "href": "slides-03-02.html#distribution-with-filtered-data",
-    "title": "Exploring Categorical Data",
-    "section": "Distribution – with filtered data",
-    "text": "Distribution – with filtered data\n\ncounty |&gt;\n  filter(median_edu != \"below_hs\",\n         !is.na(median_edu)) |&gt;\n  ggplot(aes(x = unemployment_rate)) + \n  geom_histogram() +\n  facet_wrap(~median_edu)"
-  },
-  {
-    "objectID": "slides-03-02.html#measures-of-central-tendency",
-    "href": "slides-03-02.html#measures-of-central-tendency",
-    "title": "Exploring Categorical Data",
-    "section": "Measures of Central Tendency",
-    "text": "Measures of Central Tendency\nMean and median – add group_by with categorical variable\n\ncounty |&gt;\n  group_by(median_edu) |&gt;\n  summarize(mean = mean(unemployment_rate, na.rm = TRUE),\n            median = median(unemployment_rate, na.rm = TRUE))"
-  },
-  {
-    "objectID": "slides-03-02.html#variability",
-    "href": "slides-03-02.html#variability",
-    "title": "Exploring Categorical Data",
-    "section": "Variability",
-    "text": "Variability\nRange, standard deviation – add group_by with categorical variable\n\ncounty |&gt;\n  group_by(median_edu) |&gt;\n  summarize(min = min(unemployment_rate, na.rm = TRUE),\n            max = max(unemployment_rate, na.rm = TRUE),\n            sd = sd(unemployment_rate, na.rm = TRUE)) |&gt;\n  mutate(range = max - min)"
-  },
-  {
-    "objectID": "slides-03-02.html#variability-box-plot-iqr",
-    "href": "slides-03-02.html#variability-box-plot-iqr",
-    "title": "Exploring Categorical Data",
-    "section": "Variability – Box plot (IQR)",
-    "text": "Variability – Box plot (IQR)\n\ncounty |&gt;\n  ggplot(aes(y = unemployment_rate,\n             x = median_edu)) +\n  geom_boxplot()"
+    "objectID": "slides-02-03.html#examples",
+    "href": "slides-02-03.html#examples",
+    "title": "Regular Expressions",
+    "section": "Examples",
+    "text": "Examples\n[abc] - matches any single character from the set (a, b, or c)\n[^abc] - matches any single character NOT in the set"
   },
   {
     "objectID": "modules.html#practice",
     "href": "modules.html#practice",
     "title": "Modules",
     "section": "Practice",
-    "text": "Practice\n\nModule 3 Practice"
+    "text": "Practice\nClean this data set on Titanic survivors"
   },
   {
-    "objectID": "modules.html#assignment",
-    "href": "modules.html#assignment",
-    "title": "Modules",
-    "section": "Assignment",
-    "text": "Assignment\n\nAssignment 2"
+    "objectID": "slides-02-04.html",
+    "href": "slides-02-04.html",
+    "title": "Numpy",
+    "section": "",
+    "text": "import numpy as np"
   },
   {
-    "objectID": "slides-04-01.html#the-data",
-    "href": "slides-04-01.html#the-data",
-    "title": "Summarizing Data",
-    "section": "The data",
-    "text": "The data\nWe will be working with global surface temperature (1940-2024)\nFirst, download the data and set it into your project folder.\n\nlibrary(tidyverse)\n\ntemperatures &lt;- read_csv(\"data/average-monthly-surface-temperature.csv\")"
+    "objectID": "slides-02-04.html#package-and-data",
+    "href": "slides-02-04.html#package-and-data",
+    "title": "Numpy",
+    "section": "Package and Data",
+    "text": "Package and Data\n\nimport numpy as np"
   },
   {
-    "objectID": "slides-04-01.html#variables",
-    "href": "slides-04-01.html#variables",
-    "title": "Summarizing Data",
-    "section": "Variables",
-    "text": "Variables\n\ncountry_name\ncountry_code\nyear\nday\ndaily_average\nmonthly_average"
+    "objectID": "slides-02-04.html#recode-data",
+    "href": "slides-02-04.html#recode-data",
+    "title": "Numpy",
+    "section": "Recode Data",
+    "text": "Recode Data\n\nbank['sex'] = np.where(bank['sex'] == \"Female\", 0, 1)\nbank.head()"
   },
   {
-    "objectID": "slides-04-01.html#variables-1",
-    "href": "slides-04-01.html#variables-1",
-    "title": "Summarizing Data",
-    "section": "Variables",
-    "text": "Variables\n\nDomestic – Number of internal air passengers in thousands for a country, obtained from official statistics\nInternational – Number of international air passengers in thousands, obtained from official statistics\nTotal_OS – Total number of air passengers in thousands, obtained from other openly available data sources"
+    "objectID": "slides-02-04.html#transform-data",
+    "href": "slides-02-04.html#transform-data",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\n\nbank['log_salary'] = np.log(bank['salary'])"
   },
   {
-    "objectID": "slides-04-01.html#inspect-the-data",
-    "href": "slides-04-01.html#inspect-the-data",
-    "title": "Summarizing Data",
-    "section": "Inspect the data",
-    "text": "Inspect the data\n\ntemperatures |&gt;\n  glimpse()\n\nRows: 198,900\nColumns: 6\n$ country_name    &lt;chr&gt; \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"Afghanis…\n$ country_code    &lt;chr&gt; \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\"…\n$ year            &lt;dbl&gt; 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, …\n$ day             &lt;date&gt; 1940-01-15, 1940-02-15, 1940-03-15, 1940-04-15, 1940-…\n$ daily_average   &lt;dbl&gt; -2.0324936, -0.7335030, 1.9991340, 10.1997540, 17.9421…\n$ monthly_average &lt;dbl&gt; 11.32770, 11.32770, 11.32770, 11.32770, 11.32770, 11.3…"
+    "objectID": "slides-03-01.html#methods-to-use",
+    "href": "slides-03-01.html#methods-to-use",
+    "title": "Data Wrangling",
+    "section": "Methods to use",
+    "text": "Methods to use\nTwo .replace() methods, one from pandas.Series.str and another from pandas.DataFrame\n\ndata_frame[column_name] = data_frame[column_name].str.replace(r\"none\", \"0\")\ndata_frame[column_name] = pd.to_numeric(data_frame[column_name])\ndata_frame = data_frame.replace({'data_frame': {'value1': '0', 'value2': '1'}})"
   },
   {
-    "objectID": "slides-04-01.html#inspect-the-data-1",
-    "href": "slides-04-01.html#inspect-the-data-1",
-    "title": "Summarizing Data",
-    "section": "Inspect the data",
-    "text": "Inspect the data\n\ntemperatures |&gt;\n  summary()\n\n country_name       country_code            year           day            \n Length:198900      Length:198900      Min.   :1940   Min.   :1940-01-15  \n Class :character   Class :character   1st Qu.:1961   1st Qu.:1961-04-07  \n Mode  :character   Mode  :character   Median :1982   Median :1982-06-30  \n                                       Mean   :1982   Mean   :1982-06-30  \n                                       3rd Qu.:2003   3rd Qu.:2003-09-22  \n                                       Max.   :2024   Max.   :2024-12-15  \n daily_average    monthly_average \n Min.   :-36.24   Min.   :-21.53  \n 1st Qu.: 12.30   1st Qu.: 10.57  \n Median : 22.06   Median : 21.86  \n Mean   : 18.07   Mean   : 18.07  \n 3rd Qu.: 25.32   3rd Qu.: 25.14  \n Max.   : 39.89   Max.   : 29.79"
+    "objectID": "slides-03-01.html#practice",
+    "href": "slides-03-01.html#practice",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\n\nClean this data set on Titanic survivors\nMake sure you define a main() methods that reads and writes the data\nJoin Gradescope – it’s free, and join our course (Entry Code:8XG2NV)\nSubmit your file(s) to the Data Wrangling assignment"
   },
   {
-    "objectID": "slides-04-01.html#questions",
-    "href": "slides-04-01.html#questions",
-    "title": "Summarizing Data",
-    "section": "Questions",
-    "text": "Questions\nWhat questions would you be interested in answering, based on this data set?"
+    "objectID": "slides-03-01.html#exploratory-data-analysis",
+    "href": "slides-03-01.html#exploratory-data-analysis",
+    "title": "Data Wrangling",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\nCalculating descriptive stats of a numeric variable by a group.\n\ndata_frame.groupby(\"category\")[\"numeric_value\"].mean().reset_index()\ndata_frame.groupby(\"category\")[\"numeric_value\"].agg([\"mean\", \"std\", \"max\", \"min\"]).reset_index()"
   },
   {
-    "objectID": "slides-04-01.html#plots",
-    "href": "slides-04-01.html#plots",
-    "title": "Summarizing Data",
-    "section": "Plots",
-    "text": "Plots\n\ntemperatures |&gt;\n  ggplot(aes(x = daily_average)) +\n  geom_histogram()"
-  },
-  {
-    "objectID": "slides-04-01.html#plots-1",
-    "href": "slides-04-01.html#plots-1",
-    "title": "Summarizing Data",
-    "section": "Plots",
-    "text": "Plots\nToo much data to visualize – we need to filter and/or summarize the data.\n\ntemperatures |&gt;\n  ggplot(aes(x = year, y = monthly_average)) +\n  geom_point()"
-  },
-  {
-    "objectID": "slides-04-01.html#filtering-the-data-by-country",
-    "href": "slides-04-01.html#filtering-the-data-by-country",
-    "title": "Summarizing Data",
-    "section": "Filtering the data by country",
-    "text": "Filtering the data by country\n\ntemperatures |&gt;\n  filter(country_code == \"USA\") |&gt;\n  ggplot(aes(x = year, y = monthly_average)) +\n  geom_point()"
-  },
-  {
-    "objectID": "slides-04-01.html#filtering-the-data-by-countries",
-    "href": "slides-04-01.html#filtering-the-data-by-countries",
-    "title": "Summarizing Data",
-    "section": "Filtering the data by countries",
-    "text": "Filtering the data by countries\n\ncountries &lt;- c(\"USA\", \"BRA\")\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = year, y = monthly_average)) +\n  geom_point()"
-  },
-  {
-    "objectID": "slides-04-01.html#adding-color",
-    "href": "slides-04-01.html#adding-color",
-    "title": "Summarizing Data",
-    "section": "Adding color",
-    "text": "Adding color\n\ncountries &lt;- c(\"USA\", \"BRA\")\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = year, y = monthly_average, color = country_code)) +\n  geom_point()"
-  },
-  {
-    "objectID": "slides-04-01.html#extracting-month",
-    "href": "slides-04-01.html#extracting-month",
-    "title": "Summarizing Data",
-    "section": "Extracting month",
-    "text": "Extracting month\n\ntemperatures |&gt;\n  mutate(month = month(day))"
-  },
-  {
-    "objectID": "slides-04-01.html#extracting-month-save-to-data-frame",
-    "href": "slides-04-01.html#extracting-month-save-to-data-frame",
-    "title": "Summarizing Data",
-    "section": "Extracting month – save to data frame",
-    "text": "Extracting month – save to data frame\n\ntemperatures &lt;- temperatures |&gt;\n  mutate(month = month(day))"
-  },
-  {
-    "objectID": "slides-04-01.html#plot",
-    "href": "slides-04-01.html#plot",
-    "title": "Summarizing Data",
-    "section": "Plot",
-    "text": "Plot\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = month, y = daily_average, color = country_code)) +\n  geom_point()"
+    "objectID": "slides-03-01.html#bar-plots",
+    "href": "slides-03-01.html#bar-plots",
+    "title": "Data Wrangling",
+    "section": "Bar plots",
+    "text": "Bar plots\n\nimport seaborn as sns\n\nsns.barplot(data = desc_stats, x = \"category\", y = \"mean\")"
   },
   {
     "objectID": "modules.html#slides-2",
     "href": "modules.html#slides-2",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nSummarizing Data – code\nCounting Categorical Data"
+    "text": "Slides\n\nData Wrangling\nNumpy\nData Modeling – intro"
   },
   {
-    "objectID": "slides-04-01.html",
-    "href": "slides-04-01.html",
-    "title": "Summarizing Data",
-    "section": "",
-    "text": "We will be working with global surface temperature (1940-2024)\nFirst, download the data and set it into your project folder.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntemperatures &lt;- read_csv(\"data/average-monthly-surface-temperature.csv\")\n\nRows: 198900 Columns: 6\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (2): country_name, country_code\ndbl  (3): year, daily_average, monthly_average\ndate (1): day\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+    "objectID": "slides-03-02.html#data-modeling",
+    "href": "slides-03-02.html#data-modeling",
+    "title": "Intro to Data Modeling",
+    "section": "Data Modeling",
+    "text": "Data Modeling"
   },
   {
-    "objectID": "slides-04-01.html#plot-1",
-    "href": "slides-04-01.html#plot-1",
-    "title": "Summarizing Data",
-    "section": "Plot",
-    "text": "Plot\n\ntemperatures |&gt;\n  filter(country_code %in% countries) |&gt;\n  ggplot(aes(x = month, y = daily_average, color = country_code)) +\n  geom_point() +\n  scale_x_continuous(breaks = c(1:12))"
+    "objectID": "slides-03-02.html#inference-vs.-prediction",
+    "href": "slides-03-02.html#inference-vs.-prediction",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference:\n\nunderstanding relationships and testing hypotheses about how variables interact\nexplain the underlying mechanisms and relationships in the data\nHow does education relates to income?"
   },
   {
-    "objectID": "slides-04-01.html#descriptive-statistics",
-    "href": "slides-04-01.html#descriptive-statistics",
-    "title": "Summarizing Data",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\ntemperatures |&gt;\n  group_by(year) |&gt;\n  summarize(mean = mean(daily_average),\n            median = median(daily_average),\n            sd = sd(daily_average),\n            min = min(daily_average),\n            max = max(daily_average)) |&gt;\n  mutate(range = max - min,\n         lower = mean - sd,\n         upper = mean + sd)"
+    "objectID": "slides-03-02.html#inference-vs.-prediction-1",
+    "href": "slides-03-02.html#inference-vs.-prediction-1",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nPrediction:\n\ngenerating accurate estimates of future or unknown values\noptimizing the model’s ability to make correct predictions\nAccurately forecast someone’s income based on their education level."
   },
   {
-    "objectID": "slides-04-01.html#descriptive-statistics-save-results",
-    "href": "slides-04-01.html#descriptive-statistics-save-results",
-    "title": "Summarizing Data",
-    "section": "Descriptive Statistics – save results",
-    "text": "Descriptive Statistics – save results\n\ntemp_desc &lt;- temperatures |&gt;\n  group_by(year) |&gt;\n  summarize(mean = mean(daily_average),\n            median = median(daily_average),\n            sd = sd(daily_average),\n            min = min(daily_average),\n            max = max(daily_average)) |&gt;\n  mutate(range = max - min,\n         lower = mean - sd,\n         upper = mean + sd)"
+    "objectID": "slides-03-02.html#inference-vs.-prediction-2",
+    "href": "slides-03-02.html#inference-vs.-prediction-2",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference models prioritize interpretability and often use simpler, more transparent methods like linear regression\nPrediction models may use more complex “black box” approaches like neural networks if they improve accuracy"
   },
   {
-    "objectID": "slides-04-01.html#visualizing-statistics",
-    "href": "slides-04-01.html#visualizing-statistics",
-    "title": "Summarizing Data",
-    "section": "Visualizing Statistics",
-    "text": "Visualizing Statistics\n\ntemp_desc |&gt;\n  ggplot(aes(x = year, y = mean)) +\n  geom_point()"
+    "objectID": "slides-03-02.html#inference-vs.-prediction-3",
+    "href": "slides-03-02.html#inference-vs.-prediction-3",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nIn inference, you carefully choose variables based on theory and prior research\nFor prediction, you might include any feature that improves predictive performance, even if the relationship isn’t theoretically clear (! careful with this approach)"
   },
   {
-    "objectID": "modules.html#assignment-1",
-    "href": "modules.html#assignment-1",
-    "title": "Modules",
-    "section": "Assignment",
-    "text": "Assignment\n\nAssignment 3"
+    "objectID": "slides-03-02.html#inference-vs.-prediction-4",
+    "href": "slides-03-02.html#inference-vs.-prediction-4",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference focuses on metrics like p-values, confidence intervals, and effect sizes\nPrediction emphasizes metrics like mean squared error, classification accuracy, or the area under the ROC curve (AUC)"
   },
   {
-    "objectID": "assignments/assignment-03.html",
-    "href": "assignments/assignment-03.html",
-    "title": "Assignment 03",
-    "section": "",
-    "text": "Group members\nWhat are your group members (up to 3 people)?\nENTER YOUR ANSWER HERE\n\n\nData\nWhat data set are you using?\nENTER YOUR ANSWER HERE: DESCRIBE THE DATA (WHERE IT IS FROM? WHAT WEBSITE/API?) PROVIDE A DATA DICTIONARY WITH EACH VARIABLE IN THE DATA, THE TYPE OF VARIABLE (CATEGORICAL, CATEGORICAL ORDINAL, NUMERIC CONTINUOUS, NUMERIC DISCRETE) AND A SHORT DESCRIPTION OF EACH VARIABLE\nRead data in:\n\n\nQuestions\nWhat questions are you going to answer with this data set?\nPROVIDE AT LEAST TWO QUESTIONS – ONE DESCRIPTIVE (FOR AT LEAST ONE NUMERIC VARIABLE) AND ONE CATEGORICAL (ADD A GROUP TO THE ANALYSIS OF YOUR CHOSEN NUMERIC VARIABLE)\n\n\nPlots\nDistribution of one numeric variable: plot a histogram of one numeric variable\nBox plot of one numeric variable by one categorical variable: create a box plot of one numeric variable vs. one categorical variable"
+    "objectID": "slides-03-02.html#inference-vs.-prediction-5",
+    "href": "slides-03-02.html#inference-vs.-prediction-5",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\nOverfitting concerns\n\nboth approaches need to address overfitting\nit’s especially critical in prediction\ninference models might accept slightly worse fit for better interpretability\nprediction models focus heavily on cross-validation and out-of-sample performance"
   },
   {
-    "objectID": "slides-04-02.html#categorical-data",
-    "href": "slides-04-02.html#categorical-data",
-    "title": "Counting Categorical Data",
-    "section": "Categorical Data",
-    "text": "Categorical Data\nWe will be working with the survey data from the beginning of the semester.\nDownload the data and set it up in your coding environment.\n\nlibrary(tidyverse)\n\nsurvey &lt;- read_csv(\"data/student-data.csv\")"
+    "objectID": "slides-03-02.html#inference",
+    "href": "slides-03-02.html#inference",
+    "title": "Intro to Data Modeling",
+    "section": "Inference",
+    "text": "Inference\nFor interpreting statistical models, we will be using the statsmodels Python package"
   },
   {
-    "objectID": "slides-04-02.html#counting-variables",
-    "href": "slides-04-02.html#counting-variables",
-    "title": "Counting Categorical Data",
-    "section": "Counting variables",
-    "text": "Counting variables\nWe can use the count() function to count how many of each value (level) we have in a categorical variable.\n\nsurvey |&gt;\n  count(eye_color)"
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nOLS is a method that finds the best-fitting straight line through a set of points by minimizing the sum of squared vertical distances between the data points and the line.\nThe goal is to find a line y = β₀ + β₁x that best fits your data, where:\n\nβ₀ is the y-intercept\nβ₁ is the slope\nx is your independent variable – or target\ny is your dependent variable – or feature(s)"
   },
   {
-    "objectID": "slides-04-02.html#contingency-tables",
-    "href": "slides-04-02.html#contingency-tables",
-    "title": "Counting Categorical Data",
-    "section": "Contingency Tables",
-    "text": "Contingency Tables\nWhen we count how many observations across two categorical variables, we are creating a cross-tab, cross-tabulation, or a contingency table.\n\ntable that displays the frequency distribution of multiple variables\nshows how two or more categorical variables relate to each other\ncommonly used in statistics for analyzing relationships between categorical data"
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression-1",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression-1",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nFor each data point, OLS:\n\nCalculates the vertical distance (residual) between the actual y-value and the predicted y-value\nSquares these distances (to make negatives positive and penalize larger errors more)\nSums all squared distances\nFinds the line that minimizes this sum"
   },
   {
-    "objectID": "slides-04-02.html#contingency-tables-1",
-    "href": "slides-04-02.html#contingency-tables-1",
-    "title": "Counting Categorical Data",
-    "section": "Contingency Tables",
-    "text": "Contingency Tables\n\nsurvey |&gt;\n  count(personality, eye_color)"
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression-2",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression-2",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nKey Assumptions:\n\nLinear relationship between variables\nIndependent observations\nHomoscedasticity (constant variance in errors)\nNormally distributed errors\nNo perfect multicollinearity"
   },
   {
-    "objectID": "slides-04-02.html#contingency-tables-2",
-    "href": "slides-04-02.html#contingency-tables-2",
-    "title": "Counting Categorical Data",
-    "section": "Contingency Tables",
-    "text": "Contingency Tables\n\nsurvey |&gt;\n  count(personality, eye_color) |&gt;\n  pivot_wider(names_from = personality, values_from = n)\n\n\n  \n\n\n\nEach cell shows the count (frequency) of individuals that fall into both categories."
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression-3",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression-3",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nAdvantages:\n\nSimple to understand and implement\nBest Linear Unbiased Estimator (BLUE) under certain conditions\nComputationally efficient\nClear interpretation of results"
   },
   {
-    "objectID": "slides-04-02.html#contingency-tables-3",
-    "href": "slides-04-02.html#contingency-tables-3",
-    "title": "Counting Categorical Data",
-    "section": "Contingency Tables",
-    "text": "Contingency Tables\nFrom contingency tables, we can:\n\nCalculate proportions and percentages\nPerform statistical tests like chi-square tests to determine if there’s a significant relationship between variables\nIdentify patterns or trends in categorical data\nCompute measures of association"
+    "objectID": "slides-03-02.html#ordinary-least-squares-ols-regression-4",
+    "href": "slides-03-02.html#ordinary-least-squares-ols-regression-4",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nLimitations:\n\nSensitive to outliers\nAssumes linear relationships\nMay not capture complex patterns\nAll predictors must be independent"
   },
   {
-    "objectID": "slides-04-02.html#bar-plot",
-    "href": "slides-04-02.html#bar-plot",
-    "title": "Counting Categorical Data",
-    "section": "Bar plot",
-    "text": "Bar plot\nA bar plot is a common way to display a single categorical variable.\n\nsurvey |&gt;\n  ggplot(aes(x = eye_color)) +\n  geom_bar()"
+    "objectID": "slides-03-02.html#ols-regression-in-statsmodels",
+    "href": "slides-03-02.html#ols-regression-in-statsmodels",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression in statsmodels",
+    "text": "OLS regression in statsmodels\n\nimport pandas as pd\nimport statsmodels.api as sm\n\n\ndef main():\n    data = pd.read_csv(\"data/clean_titanic.csv\")\n    X = data[[\"pclass\", \"sex\"]]  \n    y = data[\"survived\"] \n\n    # Ordinary Least Squares (regression)\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\nmain()"
   },
   {
-    "objectID": "slides-04-02.html#proportions",
-    "href": "slides-04-02.html#proportions",
-    "title": "Counting Categorical Data",
-    "section": "Proportions",
-    "text": "Proportions\nWe can combine group_by(), summarize(), and mutate() to get proportions\n\nsurvey |&gt;\n  group_by(eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total)"
+    "objectID": "slides-03-02.html#ols-regression-results",
+    "href": "slides-03-02.html#ols-regression-results",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:               survived   R-squared:                       0.366\nModel:                            OLS   Adj. R-squared:                  0.365\nMethod:                 Least Squares   F-statistic:                     255.2\nDate:                Tue, 11 Feb 2025   Prob (F-statistic):           3.19e-88\nTime:                        14:23:34   Log-Likelihood:                -417.77\nNo. Observations:                 887   AIC:                             841.5\nDf Residuals:                     884   BIC:                             855.9\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n=============================================================================="
   },
   {
-    "objectID": "slides-04-02.html#relative-frequency-bar-plot",
-    "href": "slides-04-02.html#relative-frequency-bar-plot",
-    "title": "Counting Categorical Data",
-    "section": "Relative Frequency Bar Plot",
-    "text": "Relative Frequency Bar Plot\nA bar plot where proportions instead of frequencies are shown is called a relative frequency bar plot.\n\nsurvey |&gt;\n  group_by(eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = eye_color, y = percent)) +\n  geom_col()"
+    "objectID": "slides-03-02.html#ols-regression-results-1",
+    "href": "slides-03-02.html#ols-regression-results-1",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst          1.0825      0.040     26.795      0.000       1.003       1.162\npclass        -0.1577      0.016    -10.029      0.000      -0.189      -0.127\nsex           -0.5161      0.027    -18.776      0.000      -0.570      -0.462\n==============================================================================\nOmnibus:                       40.150   Durbin-Watson:                   1.921\nProb(Omnibus):                  0.000   Jarque-Bera (JB):               44.755\nSkew:                           0.549   Prob(JB):                     1.91e-10\nKurtosis:                       3.060   Cond. No.                         9.07\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
   },
   {
-    "objectID": "slides-04-02.html#how-are-bar-plots-different-than-histograms",
-    "href": "slides-04-02.html#how-are-bar-plots-different-than-histograms",
-    "title": "Counting Categorical Data",
-    "section": "How are bar plots different than histograms?",
-    "text": "How are bar plots different than histograms?\n\nBar plots are used for displaying distributions of categorical variables, while histograms are used for numerical variables.\nThe x-axis in a histogram is a number line, hence the order of the bars cannot be changed\nIn a bar plot the categories can be listed in any order (though some orderings make more sense than others, especially for ordinal variables)"
+    "objectID": "slides-03-02.html#ols-regression-results-2",
+    "href": "slides-03-02.html#ols-regression-results-2",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n\nWhat other variables can you add to the model?\nHow does the model change?"
   },
   {
-    "objectID": "slides-04-02.html#ordering-a-bar-plot",
-    "href": "slides-04-02.html#ordering-a-bar-plot",
-    "title": "Counting Categorical Data",
-    "section": "Ordering a bar plot",
-    "text": "Ordering a bar plot\n\nsurvey |&gt;\n  group_by(eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  ggplot(aes(x = reorder(eye_color, -n), y = n)) +\n  geom_col() +\n  labs(x = \"eye color\")"
+    "objectID": "slides-03-02.html#ols-regression-results-3",
+    "href": "slides-03-02.html#ols-regression-results-3",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\nRun OLS regression on this kaggle dataset on house prices"
   },
   {
-    "objectID": "slides-04-02.html#proportions-in-contingency-tables",
-    "href": "slides-04-02.html#proportions-in-contingency-tables",
-    "title": "Counting Categorical Data",
-    "section": "Proportions in contingency tables",
-    "text": "Proportions in contingency tables\nWhat is the personality split for each eye color?\n\nsurvey |&gt;\n  group_by(eye_color, personality) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total)"
+    "objectID": "slides-02-04.html#transform-data-1",
+    "href": "slides-02-04.html#transform-data-1",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nNormalizing skewed distributions: Many real-world variables (like income, population, prices) tend to have right-skewed distributions, where most values are small but there are some very large values. Taking the logarithm can make these distributions more symmetric and closer to normal, which is beneficial for many statistical methods."
   },
   {
-    "objectID": "slides-04-02.html#proportions-in-contingency-tables-1",
-    "href": "slides-04-02.html#proportions-in-contingency-tables-1",
-    "title": "Counting Categorical Data",
-    "section": "Proportions in contingency tables",
-    "text": "Proportions in contingency tables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total)"
+    "objectID": "slides-02-04.html#transform-data-2",
+    "href": "slides-02-04.html#transform-data-2",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nManaging outliers: Log transformation reduces the impact of extreme values or outliers. For example, the difference between $1M and $2M becomes similar in magnitude to the difference between $10K and $20K when logged."
   },
   {
-    "objectID": "slides-04-02.html#bar-plots-with-two-variables",
-    "href": "slides-04-02.html#bar-plots-with-two-variables",
-    "title": "Counting Categorical Data",
-    "section": "Bar plots with two variables",
-    "text": "Bar plots with two variables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = personality, y = n, fill = eye_color)) +\n  geom_col()"
+    "objectID": "slides-02-04.html#transform-data-3",
+    "href": "slides-02-04.html#transform-data-3",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nLinearizing relationships: Many relationships that appear exponential become linear after log transformation. For instance, if \\(y = ax^b\\), then \\(log(y) = log(a) + b*log(x)\\) is linear. This makes the relationship easier to model and interpret."
   },
   {
-    "objectID": "slides-04-02.html#bar-plots-with-two-variables-1",
-    "href": "slides-04-02.html#bar-plots-with-two-variables-1",
-    "title": "Counting Categorical Data",
-    "section": "Bar plots with two variables",
-    "text": "Bar plots with two variables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = personality, y = n, fill = eye_color)) +\n  geom_col(position = \"dodge\")"
+    "objectID": "slides-02-04.html#transform-data-4",
+    "href": "slides-02-04.html#transform-data-4",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nMaking multiplicative relationships additive: When variables have multiplicative effects (like compound growth), logging transforms them into additive relationships. This often makes more sense for how variables actually interact in real-world systems."
   },
   {
-    "objectID": "slides-04-02.html#bar-plots-with-two-variables-2",
-    "href": "slides-04-02.html#bar-plots-with-two-variables-2",
-    "title": "Counting Categorical Data",
-    "section": "Bar plots with two variables",
-    "text": "Bar plots with two variables\nWhat’s the eye color proportion for each personality?\n\nsurvey |&gt;\n  group_by(personality, eye_color) |&gt;\n  summarize(n = n()) |&gt;\n  mutate(total = sum(n),\n         percent = n/total) |&gt;\n  ggplot(aes(x = personality, y = n, fill = eye_color)) +\n  geom_col(position = \"fill\")"
+    "objectID": "slides-02-04.html#transform-data-5",
+    "href": "slides-02-04.html#transform-data-5",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nStabilizing variance: When the variability of data increases with its magnitude (heteroscedasticity), log transformation can help create more constant variance across the range of values, which is important for many statistical methods."
   },
   {
-    "objectID": "slides-04-02.html#practice",
-    "href": "slides-04-02.html#practice",
-    "title": "Counting Categorical Data",
-    "section": "Practice",
-    "text": "Practice\nWhat other questions can you answer with this data?\n\nCreate contingency tables\nCreate bar plots based on your tables"
+    "objectID": "slides-03-02.html#package-and-data",
+    "href": "slides-03-02.html#package-and-data",
+    "title": "Numpy",
+    "section": "Package and Data",
+    "text": "Package and Data\n\nimport numpy as np"
   },
   {
-    "objectID": "slides-04-02.html#gradescope-activity",
-    "href": "slides-04-02.html#gradescope-activity",
-    "title": "Counting Categorical Data",
-    "section": "Gradescope activity",
-    "text": "Gradescope activity\nGo to gradescope and click on summarizing data and answer the questions about the survey data we have been working on"
+    "objectID": "slides-03-02.html#recode-data",
+    "href": "slides-03-02.html#recode-data",
+    "title": "Numpy",
+    "section": "Recode Data",
+    "text": "Recode Data\n\nbank['sex'] = np.where(bank['sex'] == \"Female\", 0, 1)\nbank.head()"
   },
   {
-    "objectID": "slides-05-01.html#what-is-sampling",
-    "href": "slides-05-01.html#what-is-sampling",
-    "title": "Sampling Concepts",
-    "section": "What is sampling?",
-    "text": "What is sampling?\n\nSampling is the process of selecting a subset of individuals from a larger population to estimate characteristics of the whole population\nIt’s like tasting a spoonful of soup to judge how the entire pot tastes.\nThe goal is to make inferences about a large population when studying every member would be impractical or impossible\nIt is also used to reduce costs and time while still getting reliable information"
+    "objectID": "slides-03-02.html#transform-data",
+    "href": "slides-03-02.html#transform-data",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\n\nbank['log_salary'] = np.log(bank['salary'])"
   },
   {
-    "objectID": "slides-05-01.html#random-sampling",
-    "href": "slides-05-01.html#random-sampling",
-    "title": "Sampling Concepts",
-    "section": "Random Sampling",
-    "text": "Random Sampling\n\nSimple random sampling: Every member of the population has an equal chance of being selected\nSystematic sampling: Selecting every nth member from a population\nStratified sampling: Dividing the population into subgroups (strata) and sampling from each\nCluster Sampling: Dividing the population into subgroups or clusters, and then some of these clusters are randomly selected for study – all members within those chosen clusters are included in the sample."
+    "objectID": "slides-03-02.html#transform-data-1",
+    "href": "slides-03-02.html#transform-data-1",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nNormalizing skewed distributions: Many real-world variables (like income, population, prices) tend to have right-skewed distributions, where most values are small but there are some very large values. Taking the logarithm can make these distributions more symmetric and closer to normal, which is beneficial for many statistical methods."
   },
   {
-    "objectID": "slides-05-01.html#examples",
-    "href": "slides-05-01.html#examples",
-    "title": "Sampling Concepts",
-    "section": "Examples",
-    "text": "Examples\nA high school wants to survey students about cafeteria food. They have 1,000 students.\n\nSimple random sample: a computer randomly selects 100 student ID numbers (every student has an equal chance of being selected)\nStratified sampling: 25 students of each grade level is randomly selected\nSystematic sampling: every 10th student in the school roster is selected\nCluster sampling: homerooms are randomly selected, every student in the homeroom is selected"
+    "objectID": "slides-03-02.html#transform-data-2",
+    "href": "slides-03-02.html#transform-data-2",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nManaging outliers: Log transformation reduces the impact of extreme values or outliers. For example, the difference between $1M and $2M becomes similar in magnitude to the difference between $10K and $20K when logged."
   },
   {
-    "objectID": "slides-05-01.html#other-types-of-sampling",
-    "href": "slides-05-01.html#other-types-of-sampling",
-    "title": "Sampling Concepts",
-    "section": "Other types of sampling",
-    "text": "Other types of sampling\n\nConvenience sampling: Selecting easily accessible subjects\nPurposive sampling: Choosing subjects based on specific characteristics\nQuota sampling: Selecting subjects based on predetermined proportions"
+    "objectID": "slides-03-02.html#transform-data-3",
+    "href": "slides-03-02.html#transform-data-3",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nLinearizing relationships: Many relationships that appear exponential become linear after log transformation. For instance, if \\(y = ax^b\\), then \\(log(y) = log(a) + b*log(x)\\) is linear. This makes the relationship easier to model and interpret."
   },
   {
-    "objectID": "slides-05-01.html#consideration-re-samplings",
-    "href": "slides-05-01.html#consideration-re-samplings",
-    "title": "Sampling Concepts",
-    "section": "Consideration re samplings",
-    "text": "Consideration re samplings\n\nSample Size: Larger samples generally provide more accurate estimates but require more resources\nRepresentativeness: The sample should reflect the key characteristics of the population\nSampling Error: The difference between the sample estimate and the true population value\nBias: Systematic errors that can occur due to poor sampling method"
+    "objectID": "slides-03-02.html#transform-data-4",
+    "href": "slides-03-02.html#transform-data-4",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nMaking multiplicative relationships additive: When variables have multiplicative effects (like compound growth), logging transforms them into additive relationships. This often makes more sense for how variables actually interact in real-world systems."
   },
   {
-    "objectID": "slides-05-01.html#examples-1",
-    "href": "slides-05-01.html#examples-1",
-    "title": "Sampling Concepts",
-    "section": "Examples",
-    "text": "Examples\nA city wants to study household energy usage. Instead of sampling random houses across the entire city, they randomly select 20 neighborhoods and study all houses within those neighborhoods\nA quality control inspector at a candy factory checks every 50th chocolate bar coming off the production line. If they start with the 5th bar, they would check bars #5, #55, #105, and so on."
+    "objectID": "slides-03-02.html#transform-data-5",
+    "href": "slides-03-02.html#transform-data-5",
+    "title": "Numpy",
+    "section": "Transform Data",
+    "text": "Transform Data\nWhen do we log-transform numeric variables?\n\nStabilizing variance: When the variability of data increases with its magnitude (heteroscedasticity), log transformation can help create more constant variance across the range of values, which is important for many statistical methods."
   },
   {
-    "objectID": "slides-05-01.html#examples-2",
-    "href": "slides-05-01.html#examples-2",
-    "title": "Sampling Concepts",
-    "section": "Examples",
-    "text": "Examples\nA city wants to study household energy usage. Instead of sampling random houses across the entire city, they randomly select 20 neighborhoods and study all houses within those neighborhoods – cluster sampling\nA quality control inspector at a candy factory checks every 50th chocolate bar coming off the production line. If they start with the 5th bar, they would check bars #5, #55, #105, and so on – systematic sampling"
+    "objectID": "slides-03-03.html#data-modeling",
+    "href": "slides-03-03.html#data-modeling",
+    "title": "Intro to Data Modeling",
+    "section": "Data Modeling",
+    "text": "Data Modeling"
   },
   {
-    "objectID": "slides-05-01.html#examples-3",
-    "href": "slides-05-01.html#examples-3",
-    "title": "Sampling Concepts",
-    "section": "Examples",
-    "text": "Examples\nA high school wants to survey students about cafeteria food. They have 1,000 students.\n\nConvenience sampling: students who happen to be at the cafeteria on a Tuesday are selected\nPurposive sampling: students who eat at the cafeteria at least three days a week are selected\nQuota Sampling: quotas by age group are determined, with 50% of students between 16-17 years old, and 50% of students 18 or older – they continue sampling until they meet these quotas"
+    "objectID": "slides-03-03.html#inference-vs.-prediction",
+    "href": "slides-03-03.html#inference-vs.-prediction",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference:\n\nunderstanding relationships and testing hypotheses about how variables interact\nexplain the underlying mechanisms and relationships in the data\nHow does education relates to income?"
   },
   {
-    "objectID": "slides-05-01.html#examples-4",
-    "href": "slides-05-01.html#examples-4",
-    "title": "Sampling Concepts",
-    "section": "Examples",
-    "text": "Examples\nA researcher studying the effects of marathon running on the body specifically selects participants who have completed at least three marathons in the past year.\nA researcher studying shopping habits interviews customers who happen to be at the mall on a Tuesday afternoon. They’re chosen simply because they’re conveniently available."
+    "objectID": "slides-03-03.html#inference-vs.-prediction-1",
+    "href": "slides-03-03.html#inference-vs.-prediction-1",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nPrediction:\n\ngenerating accurate estimates of future or unknown values\noptimizing the model’s ability to make correct predictions\nAccurately forecast someone’s income based on their education level."
   },
   {
-    "objectID": "slides-05-01.html#examples-5",
-    "href": "slides-05-01.html#examples-5",
-    "title": "Sampling Concepts",
-    "section": "Examples",
-    "text": "Examples\nA researcher studying the effects of marathon running on the body specifically selects participants who have completed at least three marathons in the past year – purposive sampling\nA researcher studying shopping habits interviews customers who happen to be at the mall on a Tuesday afternoon. They’re chosen simply because they’re conveniently available – covenience sampling"
+    "objectID": "slides-03-03.html#inference-vs.-prediction-2",
+    "href": "slides-03-03.html#inference-vs.-prediction-2",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference models prioritize interpretability and often use simpler, more transparent methods like linear regression\nPrediction models may use more complex “black box” approaches like neural networks if they improve accuracy"
   },
   {
-    "objectID": "slides-05-01.html#simulation",
-    "href": "slides-05-01.html#simulation",
-    "title": "Sampling Concepts",
-    "section": "Simulation",
-    "text": "Simulation\nWe will be working with simulated data for practing sampling.\n\nlibrary(tidyverse)\n\ndata &lt;- read_csv(\"data/simulated-data.csv\")"
+    "objectID": "slides-03-03.html#inference-vs.-prediction-3",
+    "href": "slides-03-03.html#inference-vs.-prediction-3",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nIn inference, you carefully choose variables based on theory and prior research\nFor prediction, you might include any feature that improves predictive performance, even if the relationship isn’t theoretically clear (! careful with this approach)"
   },
   {
-    "objectID": "slides-05-01.html#distribution",
-    "href": "slides-05-01.html#distribution",
-    "title": "Sampling Concepts",
-    "section": "Distribution",
-    "text": "Distribution\n\ndata |&gt;\n  ggplot(aes(x = length_cm)) +\n  geom_histogram(bins = 100) +\n  facet_wrap(~color)"
+    "objectID": "slides-03-03.html#inference-vs.-prediction-4",
+    "href": "slides-03-03.html#inference-vs.-prediction-4",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\nInference focuses on metrics like p-values, confidence intervals, and effect sizes\nPrediction emphasizes metrics like mean squared error, classification accuracy, or the area under the ROC curve (AUC)"
   },
   {
-    "objectID": "slides-05-01.html#random-sampling-1",
-    "href": "slides-05-01.html#random-sampling-1",
-    "title": "Sampling Concepts",
-    "section": "Random Sampling",
-    "text": "Random Sampling\n\nrandom_sample &lt;- data |&gt;\n  slice_sample(n = 1000)\n\nrandom_sample |&gt;\n  ggplot(aes(x = length_cm)) +\n  geom_histogram() +\n  facet_wrap(~color)"
+    "objectID": "slides-03-03.html#inference-vs.-prediction-5",
+    "href": "slides-03-03.html#inference-vs.-prediction-5",
+    "title": "Intro to Data Modeling",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\nOverfitting concerns\n\nboth approaches need to address overfitting\nit’s especially critical in prediction\ninference models might accept slightly worse fit for better interpretability\nprediction models focus heavily on cross-validation and out-of-sample performance"
   },
   {
-    "objectID": "slides-05-01.html#measures-of-centrality",
-    "href": "slides-05-01.html#measures-of-centrality",
-    "title": "Sampling Concepts",
-    "section": "Measures of Centrality",
-    "text": "Measures of Centrality\n\ndata |&gt;\n  group_by(color) |&gt;\n  summarize(n = n(),\n            mean = mean(length_cm),\n            median = median(length_cm))"
+    "objectID": "slides-03-03.html#inference",
+    "href": "slides-03-03.html#inference",
+    "title": "Intro to Data Modeling",
+    "section": "Inference",
+    "text": "Inference\nFor interpreting statistical models, we will be using the statsmodels Python package"
   },
   {
-    "objectID": "slides-05-01.html#measures-of-centrality-1",
-    "href": "slides-05-01.html#measures-of-centrality-1",
-    "title": "Sampling Concepts",
-    "section": "Measures of Centrality",
-    "text": "Measures of Centrality\n\nrandom_sample |&gt;\n  group_by(color) |&gt;\n  summarize(n = n(),\n            mean = mean(length_cm),\n            median = median(length_cm))"
+    "objectID": "slides-03-03.html#ordinary-least-squares-ols-regression",
+    "href": "slides-03-03.html#ordinary-least-squares-ols-regression",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nOLS is a method that finds the best-fitting straight line through a set of points by minimizing the sum of squared vertical distances between the data points and the line.\nThe goal is to find a line y = β₀ + β₁x that best fits your data, where:\n\nβ₀ is the y-intercept\nβ₁ is the slope\nx is your independent variable – or feature(s)\ny is your dependent variable – or target"
   },
   {
-    "objectID": "slides-05-01.html#systematic-sampling",
-    "href": "slides-05-01.html#systematic-sampling",
-    "title": "Sampling Concepts",
-    "section": "Systematic sampling",
-    "text": "Systematic sampling\n\nsystematic_sample &lt;- data |&gt;\n  slice(seq(1, 1000000, by = 1000))\n\nsystematic_sample |&gt;\n  ggplot(aes(x = length_cm)) +\n  geom_histogram() +\n  facet_wrap(~color)"
+    "objectID": "slides-03-03.html#ordinary-least-squares-ols-regression-1",
+    "href": "slides-03-03.html#ordinary-least-squares-ols-regression-1",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nFor each data point, OLS:\n\nCalculates the vertical distance (residual) between the actual y-value and the predicted y-value\nSquares these distances (to make negatives positive and penalize larger errors more)\nSums all squared distances\nFinds the line that minimizes this sum"
   },
   {
-    "objectID": "slides-05-01.html#measures-of-centrality-2",
-    "href": "slides-05-01.html#measures-of-centrality-2",
-    "title": "Sampling Concepts",
-    "section": "Measures of Centrality",
-    "text": "Measures of Centrality\n\nsystematic_sample |&gt;\n  group_by(color) |&gt;\n  summarize(n = n(),\n            mean = mean(length_cm),\n            median = median(length_cm))"
+    "objectID": "slides-03-03.html#ordinary-least-squares-ols-regression-2",
+    "href": "slides-03-03.html#ordinary-least-squares-ols-regression-2",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nKey Assumptions:\n\nLinear relationship between variables\nIndependent observations\nHomoscedasticity (constant variance in errors)\nNormally distributed errors\nNo perfect multicollinearity"
   },
   {
-    "objectID": "slides-05-02.html#data",
-    "href": "slides-05-02.html#data",
-    "title": "Case Study",
-    "section": "Data",
-    "text": "Data\nWe will be using data from the World Happiness Report for this case study.\nDownload the data and set it up in your working environment.\n\nlibrary(tidyverse)\n\nhappiness &lt;- read_csv(\"data/world-happiness-2020-2024.csv\")"
+    "objectID": "slides-03-03.html#ordinary-least-squares-ols-regression-3",
+    "href": "slides-03-03.html#ordinary-least-squares-ols-regression-3",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nAdvantages:\n\nSimple to understand and implement\nBest Linear Unbiased Estimator (BLUE) under certain conditions\nComputationally efficient\nClear interpretation of results"
   },
   {
-    "objectID": "slides-05-02.html#questions",
-    "href": "slides-05-02.html#questions",
-    "title": "Case Study",
-    "section": "Questions",
-    "text": "Questions\nWhat questions can you ask based on the data?"
+    "objectID": "slides-03-03.html#ordinary-least-squares-ols-regression-4",
+    "href": "slides-03-03.html#ordinary-least-squares-ols-regression-4",
+    "title": "Intro to Data Modeling",
+    "section": "Ordinary Least Squares (OLS) regression",
+    "text": "Ordinary Least Squares (OLS) regression\nLimitations:\n\nSensitive to outliers\nAssumes linear relationships\nMay not capture complex patterns\nAll predictors must be independent"
   },
   {
-    "objectID": "slides-05-02.html#distribution",
-    "href": "slides-05-02.html#distribution",
-    "title": "Case Study",
-    "section": "Distribution",
-    "text": "Distribution\n\nhappiness |&gt;\n  ggplot(aes(x = ladder_score)) +\n  geom_histogram()"
+    "objectID": "slides-03-03.html#ols-regression-in-statsmodels",
+    "href": "slides-03-03.html#ols-regression-in-statsmodels",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression in statsmodels",
+    "text": "OLS regression in statsmodels\n\nimport pandas as pd\nimport statsmodels.api as sm\n\n\ndef main():\n    data = pd.read_csv(\"data/clean_titanic.csv\")\n    X = data[[\"pclass\", \"sex\"]]  \n    y = data[\"survived\"] \n\n    # Ordinary Least Squares (regression)\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\nmain()"
   },
   {
-    "objectID": "slides-05-02.html#distribution-1",
-    "href": "slides-05-02.html#distribution-1",
-    "title": "Case Study",
-    "section": "Distribution",
-    "text": "Distribution\n\nhappiness |&gt;\n  ggplot(aes(x = ladder_score)) +\n  geom_histogram() +\n  facet_wrap(~regional_indicator)"
+    "objectID": "slides-03-03.html#ols-regression-results",
+    "href": "slides-03-03.html#ols-regression-results",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:               survived   R-squared:                       0.366\nModel:                            OLS   Adj. R-squared:                  0.365\nMethod:                 Least Squares   F-statistic:                     255.2\nDate:                Tue, 11 Feb 2025   Prob (F-statistic):           3.19e-88\nTime:                        14:23:34   Log-Likelihood:                -417.77\nNo. Observations:                 887   AIC:                             841.5\nDf Residuals:                     884   BIC:                             855.9\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n=============================================================================="
   },
   {
-    "objectID": "slides-05-02.html#measures-of-centrality-and-variability",
-    "href": "slides-05-02.html#measures-of-centrality-and-variability",
-    "title": "Case Study",
-    "section": "Measures of centrality and variability",
-    "text": "Measures of centrality and variability\n\nhappiness |&gt;\n  group_by(regional_indicator) |&gt;\n  summarize(mean_score = mean(ladder_score),\n            sd_score = sd(ladder_score))\n\n\n\n\n\nregional_indicator\nmean_score\nsd_score\n\n\n\n\nCentral and Eastern Europe\n6.051499\n0.5028462\n\n\nCommonwealth of Independent States\n5.497196\n0.4452581\n\n\nEast Asia\n5.853280\n0.3971070\n\n\nLatin America and Caribbean\n5.988879\n0.5232964\n\n\nMiddle East and North Africa\n5.158222\n1.1266599\n\n\nNorth America and ANZ\n7.067760\n0.1491133\n\n\nSouth Asia\n4.247478\n1.0502632\n\n\nSoutheast Asia\n5.441158\n0.6593355\n\n\nSub-Saharan Africa\n4.428523\n0.6617718\n\n\nWestern Europe\n6.889537\n0.6066269"
+    "objectID": "slides-03-03.html#ols-regression-results-1",
+    "href": "slides-03-03.html#ols-regression-results-1",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst          1.0825      0.040     26.795      0.000       1.003       1.162\npclass        -0.1577      0.016    -10.029      0.000      -0.189      -0.127\nsex           -0.5161      0.027    -18.776      0.000      -0.570      -0.462\n==============================================================================\nOmnibus:                       40.150   Durbin-Watson:                   1.921\nProb(Omnibus):                  0.000   Jarque-Bera (JB):               44.755\nSkew:                           0.549   Prob(JB):                     1.91e-10\nKurtosis:                       3.060   Cond. No.                         9.07\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+  },
+  {
+    "objectID": "slides-03-03.html#ols-regression-results-2",
+    "href": "slides-03-03.html#ols-regression-results-2",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\n\nWhat other variables can you add to the model?\nHow does the model change?"
+  },
+  {
+    "objectID": "slides-03-03.html#ols-regression-results-3",
+    "href": "slides-03-03.html#ols-regression-results-3",
+    "title": "Intro to Data Modeling",
+    "section": "OLS regression results",
+    "text": "OLS regression results\nRun OLS regression on this kaggle dataset on house prices"
   },
   {
     "objectID": "modules.html#slides-3",
     "href": "modules.html#slides-3",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nSampling\nCase Study\nIntroduction to Inference"
+    "text": "Slides\n\nOLS case study\nLogistic Regression\nOLS vs. Logit – case study\nMachine Learning"
   },
   {
-    "objectID": "slides-05-02.html",
-    "href": "slides-05-02.html",
-    "title": "Case Study",
+    "objectID": "slides-04-02.html#logistic-regression",
+    "href": "slides-04-02.html#logistic-regression",
+    "title": "Logistic Regression",
+    "section": "Logistic Regression",
+    "text": "Logistic Regression\n\nBinary Outcome – statistical model used for binary classification problems\nPredicts probability of an event occurring (between 0 and 1)\nUses the logistic/sigmoid function to transform predictions"
+  },
+  {
+    "objectID": "slides-04-02.html#the-logistic-function",
+    "href": "slides-04-02.html#the-logistic-function",
+    "title": "Logistic Regression",
+    "section": "The Logistic Function",
+    "text": "The Logistic Function\n\nS-shaped curve (sigmoid)\nTransforms any input into a probability between 0 and 1\nFormula: \\(p = \\frac{1}{1 + e^{-z}}\\) where z is the linear predictor \\(\\beta_0 + \\beta_1 * x\\)"
+  },
+  {
+    "objectID": "slides-04-02.html#assumptions",
+    "href": "slides-04-02.html#assumptions",
+    "title": "Logistic Regression",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nIndependent observations\nNo multicollinearity among predictors\nLinear relationship between target (in log odds) and predictors\nAdequate sample size"
+  },
+  {
+    "objectID": "slides-04-02.html#data",
+    "href": "slides-04-02.html#data",
+    "title": "Logistic Regression",
+    "section": "Data",
+    "text": "Data\nDownload Tagliamonte’s that expresion data and inspect it\nPhenomenom:\n\nI think that I will have a great time\nI think I will have a great time\n\nQuestion: What linguistics and social factor affect the expression of that"
+  },
+  {
+    "objectID": "slides-04-02.html#logistic-regression-with-statsmodels",
+    "href": "slides-04-02.html#logistic-regression-with-statsmodels",
+    "title": "Logistic Regression",
+    "section": "Logistic Regression with statsmodels",
+    "text": "Logistic Regression with statsmodels\nDownload clean-that-expression.csv\n\nimport statsmodels.api as sm \nimport pandas as pd  \n\ndef main():\n    # loading the training dataset  \n    data = pd.read_csv(\"data/clean-that-expression.csv\") \n    \n    # defining the dependent and independent variables \n    X = data[[\"know\"]] \n    y = data[\"expressed\"]\n    \n    # building the model and fitting the data \n    log_reg = sm.Logit(y, sm.add_constant(X)).fit() \n    print(log_reg.summary()) \n\nmain()"
+  },
+  {
+    "objectID": "slides-04-01.html#house-prices",
+    "href": "slides-04-01.html#house-prices",
+    "title": "OLS Case Study",
+    "section": "House Prices",
+    "text": "House Prices\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef main():\n    data = pd.read_csv(\"data/clean_house_prices.csv\")\n\n    X = data[[\"bed\", \"house_size\"]]\n    y = data[\"price\"]\n\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\n\nmain()"
+  },
+  {
+    "objectID": "slides-04-01.html#results-part-1",
+    "href": "slides-04-01.html#results-part-1",
+    "title": "OLS Case Study",
+    "section": "Results – part 1",
+    "text": "Results – part 1\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                  price   R-squared:                       0.242\nModel:                            OLS   Adj. R-squared:                  0.242\nMethod:                 Least Squares   F-statistic:                     1623.\nDate:                Sun, 16 Feb 2025   Prob (F-statistic):               0.00\nTime:                        09:06:45   Log-Likelihood:            -1.4998e+05\nNo. Observations:               10154   AIC:                         3.000e+05\nDf Residuals:                   10151   BIC:                         3.000e+05\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n=============================================================================="
+  },
+  {
+    "objectID": "slides-04-01.html#results-part-2",
+    "href": "slides-04-01.html#results-part-2",
+    "title": "OLS Case Study",
+    "section": "Results – part 2",
+    "text": "Results – part 2\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst       -2.26e+04   1.92e+04     -1.177      0.239   -6.02e+04     1.5e+04\nbed        -2.675e+04   7072.066     -3.783      0.000   -4.06e+04   -1.29e+04\nhouse_size   391.1845      8.311     47.067      0.000     374.893     407.476\n==============================================================================\nOmnibus:                    12672.728   Durbin-Watson:                   1.202\nProb(Omnibus):                  0.000   Jarque-Bera (JB):          3902146.529\nSkew:                           6.543   Prob(JB):                         0.00\nKurtosis:                      98.141   Cond. No.                     6.85e+03\n=============================================================================="
+  },
+  {
+    "objectID": "slides-04-01.html#interpretation",
+    "href": "slides-04-01.html#interpretation",
+    "title": "OLS Case Study",
+    "section": "Interpretation",
+    "text": "Interpretation\nFor every added square foot, the price of the house goes up by 391.1845 dollars"
+  },
+  {
+    "objectID": "slides-04-01.html#predicting-new-data",
+    "href": "slides-04-01.html#predicting-new-data",
+    "title": "OLS Case Study",
+    "section": "Predicting new data",
+    "text": "Predicting new data\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef main():\n    data = pd.read_csv(\"data/clean_house_prices.csv\")\n\n    X = data[[\"bed\", \"house_size\", \"zip_code_99350\"]]\n    y = data[\"price\"]\n\n    result = sm.OLS(y, sm.add_constant(X)).fit()\n    print(result.summary())\n\n    data_dict = {\"bed\": [2, 3, 2], \n                 \"house_size\": [1400, 2300, 1400],\n                 \"zip_code_99350\": [0, 0, 1] }\n    df_dict = pd.DataFrame(data_dict)\n    new_data = sm.add_constant(df_dict[[\"bed\", \"house_size\", \"zip_code_99350\"]])\n    \n    predictions = result.predict(new_data)\n    print(predictions)\n\n\nmain()"
+  },
+  {
+    "objectID": "slides-04-01.html#removing-columns-from-data",
+    "href": "slides-04-01.html#removing-columns-from-data",
+    "title": "OLS Case Study",
+    "section": "Removing columns from data",
+    "text": "Removing columns from data\n\ncolumns_to_exclude = [\"price\"]\nselected_data = data.drop(columns=columns_to_exclude)"
+  },
+  {
+    "objectID": "slides-04-01.html#selecting-some-columns-from-data",
+    "href": "slides-04-01.html#selecting-some-columns-from-data",
+    "title": "OLS Case Study",
+    "section": "Selecting some columns from data",
+    "text": "Selecting some columns from data\n\nselected_data  = filtered_data.loc[:, [\"price\", \"bed\", \"house_size\", \"zip_code\"]]"
+  },
+  {
+    "objectID": "slides-04-02.html#data-wrangling",
+    "href": "slides-04-02.html#data-wrangling",
+    "title": "Logistic Regression",
+    "section": "Data wrangling",
+    "text": "Data wrangling\n\nMake every variable in Tagliamonte’s that expresion data a numeric variable\nCall your python script data_wrangling.py\nYour script should read data/that-expression.csv and write data/clean-that-expression.csv\nSubmit it to gradescope\n\n\nassert isinstance(data.iloc[:,0][0], np.int64)\nassert isinstance(data.iloc[:,1][0], np.int64)\nassert isinstance(data.iloc[:,2][0], np.int64)"
+  },
+  {
+    "objectID": "project-01.html",
+    "href": "project-01.html",
+    "title": "Project 1",
     "section": "",
-    "text": "We will be using data from the World Happiness Report for this case study.\nDownload the data and set it up in your working environment.\n\nlibrary(tidyverse)\n\nhappiness &lt;- read_csv(\"data/world-happiness-2020-2024.csv\")"
+    "text": "In this project, you will be fitting a linear regression model to tuition in the US data.\nDownload the tuition data and set up your coding environment."
   },
   {
-    "objectID": "slides-05-02.html#bar-plot",
-    "href": "slides-05-02.html#bar-plot",
-    "title": "Case Study",
-    "section": "Bar plot",
-    "text": "Bar plot\n\nhappiness |&gt;\n  group_by(regional_indicator) |&gt;\n  summarize(mean_score = mean(ladder_score),\n            sd_score = sd(ladder_score)) |&gt;\n  ggplot(aes(x = mean_score, \n             y = reorder(regional_indicator, mean_score))) +\n  geom_col() +\n  geom_errorbar(aes(xmin = mean_score-sd_score, xmax = mean_score+sd_score))"
+    "objectID": "project-01.html#data-wrangling",
+    "href": "project-01.html#data-wrangling",
+    "title": "Project 1",
+    "section": "Data wrangling",
+    "text": "Data wrangling\nCreate a data_wrangling.py Python script and unsure that:\n\nthe year variable is an integer – remove the - and everything after the dash\nthe state variable is transformed into dummy variables, with one variable for each state, one hot encoded (with zeros and 1, integer format)\nyour main() function reads the original file in a folder called data (use pd.read_csv(\"data/tuition.csv\")) and write out a clean-tuition.csv file to the data folder (use .to_csv(\"data/clean-tuition.csv\"))\n\nHere’s what your clean-tuition.csv file should look like (showing first rows and first columns only):"
   },
   {
-    "objectID": "slides-05-02.html#line-plot",
-    "href": "slides-05-02.html#line-plot",
-    "title": "Case Study",
-    "section": "Line plot",
-    "text": "Line plot\n\nhappiness |&gt;\n  group_by(regional_indicator, year) |&gt;\n  summarize(mean_score = mean(ladder_score)) |&gt;\n  ggplot(aes(x = year, y = mean_score, color = regional_indicator)) + \n  geom_point() +\n  geom_line()"
+    "objectID": "project-01.html#plot",
+    "href": "project-01.html#plot",
+    "title": "Project 1",
+    "section": "Plot",
+    "text": "Plot\nCreate a plots.ipynb python notebook file and with the clean-tuition.csv data create a scatterplot of tuition vs. academic year.\nYou should replicate this scatterplot:"
   },
   {
-    "objectID": "slides-05-01.html#population-vs.-sample",
-    "href": "slides-05-01.html#population-vs.-sample",
-    "title": "Sampling Concepts",
-    "section": "Population vs. Sample",
-    "text": "Population vs. Sample\n\nTarget population:\n\nthe entire group that you want to draw conclusions about\ndefined in terms of age, job, political afilitation, geographical location, age, income\n\nSample: the specific group of individuals that you will collect data from"
+    "objectID": "project-01.html#submit-to-gradescope",
+    "href": "project-01.html#submit-to-gradescope",
+    "title": "Project 1",
+    "section": "Submit to gradescope",
+    "text": "Submit to gradescope\nYou are to submit three files to gradescope:\n\ndata_wrangling.py\nplots.ipynb\nmodeling.py\n\nYou can submit other .py files if you are using any – don’t include any subfolders in your submission though, gradescope will not be considering any folders when running the code (only the data folder where .csv files should be placed).\nThe data gradescope will be using is slightly different from the data you are being provided with, but your code should be generalizable (meaning, no hardcoding of model coefficients, for example)."
   },
   {
-    "objectID": "slides-05-01.html#gradescope-activity",
-    "href": "slides-05-01.html#gradescope-activity",
-    "title": "Sampling Concepts",
-    "section": "Gradescope activity",
-    "text": "Gradescope activity\nGo to gradescope and answer the questions about samples"
+    "objectID": "modules.html#assignment",
+    "href": "modules.html#assignment",
+    "title": "Modules",
+    "section": "Assignment",
+    "text": "Assignment\n\nProject 01 – due Friday, February 28, 11:59pm"
   },
   {
-    "objectID": "slides-05-03.html#null-hypothesis",
-    "href": "slides-05-03.html#null-hypothesis",
-    "title": "Introduction to Inference",
-    "section": "Null Hypothesis",
-    "text": "Null Hypothesis\n\na statistical statement that assumes there is no effect, no difference, or no relationship between variables being studied\nthe default position that any observed difference is due to random chance rather than a real effect\nthe question is whether there is enough evidence to reject the null hypothesis"
+    "objectID": "project-01.html#data-modeling",
+    "href": "project-01.html#data-modeling",
+    "title": "Project 1",
+    "section": "Data modeling",
+    "text": "Data modeling\nCreate a modeling.py Python script and run Ordinary Least Squares on the clean-tution.csv data.\nEnsure that your main() function:\n\nprints out only the summary of the model, and the rsquared and rsquared adjusted values (in this order, your script should not print anything else) – you can use print(model.summary()), print(model.rsquared) and print(model.rsquared_adj) (replace model with the variable name you use in your script)\nwrites a coefficients.csv file with all of your model’s coefficients – you can use this block of code to based your code on (again, replace model with your variable name)\n\n\ncoeffs = model.params\ndf_coeffs = pd.DataFrame(coeffs)\ndf_coeffs.columns = [\"coefficient\"]\ndf_coeffs[\"variable\"] = df_coeffs.index\ndf_coeffs.to_csv(\"coefficients.csv\", index=False)\n\nHere’s what your coefficients.csv file should look like (showing first rows only):"
   },
   {
-    "objectID": "slides-05-03.html#null-hypothesis-1",
-    "href": "slides-05-03.html#null-hypothesis-1",
-    "title": "Introduction to Inference",
-    "section": "Null Hypothesis",
-    "text": "Null Hypothesis\n\\(H_0\\) (Null Hypothesis): The variables region and happiness score are independent. The difference in scores across different regions was due to natural variability inherent in the population.\n\\(H_1\\) (Alternative Hypothesis): The variables region and happiness score are not independent. The difference in scores across different regions was not due to natural variability."
+    "objectID": "slides-04-03.html#comparing-model-results",
+    "href": "slides-04-03.html#comparing-model-results",
+    "title": "OLS vs. Logit",
+    "section": "Comparing model results",
+    "text": "Comparing model results\nData: clean_titanic.csv\n\nCreate two Python scripts, one with OLS modeling, another with Logit modeling.\nWhat are the differences in the results?"
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing",
-    "href": "slides-05-03.html#hypothesis-testing",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis Testing",
-    "text": "Hypothesis Testing\n\ngoal: reject the null hypothesis in favor of an alternative hypothesis that suggests there is a real effect\nWe only reject the null hypothesis if we find strong statistical evidence against it\n\nThink of it like a criminal trial - the defendant is presumed innocent (null hypothesis) until proven guilty beyond a reasonable doubt. Similarly, we assume no effect exists until we have strong statistical evidence suggesting otherwise."
+    "objectID": "slides-04-03.html#ols",
+    "href": "slides-04-03.html#ols",
+    "title": "OLS vs. Logit",
+    "section": "OLS",
+    "text": "OLS\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef logit_to_probability(logit):\n  return 1 / (1 + np.exp(-logit))\n\ndef main():\n    data = pd.read_csv(\"data/clean_titanic.csv\")\n\n    X = data[[\"fare\", \"sex\", \"age\", \n          \"siblings_spouses_aboard\",\n          \"parents_children_aboard\"]]\n    y = data[\"survived\"]\n\n    model = sm.OLS(y, sm.add_constant(X)).fit()\n    print(model.summary())\n\n    coeffs = pd.DataFrame(model.params)\n    print(coeffs)\n    coeffs_prob = coeffs[0].apply(logit_to_probability)\n    print(coeffs_prob)\n\nmain()"
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing-1",
-    "href": "slides-05-03.html#hypothesis-testing-1",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis testing",
-    "text": "Hypothesis testing\n\ntwo_groups &lt;- happiness |&gt;\n  filter(regional_indicator %in% c(\"Western Europe\", \"South Asia\"))\nt.test(ladder_score ~ regional_indicator, data = two_groups)\n\n\n    Welch Two Sample t-test\n\ndata:  ladder_score by regional_indicator\nt = -13.546, df = 37.636, p-value = 4.762e-16\nalternative hypothesis: true difference in means between group South Asia and group Western Europe is not equal to 0\n95 percent confidence interval:\n -3.037035 -2.247082\nsample estimates:\n    mean in group South Asia mean in group Western Europe \n                    4.247478                     6.889537"
+    "objectID": "slides-04-03.html#logit",
+    "href": "slides-04-03.html#logit",
+    "title": "OLS vs. Logit",
+    "section": "Logit",
+    "text": "Logit\n\nimport pandas as pd\nimport numpy as np\nimport statsmodels.api as sm\n\ndef logit_to_probability(logit):\n  return 1 / (1 + np.exp(-logit))\n\ndef main():\n    data = pd.read_csv(\"data/clean_titanic.csv\")\n\n    X = data[[\"fare\", \"sex\", \"age\", \n          \"siblings_spouses_aboard\",\n          \"parents_children_aboard\"]]\n    y = data[\"survived\"]\n\n    model = sm.Logit(y, sm.add_constant(X)).fit()\n    print(model.summary())\n\n    coeffs = pd.DataFrame(model.params)\n    print(coeffs)\n    coeffs_prob = coeffs[0].apply(logit_to_probability)\n    print(coeffs_prob)\n\nmain()"
   },
   {
-    "objectID": "slides-05-03.html#the-data",
-    "href": "slides-05-03.html#the-data",
-    "title": "Introduction to Inference",
-    "section": "The data",
-    "text": "The data\nWe will be using data from the World Happiness Report for this case study.\nDownload the data and set it up in your coding environment.\nIf you have already set the data up, then you can reuse the project you had going.\n\nlibrary(tidyverse)\nhappiness &lt;- read_csv(\"data/world-happiness-2020-2024.csv\")"
+    "objectID": "slides-04-03.html#spam-vs.-ham",
+    "href": "slides-04-03.html#spam-vs.-ham",
+    "title": "OLS vs. Logit",
+    "section": "Spam vs. Ham",
+    "text": "Spam vs. Ham\nRun both OLS and Logit on this email data\n\nDownload the data\nClean the data\nWhat’s the target/response variable? What are the features/predictors?\nModel the data"
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing-t-test",
-    "href": "slides-05-03.html#hypothesis-testing-t-test",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis testing: t-test",
-    "text": "Hypothesis testing: t-test\n\nstatistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂)\nThe variability in the data (variance, standard deviation)\nThe sample size"
+    "objectID": "slides-04-04.html#whats-machine-learning",
+    "href": "slides-04-04.html#whats-machine-learning",
+    "title": "Machine Learning (Prediction)",
+    "section": "What’s machine learning?",
+    "text": "What’s machine learning?\n\nmodeling to make predictions or find patterns in data\noften without explicit hypotheses\na flexible pattern-matcher looking for useful relationships in data\nmodels learn patterns and relationships within the data\nusually needs large amounts of data to train effective models"
   },
   {
-    "objectID": "slides-05-03.html#welch-two-sample-t-test",
-    "href": "slides-05-03.html#welch-two-sample-t-test",
-    "title": "Introduction to Inference",
-    "section": "Welch Two Sample t-test",
-    "text": "Welch Two Sample t-test\nThe Welch t-test formula (also called Welch’s unequal variances t-test) is:\nt = (x̄₁ - x̄₂) / √(s₁²/n₁ + s₂²/n₂)\nWhere:\n\nx̄₁ and x̄₂ are the sample means\ns₁² and s₂² are the sample variances\nn₁ and n₂ are the sample sizes"
+    "objectID": "slides-04-04.html#scikit-learn",
+    "href": "slides-04-04.html#scikit-learn",
+    "title": "Machine Learning (Prediction)",
+    "section": "Scikit-learn",
+    "text": "Scikit-learn\n\noften shortened to sklearn\nopen-source machine learning library"
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing-t-test-1",
-    "href": "slides-05-03.html#hypothesis-testing-t-test-1",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis testing – t-test",
-    "text": "Hypothesis testing – t-test\n\ntwo_regions &lt;- happiness |&gt;\n  filter(regional_indicator %in% c(\"Western Europe\", \"South Asia\"))\n\nt.test(ladder_score ~ regional_indicator, data = two_regions)\n\n\n    Welch Two Sample t-test\n\ndata:  ladder_score by regional_indicator\nt = -13.546, df = 37.636, p-value = 4.762e-16\nalternative hypothesis: true difference in means between group South Asia and group Western Europe is not equal to 0\n95 percent confidence interval:\n -3.037035 -2.247082\nsample estimates:\n    mean in group South Asia mean in group Western Europe \n                    4.247478                     6.889537 \n\n\nSince the p-value is less than 0.05, we can reject the null hypothesis"
+    "objectID": "slides-04-04.html#train-test",
+    "href": "slides-04-04.html#train-test",
+    "title": "Machine Learning (Prediction)",
+    "section": "Train-Test",
+    "text": "Train-Test\nSince the focus of machine learning is on model performance, we worry more about overfitting – we (validate and) test data that was not used in building the models (training)\nTesting (and validation) helps to assess how well the model generalizes to new, unseen data."
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing-anova",
-    "href": "slides-05-03.html#hypothesis-testing-anova",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis testing – ANOVA",
-    "text": "Hypothesis testing – ANOVA\nANalysis Of VAriance (ANOVA):\n\na statistical test to determine whether two or more population means are different\n\nThe core concept is comparing:\n\nVariation between groups (how different the group means are from each other)\nVariation within groups (how spread out the data is within each group)"
+    "objectID": "slides-04-04.html#measuring-performance",
+    "href": "slides-04-04.html#measuring-performance",
+    "title": "Machine Learning (Prediction)",
+    "section": "Measuring Performance",
+    "text": "Measuring Performance\nRegression vs. Classification – different types of measures\nLet’s start with regression:\n\nMean Square Error (MSE):average of the squared differences between predicted and actual values\nSquare Root of MSE (RMSE): makes the error values more interpretable as they are in the same units as the target variable\nR-squared (R2 or \\(R^2\\)): the proportion of variance in the dependent variable explained by the model – ranges from 0 to 1, where 1 indicates a perfect fit."
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing-anova-1",
-    "href": "slides-05-03.html#hypothesis-testing-anova-1",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis testing – ANOVA",
-    "text": "Hypothesis testing – ANOVA\n\nANOVA calculates an F-statistic: the ratio of between-group variance to within-group variance.\nA large F-value suggests the differences between groups are meaningful rather than due to chance."
+    "objectID": "slides-04-04.html#train-test-with-sklearn",
+    "href": "slides-04-04.html#train-test-with-sklearn",
+    "title": "Machine Learning (Prediction)",
+    "section": "Train-Test with sklearn",
+    "text": "Train-Test with sklearn\nWe first load the method for splitting the data:\n\nfrom sklearn.model_selection import train_test_split\n\nThen, after reading the data in, we calltrain_test_split()\n\ntrain_test_split(X, y, test_size=0.3)\n\nDocumentation for train_test_split"
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing-anova-2",
-    "href": "slides-05-03.html#hypothesis-testing-anova-2",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis testing – ANOVA",
-    "text": "Hypothesis testing – ANOVA\n\nanova &lt;- aov(ladder_score ~ regional_indicator, data = happiness)\nsummary(anova)\n\n                    Df Sum Sq Mean Sq F value Pr(&gt;F)    \nregional_indicator   9  562.6   62.51   133.8 &lt;2e-16 ***\nResiduals          717  335.1    0.47                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "objectID": "slides-04-04.html#whats-machine-learning-1",
+    "href": "slides-04-04.html#whats-machine-learning-1",
+    "title": "Machine Learning (Prediction)",
+    "section": "What’s machine learning?",
+    "text": "What’s machine learning?\n\nless concerned with whether the data represents a random sample from a population\nfocus on predictive accuracy and generalization performance\ninterested in how well the model performs on new data"
   },
   {
-    "objectID": "slides-05-02.html#box-plot",
-    "href": "slides-05-02.html#box-plot",
-    "title": "Case Study",
-    "section": "Box plot",
-    "text": "Box plot\n\nhappiness |&gt;\n  ggplot(aes(y = reorder(regional_indicator, ladder_score), \n             x = ladder_score)) +\n  geom_boxplot() +\n  labs(title = \"IQR of happiness scores across regions\",\n       y = \"\")"
+    "objectID": "slides-04-04.html#scikit-learn-1",
+    "href": "slides-04-04.html#scikit-learn-1",
+    "title": "Machine Learning (Prediction)",
+    "section": "Scikit-learn",
+    "text": "Scikit-learn\n\nThis package includes:\n\nSupervised Learning Algorithms: Linear Regression, Random Forests, Support Vector Machines (SVM), and Neural Networks\nUnsupervised Learning Clustering Algorithms: K-means, PCA\nModel Selection Tools: cross-validation, parameter tuning, and metrics evaluation\nData Preprocessing Tools: scalers, encoders, and feature selection"
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing-t-test-2",
-    "href": "slides-05-03.html#hypothesis-testing-t-test-2",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis testing – t-test",
-    "text": "Hypothesis testing – t-test\n\ntwo_years &lt;- happiness |&gt;\n  filter(year %in% c(2020, 2024))\n\nt.test(ladder_score ~ year, data = two_years)\n\n\n    Welch Two Sample t-test\n\ndata:  ladder_score by year\nt = -0.31048, df = 288.86, p-value = 0.7564\nalternative hypothesis: true difference in means between group 2020 and group 2024 is not equal to 0\n95 percent confidence interval:\n -0.3023198  0.2199362\nsample estimates:\nmean in group 2020 mean in group 2024 \n          5.486380           5.527572 \n\n\nSince the p-value is greater than 0.05, we are unable to reject the null hypothesis"
+    "objectID": "slides-04-04.html#train-test-1",
+    "href": "slides-04-04.html#train-test-1",
+    "title": "Machine Learning (Prediction)",
+    "section": "Train-Test",
+    "text": "Train-Test\n\nTraining Set:\n\nused to train the machine learning model\nmost of the data (70% to 80%, usually)\n\nTesting Set:\n\nused to evaluate the model’s performance\nsmaller portion of the data that the model has not seen during training."
   },
   {
-    "objectID": "slides-05-03.html#effect-size",
-    "href": "slides-05-03.html#effect-size",
-    "title": "Introduction to Inference",
-    "section": "Effect size",
-    "text": "Effect size\n\nmeasure of the strength or magnitude of a relationship\nunlike statistical significance (p-values), effect size tells you how meaningful or important a difference is in practical terms\nfor differences in group means, we use Cohen’s d:\n\n\nd = (x̄₁ - x̄₂) / √(s₁² + s₂²)/2\n\nWhere:\n\nx̄₁ and x̄₂ are the sample means\ns₁² and s₂² are the sample variances"
+    "objectID": "slides-04-04.html#train-test-with-sklearn-1",
+    "href": "slides-04-04.html#train-test-with-sklearn-1",
+    "title": "Machine Learning (Prediction)",
+    "section": "Train-Test with sklearn",
+    "text": "Train-Test with sklearn\n\nrandom_state parameter: integer, seed value, to ensure reproducibility, sets the seed for the random number generator\n\nThe choice of random_state can impact the performance of your model, especially if the dataset is small or if the data points are not uniformly distributed.\nDifferent splits can lead to different training and testing sets, which in turn can affect the model’s performance metrics."
   },
   {
-    "objectID": "slides-05-03.html#effect-size-cohens-d",
-    "href": "slides-05-03.html#effect-size-cohens-d",
-    "title": "Introduction to Inference",
-    "section": "Effect size – Cohen’s d",
-    "text": "Effect size – Cohen’s d\n\nlibrary(lsr)\nwestern_europe &lt;- happiness |&gt; \n  filter(regional_indicator == \"Western Europe\")\n\nsouth_asia &lt;- happiness |&gt; \n  filter(regional_indicator == \"South Asia\")\n\n\ncohensD(western_europe$ladder_score, south_asia$ladder_score)\n\n[1] 3.597635"
+    "objectID": "slides-04-04.html#example",
+    "href": "slides-04-04.html#example",
+    "title": "Machine Learning (Prediction)",
+    "section": "Example",
+    "text": "Example\n\nimport random\nprint(random.randint(1, 10))\n\n7\n\n\n\nimport random\nrandom.seed(123)\nprint(random.randint(1, 10))\n\n1"
   },
   {
-    "objectID": "slides-05-03.html#effect-size-cohens-d-1",
-    "href": "slides-05-03.html#effect-size-cohens-d-1",
-    "title": "Introduction to Inference",
-    "section": "Effect size – Cohen’s d",
-    "text": "Effect size – Cohen’s d\n\nlibrary(lsr)\nyear_2020 &lt;- happiness |&gt; \n  filter(year == 2020)\n\nyear_2024 &lt;- happiness |&gt; \n  filter(year == 2024)\n\n\ncohensD(year_2020$ladder_score, year_2024$ladder_score)\n\n[1] 0.03623506"
+    "objectID": "slides-04-04.html#train-test-with-sklearn-2",
+    "href": "slides-04-04.html#train-test-with-sklearn-2",
+    "title": "Machine Learning (Prediction)",
+    "section": "Train-Test with sklearn",
+    "text": "Train-Test with sklearn\nLet’s use the clean email data for our first model (we will be running regression):\n\ndata = pd.read_csv(\"data/clean_email.csv\")\nX = data[[\"to_multiple\"]]\ny = data[\"spam\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=123)"
   },
   {
-    "objectID": "slides-05-03.html#hypothesis-testing-one-way-anova",
-    "href": "slides-05-03.html#hypothesis-testing-one-way-anova",
-    "title": "Introduction to Inference",
-    "section": "Hypothesis testing – one-way ANOVA",
-    "text": "Hypothesis testing – one-way ANOVA\nOne-way ANOVA: Examines the effect of one independent variable on the response (dependent) variable\n\nanova &lt;- aov(ladder_score ~ regional_indicator, data = happiness)\nsummary(anova)\n\n                    Df Sum Sq Mean Sq F value Pr(&gt;F)    \nregional_indicator   9  562.6   62.51   133.8 &lt;2e-16 ***\nResiduals          717  335.1    0.47                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "objectID": "slides-04-04.html#linear-regression",
+    "href": "slides-04-04.html#linear-regression",
+    "title": "Machine Learning (Prediction)",
+    "section": "Linear Regression",
+    "text": "Linear Regression\nWe will be using LinearRegression from sklearn.linear_model\n\nfrom sklearn.linear_model import LinearRegression\n\nThen we create and fit the model to our data\n\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)"
   },
   {
-    "objectID": "slides-05-03.html#type-i-and-type-ii-errors",
-    "href": "slides-05-03.html#type-i-and-type-ii-errors",
-    "title": "Introduction to Inference",
-    "section": "Type I and Type II errors",
-    "text": "Type I and Type II errors\nType I Error (False Positive):\n\nRejecting the null hypothesis when the null hypothesis should not have been rejected\n\nType II Error (False Negative):\n\nFailing to reject the null hypothesis when it should have been rejected\n\nA courtroom analogy:\n\nType I Error: Convicting an innocent person\nType II Error: Letting a guilty person go free"
+    "objectID": "slides-04-04.html#assessing-model",
+    "href": "slides-04-04.html#assessing-model",
+    "title": "Machine Learning (Prediction)",
+    "section": "Assessing model",
+    "text": "Assessing model\nWe make predictions based on the test features\n\ny_pred = model.predict(X_test)\n\nThen we evaluate the model – lets calculate MSE and R2.\n\nfrom sklearn.metrics import mean_squared_error, r2_score\n\nThen we call the appropiate methods on our observed and predicted targets:\n\nprint(mean_squared_error(y_test, y_pred))\nprint(r2_score(y_test, y_pred))"
   },
   {
-    "objectID": "slides-05-03.html#absence-of-evidence-is-not-evidence-of-absence",
-    "href": "slides-05-03.html#absence-of-evidence-is-not-evidence-of-absence",
-    "title": "Introduction to Inference",
-    "section": "Absence of evidence is not evidence of absence",
-    "text": "Absence of evidence is not evidence of absence\n“Absence of evidence is not evidence of absence” means that the fact that we haven’t found evidence for something doesn’t prove that it doesn’t exist.\n\nWhen we fail to reject the null hypothesis, we shouldn’t conclude that the null hypothesis is true - we can only say we don’t have enough evidence to reject it."
+    "objectID": "slides-04-04.html#scaling-features",
+    "href": "slides-04-04.html#scaling-features",
+    "title": "Machine Learning (Prediction)",
+    "section": "Scaling features",
+    "text": "Scaling features\nLet’s start with StandardScaler\n\nfrom sklearn.preprocessing import StandardScaler\n\nWe then scale our features for both training and testing data sets.\n\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)"
   },
   {
-    "objectID": "slides-05-03.html#p-value",
-    "href": "slides-05-03.html#p-value",
-    "title": "Introduction to Inference",
-    "section": "p-value",
-    "text": "p-value\n\nthe probability of type I error\nlower the p-value is, the lower the probability of getting that result if the null hypothesis were true\nalpha level α is usually 0.05 (often the alpha level is adjusted if more than one statistical test is run)\n\n“p-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone” – American Statistical Association (ASA)"
+    "objectID": "slides-04-04.html#feature-scaling",
+    "href": "slides-04-04.html#feature-scaling",
+    "title": "Machine Learning (Prediction)",
+    "section": "Feature scaling",
+    "text": "Feature scaling\n\nPuts all features on a comparable level, so the model can properly assess their relative importance\nEnsures fair comparison between features – especially when features have very different scales (like age [0-100] vs. income [$0-$1,000,000]) (the model may incorrectly prioritize features with larger values)\nHelps avoid overflow or underflow issues in computations caused by very large or very small numbers can cause numerical"
   },
   {
-    "objectID": "slides-06-01.html#hypothesis-testing-t-test",
-    "href": "slides-06-01.html#hypothesis-testing-t-test",
-    "title": "Hypothesis Testing",
-    "section": "Hypothesis testing: t-test",
-    "text": "Hypothesis testing: t-test\n\nstatistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂)\nThe variability in the data (variance, standard deviation)\nThe sample size"
+    "objectID": "slides-04-04.html#feature-scaling-1",
+    "href": "slides-04-04.html#feature-scaling-1",
+    "title": "Machine Learning (Prediction)",
+    "section": "Feature scaling",
+    "text": "Feature scaling\nCommon scaling methods include:\n\nMin-Max Scaling: Scales features to a fixed range, usually [0,1]\nStandard Scaling: Transforms features to have zero mean and unit variance\nRobust Scaling: Uses statistics that are robust to outliers (like median and quartiles)"
   },
   {
-    "objectID": "slides-06-01.html#welch-two-sample-t-test",
-    "href": "slides-06-01.html#welch-two-sample-t-test",
-    "title": "Hypothesis Testing",
-    "section": "Welch Two Sample t-test",
-    "text": "Welch Two Sample t-test\nThe Welch t-test formula (also called Welch’s unequal variances t-test) is:\nt = (x̄₁ - x̄₂) / √(s₁²/n₁ + s₂²/n₂)\nWhere:\n\nx̄₁ and x̄₂ are the sample means\ns₁² and s₂² are the sample variances\nn₁ and n₂ are the sample sizes"
+    "objectID": "slides-05-01.html#train-test-with-sklearn",
+    "href": "slides-05-01.html#train-test-with-sklearn",
+    "title": "Introduction to Scikit-learn",
+    "section": "Train-Test with sklearn",
+    "text": "Train-Test with sklearn\nWe first load the method for splitting the data:\n\nfrom sklearn.model_selection import train_test_split\n\nThen, after reading the data in, we calltrain_test_split()\n\ntrain_test_split(X, y, test_size=0.3)\n\nDocumentation for train_test_split"
   },
   {
-    "objectID": "slides-06-01.html#the-data",
-    "href": "slides-06-01.html#the-data",
-    "title": "Hypothesis Testing",
-    "section": "The data",
-    "text": "The data\nWe will be using data from the World Happiness Report for this case study.\nDownload the data and set it up in your coding environment.\nIf you have already set the data up, then you can reuse the project you had going.\n\nlibrary(tidyverse)\nhappiness &lt;- read_csv(\"data/world-happiness-2020-2024.csv\")"
+    "objectID": "slides-05-01.html#train-test-with-sklearn-1",
+    "href": "slides-05-01.html#train-test-with-sklearn-1",
+    "title": "Introduction to Scikit-learn",
+    "section": "Train-Test with sklearn",
+    "text": "Train-Test with sklearn\n\nrandom_state parameter: integer, seed value, to ensure reproducibility, sets the seed for the random number generator\n\nThe choice of random_state can impact the performance of your model, especially if the dataset is small or if the data points are not uniformly distributed.\nDifferent splits can lead to different training and testing sets, which in turn can affect the model’s performance metrics."
   },
   {
-    "objectID": "slides-06-01.html#null-hypothesis",
-    "href": "slides-06-01.html#null-hypothesis",
-    "title": "Hypothesis Testing",
-    "section": "Null Hypothesis",
-    "text": "Null Hypothesis\n\\(H_0\\) (Null Hypothesis): The difference in mean happiness score between Western Europe and South Asia is due to natural variability inherent in the population.\n\\(H_1\\) (Alternative Hypothesis): The difference in mean happiness score between Western Europe and South Asia is real (not due to natural variability)."
+    "objectID": "slides-05-01.html#example",
+    "href": "slides-05-01.html#example",
+    "title": "Introduction to Scikit-learn",
+    "section": "Example",
+    "text": "Example\n\nimport random\nprint(random.randint(1, 10))\n\n8\n\n\n\nimport random\nrandom.seed(123)\nprint(random.randint(1, 10))\n\n1"
   },
   {
-    "objectID": "slides-06-01.html#hypothesis-testing-t-test-1",
-    "href": "slides-06-01.html#hypothesis-testing-t-test-1",
-    "title": "Hypothesis Testing",
-    "section": "Hypothesis testing – t-test",
-    "text": "Hypothesis testing – t-test\n\ntwo_regions &lt;- happiness |&gt;\n  filter(regional_indicator %in% c(\"Western Europe\", \"South Asia\"))\n\nt.test(ladder_score ~ regional_indicator, data = two_regions)\n\n\n    Welch Two Sample t-test\n\ndata:  ladder_score by regional_indicator\nt = -13.546, df = 37.636, p-value = 4.762e-16\nalternative hypothesis: true difference in means between group South Asia and group Western Europe is not equal to 0\n95 percent confidence interval:\n -3.037035 -2.247082\nsample estimates:\n    mean in group South Asia mean in group Western Europe \n                    4.247478                     6.889537 \n\n\nSince the p-value is less than 0.05, we can reject the null hypothesis"
+    "objectID": "slides-05-01.html#train-test-with-sklearn-2",
+    "href": "slides-05-01.html#train-test-with-sklearn-2",
+    "title": "Introduction to Scikit-learn",
+    "section": "Train-Test with sklearn",
+    "text": "Train-Test with sklearn\nLet’s use the clean email data for our first model (we will be running regression):\n\ndata = pd.read_csv(\"data/clean_email.csv\")\nX = data[[\"to_multiple\"]]\ny = data[\"spam\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=123)"
   },
   {
-    "objectID": "slides-06-01.html#null-hypothesis-1",
-    "href": "slides-06-01.html#null-hypothesis-1",
-    "title": "Hypothesis Testing",
-    "section": "Null Hypothesis",
-    "text": "Null Hypothesis\n\\(H_0\\) (Null Hypothesis): The difference in mean happiness score between the years of 2020 and 2024 is due to natural variability inherent in the population.\n\\(H_1\\) (Alternative Hypothesis): The difference in mean happiness score between the years of 2020 and 2024 is real (not due to natural variability)."
+    "objectID": "slides-05-01.html#linear-regression",
+    "href": "slides-05-01.html#linear-regression",
+    "title": "Introduction to Scikit-learn",
+    "section": "Linear Regression",
+    "text": "Linear Regression\nWe will be using LinearRegression from sklearn.linear_model\n\nfrom sklearn.linear_model import LinearRegression\n\nThen we create and fit the model to our data\n\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)"
   },
   {
-    "objectID": "slides-06-01.html#hypothesis-testing-t-test-2",
-    "href": "slides-06-01.html#hypothesis-testing-t-test-2",
-    "title": "Hypothesis Testing",
-    "section": "Hypothesis testing – t-test",
-    "text": "Hypothesis testing – t-test\n\ntwo_years &lt;- happiness |&gt;\n  filter(year %in% c(2020, 2024))\n\nt.test(ladder_score ~ year, data = two_years)\n\n\n    Welch Two Sample t-test\n\ndata:  ladder_score by year\nt = -0.31048, df = 288.86, p-value = 0.7564\nalternative hypothesis: true difference in means between group 2020 and group 2024 is not equal to 0\n95 percent confidence interval:\n -0.3023198  0.2199362\nsample estimates:\nmean in group 2020 mean in group 2024 \n          5.486380           5.527572 \n\n\nSince the p-value is greater than 0.05, we are unable to reject the null hypothesis"
+    "objectID": "slides-05-01.html#assessing-model",
+    "href": "slides-05-01.html#assessing-model",
+    "title": "Introduction to Scikit-learn",
+    "section": "Assessing model",
+    "text": "Assessing model\nWe make predictions based on the test features\n\ny_pred = model.predict(X_test)\n\nThen we evaluate the model – lets calculate MSE and R2.\n\nfrom sklearn.metrics import mean_squared_error, r2_score\n\nThen we call the appropiate methods on our observed and predicted targets:\n\nprint(mean_squared_error(y_test, y_pred))\nprint(r2_score(y_test, y_pred))"
   },
   {
-    "objectID": "slides-06-01.html#absence-of-evidence-is-not-evidence-of-absence",
-    "href": "slides-06-01.html#absence-of-evidence-is-not-evidence-of-absence",
-    "title": "Hypothesis Testing",
-    "section": "Absence of evidence is not evidence of absence",
-    "text": "Absence of evidence is not evidence of absence\n“Absence of evidence is not evidence of absence” means that the fact that we haven’t found evidence for something doesn’t prove that it doesn’t exist.\n\nWhen we fail to reject the null hypothesis, we shouldn’t conclude that the null hypothesis is true - we can only say we don’t have enough evidence to reject it."
+    "objectID": "slides-05-01.html#feature-scaling",
+    "href": "slides-05-01.html#feature-scaling",
+    "title": "Introduction to Scikit-learn",
+    "section": "Feature scaling",
+    "text": "Feature scaling\n\nPuts all features on a comparable level, so the model can properly assess their relative importance\nEnsures fair comparison between features – especially when features have very different scales (like age [0-100] vs. income [$0-$1,000,000]) (the model may incorrectly prioritize features with larger values)\nHelps avoid overflow or underflow issues in computations caused by very large or very small numbers can cause numerical"
   },
   {
-    "objectID": "slides-06-01.html#effect-size",
-    "href": "slides-06-01.html#effect-size",
-    "title": "Hypothesis Testing",
-    "section": "Effect size",
-    "text": "Effect size\n\nmeasure of the strength or magnitude of a relationship\nunlike statistical significance (p-values), effect size tells you how meaningful or important a difference is in practical terms\nfor differences in group means, we use Cohen’s d:\n\n\nd = (x̄₁ - x̄₂) / √(s₁² + s₂²)/2\n\nWhere:\n\nx̄₁ and x̄₂ are the sample means\ns₁² and s₂² are the sample variances"
+    "objectID": "slides-05-01.html#feature-scaling-1",
+    "href": "slides-05-01.html#feature-scaling-1",
+    "title": "Introduction to Scikit-learn",
+    "section": "Feature scaling",
+    "text": "Feature scaling\nCommon scaling methods include:\n\nMin-Max Scaling: Scales features to a fixed range, usually [0,1]\nStandard Scaling: Transforms features to have zero mean and unit variance\nRobust Scaling: Uses statistics that are robust to outliers (like median and quartiles)"
   },
   {
-    "objectID": "slides-06-01.html#effect-size-cohens-d",
-    "href": "slides-06-01.html#effect-size-cohens-d",
-    "title": "Hypothesis Testing",
-    "section": "Effect size – Cohen’s d",
-    "text": "Effect size – Cohen’s d\n\nlibrary(lsr)\nwestern_europe &lt;- happiness |&gt; \n  filter(regional_indicator == \"Western Europe\")\n\nsouth_asia &lt;- happiness |&gt; \n  filter(regional_indicator == \"South Asia\")\n\n\ncohensD(western_europe$ladder_score, south_asia$ladder_score)\n\n[1] 3.597635"
-  },
-  {
-    "objectID": "slides-06-01.html#effect-size-cohens-d-1",
-    "href": "slides-06-01.html#effect-size-cohens-d-1",
-    "title": "Hypothesis Testing",
-    "section": "Effect size – Cohen’s d",
-    "text": "Effect size – Cohen’s d\n\nlibrary(lsr)\nyear_2020 &lt;- happiness |&gt; \n  filter(year == 2020)\n\nyear_2024 &lt;- happiness |&gt; \n  filter(year == 2024)\n\n\ncohensD(year_2020$ladder_score, year_2024$ladder_score)\n\n[1] 0.03623506"
-  },
-  {
-    "objectID": "slides-06-01.html#hypothesis-testing-anova",
-    "href": "slides-06-01.html#hypothesis-testing-anova",
-    "title": "Hypothesis Testing",
-    "section": "Hypothesis testing – ANOVA",
-    "text": "Hypothesis testing – ANOVA\nANalysis Of VAriance (ANOVA):\n\na statistical test to determine whether two or more population means are different\n\nThe core concept is comparing:\n\nVariation between groups (how different the group means are from each other)\nVariation within groups (how spread out the data is within each group)"
-  },
-  {
-    "objectID": "slides-06-01.html#hypothesis-testing-anova-1",
-    "href": "slides-06-01.html#hypothesis-testing-anova-1",
-    "title": "Hypothesis Testing",
-    "section": "Hypothesis testing – ANOVA",
-    "text": "Hypothesis testing – ANOVA\n\nANOVA calculates an F-statistic: the ratio of between-group variance to within-group variance.\nA large F-value suggests the differences between groups are meaningful rather than due to chance."
-  },
-  {
-    "objectID": "slides-06-01.html#null-hypothesis-2",
-    "href": "slides-06-01.html#null-hypothesis-2",
-    "title": "Hypothesis Testing",
-    "section": "Null Hypothesis",
-    "text": "Null Hypothesis\n\\(H_0\\) (Null Hypothesis): The variables region and happiness score are independent. The difference in scores across different regions was due to natural variability inherent in the population.\n\\(H_1\\) (Alternative Hypothesis): The variables region and happiness score are not independent. The difference in scores across different regions was not due to natural variability."
-  },
-  {
-    "objectID": "slides-06-01.html#hypothesis-testing-one-way-anova",
-    "href": "slides-06-01.html#hypothesis-testing-one-way-anova",
-    "title": "Hypothesis Testing",
-    "section": "Hypothesis testing – one-way ANOVA",
-    "text": "Hypothesis testing – one-way ANOVA\nOne-way ANOVA: Examines the effect of one independent variable on the response (dependent) variable\n\nanova &lt;- aov(ladder_score ~ regional_indicator, data = happiness)\nsummary(anova)\n\n                    Df Sum Sq Mean Sq F value Pr(&gt;F)    \nregional_indicator   9  562.6   62.51   133.8 &lt;2e-16 ***\nResiduals          717  335.1    0.47                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "objectID": "slides-05-01.html#scaling-features",
+    "href": "slides-05-01.html#scaling-features",
+    "title": "Introduction to Scikit-learn",
+    "section": "Scaling features",
+    "text": "Scaling features\nLet’s start with StandardScaler\n\nfrom sklearn.preprocessing import StandardScaler\n\nWe then scale our features for both training and testing data sets.\n\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)"
   },
   {
     "objectID": "modules.html#slides-4",
     "href": "modules.html#slides-4",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nHypothesis Testing"
+    "text": "Slides\n\nIntroduction to scikit-learn"
   }
 ]
