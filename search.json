@@ -1431,8 +1431,8 @@
     "objectID": "slides-06-01.html#hypothesis-testing-t-test",
     "href": "slides-06-01.html#hypothesis-testing-t-test",
     "title": "Hypothesis Testing",
-    "section": "Hypothesis testing: t-test",
-    "text": "Hypothesis testing: t-test\n\nstatistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂)\nThe variability in the data (variance, standard deviation)\nThe sample size"
+    "section": "Hypothesis testing – t-test",
+    "text": "Hypothesis testing – t-test\n\ntwo_regions &lt;- happiness |&gt;\n  filter(regional_indicator %in% c(\"Western Europe\", \"South Asia\"))\n\nt.test(ladder_score ~ regional_indicator, data = two_regions)\n\n\n    Welch Two Sample t-test\n\ndata:  ladder_score by regional_indicator\nt = -13.546, df = 37.636, p-value = 4.762e-16\nalternative hypothesis: true difference in means between group South Asia and group Western Europe is not equal to 0\n95 percent confidence interval:\n -3.037035 -2.247082\nsample estimates:\n    mean in group South Asia mean in group Western Europe \n                    4.247478                     6.889537 \n\n\nSince the p-value is less than 0.05, we can reject the null hypothesis"
   },
   {
     "objectID": "slides-06-01.html#welch-two-sample-t-test",
@@ -1460,7 +1460,7 @@
     "href": "slides-06-01.html#hypothesis-testing-t-test-1",
     "title": "Hypothesis Testing",
     "section": "Hypothesis testing – t-test",
-    "text": "Hypothesis testing – t-test\n\ntwo_regions &lt;- happiness |&gt;\n  filter(regional_indicator %in% c(\"Western Europe\", \"South Asia\"))\n\nt.test(ladder_score ~ regional_indicator, data = two_regions)\n\n\n    Welch Two Sample t-test\n\ndata:  ladder_score by regional_indicator\nt = -13.546, df = 37.636, p-value = 4.762e-16\nalternative hypothesis: true difference in means between group South Asia and group Western Europe is not equal to 0\n95 percent confidence interval:\n -3.037035 -2.247082\nsample estimates:\n    mean in group South Asia mean in group Western Europe \n                    4.247478                     6.889537 \n\n\nSince the p-value is less than 0.05, we can reject the null hypothesis"
+    "text": "Hypothesis testing – t-test\n\ntwo_years &lt;- happiness |&gt;\n  filter(year %in% c(2020, 2024))\n\nt.test(ladder_score ~ year, data = two_years)\n\n\n    Welch Two Sample t-test\n\ndata:  ladder_score by year\nt = -0.31048, df = 288.86, p-value = 0.7564\nalternative hypothesis: true difference in means between group 2020 and group 2024 is not equal to 0\n95 percent confidence interval:\n -0.3023198  0.2199362\nsample estimates:\nmean in group 2020 mean in group 2024 \n          5.486380           5.527572 \n\n\nSince the p-value is greater than 0.05, we are unable to reject the null hypothesis"
   },
   {
     "objectID": "slides-06-01.html#null-hypothesis-1",
@@ -1516,7 +1516,7 @@
     "href": "slides-06-01.html#hypothesis-testing-anova-1",
     "title": "Hypothesis Testing",
     "section": "Hypothesis testing – ANOVA",
-    "text": "Hypothesis testing – ANOVA\n\nANOVA calculates an F-statistic: the ratio of between-group variance to within-group variance.\nA large F-value suggests the differences between groups are meaningful rather than due to chance."
+    "text": "Hypothesis testing – ANOVA\n\nANOVA calculates an F-statistic: the ratio of between-group variance to within-group variance.\nA large F-value suggests the differences between/across groups are meaningful rather than due to chance.\nIf the null hypothesis is rejected, it means that at least one group mean is different from another, but not necessarily that all groups are different from each other. – ANOVA indicates whether there’s a difference somewhere, we don’t know where"
   },
   {
     "objectID": "slides-06-01.html#null-hypothesis-2",
@@ -1537,6 +1537,125 @@
     "href": "modules.html#slides-4",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nHypothesis Testing"
+    "text": "Slides\n\nHypothesis Testing\nBivariate Analysis"
+  },
+  {
+    "objectID": "slides-06-02.html#two-numeric-variables",
+    "href": "slides-06-02.html#two-numeric-variables",
+    "title": "Bivariate Analysis",
+    "section": "Two numeric variables",
+    "text": "Two numeric variables\nWe saw two hypothesis tests for checking if differences in the mean of a numeric variable across different groups is real (t-test and ANOVA)\nWhat if we have two numeric variables?\n\nscatterplots\ncorrelation\nlinear regression"
+  },
+  {
+    "objectID": "slides-06-02.html#case-study",
+    "href": "slides-06-02.html#case-study",
+    "title": "Bivariate Analysis",
+    "section": "Case Study",
+    "text": "Case Study\nWe will be working with Indicators of Anxiety or Depression Based on Reported Frequency of Symptoms in November 2020-2024\nPlease download the clean data and set up your analysis environment.\n\nlibrary(tidyverse)\ndep_anx &lt;- read_csv(\"data/depression-anxiety.csv\")"
+  },
+  {
+    "objectID": "slides-06-02.html#question",
+    "href": "slides-06-02.html#question",
+    "title": "Bivariate Analysis",
+    "section": "Question",
+    "text": "Question\n\nDoes reported frequency of anxiety symptoms correlate with reported frequency of depression symptoms?"
+  },
+  {
+    "objectID": "slides-06-02.html#descriptive-statistics-scatterplot",
+    "href": "slides-06-02.html#descriptive-statistics-scatterplot",
+    "title": "Bivariate Analysis",
+    "section": "Descriptive Statistics – Scatterplot",
+    "text": "Descriptive Statistics – Scatterplot\n\ndep_anx |&gt;\n  ggplot(aes(x = symptoms_of_depressive_disorder,\n             y = symptoms_of_anxiety_disorder)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-06-02.html#association-correlation",
+    "href": "slides-06-02.html#association-correlation",
+    "title": "Bivariate Analysis",
+    "section": "Association – Correlation",
+    "text": "Association – Correlation\n\nevaluates the association between two or more numeric variables\nwhen one variable changes, does the other variable change along with it?\ncorrelation coefficient ranges from -1 to +1:\n\n+1 means a perfect positive correlation (as one increases, the other increases)\n-1 means a perfect negative correlation (as one increases, the other decreases)\n0 means no correlation (the variables don’t appear related)"
+  },
+  {
+    "objectID": "slides-06-02.html#association-correlation-1",
+    "href": "slides-06-02.html#association-correlation-1",
+    "title": "Bivariate Analysis",
+    "section": "Association – Correlation",
+    "text": "Association – Correlation\nWe use cor.test() to calculate correlation in R.\n\ncor.test(dep_anx$symptoms_of_depressive_disorder,\n         dep_anx$symptoms_of_anxiety_disorder)\n\n\n    Pearson's product-moment correlation\n\ndata:  dep_anx$symptoms_of_depressive_disorder and dep_anx$symptoms_of_anxiety_disorder\nt = 219.22, df = 5359, p-value &lt; 2.2e-16\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.9457571 0.9511318\nsample estimates:\n      cor \n0.9485127"
+  },
+  {
+    "objectID": "slides-06-02.html#pearson-correlation-formula",
+    "href": "slides-06-02.html#pearson-correlation-formula",
+    "title": "Bivariate Analysis",
+    "section": "Pearson correlation formula",
+    "text": "Pearson correlation formula\n\\(r = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})*(y_i - \\bar{y})}{\\sqrt{\\sum_{i=1}^n (x_i - \\bar{x})^2*\\sum_{i=1}^n(y_i - \\bar{y})^2}}\\)\nWhere:\n\nx and y are two vectors of length n\n\\(\\bar{x}\\) and \\(\\bar{y}\\) are the means of x and y, respectively"
+  },
+  {
+    "objectID": "slides-06-02.html#null-and-alternative-hypotheses",
+    "href": "slides-06-02.html#null-and-alternative-hypotheses",
+    "title": "Bivariate Analysis",
+    "section": "Null and Alternative Hypotheses",
+    "text": "Null and Alternative Hypotheses\n\\(H_0\\): There is no linear relationship between frequency of anxiety and frequency of depression\n\\(H_1\\): There is a linear relationship between frequency of anxiety and frequency of depression"
+  },
+  {
+    "objectID": "slides-06-02.html#linear-regression-effect",
+    "href": "slides-06-02.html#linear-regression-effect",
+    "title": "Bivariate Analysis",
+    "section": "Linear Regression – effect",
+    "text": "Linear Regression – effect\nWhat’s the effect of anxiety frequency on depressive disorder frequency?\nLinear regression:\n\nestabiblishes a relationship between a dependent variable (Y) and one or more independent variables (X)\nassumes a linear relationship between variables\nfinds the best-fitting straight line through the data points\ncan tell you how much of the variation in Y is explained by X (through R-squared)"
+  },
+  {
+    "objectID": "slides-06-02.html#linear-regression-formula",
+    "href": "slides-06-02.html#linear-regression-formula",
+    "title": "Bivariate Analysis",
+    "section": "Linear Regression – formula",
+    "text": "Linear Regression – formula\n\\(\\hat{y} = \\beta_0 + \\beta_1 x\\)\nWhere:\n\n\\(\\hat{y}\\) is the predicted value (of the response/dependent variable)\n\\(x\\) is the independent variable\n\\(\\beta_0\\) is the intercept\n\\(\\beta_1\\) is the slope"
+  },
+  {
+    "objectID": "slides-06-02.html#linear-regression-in-r",
+    "href": "slides-06-02.html#linear-regression-in-r",
+    "title": "Bivariate Analysis",
+    "section": "Linear Regression in R",
+    "text": "Linear Regression in R\n\nmodel &lt;- lm(symptoms_of_depressive_disorder ~ symptoms_of_anxiety_disorder,\n            data = dep_anx)\n\nsummary(model)\n\n\nCall:\nlm(formula = symptoms_of_depressive_disorder ~ symptoms_of_anxiety_disorder, \n    data = dep_anx)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-8.9138 -1.3956 -0.0444  1.3620 13.4346 \n\nCoefficients:\n                              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)                  -0.995443   0.113038  -8.806   &lt;2e-16 ***\nsymptoms_of_anxiety_disorder  0.837579   0.003821 219.222   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.231 on 5359 degrees of freedom\n  (237 observations deleted due to missingness)\nMultiple R-squared:  0.8997,    Adjusted R-squared:  0.8997 \nF-statistic: 4.806e+04 on 1 and 5359 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "slides-06-02.html#questions",
+    "href": "slides-06-02.html#questions",
+    "title": "Bivariate Analysis",
+    "section": "Questions",
+    "text": "Questions\nWhat other questions can you answer with this data set?"
+  },
+  {
+    "objectID": "slides-06-01.html",
+    "href": "slides-06-01.html",
+    "title": "Hypothesis Testing",
+    "section": "",
+    "text": "statistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂)\nThe variability in the data (variance, standard deviation)\nThe sample size"
+  },
+  {
+    "objectID": "slides-06-01.html#hypothesis-testing-two-sample-t-test",
+    "href": "slides-06-01.html#hypothesis-testing-two-sample-t-test",
+    "title": "Hypothesis Testing",
+    "section": "",
+    "text": "statistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂)\nThe variability in the data (variance, standard deviation)\nThe sample size"
+  },
+  {
+    "objectID": "slides-06-01.html#t-test-assumptions",
+    "href": "slides-06-01.html#t-test-assumptions",
+    "title": "Hypothesis Testing",
+    "section": "t-test assumptions",
+    "text": "t-test assumptions\n\nwe need a numeric continuous variable (the data) and a categorical variable (for Two-sample t-test)\nthe data should be approximately normally distributed\nobservations are independent of one another\neach subject belongs to only one group\n\nThe t-test is fairly robust to minor violations of normality, especially with larger sample sizes (typically n &gt; 30)"
+  },
+  {
+    "objectID": "slides-06-01.html#anova-assumptions",
+    "href": "slides-06-01.html#anova-assumptions",
+    "title": "Hypothesis Testing",
+    "section": "ANOVA – assumptions",
+    "text": "ANOVA – assumptions\n\nANOVA requires one categorical variable and one numeric variable\nobservations are independent of one another\neach subject belongs to only one group\nthere should be no outliers\nresiduals should follow approximately a normal distribution\n\nANOVA is also fairly robust to minor violations of normality, especially with larger sample sizes (typically n &gt; 30)"
+  },
+  {
+    "objectID": "slides-06-01.html#distribution-of-residuals",
+    "href": "slides-06-01.html#distribution-of-residuals",
+    "title": "Hypothesis Testing",
+    "section": "Distribution of residuals",
+    "text": "Distribution of residuals\n\nhist(anova$residuals)"
   }
 ]
