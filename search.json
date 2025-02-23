@@ -1634,8 +1634,8 @@
     "objectID": "slides-06-01.html#hypothesis-testing-two-sample-t-test",
     "href": "slides-06-01.html#hypothesis-testing-two-sample-t-test",
     "title": "Hypothesis Testing",
-    "section": "",
-    "text": "statistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂)\nThe variability in the data (variance, standard deviation)\nThe sample size"
+    "section": "Hypothesis testing: Two-sample t-test",
+    "text": "Hypothesis testing: Two-sample t-test\n\nstatistical test used to determine if there’s a significant difference between the means of two groups\nit helps us decide whether to reject the null hypothesis that any observed difference is just due to chance\n\nThe test looks at:\n\nThe difference between the group means (x̄₁ - x̄₂)\nThe variability in the data (variance, standard deviation)\nThe sample size"
   },
   {
     "objectID": "slides-06-01.html#t-test-assumptions",
