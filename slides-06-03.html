@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>STAT 230 Data Science and Statistics – Bivariate Analysis</title>
+  <title>STAT 230 Data Science and Statistics – Two Categorical Variables</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,236 +191,41 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Bivariate Analysis</h1>
+  <h1 class="title">Two Categorical Variables</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="two-numeric-variables" class="slide level2">
-<h2>Two numeric variables</h2>
-<p>We saw two hypothesis tests for checking if differences in the mean of a numeric variable across different groups is real (t-test and ANOVA)</p>
-<p>What if we have two numeric variables?</p>
-<ul>
-<li>scatterplots</li>
-<li>correlation</li>
-<li>linear regression</li>
-</ul>
-</section>
-<section id="case-study" class="slide level2">
-<h2>Case Study</h2>
-<p>We will be working with <a href="https://catalog.data.gov/dataset/indicators-of-anxiety-or-depression-based-on-reported-frequency-of-symptoms-during-last-7-">Indicators of Anxiety or Depression Based on Reported Frequency of Symptoms in November 2020-2024</a></p>
-<p>Please <a href="data/depression-anxiety.csv">download the clean data</a> and set up your analysis environment.</p>
+<section id="data" class="slide level2">
+<h2>Data</h2>
+<p>We will be working with <a href="https://catalog.data.gov/dataset/electric-vehicle-population-data">Electric Vehicle Population Data</a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a>dep_anx <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/depression-anxiety.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a>electric_cars <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/electrice-cars.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="question" class="slide level2">
-<h2>Question</h2>
-<blockquote>
-<p>Does reported frequency of anxiety symptoms correlate with reported frequency of depression symptoms?</p>
-</blockquote>
-</section>
-<section id="descriptive-statistics-scatterplot" class="slide level2">
-<h2>Descriptive Statistics – Scatterplot</h2>
+<section id="hypothesis-testing-chi-square" class="slide level2">
+<h2>Hypothesis testing – Chi-square</h2>
+<p>contingency tables</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>dep_anx <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> symptoms_of_depressive_disorder,</span>
-<span id="cb2-3"><a></a>             <span class="at">y =</span> symptoms_of_anxiety_disorder)) <span class="sc">+</span></span>
-<span id="cb2-4"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="slides-06-02_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="association-correlation" class="slide level2">
-<h2>Association – Correlation</h2>
-<ul>
-<li>evaluates the association between two or more numeric variables</li>
-<li>when one variable changes, does the other variable change along with it?</li>
-<li>correlation coefficient ranges from -1 to +1:
-<ul>
-<li>+1 means a perfect positive correlation (as one increases, the other increases)</li>
-<li>-1 means a perfect negative correlation (as one increases, the other decreases)</li>
-<li>0 means no correlation (the variables don’t appear related)</li>
-</ul></li>
-</ul>
-</section>
-<section id="null-and-alternative-hypotheses" class="slide level2">
-<h2>Null and Alternative Hypotheses</h2>
-<p><span class="math inline">\(H_0\)</span>: There is <strong>no</strong> linear relationship between frequency of anxiety and frequency of depression</p>
-<p><span class="math inline">\(H_1\)</span>: There is a linear relationship between frequency of anxiety and frequency of depression</p>
-</section>
-<section id="pearson-correlation-formula" class="slide level2">
-<h2>Pearson correlation formula</h2>
-<p><span class="math inline">\(r = \frac{\sum_{i=1}^n (x_i - \bar{x})*(y_i - \bar{y})}{\sqrt{\sum_{i=1}^n (x_i - \bar{x})^2*\sum_{i=1}^n(y_i - \bar{y})^2}}\)</span></p>
-<p>Where:</p>
-<ul>
-<li>x and y are two vectors of length n</li>
-<li><span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\bar{y}\)</span> are the means of x and y, respectively</li>
-</ul>
-</section>
-<section id="association-correlation-1" class="slide level2">
-<h2>Association – Correlation</h2>
-<p>We use <code>cor.test()</code> to calculate correlation in R.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">cor.test</span>(dep_anx<span class="sc">$</span>symptoms_of_depressive_disorder,</span>
-<span id="cb3-2"><a></a>         dep_anx<span class="sc">$</span>symptoms_of_anxiety_disorder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>electric_cars <span class="ot">&lt;-</span> electric_cars <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a></a>  <span class="fu">mutate</span>(<span class="at">tesla =</span> <span class="fu">if_else</span>(make <span class="sc">==</span> <span class="st">"TESLA"</span>, <span class="st">"yes"</span>, <span class="st">"no"</span>))</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a>my_table <span class="ot">&lt;-</span> <span class="fu">table</span>(electric_cars<span class="sc">$</span>state, electric_cars<span class="sc">$</span>make)</span>
+<span id="cb2-5"><a></a></span>
+<span id="cb2-6"><a></a><span class="fu">chisq.test</span>(<span class="fu">matrix</span>(my_table))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Pearson's product-moment correlation
+    Chi-squared test for given probabilities
 
-data:  dep_anx$symptoms_of_depressive_disorder and dep_anx$symptoms_of_anxiety_disorder
-t = 219.22, df = 5359, p-value &lt; 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.9457571 0.9511318
-sample estimates:
-      cor 
-0.9485127 </code></pre>
+data:  matrix(my_table)
+X-squared = 107762274, df = 2253, p-value &lt; 2.2e-16</code></pre>
 </div>
-</div>
-</section>
-<section id="questions" class="slide level2">
-<h2>Questions</h2>
-<p>What other questions can you answer with this data set?</p>
-</section>
-<section id="one-numeric-and-one-categorical-variable" class="slide level2">
-<h2>One numeric and one categorical variable</h2>
-<p>Is reported frequency of sympoms of depressive disorder higher in transgender than cic-gender people?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>by_gender <span class="ot">&lt;-</span> dep_anx <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">"By Gender identity"</span>) </span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a>by_gender <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a></a>  <span class="fu">count</span>(subgroup)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">subgroup</th>
-<th style="text-align: right;">n</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Cis-gender female</td>
-<td style="text-align: right;">44</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Cis-gender male</td>
-<td style="text-align: right;">44</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Transgender</td>
-<td style="text-align: right;">44</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="recoding-variable" class="slide level2">
-<h2>Recoding variable</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>by_gender <span class="ot">&lt;-</span> by_gender<span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">mutate</span>(<span class="at">transgender =</span> <span class="fu">if_else</span>(subgroup <span class="sc">==</span> <span class="st">"Transgender"</span>,</span>
-<span id="cb6-3"><a></a>                               <span class="st">"yes"</span>, <span class="st">"no"</span>))</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a>by_gender <span class="sc">|&gt;</span></span>
-<span id="cb6-6"><a></a>  <span class="fu">count</span>(subgroup, transgender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">subgroup</th>
-<th style="text-align: left;">transgender</th>
-<th style="text-align: right;">n</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Cis-gender female</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: right;">44</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Cis-gender male</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: right;">44</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Transgender</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: right;">44</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="two-way-t-test" class="slide level2">
-<h2>Two-way t-test</h2>
-<p>What’s the Null Hypothesis?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">t.test</span>(symptoms_of_depressive_disorder <span class="sc">~</span> transgender,</span>
-<span id="cb7-2"><a></a>       <span class="at">data =</span> by_gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Welch Two Sample t-test
-
-data:  symptoms_of_depressive_disorder by transgender
-t = -26.835, df = 46.646, p-value &lt; 2.2e-16
-alternative hypothesis: true difference in means between group no and group yes is not equal to 0
-95 percent confidence interval:
- -38.12833 -32.80919
-sample estimates:
- mean in group no mean in group yes 
-         19.61282          55.08158 </code></pre>
-</div>
-</div>
-<p>Since the p-value is lower than the alpha of 0.05, we can reject the null hypothesis.</p>
-</section>
-<section id="anxiety-by-age" class="slide level2">
-<h2>Anxiety by Age</h2>
-<p>Is reported frequency of sympoms of anxiety different across age groups?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>by_age <span class="ot">&lt;-</span> dep_anx <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">"By Age"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="anova" class="slide level2">
-<h2>Anova</h2>
-<p>What’s the Null Hypothesis?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(symptoms_of_anxiety_disorder <span class="sc">~</span> subgroup, <span class="at">data =</span> by_age)</span>
-<span id="cb10-2"><a></a><span class="fu">summary</span>(anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>             Df Sum Sq Mean Sq F value Pr(&gt;F)    
-subgroup      6  45677    7613     290 &lt;2e-16 ***
-Residuals   497  13047      26                   
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-70 observations deleted due to missingness</code></pre>
-</div>
-</div>
-<p>Since the p-value is lower than the alpha of 0.05, we can reject the null hypothesis.</p>
-</section>
-<section id="box-plot" class="slide level2">
-<h2>Box Plot</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>by_age <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> symptoms_of_anxiety_disorder,</span>
-<span id="cb12-3"><a></a>             <span class="at">y =</span> subgroup)) <span class="sc">+</span></span>
-<span id="cb12-4"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
 </div>
 
 
-<img data-src="slides-06-02_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -477,7 +282,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

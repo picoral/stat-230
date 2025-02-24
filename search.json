@@ -1706,5 +1706,19 @@
     "title": "Bivariate Analysis",
     "section": "Box Plot",
     "text": "Box Plot\n\nby_age |&gt;\n  ggplot(aes(x = symptoms_of_anxiety_disorder,\n             y = subgroup)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides-06-03.html#data",
+    "href": "slides-06-03.html#data",
+    "title": "Two Categorical Variables",
+    "section": "Data",
+    "text": "Data\nWe will be working with Electric Vehicle Population Data\n\nlibrary(tidyverse)\nelectric_cars &lt;- read_csv(\"data/electrice-cars.csv\")"
+  },
+  {
+    "objectID": "slides-06-03.html#hypothesis-testing-chi-square",
+    "href": "slides-06-03.html#hypothesis-testing-chi-square",
+    "title": "Two Categorical Variables",
+    "section": "Hypothesis testing – Chi-square",
+    "text": "Hypothesis testing – Chi-square\ncontingency tables\n\nelectric_cars &lt;- electric_cars |&gt;\n  mutate(tesla = if_else(make == \"TESLA\", \"yes\", \"no\"))\n\nmy_table &lt;- table(electric_cars$state, electric_cars$make)\n\nchisq.test(matrix(my_table))\n\n\n    Chi-squared test for given probabilities\n\ndata:  matrix(my_table)\nX-squared = 107762274, df = 2253, p-value &lt; 2.2e-16"
   }
 ]
