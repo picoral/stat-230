@@ -1677,7 +1677,7 @@
     "href": "slides-06-02.html#recoding-variable",
     "title": "Bivariate Analysis",
     "section": "Recoding variable",
-    "text": "Recoding variable\n\nby_gender &lt;- by_gender|&gt;\n  mutate(transgender = if_else(subgroup == \"Transgender\",\n                               \"yes\", \"no\"))"
+    "text": "Recoding variable\n\nby_gender &lt;- by_gender|&gt;\n  mutate(transgender = if_else(subgroup == \"Transgender\",\n                               \"yes\", \"no\"))\n\nby_gender |&gt;\n  count(subgroup, transgender)\n\n\n\n\n\nsubgroup\ntransgender\nn\n\n\n\n\nCis-gender female\nno\n44\n\n\nCis-gender male\nno\n44\n\n\nTransgender\nyes\n44"
   },
   {
     "objectID": "slides-06-02.html#two-way-t-test",

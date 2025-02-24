@@ -326,7 +326,40 @@ sample estimates:
 <div class="cell" data-meassage="false">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>by_gender <span class="ot">&lt;-</span> by_gender<span class="sc">|&gt;</span></span>
 <span id="cb6-2"><a></a>  <span class="fu">mutate</span>(<span class="at">transgender =</span> <span class="fu">if_else</span>(subgroup <span class="sc">==</span> <span class="st">"Transgender"</span>,</span>
-<span id="cb6-3"><a></a>                               <span class="st">"yes"</span>, <span class="st">"no"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-3"><a></a>                               <span class="st">"yes"</span>, <span class="st">"no"</span>))</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>by_gender <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a></a>  <span class="fu">count</span>(subgroup, transgender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">subgroup</th>
+<th style="text-align: left;">transgender</th>
+<th style="text-align: right;">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cis-gender female</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cis-gender male</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Transgender</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: right;">44</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </section>
 <section id="two-way-t-test" class="slide level2">
