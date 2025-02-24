@@ -1664,5 +1664,47 @@
     "title": "Bivariate Analysis",
     "section": "Results Interpretation",
     "text": "Results Interpretation\nThe results suggest that anxiety and depressive symptoms are closely related. For each one-unit increase in anxiety symptoms, depressive symptoms increase by 0.84 units. When frequency of anxiety symptoms are at zero, the model predicts negative frequency depressive symptoms (-0.995). The model explains about 90% of the variance in frequency of depressive symptoms."
+  },
+  {
+    "objectID": "slides-06-02.html#one-numeric-and-one-categorical-variable",
+    "href": "slides-06-02.html#one-numeric-and-one-categorical-variable",
+    "title": "Bivariate Analysis",
+    "section": "One numeric and one categorical variable",
+    "text": "One numeric and one categorical variable\nIs reported frequency of sympoms of depressive disorder higher in transgender than cic-gender people?\n\nby_gender &lt;- dep_anx |&gt;\n  filter(group == \"By Gender identity\") \n\nby_gender |&gt;\n  count(subgroup)\n\n\n\n\n\nsubgroup\nn\n\n\n\n\nCis-gender female\n44\n\n\nCis-gender male\n44\n\n\nTransgender\n44"
+  },
+  {
+    "objectID": "slides-06-02.html#recoding-variable",
+    "href": "slides-06-02.html#recoding-variable",
+    "title": "Bivariate Analysis",
+    "section": "Recoding variable",
+    "text": "Recoding variable\n\nby_gender &lt;- by_gender|&gt;\n  mutate(transgender = if_else(subgroup == \"Transgender\",\n                               \"yes\", \"no\"))"
+  },
+  {
+    "objectID": "slides-06-02.html#two-way-t-test",
+    "href": "slides-06-02.html#two-way-t-test",
+    "title": "Bivariate Analysis",
+    "section": "Two-way t-test",
+    "text": "Two-way t-test\nWhat’s the Null Hypothesis?\n\nt.test(symptoms_of_depressive_disorder ~ transgender,\n       data = by_gender)\n\n\n    Welch Two Sample t-test\n\ndata:  symptoms_of_depressive_disorder by transgender\nt = -26.835, df = 46.646, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means between group no and group yes is not equal to 0\n95 percent confidence interval:\n -38.12833 -32.80919\nsample estimates:\n mean in group no mean in group yes \n         19.61282          55.08158 \n\n\nSince the p-value is lower than the alpha of 0.05, we can reject the null hypothesis."
+  },
+  {
+    "objectID": "slides-06-02.html#anxiety-by-age",
+    "href": "slides-06-02.html#anxiety-by-age",
+    "title": "Bivariate Analysis",
+    "section": "Anxiety by Age",
+    "text": "Anxiety by Age\nIs reported frequency of sympoms of anxiety different across age groups?\n\nby_age &lt;- dep_anx |&gt;\n  filter(group == \"By Age\")"
+  },
+  {
+    "objectID": "slides-06-02.html#anova",
+    "href": "slides-06-02.html#anova",
+    "title": "Bivariate Analysis",
+    "section": "Anova",
+    "text": "Anova\nWhat’s the Null Hypothesis?\n\nanova &lt;- aov(symptoms_of_anxiety_disorder ~ subgroup, data = by_age)\nsummary(anova)\n\n             Df Sum Sq Mean Sq F value Pr(&gt;F)    \nsubgroup      6  45677    7613     290 &lt;2e-16 ***\nResiduals   497  13047      26                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n70 observations deleted due to missingness\n\n\nSince the p-value is lower than the alpha of 0.05, we can reject the null hypothesis."
+  },
+  {
+    "objectID": "slides-06-02.html#box-plot",
+    "href": "slides-06-02.html#box-plot",
+    "title": "Bivariate Analysis",
+    "section": "Box Plot",
+    "text": "Box Plot\n\nby_age |&gt;\n  ggplot(aes(x = symptoms_of_anxiety_disorder,\n             y = subgroup)) +\n  geom_boxplot()"
   }
 ]

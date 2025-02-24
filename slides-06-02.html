@@ -280,69 +280,114 @@ sample estimates:
 </div>
 </div>
 </section>
-<section id="linear-regression-effect" class="slide level2">
-<h2>Linear Regression – effect</h2>
-<p>What’s the effect of anxiety frequency on depressive disorder frequency?</p>
-<p>Linear regression:</p>
-<ul>
-<li>estabiblishes a relationship between a dependent variable (Y) and one or more independent variables (X)</li>
-<li>assumes a linear relationship between variables</li>
-<li>finds the best-fitting straight line through the data points</li>
-<li>can tell you how much of the variation in Y is explained by X (through R-squared)</li>
-</ul>
-</section>
-<section id="linear-regression-formula" class="slide level2">
-<h2>Linear Regression – formula</h2>
-<p><span class="math inline">\(\hat{y} = \beta_0 + \beta_1 x\)</span></p>
-<p>Where:</p>
-<ul>
-<li><span class="math inline">\(\hat{y}\)</span> is the predicted value (of the response/dependent variable)</li>
-<li><span class="math inline">\(x\)</span> is the independent variable</li>
-<li><span class="math inline">\(\beta_0\)</span> is the intercept</li>
-<li><span class="math inline">\(\beta_1\)</span> is the slope</li>
-</ul>
-</section>
-<section id="linear-regression-in-r" class="slide level2">
-<h2>Linear Regression in R</h2>
-<div class="cell" data-meassage="false">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(symptoms_of_depressive_disorder <span class="sc">~</span> symptoms_of_anxiety_disorder,</span>
-<span id="cb5-2"><a></a>            <span class="at">data =</span> dep_anx)</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = symptoms_of_depressive_disorder ~ symptoms_of_anxiety_disorder, 
-    data = dep_anx)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--8.9138 -1.3956 -0.0444  1.3620 13.4346 
-
-Coefficients:
-                              Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)                  -0.995443   0.113038  -8.806   &lt;2e-16 ***
-symptoms_of_anxiety_disorder  0.837579   0.003821 219.222   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 2.231 on 5359 degrees of freedom
-  (237 observations deleted due to missingness)
-Multiple R-squared:  0.8997,    Adjusted R-squared:  0.8997 
-F-statistic: 4.806e+04 on 1 and 5359 DF,  p-value: &lt; 2.2e-16</code></pre>
-</div>
-</div>
-</section>
-<section id="results-interpretation" class="slide level2">
-<h2>Results Interpretation</h2>
-<p>The results suggest that anxiety and depressive symptoms are closely related. For each one-unit increase in anxiety symptoms, depressive symptoms increase by 0.84 units. When frequency of anxiety symptoms are at zero, the model predicts negative frequency depressive symptoms (-0.995). The model explains about 90% of the variance in frequency of depressive symptoms.</p>
-</section>
 <section id="questions" class="slide level2">
 <h2>Questions</h2>
 <p>What other questions can you answer with this data set?</p>
-
-
 </section>
+<section id="one-numeric-and-one-categorical-variable" class="slide level2">
+<h2>One numeric and one categorical variable</h2>
+<p>Is reported frequency of sympoms of depressive disorder higher in transgender than cic-gender people?</p>
+<div class="cell" data-meassage="false">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>by_gender <span class="ot">&lt;-</span> dep_anx <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">"By Gender identity"</span>) </span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a>by_gender <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">count</span>(subgroup)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">subgroup</th>
+<th style="text-align: right;">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cis-gender female</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cis-gender male</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Transgender</td>
+<td style="text-align: right;">44</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="recoding-variable" class="slide level2">
+<h2>Recoding variable</h2>
+<div class="cell" data-meassage="false">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>by_gender <span class="ot">&lt;-</span> by_gender<span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">mutate</span>(<span class="at">transgender =</span> <span class="fu">if_else</span>(subgroup <span class="sc">==</span> <span class="st">"Transgender"</span>,</span>
+<span id="cb6-3"><a></a>                               <span class="st">"yes"</span>, <span class="st">"no"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="two-way-t-test" class="slide level2">
+<h2>Two-way t-test</h2>
+<p>What’s the Null Hypothesis?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">t.test</span>(symptoms_of_depressive_disorder <span class="sc">~</span> transgender,</span>
+<span id="cb7-2"><a></a>       <span class="at">data =</span> by_gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  symptoms_of_depressive_disorder by transgender
+t = -26.835, df = 46.646, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means between group no and group yes is not equal to 0
+95 percent confidence interval:
+ -38.12833 -32.80919
+sample estimates:
+ mean in group no mean in group yes 
+         19.61282          55.08158 </code></pre>
+</div>
+</div>
+<p>Since the p-value is lower than the alpha of 0.05, we can reject the null hypothesis.</p>
+</section>
+<section id="anxiety-by-age" class="slide level2">
+<h2>Anxiety by Age</h2>
+<p>Is reported frequency of sympoms of anxiety different across age groups?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>by_age <span class="ot">&lt;-</span> dep_anx <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">"By Age"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="anova" class="slide level2">
+<h2>Anova</h2>
+<p>What’s the Null Hypothesis?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(symptoms_of_anxiety_disorder <span class="sc">~</span> subgroup, <span class="at">data =</span> by_age)</span>
+<span id="cb10-2"><a></a><span class="fu">summary</span>(anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             Df Sum Sq Mean Sq F value Pr(&gt;F)    
+subgroup      6  45677    7613     290 &lt;2e-16 ***
+Residuals   497  13047      26                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+70 observations deleted due to missingness</code></pre>
+</div>
+</div>
+<p>Since the p-value is lower than the alpha of 0.05, we can reject the null hypothesis.</p>
+</section>
+<section id="box-plot" class="slide level2">
+<h2>Box Plot</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>by_age <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> symptoms_of_anxiety_disorder,</span>
+<span id="cb12-3"><a></a>             <span class="at">y =</span> subgroup)) <span class="sc">+</span></span>
+<span id="cb12-4"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+
+
+<img data-src="slides-06-02_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
