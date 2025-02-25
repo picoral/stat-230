@@ -200,29 +200,369 @@
 <section id="data" class="slide level2">
 <h2>Data</h2>
 <p>We will be working with <a href="https://catalog.data.gov/dataset/electric-vehicle-population-data">Electric Vehicle Population Data</a></p>
+<p><a href="data/electric-cars.csv">Download the clean data set</a> and set up your analysis environment.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a>electric_cars <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/electrice-cars.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a>electric_cars <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/electric-cars.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="question" class="slide level2">
+<h2>Question</h2>
+<blockquote>
+<p>Are electric car makes more common in some states versus others?</p>
+</blockquote>
+</section>
+<section id="contingency-table" class="slide level2">
+<h2>Contingency Table</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>my_table <span class="ot">&lt;-</span> <span class="fu">table</span>(electric_cars<span class="sc">$</span>state, electric_cars<span class="sc">$</span>make)</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>my_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    
+     ACURA ALFA ROMEO  AUDI AZURE DYNAMICS BENTLEY   BMW BRIGHTDROP CADILLAC
+  AE     0          0     0              0       0     1          0        0
+  AK     0          0     0              0       0     0          0        0
+  AL     0          0     0              0       0     0          0        0
+  AP     0          0     0              0       0     1          0        0
+  AR     0          0     0              0       0     0          0        0
+  AZ     0          0     0              0       0     0          0        0
+  BC     0          0     0              0       0     0          0        0
+  CA     0          0     0              0       0     4          0        0
+  CO     0          0     1              0       0     2          0        0
+  CT     0          0     0              0       0     0          0        0
+  DC     0          0     0              0       0     1          0        0
+  DE     0          0     0              0       0     0          0        0
+  FL     0          0     0              0       0     0          0        0
+  GA     0          0     0              0       0     0          0        0
+  HI     0          0     0              0       0     0          0        0
+  ID     0          0     0              0       0     0          0        0
+  IL     0          0     2              0       0     0          0        0
+  IN     0          0     0              0       0     0          0        0
+  KS     0          0     0              0       0     0          0        0
+  KY     0          0     0              0       0     0          0        0
+  LA     0          0     0              0       0     0          0        0
+  MA     0          0     0              0       0     0          0        0
+  MD     0          0     1              0       0     2          0        1
+  ME     0          0     0              0       0     0          0        0
+  MI     0          0     0              0       0     0          0        0
+  MN     0          0     0              0       0     0          0        0
+  MO     0          0     0              0       0     0          0        0
+  MS     0          0     0              0       0     0          0        0
+  NC     0          0     0              0       0     0          0        0
+  NE     0          0     1              0       0     0          0        0
+  NH     0          0     0              0       0     0          0        0
+  NJ     0          0     0              0       0     0          0        0
+  NM     0          0     0              0       0     0          0        0
+  NS     0          0     0              0       0     0          0        0
+  NV     0          0     0              0       0     0          0        0
+  NY     0          0     0              0       0     0          0        0
+  OH     0          0     0              0       0     1          0        0
+  OK     0          0     0              0       0     1          0        0
+  OR     0          0     0              0       0     2          0        0
+  PA     0          0     0              0       0     0          0        0
+  RI     0          0     0              0       0     0          0        0
+  SC     0          0     0              0       0     0          0        0
+  TN     0          0     1              0       0     1          0        0
+  TX     0          0     0              0       0     0          0        0
+  UT     0          0     0              0       0     0          0        0
+  VA     0          0     1              0       0     2          0        0
+  WA   175         95  4279              4       5  9487          5     1106
+  WI     0          0     0              0       0     0          0        0
+  WY     0          0     0              0       0     0          0        0
+    
+     CHEVROLET CHRYSLER DODGE  FIAT FISKER  FORD GENESIS   GMC HONDA HYUNDAI
+  AE         0        0     0     0      0     0       0     0     0       0
+  AK         0        0     0     0      0     0       0     0     0       0
+  AL         1        0     0     0      0     0       0     0     0       0
+  AP         0        0     0     0      0     0       0     0     0       0
+  AR         0        0     0     0      0     1       0     0     0       0
+  AZ         0        1     0     0      0     0       0     0     0       0
+  BC         0        0     0     0      0     0       0     0     0       0
+  CA         3        8     0     0      0    10       1     0     1       2
+  CO         0        2     0     0      0     1       0     0     0       0
+  CT         1        3     0     0      0     1       0     0     0       0
+  DC         0        0     0     0      0     1       0     0     0       0
+  DE         0        0     0     0      0     0       0     0     0       0
+  FL         0        0     0     0      0     0       0     0     0       0
+  GA         1        0     0     0      0     3       0     0     0       1
+  HI         1        0     0     0      0     0       0     0     0       0
+  ID         0        0     0     0      0     1       0     0     0       0
+  IL         0        1     0     0      0     0       0     0     0       0
+  IN         0        0     0     0      0     0       0     0     0       0
+  KS         0        1     0     0      0     1       0     0     0       0
+  KY         0        1     0     0      0     1       0     0     0       0
+  LA         0        0     0     0      0     0       0     0     0       0
+  MA         0        1     0     0      0     0       0     0     0       1
+  MD         3        1     0     0      1     2       0     0     1       1
+  ME         0        1     0     0      0     0       0     0     0       0
+  MI         1        0     0     0      0     0       0     4     0       0
+  MN         0        0     0     0      0     0       0     0     0       0
+  MO         0        0     0     0      0     0       0     0     0       0
+  MS         0        0     0     0      0     0       0     0     0       0
+  NC         1        0     0     0      0     1       0     0     0       0
+  NE         0        1     0     0      0     1       0     0     0       0
+  NH         0        0     0     0      0     0       0     0     0       0
+  NJ         1        0     0     0      0     0       0     0     0       1
+  NM         0        0     0     0      0     0       0     0     0       0
+  NS         0        0     0     0      0     0       0     0     0       0
+  NV         2        1     0     0      0     1       0     0     0       0
+  NY         0        0     0     0      0     0       0     0     0       0
+  OH         0        0     0     0      0     0       0     0     0       0
+  OK         0        0     0     0      0     0       0     0     0       0
+  OR         0        0     0     0      0     0       0     0     0       1
+  PA         0        0     0     0      0     0       0     0     0       0
+  RI         0        0     0     0      0     1       0     0     0       0
+  SC         1        1     0     0      0     1       0     0     0       0
+  TN         0        0     0     0      0     0       0     0     0       0
+  TX         2        2     1     0      0     2       0     0     0       1
+  UT         0        0     0     0      0     0       0     0     0       0
+  VA         7        1     0     0      0     2       0     0     0       3
+  WA     16894     3747   765   770    180 12430     337   334  2001    7207
+  WI         0        0     0     0      0     0       0     0     0       0
+  WY         0        0     0     0      0     0       0     0     0       0
+    
+     JAGUAR  JEEP   KIA LAMBORGHINI LAND ROVER LEXUS LINCOLN LUCID MAZDA
+  AE      0     0     0           0          0     0       0     0     0
+  AK      0     0     0           0          0     0       0     0     0
+  AL      0     0     0           0          0     0       0     0     0
+  AP      0     0     0           0          0     0       0     0     0
+  AR      0     0     0           0          0     0       0     0     0
+  AZ      0     0     0           0          0     0       0     0     0
+  BC      0     0     0           0          0     0       0     0     0
+  CA      0     4     1           0          1     0       0     0     0
+  CO      0     0     0           0          0     0       0     0     0
+  CT      0     0     0           0          0     0       0     0     0
+  DC      0     0     0           0          0     0       0     0     0
+  DE      0     0     0           0          0     0       0     0     0
+  FL      0     1     1           0          0     0       0     0     0
+  GA      0     0     0           0          0     1       0     0     0
+  HI      0     3     1           0          0     0       0     0     0
+  ID      0     0     0           0          0     0       0     0     0
+  IL      0     1     0           0          0     0       0     0     0
+  IN      0     0     0           0          0     0       0     0     0
+  KS      0     0     0           0          0     0       0     0     0
+  KY      0     0     0           0          0     0       0     0     0
+  LA      0     0     0           0          0     0       0     0     0
+  MA      0     0     0           0          0     0       0     0     0
+  MD      0     0     0           0          0     1       0     0     0
+  ME      0     0     0           0          0     0       0     0     0
+  MI      0     0     0           0          0     0       0     0     0
+  MN      0     0     0           0          0     0       0     0     0
+  MO      0     1     1           0          0     0       0     0     0
+  MS      0     0     0           0          0     0       0     0     0
+  NC      0     1     0           0          0     0       0     0     0
+  NE      0     0     0           0          0     0       0     0     0
+  NH      0     0     0           0          0     0       0     0     0
+  NJ      0     0     0           0          0     0       0     0     0
+  NM      0     1     0           0          0     0       0     0     0
+  NS      0     0     0           0          0     0       0     0     0
+  NV      0     0     0           0          0     0       0     0     0
+  NY      0     0     2           0          0     0       0     0     0
+  OH      0     0     0           0          0     0       0     0     0
+  OK      0     0     0           0          0     0       0     0     0
+  OR      0     0     0           0          0     0       0     0     0
+  PA      0     1     0           0          0     0       0     0     0
+  RI      0     0     0           0          0     0       0     0     0
+  SC      0     0     0           0          0     0       0     0     0
+  TN      0     1     0           0          0     0       0     0     0
+  TX      0     2     0           0          0     0       0     0     0
+  UT      0     0     0           0          0     0       0     0     0
+  VA      0     4     3           0          0     0       0     0     0
+  WA    239  5900 11215           5        116   913     356   374   980
+  WI      0     0     0           0          0     0       0     0     0
+  WY      0     0     0           0          0     0       0     0     0
+    
+     MERCEDES-BENZ  MINI MITSUBISHI MULLEN AUTOMOTIVE INC. NISSAN POLESTAR
+  AE             0     0          0                      0      0        0
+  AK             0     0          0                      0      0        0
+  AL             0     0          0                      0      0        0
+  AP             0     0          0                      0      0        0
+  AR             0     0          0                      0      0        0
+  AZ             1     0          0                      0      0        0
+  BC             0     0          0                      0      0        0
+  CA             1     0          0                      0      1        1
+  CO             0     0          0                      0      0        0
+  CT             0     0          0                      0      0        0
+  DC             0     0          0                      0      1        0
+  DE             0     0          0                      0      0        0
+  FL             1     0          0                      0      0        0
+  GA             0     0          0                      0      1        0
+  HI             0     0          0                      0      0        0
+  ID             0     0          0                      0      0        0
+  IL             0     0          0                      0      0        0
+  IN             0     0          0                      0      0        0
+  KS             0     0          0                      0      0        0
+  KY             0     0          0                      0      0        0
+  LA             0     0          0                      0      0        0
+  MA             1     0          0                      0      0        0
+  MD             0     0          0                      0      1        0
+  ME             0     0          0                      0      0        0
+  MI             0     0          0                      0      0        0
+  MN             0     0          0                      0      0        0
+  MO             0     0          0                      0      0        0
+  MS             0     0          0                      0      0        0
+  NC             0     0          0                      0      0        0
+  NE             0     0          0                      0      0        0
+  NH             0     0          0                      0      0        0
+  NJ             0     0          0                      0      1        0
+  NM             0     0          0                      0      0        0
+  NS             0     0          0                      0      0        0
+  NV             1     0          0                      0      0        0
+  NY             0     0          0                      0      0        0
+  OH             0     0          0                      0      1        0
+  OK             0     0          0                      0      0        0
+  OR             0     0          0                      0      0        0
+  PA             1     0          0                      0      0        0
+  RI             0     0          1                      0      1        0
+  SC             0     0          0                      0      0        0
+  TN             0     0          0                      0      0        0
+  TX             0     0          0                      0      1        0
+  UT             0     0          0                      0      0        0
+  VA             0     0          0                      0      2        0
+  WA          2331  1107       1094                      2  15447     1225
+  WI             0     0          0                      0      0        0
+  WY             0     0          0                      0      0        0
+    
+     PORSCHE   RAM RIVIAN ROLLS-ROYCE SMART SUBARU TESLA TH!NK TOYOTA VINFAST
+  AE       0     0      0           0     0      0     0     0      0       0
+  AK       0     0      0           0     0      0     1     0      0       0
+  AL       0     0      0           0     0      0     4     0      2       0
+  AP       0     0      0           0     0      0     0     0      0       0
+  AR       0     0      1           0     0      0     0     0      0       0
+  AZ       0     0      1           0     0      0     4     0      0       0
+  BC       0     0      0           0     0      0     1     0      0       0
+  CA       0     0      2           0     0      0    66     0      5       0
+  CO       0     0      1           0     0      1     6     0      1       0
+  CT       0     0      0           0     0      0     2     0      1       0
+  DC       0     0      0           0     0      0     1     0      0       0
+  DE       0     0      0           0     0      0     1     0      0       0
+  FL       0     0      2           0     0      0    10     0      1       0
+  GA       0     0      1           0     0      0     3     0      1       0
+  HI       0     0      0           0     0      0     2     0      0       0
+  ID       0     0      1           0     0      0     1     0      0       0
+  IL       0     0      0           0     0      0     3     0      0       0
+  IN       0     0      0           0     0      0     1     0      0       0
+  KS       0     0      0           0     0      0     5     0      0       0
+  KY       0     0      1           0     0      0     1     0      0       0
+  LA       0     0      0           0     0      0     1     0      0       0
+  MA       0     0      0           0     0      0     5     0      0       0
+  MD       0     0      0           0     0      0    17     0      2       0
+  ME       0     0      0           0     0      0     0     0      1       0
+  MI       0     0      0           0     0      0     0     0      1       0
+  MN       0     0      0           0     0      0     1     0      0       0
+  MO       0     0      0           0     0      0     6     0      0       0
+  MS       0     0      0           0     0      0     1     0      0       0
+  NC       0     0      0           0     0      0    13     0      2       0
+  NE       0     0      0           0     0      0     0     0      0       0
+  NH       0     0      0           0     0      0     1     0      0       0
+  NJ       0     0      0           0     0      1     3     0      1       0
+  NM       0     0      0           0     0      0     0     0      0       0
+  NS       0     0      0           0     0      0     1     0      0       0
+  NV       0     0      0           0     0      0     7     0      0       0
+  NY       0     0      0           0     0      0     9     0      1       0
+  OH       0     0      0           0     0      0     2     0      0       0
+  OK       0     0      0           0     0      0     0     0      0       0
+  OR       0     0      0           0     0      0     2     0      3       0
+  PA       0     0      0           0     0      0     3     0      0       0
+  RI       0     0      1           0     0      0     0     0      0       0
+  SC       0     0      0           0     0      0     3     0      0       0
+  TN       0     0      0           0     0      0     1     0      0       0
+  TX       0     0      1           0     0      0    16     0      2       0
+  UT       0     0      0           0     0      0     2     0      0       0
+  VA       0     0      1           0     0      1    28     0      4       0
+  WA    1433     2   6699           4   241   1912 99456     5   9237       2
+  WI       0     0      0           0     0      0     1     0      0       0
+  WY       0     0      0           0     0      0     1     0      0       0
+    
+     VOLKSWAGEN VOLVO WHEEGO ELECTRIC CARS
+  AE          0     0                    0
+  AK          0     0                    0
+  AL          1     0                    0
+  AP          0     0                    0
+  AR          0     0                    0
+  AZ          0     1                    0
+  BC          0     0                    0
+  CA          4     1                    0
+  CO          0     3                    0
+  CT          0     1                    0
+  DC          0     0                    0
+  DE          0     0                    0
+  FL          0     0                    0
+  GA          1     1                    0
+  HI          0     0                    0
+  ID          0     0                    0
+  IL          1     0                    0
+  IN          0     0                    0
+  KS          0     1                    0
+  KY          1     0                    0
+  LA          0     0                    0
+  MA          0     0                    0
+  MD          1     1                    0
+  ME          0     0                    0
+  MI          0     0                    0
+  MN          0     0                    0
+  MO          0     0                    0
+  MS          0     0                    0
+  NC          0     0                    0
+  NE          0     0                    0
+  NH          0     0                    0
+  NJ          0     1                    0
+  NM          1     0                    0
+  NS          0     0                    0
+  NV          0     0                    0
+  NY          0     0                    0
+  OH          0     0                    0
+  OK          0     0                    0
+  OR          0     0                    0
+  PA          0     0                    0
+  RI          0     0                    0
+  SC          0     0                    0
+  TN          0     0                    0
+  TX          0     0                    0
+  UT          0     0                    0
+  VA          1     2                    0
+  WA       5848  5782                    3
+  WI          0     0                    0
+  WY          0     0                    0</code></pre>
+</div>
+</div>
+</section>
+<section id="visualization" class="slide level2">
+<h2>Visualization</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>electric_cars <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">group_by</span>(state, make) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> state, <span class="at">y =</span> make, <span class="at">fill =</span> n)) <span class="sc">+</span></span>
+<span id="cb4-5"><a></a>  <span class="fu">geom_tile</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-06-03_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
 <section id="hypothesis-testing-chi-square" class="slide level2">
 <h2>Hypothesis testing – Chi-square</h2>
-<p>contingency tables</p>
+<ul>
+<li><p>Chi-square (<span class="math inline">\(\chi^2\)</span>) – statistical test that determines if there’s a significant association between categorical variables</p></li>
+<li><p>Chi-square test for independence: Tests whether two categorical variables are related to each other</p></li>
+</ul>
+</section>
+<section id="hypothesis-testing-chi-square-1" class="slide level2">
+<h2>Hypothesis testing – Chi-square</h2>
+<p><span class="math inline">\(H_0\)</span>: Observed frequencies match expected frequencies. There is no deviation from expected values, hence there is no relationship between the two categorical variables.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>electric_cars <span class="ot">&lt;-</span> electric_cars <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">mutate</span>(<span class="at">tesla =</span> <span class="fu">if_else</span>(make <span class="sc">==</span> <span class="st">"TESLA"</span>, <span class="st">"yes"</span>, <span class="st">"no"</span>))</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a>my_table <span class="ot">&lt;-</span> <span class="fu">table</span>(electric_cars<span class="sc">$</span>state, electric_cars<span class="sc">$</span>make)</span>
-<span id="cb2-5"><a></a></span>
-<span id="cb2-6"><a></a><span class="fu">chisq.test</span>(<span class="fu">matrix</span>(my_table))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">chisq.test</span>(my_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Chi-squared test for given probabilities
+    Pearson's Chi-squared test
 
-data:  matrix(my_table)
-X-squared = 107762274, df = 2253, p-value &lt; 2.2e-16</code></pre>
+data:  my_table
+X-squared = 2855.8, df = 2160, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions</h2>
+<p>What other questions can you answer based on this data set?</p>
 
 
 </section>
