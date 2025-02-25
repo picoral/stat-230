@@ -1740,7 +1740,7 @@
     "href": "slides-06-03.html#hypothesis-testing-chi-square-1",
     "title": "Two Categorical Variables",
     "section": "Hypothesis testing – Chi-square",
-    "text": "Hypothesis testing – Chi-square\n\\(H_0\\): Observed frequencies match expected frequencies. There is no deviation from expected values, hence there is no relationship between the two categorical variables.\n\nchisq.test(my_table)\n\n\n    Pearson's Chi-squared test\n\ndata:  my_table\nX-squared = 2855.8, df = 2160, p-value &lt; 2.2e-16"
+    "text": "Hypothesis testing – Chi-square\n\\(H_0\\): Observed frequencies match expected frequencies. There is no deviation from expected values, hence there is no relationship between the two categorical variables.\n\nchisq.test(my_table)\n\n\n    Pearson's Chi-squared test\n\ndata:  my_table\nX-squared = 2855.8, df = 2160, p-value &lt; 2.2e-16\n\n\nSince the p value is less than the alpha of 0.05, we can reject the null hypothesis."
   },
   {
     "objectID": "slides-06-03.html#question-1",
@@ -1776,5 +1776,26 @@
     "title": "Two Categorical Variables",
     "section": "Questions",
     "text": "Questions\nWhat other questions can you answer based on this data set?"
+  },
+  {
+    "objectID": "slides-06-03.html#hypothesis-testing-chi-squared",
+    "href": "slides-06-03.html#hypothesis-testing-chi-squared",
+    "title": "Two Categorical Variables",
+    "section": "Hypothesis testing – Chi-squared",
+    "text": "Hypothesis testing – Chi-squared\n\nChi-square (\\(\\chi^2\\)) – statistical test that determines if there’s a significant association between categorical variables\nChi-square test for independence: Tests whether two categorical variables are related to each other"
+  },
+  {
+    "objectID": "slides-06-03.html#hypothesis-testing-chi-squared-1",
+    "href": "slides-06-03.html#hypothesis-testing-chi-squared-1",
+    "title": "Two Categorical Variables",
+    "section": "Hypothesis testing – Chi-squared",
+    "text": "Hypothesis testing – Chi-squared\n\\(H_0\\): Observed frequencies match expected frequencies. There is no deviation from expected values, hence there is no relationship between the two categorical variables.\n\nchisq.test(my_table)\n\n\n    Pearson's Chi-squared test\n\ndata:  my_table\nX-squared = 2855.8, df = 2160, p-value &lt; 2.2e-16\n\n\nSince the p value is less than the alpha of 0.05, we can reject the null hypothesis."
+  },
+  {
+    "objectID": "slides-06-03.html#bivariate-hypothesis-testing-summary",
+    "href": "slides-06-03.html#bivariate-hypothesis-testing-summary",
+    "title": "Two Categorical Variables",
+    "section": "Bivariate hypothesis testing – summary",
+    "text": "Bivariate hypothesis testing – summary\n\none categorical with two groups and one numeric variable: t-test\none categorical and one numeric variable: ANOVA\ntwo numeric variables: correlation\ntwo categoric variables: chi-squared"
   }
 ]

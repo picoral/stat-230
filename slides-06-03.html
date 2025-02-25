@@ -530,29 +530,18 @@
 </div>
 </div>
 </section>
-<section id="visualization" class="slide level2">
-<h2>Visualization</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>electric_cars <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">group_by</span>(state, make) <span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
-<span id="cb4-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> state, <span class="at">y =</span> make, <span class="at">fill =</span> n)) <span class="sc">+</span></span>
-<span id="cb4-5"><a></a>  <span class="fu">geom_tile</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="slides-06-03_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="hypothesis-testing-chi-square" class="slide level2">
-<h2>Hypothesis testing – Chi-square</h2>
+<section id="hypothesis-testing-chi-squared" class="slide level2">
+<h2>Hypothesis testing – Chi-squared</h2>
 <ul>
 <li><p>Chi-square (<span class="math inline">\(\chi^2\)</span>) – statistical test that determines if there’s a significant association between categorical variables</p></li>
 <li><p>Chi-square test for independence: Tests whether two categorical variables are related to each other</p></li>
 </ul>
 </section>
-<section id="hypothesis-testing-chi-square-1" class="slide level2">
-<h2>Hypothesis testing – Chi-square</h2>
+<section id="hypothesis-testing-chi-squared-1" class="slide level2">
+<h2>Hypothesis testing – Chi-squared</h2>
 <p><span class="math inline">\(H_0\)</span>: Observed frequencies match expected frequencies. There is no deviation from expected values, hence there is no relationship between the two categorical variables.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">chisq.test</span>(my_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">chisq.test</span>(my_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's Chi-squared test
@@ -561,6 +550,27 @@ data:  my_table
 X-squared = 2855.8, df = 2160, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
+<p>Since the p value is less than the alpha of 0.05, we can reject the null hypothesis.</p>
+</section>
+<section id="visualization" class="slide level2">
+<h2>Visualization</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>electric_cars <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">group_by</span>(state, make) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> state, <span class="at">y =</span> make, <span class="at">fill =</span> n)) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">geom_tile</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-06-03_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="bivariate-hypothesis-testing-summary" class="slide level2">
+<h2>Bivariate hypothesis testing – summary</h2>
+<ul>
+<li>one categorical with two groups and one numeric variable: t-test</li>
+<li>one categorical and one numeric variable: ANOVA</li>
+<li>two numeric variables: correlation</li>
+<li>two categoric variables: chi-squared</li>
+</ul>
 </section>
 <section id="questions" class="slide level2">
 <h2>Questions</h2>
