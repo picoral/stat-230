@@ -1797,5 +1797,12 @@
     "title": "Two Categorical Variables",
     "section": "Bivariate hypothesis testing – summary",
     "text": "Bivariate hypothesis testing – summary\n\none categorical with two groups and one numeric variable: t-test\none categorical and one numeric variable: ANOVA\ntwo numeric variables: correlation\ntwo categoric variables: chi-squared"
+  },
+  {
+    "objectID": "slides-06-03.html#gradescope-activity",
+    "href": "slides-06-03.html#gradescope-activity",
+    "title": "Two Categorical Variables",
+    "section": "Gradescope activity",
+    "text": "Gradescope activity\nAnswer questions about hypothesis testing on gradescope"
   }
 ]
