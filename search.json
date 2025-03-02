@@ -1831,7 +1831,7 @@
     "href": "slides-07-01.html#linear-regression-in-r",
     "title": "Linear Regression",
     "section": "Linear Regression in R",
-    "text": "Linear Regression in R\n\nmodel &lt;- lm(symptoms_of_depressive_disorder ~ symptoms_of_anxiety_disorder,\n            data = dep_anx)\n\nsummary(model)"
+    "text": "Linear Regression in R\nHere’s how we create a linear model in R, we use the lm() function:\n\nmodel &lt;- lm(symptoms_of_depressive_disorder ~ symptoms_of_anxiety_disorder,\n            data = dep_anx)\n\nsummary(model)\n\n\nCall:\nlm(formula = symptoms_of_depressive_disorder ~ symptoms_of_anxiety_disorder, \n    data = dep_anx)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-8.9138 -1.3956 -0.0444  1.3620 13.4346 \n\nCoefficients:\n                              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)                  -0.995443   0.113038  -8.806   &lt;2e-16 ***\nsymptoms_of_anxiety_disorder  0.837579   0.003821 219.222   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.231 on 5359 degrees of freedom\n  (237 observations deleted due to missingness)\nMultiple R-squared:  0.8997,    Adjusted R-squared:  0.8997 \nF-statistic: 4.806e+04 on 1 and 5359 DF,  p-value: &lt; 2.2e-16"
   },
   {
     "objectID": "slides-07-01.html#results-interpretation",
@@ -1839,5 +1839,166 @@
     "title": "Linear Regression",
     "section": "Results Interpretation",
     "text": "Results Interpretation\nThe results suggest that anxiety and depressive symptoms are closely related. For each one-unit increase in anxiety symptoms, depressive symptoms increase by 0.84 units. When frequency of anxiety symptoms are at zero, the model predicts negative frequency depressive symptoms (-0.995). The model explains about 90% of the variance in frequency of depressive symptoms."
+  },
+  {
+    "objectID": "slides-07-01.html#bivariate-hypothesis-testing-review",
+    "href": "slides-07-01.html#bivariate-hypothesis-testing-review",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "one categorical with two groups and one numeric variable: t-test\none categorical and one numeric variable: ANOVA\ntwo numeric variables: correlation\ntwo categoric variables: chi-squared"
+  },
+  {
+    "objectID": "slides-07-01.html#regression",
+    "href": "slides-07-01.html#regression",
+    "title": "Linear Regression",
+    "section": "Regression",
+    "text": "Regression\n\nFor regression, we need to pay attention to our dependent/outcome variable:\n\nlinear regression : when our outcome variable is a continuous numeric variable (and we assume a linear relationship)\nlogistic regression: when our outcome variable is categorical or binary"
+  },
+  {
+    "objectID": "slides-07-01.html#data",
+    "href": "slides-07-01.html#data",
+    "title": "Linear Regression",
+    "section": "Data",
+    "text": "Data\nWe will be reusing data sets that we have worked with in previous lectures.\nLet’s start with Indicators of Anxiety or Depression Based on Reported Frequency of Symptoms in November 2020-2024\nIf you have already set the data up, then you can reuse the project you had going.\n\nlibrary(tidyverse)\ndep_anx &lt;- read_csv(\"data/depression-anxiety.csv\")\n\nWe will start with using depressive disorder frequency as our outcome/response/dependent variable."
+  },
+  {
+    "objectID": "slides-07-01.html#regression-1",
+    "href": "slides-07-01.html#regression-1",
+    "title": "Linear Regression",
+    "section": "Regression",
+    "text": "Regression\n\nthese algorithms also allows us to run multi-variate analysis (as opposed to bivaraite analysis only)\nwe will still get a p-value for hypothesis testing, but we will also look at variance explained (\\(R^2\\)), and effect sizes."
+  },
+  {
+    "objectID": "slides-07-01.html#correlation",
+    "href": "slides-07-01.html#correlation",
+    "title": "Linear Regression",
+    "section": "Correlation",
+    "text": "Correlation\nAs a reminder, here’s our correlation results.\n\ncor.test(dep_anx$symptoms_of_depressive_disorder,\n         dep_anx$symptoms_of_anxiety_disorder)\n\n\n    Pearson's product-moment correlation\n\ndata:  dep_anx$symptoms_of_depressive_disorder and dep_anx$symptoms_of_anxiety_disorder\nt = 219.22, df = 5359, p-value &lt; 2.2e-16\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.9457571 0.9511318\nsample estimates:\n      cor \n0.9485127"
+  },
+  {
+    "objectID": "slides-07-01.html#linear-regression-categorical-predictor",
+    "href": "slides-07-01.html#linear-regression-categorical-predictor",
+    "title": "Linear Regression",
+    "section": "Linear regression – categorical predictor",
+    "text": "Linear regression – categorical predictor\n\nQuestion: what is the effect of biological sex on reported frequency of symptoms of depressive disorder?\n\nWe start getting the relevant data subset that answers our question:\n\ndata_by_sex &lt;- dep_anx |&gt;\n  filter(group == \"By Sex\")"
+  },
+  {
+    "objectID": "slides-07-01.html#review-box-plot-descriptive-statistics",
+    "href": "slides-07-01.html#review-box-plot-descriptive-statistics",
+    "title": "Linear Regression",
+    "section": "Review – box plot (descriptive statistics)",
+    "text": "Review – box plot (descriptive statistics)\n\ndata_by_sex |&gt;\n  ggplot(aes(y = subgroup, x = symptoms_of_depressive_disorder)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides-07-01.html#review-two-sample-t-test-hypothesis-testing",
+    "href": "slides-07-01.html#review-two-sample-t-test-hypothesis-testing",
+    "title": "Linear Regression",
+    "section": "Review – two sample t-test (hypothesis testing)",
+    "text": "Review – two sample t-test (hypothesis testing)\n\nt.test(symptoms_of_depressive_disorder ~ subgroup,\n       data = data_by_sex)\n\n\n    Welch Two Sample t-test\n\ndata:  symptoms_of_depressive_disorder by subgroup\nt = 4.1125, df = 136.39, p-value = 6.728e-05\nalternative hypothesis: true difference in means between group Female and group Male is not equal to 0\n95 percent confidence interval:\n 1.517796 4.329426\nsample estimates:\nmean in group Female   mean in group Male \n            24.11528             21.19167 \n\n\nHow do we interpret these results?"
+  },
+  {
+    "objectID": "slides-07-01.html#linear-regression",
+    "href": "slides-07-01.html#linear-regression",
+    "title": "Linear Regression",
+    "section": "Linear regression",
+    "text": "Linear regression\n\ndep_by_sex &lt;- lm(symptoms_of_depressive_disorder ~ subgroup,\n                 data = data_by_sex)\nsummary(dep_by_sex)\n\n\nCall:\nlm(formula = symptoms_of_depressive_disorder ~ subgroup, data = data_by_sex)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-10.7153  -1.2344   0.0083   2.5847   8.1847 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   24.1153     0.5027  47.973  &lt; 2e-16 ***\nsubgroupMale  -2.9236     0.7109  -4.113  6.6e-05 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.265 on 142 degrees of freedom\n  (20 observations deleted due to missingness)\nMultiple R-squared:  0.1064,    Adjusted R-squared:  0.1001 \nF-statistic: 16.91 on 1 and 142 DF,  p-value: 6.595e-05"
+  },
+  {
+    "objectID": "slides-07-01.html#results-interpretation-1",
+    "href": "slides-07-01.html#results-interpretation-1",
+    "title": "Linear Regression",
+    "section": "Results Interpretation",
+    "text": "Results Interpretation\nThis results show the relationship between biological sex and reported frequency of symptoms of depressive disorder. Males show significantly lower frequency of depression symptoms than females (the reference group) On average 2.92 fewer men (β = -2.92, p &lt; 0.0001) report symptoms of depression compared to women. The intercept (24.12) represents the average number of women that report frequency of depression symptoms. The p-value for the male subgroup is very small (p = 0.000066, p &lt; 0.05). This indicates biological sex differences are highly unlikely to be due to chance."
+  },
+  {
+    "objectID": "slides-07-01.html#results-interpretation-2",
+    "href": "slides-07-01.html#results-interpretation-2",
+    "title": "Linear Regression",
+    "section": "Results Interpretation",
+    "text": "Results Interpretation\nModel fit: R-squared (\\(R^2\\)), or variance explained, is 0.106, meaning that biological sex explains about 10.6% of the variance in reported frequency of depression symptoms. This is a relatively small amount of explained variance, suggesting other factors not included in the model also influence the frequency of depression symptoms."
+  },
+  {
+    "objectID": "slides-07-01.html#linear-regression-categorical-predictor-more-than-two-groups",
+    "href": "slides-07-01.html#linear-regression-categorical-predictor-more-than-two-groups",
+    "title": "Linear Regression",
+    "section": "Linear regression – categorical predictor (more than two groups)",
+    "text": "Linear regression – categorical predictor (more than two groups)\n\nQuestion: what is the effect of age group on reported frequency of symptoms of depressive disorder?\n\nWe start getting the relevant data subset that answers our question:\n\ndata_by_age &lt;- dep_anx |&gt;\n  filter(group == \"By Age\")"
+  },
+  {
+    "objectID": "slides-07-01.html#review-box-plot-descriptive-statistics-1",
+    "href": "slides-07-01.html#review-box-plot-descriptive-statistics-1",
+    "title": "Linear Regression",
+    "section": "Review – box plot (descriptive statistics)",
+    "text": "Review – box plot (descriptive statistics)\n\ndata_by_age |&gt;\n  ggplot(aes(y = subgroup, x = symptoms_of_depressive_disorder)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides-07-01.html#linear-regression-1",
+    "href": "slides-07-01.html#linear-regression-1",
+    "title": "Linear Regression",
+    "section": "Linear regression",
+    "text": "Linear regression\nHow do we interpret these results?\n\ndep_by_age &lt;- lm(symptoms_of_depressive_disorder ~ subgroup,\n                 data = data_by_age)\nsummary(dep_by_age)\n\n\nCall:\nlm(formula = symptoms_of_depressive_disorder ~ subgroup, data = data_by_age)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-13.8875  -1.5740   0.2125   2.5684   9.8028 \n\nCoefficients:\n                           Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)                 35.0875     0.5018   69.93   &lt;2e-16 ***\nsubgroup30 - 39 years       -8.4000     0.7096  -11.84   &lt;2e-16 ***\nsubgroup40 - 49 years      -11.7347     0.7096  -16.54   &lt;2e-16 ***\nsubgroup50 - 59 years      -13.5986     0.7096  -19.16   &lt;2e-16 ***\nsubgroup60 - 69 years      -18.4181     0.7096  -25.96   &lt;2e-16 ***\nsubgroup70 - 79 years      -22.8417     0.7096  -32.19   &lt;2e-16 ***\nsubgroup80 years and above -23.1903     0.7096  -32.68   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.258 on 497 degrees of freedom\n  (70 observations deleted due to missingness)\nMultiple R-squared:  0.7683,    Adjusted R-squared:  0.7655 \nF-statistic: 274.6 on 6 and 497 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "slides-07-01.html#plotting-effects",
+    "href": "slides-07-01.html#plotting-effects",
+    "title": "Linear Regression",
+    "section": "Plotting effects",
+    "text": "Plotting effects\n\nlibrary(effects)\n\neffect(\"subgroup\", dep_by_age) |&gt;\n  data.frame() |&gt;\n  ggplot(aes(y = subgroup, x = fit)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-07-01.html#getting-effects",
+    "href": "slides-07-01.html#getting-effects",
+    "title": "Linear Regression",
+    "section": "Getting effects",
+    "text": "Getting effects\n\nlibrary(effects)\n\neffect(\"subgroup\", dep_by_age) |&gt;\n  data.frame() \n\n            subgroup      fit        se    lower    upper\n1      18 - 29 years 35.08750 0.5017541 34.10168 36.07332\n2      30 - 39 years 26.68750 0.5017541 25.70168 27.67332\n3      40 - 49 years 23.35278 0.5017541 22.36696 24.33860\n4      50 - 59 years 21.48889 0.5017541 20.50307 22.47471\n5      60 - 69 years 16.66944 0.5017541 15.68362 17.65527\n6      70 - 79 years 12.24583 0.5017541 11.26001 13.23165\n7 80 years and above 11.89722 0.5017541 10.91140 12.88304"
+  },
+  {
+    "objectID": "slides-07-01.html#plotting-effects-adding-error-bars",
+    "href": "slides-07-01.html#plotting-effects-adding-error-bars",
+    "title": "Linear Regression",
+    "section": "Plotting effects – adding error bars",
+    "text": "Plotting effects – adding error bars\n\nlibrary(effects)\n\neffect(\"subgroup\", dep_by_age) |&gt;\n  data.frame() |&gt;\n  ggplot(aes(y = subgroup, x = fit,\n             xmin = lower, xmax = upper)) +\n  geom_point() +\n  geom_errorbar()"
+  },
+  {
+    "objectID": "slides-07-01.html#expansion",
+    "href": "slides-07-01.html#expansion",
+    "title": "Linear Regression",
+    "section": "Expansion",
+    "text": "Expansion\n\nWhat other questions can we answer?"
+  },
+  {
+    "objectID": "modules.html#slides-5",
+    "href": "modules.html#slides-5",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nLinear Regression\nCase Study"
+  },
+  {
+    "objectID": "slides-07-01.html",
+    "href": "slides-07-01.html",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "one categorical with two groups and one numeric variable: t-test\none categorical and one numeric variable: ANOVA\ntwo numeric variables: correlation\ntwo categoric variables: chi-squared"
+  },
+  {
+    "objectID": "slides-07-01.html#plotting-effects-adding-labels",
+    "href": "slides-07-01.html#plotting-effects-adding-labels",
+    "title": "Linear Regression",
+    "section": "Plotting effects – adding labels",
+    "text": "Plotting effects – adding labels\nHow do we interpret these results?\n\nlibrary(effects)\n\neffect(\"subgroup\", dep_by_age) |&gt;\n  data.frame() |&gt;\n  ggplot(aes(y = subgroup, x = fit,\n             xmin = lower, xmax = upper,\n             label = round(fit, 2))) +\n  geom_point() +\n  geom_errorbar() +\n  geom_label()"
+  },
+  {
+    "objectID": "slides-07-02.html#the-data",
+    "href": "slides-07-02.html#the-data",
+    "title": "Case Study",
+    "section": "The data",
+    "text": "The data\nWe will be using data from the World Happiness Report for this case study.\nIf you have already set the data up, then you can reuse the project you had going.\n\nlibrary(tidyverse)\nhappiness &lt;- read_csv(\"data/world-happiness-2020-2024.csv\")"
+  },
+  {
+    "objectID": "slides-07-02.html#questions",
+    "href": "slides-07-02.html#questions",
+    "title": "Case Study",
+    "section": "Questions",
+    "text": "Questions\n\nWhat questions can we answer with regression and this data set?"
   }
 ]
