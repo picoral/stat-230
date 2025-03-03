@@ -2000,5 +2000,12 @@
     "title": "Case Study",
     "section": "Questions",
     "text": "Questions\n\nWhat questions can we answer with regression and this data set?"
+  },
+  {
+    "objectID": "slides-07-01.html#linear-regression-formula-1",
+    "href": "slides-07-01.html#linear-regression-formula-1",
+    "title": "Linear Regression",
+    "section": "Linear Regression – formula",
+    "text": "Linear Regression – formula\n\nWhat’s the effect of anxiety frequency on depressive disorder frequency?\n\n\\(\\hat{depression} = \\beta_0 + \\beta_1 * anxiety\\)\n\n\\(\\beta_0\\) is the intercept – or, when anxiety is zero, what is the average depression?\n\\(\\beta_1\\) is the coefficient for anxiety, it tells us what happens with depression when anxiety changes"
   }
 ]
