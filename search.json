@@ -1844,8 +1844,8 @@
     "objectID": "slides-07-01.html#bivariate-hypothesis-testing-review",
     "href": "slides-07-01.html#bivariate-hypothesis-testing-review",
     "title": "Linear Regression",
-    "section": "",
-    "text": "one categorical with two groups and one numeric variable: t-test\none categorical and one numeric variable: ANOVA\ntwo numeric variables: correlation\ntwo categoric variables: chi-squared"
+    "section": "Bivariate hypothesis testing – review",
+    "text": "Bivariate hypothesis testing – review\n\none categorical with two groups and one numeric variable: t-test\none categorical and one numeric variable: ANOVA\ntwo numeric variables: correlation\ntwo categoric variables: chi-squared"
   },
   {
     "objectID": "slides-07-01.html#regression",
@@ -1950,7 +1950,7 @@
     "href": "slides-07-01.html#getting-effects",
     "title": "Linear Regression",
     "section": "Getting effects",
-    "text": "Getting effects\n\nlibrary(effects)\n\neffect(\"subgroup\", dep_by_age) |&gt;\n  data.frame() \n\n            subgroup      fit        se    lower    upper\n1      18 - 29 years 35.08750 0.5017541 34.10168 36.07332\n2      30 - 39 years 26.68750 0.5017541 25.70168 27.67332\n3      40 - 49 years 23.35278 0.5017541 22.36696 24.33860\n4      50 - 59 years 21.48889 0.5017541 20.50307 22.47471\n5      60 - 69 years 16.66944 0.5017541 15.68362 17.65527\n6      70 - 79 years 12.24583 0.5017541 11.26001 13.23165\n7 80 years and above 11.89722 0.5017541 10.91140 12.88304"
+    "text": "Getting effects\n\nlibrary(effects)\n\neffect(\"subgroup\", dep_by_age) |&gt;\n  data.frame()"
   },
   {
     "objectID": "slides-07-01.html#plotting-effects-adding-error-bars",
