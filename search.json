@@ -1866,7 +1866,7 @@
     "href": "slides-07-01.html#regression-1",
     "title": "Linear Regression",
     "section": "Regression",
-    "text": "Regression\n\nthese algorithms also allows us to run multi-variate analysis (as opposed to bivaraite analysis only)\nwe will still get a p-value for hypothesis testing, but we will also look at variance explained (\\(R^2\\)), and effect sizes."
+    "text": "Regression\n\nthese algorithms also allow us to run multi-variate analyses (as opposed to bivariate analyses only)\nwe will still get a p-value for hypothesis testing, but we will also look at variance explained (\\(R^2\\)), and effect sizes."
   },
   {
     "objectID": "slides-07-01.html#correlation",
@@ -1908,7 +1908,7 @@
     "href": "slides-07-01.html#results-interpretation-1",
     "title": "Linear Regression",
     "section": "Results Interpretation",
-    "text": "Results Interpretation\nThis results show the relationship between biological sex and reported frequency of symptoms of depressive disorder. Males show significantly lower frequency of depression symptoms than females (the reference group) On average 2.92 fewer men (β = -2.92, p &lt; 0.0001) report symptoms of depression compared to women. The intercept (24.12) represents the average number of women that report frequency of depression symptoms. The p-value for the male subgroup is very small (p = 0.000066, p &lt; 0.05). This indicates biological sex differences are highly unlikely to be due to chance."
+    "text": "Results Interpretation\nThese results show the relationship between biological sex and reported frequency of symptoms of depressive disorder. Males show significantly lower reported frequency of depression symptoms than females (the reference group) On average 2.92 fewer men (β = -2.92, p &lt; 0.0001) report symptoms of depression compared to women. The intercept (24.12) represents the average number of women that report frequency of depression symptoms. The p-value for the male subgroup is very small (p = 0.000066, p &lt; 0.05). This indicates biological sex differences are highly unlikely to be due to chance."
   },
   {
     "objectID": "slides-07-01.html#results-interpretation-2",
