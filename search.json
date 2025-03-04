@@ -1971,7 +1971,7 @@
     "href": "modules.html#slides-5",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nLinear Regression\nCase Study"
+    "text": "Slides\n\nLinear Regression\nCase Studies"
   },
   {
     "objectID": "slides-07-01.html",
@@ -1997,7 +1997,7 @@
   {
     "objectID": "slides-07-02.html#questions",
     "href": "slides-07-02.html#questions",
-    "title": "Case Study",
+    "title": "Case Studies",
     "section": "Questions",
     "text": "Questions\n\nWhat questions can we answer with regression and this data set?"
   },
@@ -2007,5 +2007,54 @@
     "title": "Linear Regression",
     "section": "Linear Regression – formula",
     "text": "Linear Regression – formula\n\nWhat’s the effect of anxiety frequency on depressive disorder frequency?\n\n\\(\\hat{depression} = \\beta_0 + \\beta_1 * anxiety\\)\n\n\\(\\beta_0\\) is the intercept – or, when anxiety is zero, what is the average depression?\n\\(\\beta_1\\) is the coefficient for anxiety, it tells us what happens with depression when anxiety changes"
+  },
+  {
+    "objectID": "slides-07-02.html#case-study-1",
+    "href": "slides-07-02.html#case-study-1",
+    "title": "Case Studies",
+    "section": "Case study 1",
+    "text": "Case study 1\nWe will be using data from the World Happiness Report for this case study.\nIf you have already set the data up, then you can reuse the project you had going.\n\nlibrary(tidyverse)\nhappiness &lt;- read_csv(\"data/world-happiness-2020-2024.csv\")"
+  },
+  {
+    "objectID": "slides-07-02.html#case-study-2",
+    "href": "slides-07-02.html#case-study-2",
+    "title": "Case Studies",
+    "section": "Case Study 2",
+    "text": "Case Study 2\nDownload the .csv file on Automobiles Annual Imports and Exports\nThere are spaces in the column names, so we need to make sure the names are clean (easier to type). We will load the janitor library and then use clean_names()\n\nlibrary(janitor)\n\nautomobile_import_export &lt;- read_csv(\"data/Automobiles_Annual_Imports_and_Exports_Through_Port_Authority_of_NY_NJ_Maritime_Terminals__Beginning_2000.csv\") |&gt;\n  clean_names()"
+  },
+  {
+    "objectID": "slides-07-02.html#questions-1",
+    "href": "slides-07-02.html#questions-1",
+    "title": "Case Studies",
+    "section": "Questions",
+    "text": "Questions\n\nWhat is the effect of type (imports vs. exports) on number of cars?\n\n\nWhat is the effect of year on number of cars being imported and exported?\n\nTo answer these two questions follow these steps:\n\nRun linear regression (lm()) with automobile_volume as the response variable\nPlot the effects\nWrite up a paragraph on your findings/answer the question"
+  },
+  {
+    "objectID": "slides-07-02.html#question-1",
+    "href": "slides-07-02.html#question-1",
+    "title": "Case Studies",
+    "section": "Question 1",
+    "text": "Question 1\n\nWhat is the effect of type (imports vs. exports) on number of cars?\n\nTo answer this question follow these steps:\n\nRun linear regression (lm()) with automobile_volume as the response variable\nPlot the effects\nWrite up a paragraph on your findings/answer the question"
+  },
+  {
+    "objectID": "slides-07-02.html#question-2",
+    "href": "slides-07-02.html#question-2",
+    "title": "Case Studies",
+    "section": "Question 2",
+    "text": "Question 2\n\nWhat is the effect of year on number of cars being imported and exported?\n\nTo answer this question follow these steps:\n\nRun linear regression (lm()) with automobile_volume as the response variable\nPlot the effects\nWrite up a paragraph on your findings/answer the question"
+  },
+  {
+    "objectID": "slides-07-02.html#gradescope-questions",
+    "href": "slides-07-02.html#gradescope-questions",
+    "title": "Case Studies",
+    "section": "Gradescope questions",
+    "text": "Gradescope questions\nAnswer these questions about the results for question 1 on Gradescope"
+  },
+  {
+    "objectID": "slides-07-02.html#case-study-3",
+    "href": "slides-07-02.html#case-study-3",
+    "title": "Case Studies",
+    "section": "Case Study 3",
+    "text": "Case Study 3\nDownload this clean data set on percentage of health conditions among children under age 18 and set up the data in your analysis environment.\nWhat questions can you answer with this data set?"
   }
 ]

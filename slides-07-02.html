@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>STAT 230 Data Science and Statistics – Case Study</title>
+  <title>STAT 230 Data Science and Statistics – Case Studies</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,14 +193,14 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Case Study</h1>
+  <h1 class="title">Case Studies</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="the-data" class="slide level2">
-<h2>The data</h2>
+<section id="case-study-1" class="slide level2">
+<h2>Case study 1</h2>
 <p>We will be using data <a href="data/world-happiness-2020-2024.csv">from the World Happiness Report</a> for this case study.</p>
 <p>If you have already set the data up, then you can reuse the project you had going.</p>
 <div class="cell">
@@ -213,6 +213,50 @@
 <blockquote>
 <p>What questions can we answer with regression and this data set?</p>
 </blockquote>
+</section>
+<section id="case-study-2" class="slide level2">
+<h2>Case Study 2</h2>
+<p>Download the <a href="https://catalog.data.gov/dataset/automobiles-annual-imports-and-exports-through-port-authority-of-ny-nj-maritime-terminals-">.csv file on Automobiles Annual Imports and Exports</a></p>
+<p>There are spaces in the column names, so we need to make sure the names are clean (easier to type). We will load the <code>janitor</code> library and then use <code>clean_names()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>automobile_import_export <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Automobiles_Annual_Imports_and_Exports_Through_Port_Authority_of_NY_NJ_Maritime_Terminals__Beginning_2000.csv"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a></a>  <span class="fu">clean_names</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="question-1" class="slide level2">
+<h2>Question 1</h2>
+<blockquote>
+<p>What is the effect of type (imports vs.&nbsp;exports) on number of cars?</p>
+</blockquote>
+<p>To answer this question follow these steps:</p>
+<ol type="1">
+<li>Run linear regression (<code>lm()</code>) with automobile_volume as the response variable</li>
+<li>Plot the effects</li>
+<li>Write up a paragraph on your findings/answer the question</li>
+</ol>
+</section>
+<section id="gradescope-questions" class="slide level2">
+<h2>Gradescope questions</h2>
+<p><a href="https://www.gradescope.com/courses/954710/assignments/5887881/">Answer these questions about the results for question 1 on Gradescope</a></p>
+</section>
+<section id="question-2" class="slide level2">
+<h2>Question 2</h2>
+<blockquote>
+<p>What is the effect of year on number of cars being imported and exported?</p>
+</blockquote>
+<p>To answer this question follow these steps:</p>
+<ol type="1">
+<li>Run linear regression (<code>lm()</code>) with automobile_volume as the response variable</li>
+<li>Plot the effects</li>
+<li>Write up a paragraph on your findings/answer the question</li>
+</ol>
+</section>
+<section id="case-study-3" class="slide level2">
+<h2>Case Study 3</h2>
+<p>Download this <a href="percentage_children_health_conditions.csv">clean data set on percentage of health conditions among children under age 18</a> and set up the data in your analysis environment.</p>
+<p>What questions can you answer with this data set?</p>
 
 
 </section>
