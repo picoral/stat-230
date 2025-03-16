@@ -2056,5 +2056,82 @@
     "title": "Case Studies",
     "section": "Case Study 3",
     "text": "Case Study 3\nDownload this clean data set on percentage of health conditions among children under age 18 and set up the data in your analysis environment.\nWhat questions can you answer with this data set?"
+  },
+  {
+    "objectID": "modules.html#slides-6",
+    "href": "modules.html#slides-6",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nReview"
+  },
+  {
+    "objectID": "slides-08-01.html#data",
+    "href": "slides-08-01.html#data",
+    "title": "Review",
+    "section": "Data",
+    "text": "Data\nDownload data on movies and their rating, and set up your analysis environment.\n\nlibrary(tidyverse)\nmovies &lt;- read_csv(\"data/movies.csv\")\n\n\nWhat variables are there in the data?\nWhat are their types?"
+  },
+  {
+    "objectID": "slides-08-01.html#dependent-variable-rating",
+    "href": "slides-08-01.html#dependent-variable-rating",
+    "title": "Review",
+    "section": "Dependent variable: Rating",
+    "text": "Dependent variable: Rating\nStep 1: Histogram\n\nmovies |&gt;\n  ggplot(aes(x = averageRating)) +\n  geom_histogram()\n\n\nWhat can we say about the distribution of the rating variable?"
+  },
+  {
+    "objectID": "slides-08-01.html#independent-variable-type",
+    "href": "slides-08-01.html#independent-variable-type",
+    "title": "Review",
+    "section": "Independent variable: type",
+    "text": "Independent variable: type\nBoxplot\n\nmovies |&gt;\n  ggplot(aes(x = averageRating, y = type)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides-08-01.html#descriptive-statistics",
+    "href": "slides-08-01.html#descriptive-statistics",
+    "title": "Review",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\nmovies |&gt;\n  group_by(type) |&gt;\n  summarize(mean = mean(averageRating),\n            min = min(averageRating),\n            max = max(averageRating),\n            n = n())"
+  },
+  {
+    "objectID": "slides-08-01.html#questions",
+    "href": "slides-08-01.html#questions",
+    "title": "Review",
+    "section": "Questions",
+    "text": "Questions\nWhat questions can we answer?"
+  },
+  {
+    "objectID": "slides-08-01.html#rating-vs.-type",
+    "href": "slides-08-01.html#rating-vs.-type",
+    "title": "Review",
+    "section": "Rating vs. Type",
+    "text": "Rating vs. Type\n\nWhat is the effect of type on rating?\n\n\nrating_by_type &lt;- lm(averageRating ~ type, data = movies)\nsummary(rating_by_type)\n\n\nCall:\nlm(formula = averageRating ~ type, data = movies)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.3704 -0.6462  0.1296  0.7687  3.8538 \n\nCoefficients:\n                 Estimate Std. Error  t value Pr(&gt;|t|)    \n(Intercept)      6.146239   0.002288 2685.794  &lt; 2e-16 ***\ntypeshort        0.663780   0.003954  167.889  &lt; 2e-16 ***\ntypetvEpisode    1.224139   0.002915  419.962  &lt; 2e-16 ***\ntypetvMiniSeries 0.952108   0.012474   76.328  &lt; 2e-16 ***\ntypetvMovie      0.417639   0.006182   67.558  &lt; 2e-16 ***\ntypetvSeries     0.685069   0.005765  118.826  &lt; 2e-16 ***\ntypetvShort      0.653040   0.026420   24.718  &lt; 2e-16 ***\ntypetvSpecial    0.766563   0.013785   55.608  &lt; 2e-16 ***\ntypevideo        0.361448   0.006195   58.348  &lt; 2e-16 ***\ntypevideoGame    0.616535   0.105955    5.819 5.93e-09 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.24 on 1081851 degrees of freedom\nMultiple R-squared:  0.1455,    Adjusted R-squared:  0.1455 \nF-statistic: 2.047e+04 on 9 and 1081851 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "slides-08-01.html#rating-vs.-type-1",
+    "href": "slides-08-01.html#rating-vs.-type-1",
+    "title": "Review",
+    "section": "Rating vs. Type",
+    "text": "Rating vs. Type\n\nWhat is the effect of type on rating?\n\n\nlibrary(effects)\n\neffect(\"type\", rating_by_type) |&gt;\n  data.frame() |&gt;\n  ggplot(aes(x = fit, xmin = lower, xmax = upper,\n             y = reorder(type, fit), label = round(fit, 2))) +\n  geom_errorbar() +\n  geom_label()"
+  },
+  {
+    "objectID": "slides-08-01.html#independent-variable-year",
+    "href": "slides-08-01.html#independent-variable-year",
+    "title": "Review",
+    "section": "Independent variable: year",
+    "text": "Independent variable: year\nScatter plot\n\nmovies |&gt;\n  ggplot(aes(y = averageRating, x = year)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-08-01.html#rating-vs.-year",
+    "href": "slides-08-01.html#rating-vs.-year",
+    "title": "Review",
+    "section": "Rating vs. year",
+    "text": "Rating vs. year\n\nWhat is the effect of year on rating?\n\n\nrating_by_year &lt;- lm(averageRating ~ year, data = movies)\nsummary(rating_by_year)\n\n\nCall:\nlm(formula = averageRating ~ year, data = movies)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.0645 -0.7201  0.1972  0.9077  3.6386 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -1.121e+01  1.157e-01  -96.84   &lt;2e-16 ***\nyear         9.024e-03  5.781e-05  156.08   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.326 on 1081859 degrees of freedom\nMultiple R-squared:  0.02202,   Adjusted R-squared:  0.02202 \nF-statistic: 2.436e+04 on 1 and 1081859 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "slides-08-01.html#rating-vs.-year-1",
+    "href": "slides-08-01.html#rating-vs.-year-1",
+    "title": "Review",
+    "section": "Rating vs. Year",
+    "text": "Rating vs. Year\n\nWhat is the effect of year on rating?\n\n\nlibrary(effects)\n\neffect(\"year\", rating_by_year) |&gt;\n  data.frame() |&gt;\n  ggplot(aes(y = fit, ymin = lower, ymax = upper,\n             x = year, label = round(fit, 2))) +\n  geom_errorbar() +\n  geom_label()"
   }
 ]
