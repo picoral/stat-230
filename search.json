@@ -2160,14 +2160,14 @@
     "href": "slides-08-02.html#multivariate-analysis-1",
     "title": "Multivariate Analysis",
     "section": "Multivariate Analysis",
-    "text": "Multivariate Analysis\n\nMultivariate Analysis is widely used in fields like marketing research, ecology, psychology, medicine, and finance where complex datasets with many variables are common\nThey help researchers identify patterns, test hypotheses, and make predictions based on multiple variables simultaneously"
+    "text": "Multivariate Analysis\n\nWidely used in fields like marketing research, ecology, psychology, medicine, and finance where complex datasets with many variables are common\nHelps researchers identify patterns, test hypotheses, and make predictions based on multiple variables simultaneously"
   },
   {
     "objectID": "slides-08-02.html#data",
     "href": "slides-08-02.html#data",
     "title": "Multivariate Analysis",
     "section": "Data",
-    "text": "Data\nWe will be workign with the same data on movies and their rating.\n\nlibrary(tidyverse)\nall_media &lt;- read_csv(\"data/movies.csv\")"
+    "text": "Data\nWe will be working with the same data on movies and their rating.\n\nlibrary(tidyverse)\nall_media &lt;- read_csv(\"data/movies.csv\")"
   },
   {
     "objectID": "slides-08-02.html#question",
