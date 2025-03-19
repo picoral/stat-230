@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.39">
+
+  <title>STAT 230 Data Science and Statistics – Multivariate Analysis</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-d57132fb69bd09b8e16d42784450680f.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Multivariate Analysis</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="multivariate-analysis" class="slide level2">
+<h2>Multivariate Analysis</h2>
+<ul>
+<li>Multivariate analysis refers to statistical techniques used to analyze data that involves multiple variables simultaneously</li>
+<li>Rather than examining each variable in isolation, multivariate methods consider the relationships and interactions among all variables</li>
+</ul>
+</section>
+<section id="multivariate-analysis-1" class="slide level2">
+<h2>Multivariate Analysis</h2>
+<ul>
+<li>Multivariate Analysis is widely used in fields like marketing research, ecology, psychology, medicine, and finance where complex datasets with many variables are common</li>
+<li>They help researchers identify patterns, test hypotheses, and make predictions based on multiple variables simultaneously</li>
+</ul>
+</section>
+<section id="multivariate-regression" class="slide level2">
+<h2>Multivariate Regression</h2>
+<ul>
+<li>We have run regression with one independent variable (x) only</li>
+<li>When the variance explained of a model is low, we assume that there are other factors that explain the response variable that are not being considered in the model</li>
+<li>Multivariate Regression: Examines relationships between multiple independent variables and one or more dependent variables.</li>
+</ul>
+</section>
+<section id="data" class="slide level2">
+<h2>Data</h2>
+<p>We will be workign with the same <a href="https://drive.google.com/file/d/1k7wJXMt1Ux7j1jSDEsS98LdFGPu5-rtv/view?usp=sharing">data on movies and their rating</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a>all_media <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/movies.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="question" class="slide level2">
+<h2>Question</h2>
+<blockquote>
+<p>What is the effect of type and genre on rating?</p>
+</blockquote>
+</section>
+<section id="inferential-statistics" class="slide level2">
+<h2>Inferential Statistics</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(averageRating <span class="sc">~</span> genre <span class="sc">+</span> type,</span>
+<span id="cb2-2"><a></a>            <span class="at">data =</span> all_media)</span>
+<span id="cb2-3"><a></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = averageRating ~ genre + type, data = all_media)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.9196 -0.6299  0.1017  0.7512  4.9461 
+
+Coefficients:
+                  Estimate Std. Error  t value Pr(&gt;|t|)    
+(Intercept)       5.980290   0.004001 1494.848  &lt; 2e-16 ***
+genreAdult       -0.146381   0.010808  -13.544  &lt; 2e-16 ***
+genreAdventure    0.009168   0.005931    1.546 0.122113    
+genreAnimation   -0.241429   0.011104  -21.742  &lt; 2e-16 ***
+genreBiography    0.628527   0.008904   70.589  &lt; 2e-16 ***
+genreComedy       0.039077   0.004068    9.607  &lt; 2e-16 ***
+genreCrime        0.118833   0.005486   21.661  &lt; 2e-16 ***
+genreDocumentary  0.640106   0.004993  128.189  &lt; 2e-16 ***
+genreDrama        0.268465   0.004416   60.793  &lt; 2e-16 ***
+genreFamily      -0.014477   0.010263   -1.411 0.158361    
+genreFantasy      0.026625   0.014903    1.786 0.074021 .  
+genreFilm-Noir    0.364710   0.269527    1.353 0.176009    
+genreGame-Show   -0.054079   0.011768   -4.595 4.32e-06 ***
+genreHistory      0.547596   0.035981   15.219  &lt; 2e-16 ***
+genreHorror      -0.850390   0.008641  -98.410  &lt; 2e-16 ***
+genreMusical      0.610299   0.012929   47.205  &lt; 2e-16 ***
+genreMystery      0.061452   0.019323    3.180 0.001472 ** 
+genreNews        -1.343697   0.027049  -49.677  &lt; 2e-16 ***
+genreReality-TV  -0.243151   0.008315  -29.243  &lt; 2e-16 ***
+genreRomance      0.059879   0.016413    3.648 0.000264 ***
+genreSci-Fi      -0.178261   0.017747  -10.045  &lt; 2e-16 ***
+genreShort       -0.080398   0.009259   -8.683  &lt; 2e-16 ***
+genreSport        0.204031   0.024078    8.474  &lt; 2e-16 ***
+genreTalk-Show   -0.501142   0.019687  -25.455  &lt; 2e-16 ***
+genreThriller    -0.188485   0.013455  -14.008  &lt; 2e-16 ***
+genreWar          0.080935   0.040708    1.988 0.046792 *  
+genreWestern      0.197201   0.012857   15.338  &lt; 2e-16 ***
+typeshort         0.746905   0.004148  180.046  &lt; 2e-16 ***
+typetvEpisode     1.299175   0.003038  427.574  &lt; 2e-16 ***
+typetvMiniSeries  0.880923   0.012215   72.121  &lt; 2e-16 ***
+typetvMovie       0.305417   0.006107   50.015  &lt; 2e-16 ***
+typetvSeries      0.771852   0.005780  133.532  &lt; 2e-16 ***
+typetvShort       0.729547   0.025748   28.334  &lt; 2e-16 ***
+typetvSpecial     0.783455   0.014180   55.251  &lt; 2e-16 ***
+typevideo         0.417346   0.006803   61.346  &lt; 2e-16 ***
+typevideoGame     0.814507   0.104161    7.820 5.30e-15 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.205 on 1071553 degrees of freedom
+Multiple R-squared:  0.1892,    Adjusted R-squared:  0.1892 
+F-statistic:  7144 on 35 and 1071553 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="visualizing-results" class="slide level2">
+<h2>Visualizing Results</h2>
+<blockquote>
+<p>What is the effect of type and genre on rating?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(effects)</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a><span class="fu">effect</span>(<span class="st">"type"</span>, model) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">data.frame</span>() <span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> fit, <span class="at">xmin =</span> lower, <span class="at">xmax =</span> upper,</span>
+<span id="cb4-6"><a></a>             <span class="at">y =</span> <span class="fu">reorder</span>(type, fit), <span class="at">label =</span> <span class="fu">round</span>(fit, <span class="dv">2</span>))) <span class="sc">+</span></span>
+<span id="cb4-7"><a></a>  <span class="fu">geom_errorbar</span>() <span class="sc">+</span></span>
+<span id="cb4-8"><a></a>  <span class="fu">geom_label</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-08-02_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="visualizing-results-1" class="slide level2">
+<h2>Visualizing Results</h2>
+<blockquote>
+<p>What is the effect of type and genre on rating?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">effect</span>(<span class="st">"genre"</span>, model) <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">data.frame</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> fit, <span class="at">xmin =</span> lower, <span class="at">xmax =</span> upper,</span>
+<span id="cb5-4"><a></a>             <span class="at">y =</span> <span class="fu">reorder</span>(genre, fit))) <span class="sc">+</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">geom_errorbar</span>() <span class="sc">+</span></span>
+<span id="cb5-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-08-02_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="question-1" class="slide level2">
+<h2>Question</h2>
+<blockquote>
+<p>What factors have an effect on rating?</p>
+</blockquote>
+</section>
+<section id="inferential-statistics-1" class="slide level2">
+<h2>Inferential Statistics</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(averageRating <span class="sc">~</span> genre <span class="sc">+</span> type <span class="sc">+</span> year <span class="sc">+</span> runtime <span class="sc">+</span> numVotes,</span>
+<span id="cb6-2"><a></a>            <span class="at">data =</span> all_media)</span>
+<span id="cb6-3"><a></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = averageRating ~ genre + type + year + runtime + 
+    numVotes, data = all_media)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.9748 -0.6314  0.1068  0.7494  4.9290 
+
+Coefficients:
+                   Estimate Std. Error  t value Pr(&gt;|t|)    
+(Intercept)      -4.686e+00  1.112e-01  -42.132  &lt; 2e-16 ***
+genreAdult       -1.078e-01  1.075e-02  -10.021  &lt; 2e-16 ***
+genreAdventure    3.851e-02  5.904e-03    6.522 6.94e-11 ***
+genreAnimation   -1.929e-01  1.105e-02  -17.455  &lt; 2e-16 ***
+genreBiography    5.944e-01  8.863e-03   67.066  &lt; 2e-16 ***
+genreComedy       5.881e-02  4.050e-03   14.521  &lt; 2e-16 ***
+genreCrime        1.309e-01  5.457e-03   23.989  &lt; 2e-16 ***
+genreDocumentary  6.187e-01  4.984e-03  124.144  &lt; 2e-16 ***
+genreDrama        2.760e-01  4.395e-03   62.803  &lt; 2e-16 ***
+genreFamily       3.520e-02  1.022e-02    3.445 0.000571 ***
+genreFantasy      1.054e-02  1.482e-02    0.711 0.477009    
+genreFilm-Noir    6.351e-01  2.680e-01    2.370 0.017812 *  
+genreGame-Show   -9.689e-02  1.172e-02   -8.270  &lt; 2e-16 ***
+genreHistory      5.363e-01  3.578e-02   14.988  &lt; 2e-16 ***
+genreHorror      -9.003e-01  8.616e-03 -104.497  &lt; 2e-16 ***
+genreMusical      6.594e-01  1.286e-02   51.258  &lt; 2e-16 ***
+genreMystery      5.447e-02  1.922e-02    2.834 0.004593 ** 
+genreNews        -1.330e+00  2.690e-02  -49.453  &lt; 2e-16 ***
+genreReality-TV  -2.832e-01  8.285e-03  -34.184  &lt; 2e-16 ***
+genreRomance      3.815e-02  1.633e-02    2.336 0.019471 *  
+genreSci-Fi      -2.076e-01  1.765e-02  -11.757  &lt; 2e-16 ***
+genreShort       -6.313e-02  9.209e-03   -6.854 7.16e-12 ***
+genreSport        2.078e-01  2.394e-02    8.676  &lt; 2e-16 ***
+genreTalk-Show   -5.269e-01  1.958e-02  -26.907  &lt; 2e-16 ***
+genreThriller    -2.383e-01  1.340e-02  -17.784  &lt; 2e-16 ***
+genreWar          1.506e-01  4.049e-02    3.720 0.000199 ***
+genreWestern      4.418e-01  1.302e-02   33.931  &lt; 2e-16 ***
+typeshort         7.434e-01  4.133e-03  179.875  &lt; 2e-16 ***
+typetvEpisode     1.255e+00  3.089e-03  406.313  &lt; 2e-16 ***
+typetvMiniSeries  8.255e-01  1.216e-02   67.868  &lt; 2e-16 ***
+typetvMovie       2.981e-01  6.078e-03   49.049  &lt; 2e-16 ***
+typetvSeries      7.263e-01  5.772e-03  125.845  &lt; 2e-16 ***
+typetvShort       7.175e-01  2.561e-02   28.022  &lt; 2e-16 ***
+typetvSpecial     7.242e-01  1.412e-02   51.289  &lt; 2e-16 ***
+typevideo         3.763e-01  6.788e-03   55.444  &lt; 2e-16 ***
+typevideoGame     7.620e-01  1.036e-01    7.357 1.89e-13 ***
+year              5.335e-03  5.570e-05   95.780  &lt; 2e-16 ***
+runtime           3.691e-07  3.245e-07    1.137 0.255373    
+numVotes          2.798e-06  5.444e-08   51.392  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.199 on 1071550 degrees of freedom
+Multiple R-squared:  0.1982,    Adjusted R-squared:  0.1982 
+F-statistic:  6972 on 38 and 1071550 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="inferential-statistics-2" class="slide level2">
+<h2>Inferential Statistics</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>just_movies <span class="ot">&lt;-</span> all_media <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">filter</span>(type <span class="sc">==</span> <span class="st">"movie"</span>)</span>
+<span id="cb8-3"><a></a></span>
+<span id="cb8-4"><a></a>model_movie <span class="ot">&lt;-</span> <span class="fu">lm</span>(averageRating <span class="sc">~</span> genre <span class="sc">+</span> year <span class="sc">+</span> numVotes <span class="sc">+</span> runtime,</span>
+<span id="cb8-5"><a></a>                  <span class="at">data =</span> just_movies)</span>
+<span id="cb8-6"><a></a><span class="fu">summary</span>(model_movie)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = averageRating ~ genre + year + numVotes + runtime, 
+    data = just_movies)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-8.0407 -0.7211  0.0701  0.7729  5.2770 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       5.913e+00  1.841e-01  32.112  &lt; 2e-16 ***
+genreAdult       -1.857e-01  2.109e-02  -8.802  &lt; 2e-16 ***
+genreAdventure    2.703e-01  1.326e-02  20.385  &lt; 2e-16 ***
+genreAnimation    5.166e-01  4.352e-02  11.871  &lt; 2e-16 ***
+genreBiography    1.279e+00  1.465e-02  87.289  &lt; 2e-16 ***
+genreComedy       2.175e-01  8.610e-03  25.257  &lt; 2e-16 ***
+genreCrime        3.645e-01  1.237e-02  29.459  &lt; 2e-16 ***
+genreDocumentary  1.548e+00  9.429e-03 164.195  &lt; 2e-16 ***
+genreDrama        5.690e-01  8.278e-03  68.736  &lt; 2e-16 ***
+genreFamily       3.598e-01  2.602e-02  13.827  &lt; 2e-16 ***
+genreFantasy     -7.852e-03  3.094e-02  -0.254 0.799679    
+genreFilm-Noir    6.699e-01  2.729e-01   2.455 0.014098 *  
+genreGame-Show    1.736e+00  1.220e+00   1.423 0.154711    
+genreHistory      1.056e+00  7.174e-02  14.721  &lt; 2e-16 ***
+genreHorror      -9.357e-01  1.313e-02 -71.242  &lt; 2e-16 ***
+genreMusical      9.611e-01  3.010e-02  31.927  &lt; 2e-16 ***
+genreMystery      1.774e-01  3.240e-02   5.475 4.38e-08 ***
+genreNews         1.492e+00  4.980e-01   2.995 0.002742 ** 
+genreReality-TV   7.571e-01  2.393e-01   3.163 0.001560 ** 
+genreRomance      3.628e-01  2.443e-02  14.853  &lt; 2e-16 ***
+genreSci-Fi      -4.333e-01  3.689e-02 -11.743  &lt; 2e-16 ***
+genreSport        9.082e-01  8.592e-02  10.570  &lt; 2e-16 ***
+genreTalk-Show    9.112e-01  4.611e-01   1.976 0.048154 *  
+genreThriller    -7.378e-02  1.989e-02  -3.709 0.000208 ***
+genreWar          2.902e-01  5.721e-02   5.073 3.93e-07 ***
+genreWestern      1.486e-01  2.672e-02   5.563 2.66e-08 ***
+year             -1.301e-04  9.217e-05  -1.411 0.158220    
+numVotes          2.943e-06  5.848e-08  50.327  &lt; 2e-16 ***
+runtime           9.125e-05  1.312e-05   6.956 3.50e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.22 on 287315 degrees of freedom
+Multiple R-squared:  0.1847,    Adjusted R-squared:  0.1846 
+F-statistic:  2324 on 28 and 287315 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="inferential-statistics-3" class="slide level2">
+<h2>Inferential Statistics</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">anova</span>(model_movie)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Df"],"name":[1],"type":["int"],"align":["right"]},{"label":["Sum Sq"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mean Sq"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["F value"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Pr(>F)"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"25","2":"9.296893e+04","3":"3718.7573177","4":"2499.2387637","5":"0.000000e+00","_rn_":"genre"},{"1":"1","2":"5.618218e-01","3":"0.5618218","4":"0.3775796","5":"5.389020e-01","_rn_":"year"},{"1":"1","2":"3.780799e+03","3":"3780.7986111","4":"2540.9344142","5":"0.000000e+00","_rn_":"numVotes"},{"1":"1","2":"7.200529e+01","3":"72.0052893","4":"48.3920823","5":"3.497153e-12","_rn_":"runtime"},{"1":"287315","2":"4.275121e+05","3":"1.4879560","4":"NA","5":"NA","_rn_":"Residuals"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
