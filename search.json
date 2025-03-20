@@ -2224,5 +2224,12 @@
     "title": "Multivariate Analysis",
     "section": "Inferential Statistics",
     "text": "Inferential Statistics\n\nanova(model_movie)"
+  },
+  {
+    "objectID": "slides-08-02.html#case-study",
+    "href": "slides-08-02.html#case-study",
+    "title": "Multivariate Analysis",
+    "section": "Case Study",
+    "text": "Case Study\nDownload data on American Idol, set up your analysis environment, and answer the following question:\n\nWhat factors have an effect on episode rating?"
   }
 ]
