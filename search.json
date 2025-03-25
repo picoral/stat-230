@@ -2314,7 +2314,7 @@
     "href": "modules.html#slides-7",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nMore Regression\nCase Study - Logistic Regression"
+    "text": "Slides\n\nMore Regression\nCase Study - Logistic Regression\nFull Case Study - spam"
   },
   {
     "objectID": "modules.html#assignment-3",
@@ -2322,5 +2322,75 @@
     "title": "Modules",
     "section": "Assignment",
     "text": "Assignment\n\nAssignment 5 – deadline March 31st"
+  },
+  {
+    "objectID": "slides-09-03.html#setting-up-a-new-.qmd-file",
+    "href": "slides-09-03.html#setting-up-a-new-.qmd-file",
+    "title": "Full Case Study – Emails",
+    "section": "Setting up a new .qmd file",
+    "text": "Setting up a new .qmd file\nFor this case study, we will do what I expect you to do for the final project.\nWe will start by creating a new .qmd file.\n\nClick on the File option on the top menu, choose New File then click on Quarto Document...\nFill out title and author and click on Create"
+  },
+  {
+    "objectID": "slides-09-03.html#the-data",
+    "href": "slides-09-03.html#the-data",
+    "title": "Full Case Study – Emails",
+    "section": "The Data",
+    "text": "The Data\nDownload the email data and set it up in your project.\nIn your .qmd file, add a code chunk for the follow (shortcut: option + command + i for macs, crtl + alt + i for windows)\n\nlibrary(tidyverse)\nlibrary(effects)\n\nemail &lt;- read_csv(\"data/email.csv\")\n\nYou can check the data dictionary to understand what the variables are."
+  },
+  {
+    "objectID": "slides-09-03.html#question",
+    "href": "slides-09-03.html#question",
+    "title": "Full Case Study – Emails",
+    "section": "Question",
+    "text": "Question\n\nWhat factors have an effect on whether an email message is spam or not?"
+  },
+  {
+    "objectID": "slides-09-03.html#descriptive-statistics",
+    "href": "slides-09-03.html#descriptive-statistics",
+    "title": "Full Case Study – Emails",
+    "section": "Descriptive statistics",
+    "text": "Descriptive statistics\nWhat percentage of the data is spam?\n\nemail |&gt;\n  summarize(mean(spam))\n\n\n\n\n\nmean(spam)\n\n\n\n\n0.0935986"
+  },
+  {
+    "objectID": "slides-09-03.html#descriptive-statistics-1",
+    "href": "slides-09-03.html#descriptive-statistics-1",
+    "title": "Full Case Study – Emails",
+    "section": "Descriptive statistics",
+    "text": "Descriptive statistics\nWhat percentage of emails sent to multiple recipients spam?\n\nemail |&gt;\n  group_by(to_multiple) |&gt;\n  summarize(mean(spam))\n\n\n\n\n\nto_multiple\nmean(spam)\n\n\n\n\n0\n0.1075432\n\n\n1\n0.0193548\n\n\n\n\n\n\nWhat other variables can we investigate?"
+  },
+  {
+    "objectID": "slides-09-03.html#plots",
+    "href": "slides-09-03.html#plots",
+    "title": "Full Case Study – Emails",
+    "section": "Plots",
+    "text": "Plots\nWhat is the distribution of number of characters of spam vs. non-spam messages?\n\nemail |&gt;\n  ggplot(aes(x = factor(spam), y = num_char)) +\n  geom_boxplot()\n\n\nWhat other plots can we create?"
+  },
+  {
+    "objectID": "slides-09-03.html#model",
+    "href": "slides-09-03.html#model",
+    "title": "Full Case Study – Emails",
+    "section": "Model",
+    "text": "Model\nWhat factors have an effect on whether an email message is spam or not?\n\nmodel &lt;- glm(spam ~ to_multiple + attach + num_char + number,\n             data = email,\n             family = binomial)\nanova(model)\n\n\n\n\n\n\nDf\nDeviance\nResid. Df\nResid. Dev\nPr(&gt;Chi)\n\n\n\n\nNULL\nNA\nNA\n3920\n2437.180\nNA\n\n\nto_multiple\n1\n65.16041\n3919\n2372.019\n0.0000000\n\n\nattach\n1\n8.82110\n3918\n2363.198\n0.0029777\n\n\nnum_char\n1\n98.71806\n3917\n2264.480\n0.0000000\n\n\nnumber\n2\n123.19374\n3915\n2141.286\n0.0000000"
+  },
+  {
+    "objectID": "slides-09-03.html#model-1",
+    "href": "slides-09-03.html#model-1",
+    "title": "Full Case Study – Emails",
+    "section": "Model",
+    "text": "Model\nVariance explained\n\n1 - model$deviance/model$null.deviance\n\n[1] 0.1214081\n\n\nFind a good model."
+  },
+  {
+    "objectID": "slides-09-03.html#interpret-results",
+    "href": "slides-09-03.html#interpret-results",
+    "title": "Full Case Study – Emails",
+    "section": "Interpret Results",
+    "text": "Interpret Results\nYou can check the effects of each variable.\n\neffect(\"number\", model) |&gt;\n  data.frame() |&gt;\n  arrange(fit)\n\n\n\n\n\n\nnumber\nfit\nse\nlower\nupper\n\n\n\n\n3\nsmall\n0.0481429\n0.0042325\n0.0404939\n0.0571507\n\n\n1\nbig\n0.0925483\n0.0130101\n0.0700100\n0.1213951\n\n\n2\nnone\n0.1854859\n0.0190710\n0.1509691\n0.2257957"
+  },
+  {
+    "objectID": "slides-09-03.html#results",
+    "href": "slides-09-03.html#results",
+    "title": "Full Case Study – Emails",
+    "section": "Results",
+    "text": "Results\n\nWrite up your results and render your document.\nYou will see that you now have .html files in your list of files.\nInclude the .html files for your final project submission"
   }
 ]
