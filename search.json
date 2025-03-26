@@ -2399,5 +2399,215 @@
     "title": "Full Case Study – Emails",
     "section": "In-class activity",
     "text": "In-class activity\nGo to gradescope and answer today’s in-class activity about plots"
+  },
+  {
+    "objectID": "slides-09-04.html",
+    "href": "slides-09-04.html",
+    "title": "Probabilities",
+    "section": "",
+    "text": "Slides developed by Mine Çetinkaya-Rundel"
+  },
+  {
+    "objectID": "slides-09-04.html#random-processes",
+    "href": "slides-09-04.html#random-processes",
+    "title": "Probabilities",
+    "section": "Random processes",
+    "text": "Random processes\n\nA random process is a situation in which we know what outcomes could happen, but we don’t know which particular outcome will happen.\nExamples: coin tosses, die rolls"
+  },
+  {
+    "objectID": "slides-09-04.html#probability",
+    "href": "slides-09-04.html#probability",
+    "title": "Probabilities",
+    "section": "Probability",
+    "text": "Probability\n\nThere are several possible interpretations of probability but they (almost) completely agree on the mathematical rules probability must follow.\n\nP(A) = Probability of event A\n0 ≤ P(A) ≤ 1"
+  },
+  {
+    "objectID": "slides-09-04.html#frequentist-interpretation",
+    "href": "slides-09-04.html#frequentist-interpretation",
+    "title": "Probabilities",
+    "section": "Frequentist interpretation",
+    "text": "Frequentist interpretation\nThe probability of an outcome is the proportion of times the outcome would occur if we observed the random process an infinite number of times"
+  },
+  {
+    "objectID": "slides-09-04.html#bayesian-interpretation",
+    "href": "slides-09-04.html#bayesian-interpretation",
+    "title": "Probabilities",
+    "section": "Bayesian interpretation",
+    "text": "Bayesian interpretation\nA Bayesian interprets probability as a subjective degree of belief: For the same event, two separate people could have different viewpoints and so assign different probabilities.\nLargely popularized by revolutionary advance in computational technology and methods during the last twenty years."
+  },
+  {
+    "objectID": "slides-09-04.html#practice",
+    "href": "slides-09-04.html#practice",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhich of the following events would you be most surprised by?\n\nexactly 3 heads in 10 coin flips\nexactly 3 heads in 100 coin flips\nexactly 3 heads in 1000 coin flips"
+  },
+  {
+    "objectID": "slides-09-04.html#practice-1",
+    "href": "slides-09-04.html#practice-1",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhich of the following events would you be most surprised by?\n\nexactly 3 heads in 10 coin flips\nexactly 3 heads in 100 coin flips\nexactly 3 heads in 1000 coin flips"
+  },
+  {
+    "objectID": "slides-09-04.html#law-of-large-numbers",
+    "href": "slides-09-04.html#law-of-large-numbers",
+    "title": "Probabilities",
+    "section": "Law of large numbers",
+    "text": "Law of large numbers\nLaw of large numbers states that as more observations are collected, the proportion of occurrences with a particular outcome, p, converges to the probability of that outcome, p."
+  },
+  {
+    "objectID": "slides-09-04.html#practice-2",
+    "href": "slides-09-04.html#practice-2",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhen tossing a fair coin, if heads comes up on each of the first 10 tosses, what do you think the chance is that another head will come up on the next toss? 0.5, less than 0.5, or more than 0.5?"
+  },
+  {
+    "objectID": "slides-09-04.html#practice-3",
+    "href": "slides-09-04.html#practice-3",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\n\nThe probability is still 0.5, or there is still a 50% chance that another head will come up on the next toss.\nP(H on 11th toss) = P(T on 11th toss) = 0.5\nThe coin is not “due” for a tail"
+  },
+  {
+    "objectID": "slides-10-01.html#random-processes",
+    "href": "slides-10-01.html#random-processes",
+    "title": "Probabilities",
+    "section": "Random processes",
+    "text": "Random processes\n\nA random process is a situation in which we know what outcomes could happen, but we don’t know which particular outcome will happen.\nExamples: coin tosses, die rolls"
+  },
+  {
+    "objectID": "slides-10-01.html#probability",
+    "href": "slides-10-01.html#probability",
+    "title": "Probabilities",
+    "section": "Probability",
+    "text": "Probability\n\nThere are several possible interpretations of probability but they (almost) completely agree on the mathematical rules probability must follow.\n\nP(A) = Probability of event A\n0 ≤ P(A) ≤ 1"
+  },
+  {
+    "objectID": "slides-10-01.html#frequentist-interpretation",
+    "href": "slides-10-01.html#frequentist-interpretation",
+    "title": "Probabilities",
+    "section": "Frequentist interpretation",
+    "text": "Frequentist interpretation\nThe probability of an outcome is the proportion of times the outcome would occur if we observed the random process an infinite number of times"
+  },
+  {
+    "objectID": "slides-10-01.html#bayesian-interpretation",
+    "href": "slides-10-01.html#bayesian-interpretation",
+    "title": "Probabilities",
+    "section": "Bayesian interpretation",
+    "text": "Bayesian interpretation\nA Bayesian interprets probability as a subjective degree of belief: For the same event, two separate people could have different viewpoints and so assign different probabilities.\nLargely popularized by revolutionary advance in computational technology and methods during the last twenty years."
+  },
+  {
+    "objectID": "slides-10-01.html#practice",
+    "href": "slides-10-01.html#practice",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhich of the following events would you be most surprised by?\n\nexactly 3 heads in 10 coin flips\nexactly 3 heads in 100 coin flips\nexactly 3 heads in 1000 coin flips"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-1",
+    "href": "slides-10-01.html#practice-1",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhich of the following events would you be most surprised by?\n\nexactly 3 heads in 10 coin flips\nexactly 3 heads in 100 coin flips\nexactly 3 heads in 1000 coin flips"
+  },
+  {
+    "objectID": "slides-10-01.html#law-of-large-numbers",
+    "href": "slides-10-01.html#law-of-large-numbers",
+    "title": "Probabilities",
+    "section": "Law of large numbers",
+    "text": "Law of large numbers\nLaw of large numbers states that as more observations are collected, the proportion of occurrences with a particular outcome, p, converges to the probability of that outcome, p."
+  },
+  {
+    "objectID": "slides-10-01.html#practice-2",
+    "href": "slides-10-01.html#practice-2",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhen tossing a fair coin, if heads comes up on each of the first 10 tosses, what do you think the chance is that another head will come up on the next toss? 0.5, less than 0.5, or more than 0.5?"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-3",
+    "href": "slides-10-01.html#practice-3",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\n\nThe probability is still 0.5, or there is still a 50% chance that another head will come up on the next toss.\nP(H on 11th toss) = P(T on 11th toss) = 0.5\nThe coin is not “due” for a tail"
+  },
+  {
+    "objectID": "slides-10-01.html#gamblers-fallacy",
+    "href": "slides-10-01.html#gamblers-fallacy",
+    "title": "Probabilities",
+    "section": "Gambler’s Fallacy",
+    "text": "Gambler’s Fallacy\nThe common misunderstanding of the law of large numbers is that random processes are supposed to compensate for whatever happened in the past; this is just not true and is also called (or law of averages)."
+  },
+  {
+    "objectID": "slides-10-01.html#disjoint-and-non-disjoint-outcomes",
+    "href": "slides-10-01.html#disjoint-and-non-disjoint-outcomes",
+    "title": "Probabilities",
+    "section": "Disjoint and non-disjoint outcomes",
+    "text": "Disjoint and non-disjoint outcomes\nDisjoint (mutually exclusive) outcomes: Cannot happen at the same time.\n\nThe outcome of a single coin toss cannot be a head and a tail\nA student both cannot fail and pass a class\nA single card drawn from a deck cannot be an ace and a queen"
+  },
+  {
+    "objectID": "slides-10-01.html#disjoint-and-non-disjoint-outcomes-1",
+    "href": "slides-10-01.html#disjoint-and-non-disjoint-outcomes-1",
+    "title": "Probabilities",
+    "section": "Disjoint and non-disjoint outcomes",
+    "text": "Disjoint and non-disjoint outcomes\nNon-disjoint outcomes: Can happen at the same time\n\nA student can get an A in Stats and A in Econ in the same semester"
+  },
+  {
+    "objectID": "slides-10-01.html#union-of-non-disjoint-events",
+    "href": "slides-10-01.html#union-of-non-disjoint-events",
+    "title": "Probabilities",
+    "section": "Union of non-disjoint events",
+    "text": "Union of non-disjoint events\nWhat is the probability of drawing a jack or a red card from a well shuffled full deck?\n\nThere are 52 cards in a standard deck.\nThere are 4 suits; Diamonds, Clubs, Hearts, Spades.\nBlack cards include all Clubs and Spades.\nRed cards include all Hearts and Diamonds."
+  },
+  {
+    "objectID": "slides-10-01.html#union-of-non-disjoint-events-1",
+    "href": "slides-10-01.html#union-of-non-disjoint-events-1",
+    "title": "Probabilities",
+    "section": "Union of non-disjoint events",
+    "text": "Union of non-disjoint events\nWhat is the probability of drawing a jack or a red card from a well shuffled full deck?\n\nP(jack or red) = P(jack) + P(red) - P(jack and red)\nP(jack) = 4/52\nP(red) = 26/52\nP(jack and red) = 2/52\n28/52"
+  },
+  {
+    "objectID": "modules.html#slides-8",
+    "href": "modules.html#slides-8",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nProbabilities"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-4",
+    "href": "slides-10-01.html#practice-4",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhat is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?\n\n\n\n\nShares Parent’s View\nDoesn’t share\nTotal\n\n\n\n\nNO legalize\n40\n11\n51\n\n\nYES legalize\n78\n36\n114\n\n\nTotal\n118\n47\n165"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-5",
+    "href": "slides-10-01.html#practice-5",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhat is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?\nP(YES legalize or agree with parents) = P(YES legalize) + P(agree with parents) - P(YES legalize and agree with parents)"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-6",
+    "href": "slides-10-01.html#practice-6",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhat is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?\n\n(40 + 36 - 78) / 165\n(114 + 118 - 78) / 165\n78 / 165\n78 / 188\n11 / 47"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-7",
+    "href": "slides-10-01.html#practice-7",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nWhat is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?\n\n(40 + 36 - 78) / 165\n(114 + 118 - 78) / 165\n78 / 165\n78 / 188\n11 / 47"
+  },
+  {
+    "objectID": "slides-10-01.html#union-of-non-disjoint-events-2",
+    "href": "slides-10-01.html#union-of-non-disjoint-events-2",
+    "title": "Probabilities",
+    "section": "Union of non-disjoint events",
+    "text": "Union of non-disjoint events\nGeneral rule:\n\nP(A or B) = P(A) + P(B) - P(A and B)"
   }
 ]
