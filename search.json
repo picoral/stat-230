@@ -2566,14 +2566,14 @@
     "href": "slides-10-01.html#union-of-non-disjoint-events-1",
     "title": "Probabilities",
     "section": "Union of non-disjoint events",
-    "text": "Union of non-disjoint events\nWhat is the probability of drawing a jack or a red card from a well shuffled full deck?\n\nP(jack or red) = P(jack) + P(red) - P(jack and red)\nP(jack) = 4/52\nP(red) = 26/52\nP(jack and red) = 2/52\n28/52"
+    "text": "Union of non-disjoint events\nWhat is the probability of drawing a jack or a red card from a well shuffled full deck?\n\nP(A ∪ B) = P(A) + P(B) - P(A ∩ B)\n\n\nP(jack or red) = P(jack) + P(red) - P(jack and red)\nP(jack) = 4/52\nP(red) = 26/52\nP(jack and red) = 2/52\n28/52"
   },
   {
     "objectID": "modules.html#slides-8",
     "href": "modules.html#slides-8",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nProbabilities"
+    "text": "Slides\n\nProbabilities\nConditional Probabilities"
   },
   {
     "objectID": "slides-10-01.html#practice-4",
@@ -2587,7 +2587,7 @@
     "href": "slides-10-01.html#practice-5",
     "title": "Probabilities",
     "section": "Practice",
-    "text": "Practice\nWhat is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?\nP(YES legalize or agree with parents) = P(YES legalize) + P(agree with parents) - P(YES legalize and agree with parents)"
+    "text": "Practice\nWhat is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?\n\nP(A ∪ B) = P(A) + P(B) - P(A ∩ B)\n\nP(YES legalize or agree with parents) = P(YES legalize) + P(agree with parents) - P(YES legalize and agree with parents)"
   },
   {
     "objectID": "slides-10-01.html#practice-6",
@@ -2609,5 +2609,348 @@
     "title": "Probabilities",
     "section": "Union of non-disjoint events",
     "text": "Union of non-disjoint events\nGeneral rule:\n\nP(A or B) = P(A) + P(B) - P(A and B)"
+  },
+  {
+    "objectID": "slides-10-01.html#probability-distributions",
+    "href": "slides-10-01.html#probability-distributions",
+    "title": "Probabilities",
+    "section": "Probability Distributions",
+    "text": "Probability Distributions\nA probability distribution lists all possible events and the probabilities with which they occur.\nThe probability distribution a coin toss:\n\n\n\n\nHead\nTail\n\n\n\n\nProbability\n0.50\n0.50\n\n\n\nRules for probability distributions:\n\nThe events listed must be disjoint\nEach probability must be between 0 and 1\nThe probabilities must total 1"
+  },
+  {
+    "objectID": "slides-10-01.html#probability-distributions-1",
+    "href": "slides-10-01.html#probability-distributions-1",
+    "title": "Probabilities",
+    "section": "Probability Distributions",
+    "text": "Probability Distributions\nRules for probability distributions:\n\nThe events listed must be disjoint\nEach probability must be between 0 and 1\nThe probabilities must total 1\n\nThe probability distribution two coin tossess:\n\n\n\n\nHead Head\nHead Tail\nTail Head\nTail Tail\n\n\n\n\nProb.\n0.25\n0.25\n0.25\n0.25"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-8",
+    "href": "slides-10-01.html#practice-8",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nIn a survey, 52% of respondents said they are Democrats. What is the probability that a randomly selected respondent from this sample is a Republican?\n\n0.48\nmore than 0.48\nless than 0.48\ncannot calculate using only the information given"
+  },
+  {
+    "objectID": "slides-10-01.html#sample-space",
+    "href": "slides-10-01.html#sample-space",
+    "title": "Probabilities",
+    "section": "Sample space",
+    "text": "Sample space\nSample space is the collection of all possible outcomes of an experiment\n\nI flip a coin once, what is the sample space for the outcomes? S = {H, T}\nI flip a coin once twice, what is the sample space for the outcomes?\nI flip a coin once three times, what is the sample space for the outcomes?"
+  },
+  {
+    "objectID": "slides-10-01.html#sample-space-1",
+    "href": "slides-10-01.html#sample-space-1",
+    "title": "Probabilities",
+    "section": "Sample space",
+    "text": "Sample space\nSample space is the collection of all possible outcomes of an experiment\n\nI flip a coin once, what is the sample space for the outcomes? S = {H, T}\nI flip a coin once twice, what is the sample space for the outcomes? S = {HH, HT, TT, TH}\nI flip a coin once three times, what is the sample space for the outcomes?"
+  },
+  {
+    "objectID": "slides-10-01.html#sample-space-2",
+    "href": "slides-10-01.html#sample-space-2",
+    "title": "Probabilities",
+    "section": "Sample space",
+    "text": "Sample space\nSample space is the collection of all possible outcomes of an experiment\n\nI flip a coin once, what is the sample space for the outcomes? S = {H, T}\nI flip a coin once twice, what is the sample space for the outcomes? S = {HH, HT, TT, TH}\nI flip a coin once three times, what is the sample space for the outcomes? S = {HHH, HHT, HTH, HTT, THH, TTH, TTH, TTT}"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-9",
+    "href": "slides-10-01.html#practice-9",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nIn a survey, 52% of respondents said they are Democrats. What is the probability that a randomly selected respondent from this sample is a Republican?\n\n0.48\nmore than 0.48\nless than 0.48\ncannot calculate using only the information given"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-10",
+    "href": "slides-10-01.html#practice-10",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nIf the only two political parties were Republican and Democrat, then 1 would be possible. However it is also possible that some people do not affiliate with a political party or affiliate with a party other than these two. Then 3 is also possible. However 2 is definitely not possible since it would result in the total probability for the sample space being above 1."
+  },
+  {
+    "objectID": "slides-10-01.html#complementary-events",
+    "href": "slides-10-01.html#complementary-events",
+    "title": "Probabilities",
+    "section": "Complementary events",
+    "text": "Complementary events\nComplementary events are two mutually exclusive events where one event consists of all outcomes that are not in the other event (the two probabilities add to 1).\nExample: Rolling a Six-Sided Die\nThe sample space for rolling a standard six-sided die is: S = {1, 2, 3, 4, 5, 6}\n\nI roll a die once. If we know that I didn’t roll an even number, what are the possible outcomes? {1, 3, 5}"
+  },
+  {
+    "objectID": "slides-10-01.html#independence",
+    "href": "slides-10-01.html#independence",
+    "title": "Probabilities",
+    "section": "Independence",
+    "text": "Independence\nTwo processes are independent if knowing the outcome of one provides no useful information about the outcome of the other.\n\nKnowing that the coin landed on a head on the first toss does not provide any useful information for determining what the coin will land on in the second toss.\n\nOutcomes of two tosses of a coin are independent."
+  },
+  {
+    "objectID": "slides-10-01.html#dependence",
+    "href": "slides-10-01.html#dependence",
+    "title": "Probabilities",
+    "section": "Dependence",
+    "text": "Dependence\n\nKnowing that the first card drawn from a deck is an ace does provide useful information for determining the probability of drawing an ace in the second draw.\n\nOutcomes of two draws from a deck of cards (without replacement) are dependent."
+  },
+  {
+    "objectID": "slides-10-01.html#independence-1",
+    "href": "slides-10-01.html#independence-1",
+    "title": "Probabilities",
+    "section": "Independence",
+    "text": "Independence\n\nKnowing that the first card drawn from a deck is an ace does provide useful information for determining the probability of drawing an ace in the second draw.\n\nOutcomes of two draws from a deck of cards (without replacement) are dependent."
+  },
+  {
+    "objectID": "slides-10-01.html#practice-11",
+    "href": "slides-10-01.html#practice-11",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\n\nIf the probability of rain tomorrow is 0.3, what is the probability that it will NOT rain tomorrow?\nIn a standard deck of 52 playing cards, what is the probability of NOT drawing a diamond?\nA fair die is rolled once. If event A is “rolling a number less than 4,” what is the probability of the complementary event A’?\nIn a class of 40 students, 25 students passed a math test. What is the probability that a randomly selected student did NOT pass the test?"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-12",
+    "href": "slides-10-01.html#practice-12",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\n\nIf the probability of rain tomorrow is 0.3, what is the probability that it will NOT rain tomorrow? 0.7\nIn a standard deck of 52 playing cards, what is the probability of NOT drawing a diamond? 3/4\nA fair die is rolled once. If event A is “rolling a number less than 4,” what is the probability of the complementary event A’? 1/2\nIn a class of 40 students, 25 students passed a math test. What is the probability that a randomly selected student did NOT pass the test? 15/40, 3/8"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-13",
+    "href": "slides-10-01.html#practice-13",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nBetween January 9-12, 2013, SurveyUSA interviewed a random sample of 500 NC residents asking them whether they think widespread gun ownership protects law abiding citizens from crime, or makes society more dangerous. 58% of all respondents said it protects citizens. 67% of White respondents, 28% of Black respondents, and 64% of Hispanic respondents shared this view. Which of the below is true?\nhttp://www.surveyusa.com/client/PollReport.aspx?g=a5f460ef-bba9-484b-8579-1101ea26421b"
+  },
+  {
+    "objectID": "slides-10-01.html#in-class-activity",
+    "href": "slides-10-01.html#in-class-activity",
+    "title": "Probabilities",
+    "section": "In-class activity",
+    "text": "In-class activity\nGo to gradescope and answer the questions about the union of non-disjoint events"
+  },
+  {
+    "objectID": "slides-10-01.html#product-rule-for-independent-events",
+    "href": "slides-10-01.html#product-rule-for-independent-events",
+    "title": "Probabilities",
+    "section": "Product rule for independent events",
+    "text": "Product rule for independent events\nThe Product Rule for Independent Events states that if two events A and B are independent, then the probability of both events occurring (their intersection) is equal to the product of their individual probabilities.\n\nP(A and B) = P(A) x P(B)\n\n\nP(A ∩ B) = P(A) × P(B)"
+  },
+  {
+    "objectID": "slides-10-01.html#product-rule-for-independent-events-1",
+    "href": "slides-10-01.html#product-rule-for-independent-events-1",
+    "title": "Probabilities",
+    "section": "Product rule for independent events",
+    "text": "Product rule for independent events\nP(A ∩ B) = P(A) x P(B)\n\nYou toss a coin twice, what is the probability of getting two tails in a row?\n\nP(T₁ ∩ T₂) = P(T₁) × P(T₂) = 1/2 × 1/2 = 1/4"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-14",
+    "href": "slides-10-01.html#practice-14",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nP(protects citizens) = 0.58\nP(protects citizens | White) = 0.67\nP(protects citizens | Black) = 0.28\nP(protects citizens | Hispanic) = 0.64"
+  },
+  {
+    "objectID": "slides-10-01.html#disjoint-vs.-complementary",
+    "href": "slides-10-01.html#disjoint-vs.-complementary",
+    "title": "Probabilities",
+    "section": "Disjoint vs. complementary",
+    "text": "Disjoint vs. complementary\n\nDo the sum of probabilities of two disjoint events always add up to 1?\nDo the sum of probabilities of two complementary events always add up to 1?"
+  },
+  {
+    "objectID": "slides-10-01.html#disjoint-vs.-complementary-1",
+    "href": "slides-10-01.html#disjoint-vs.-complementary-1",
+    "title": "Probabilities",
+    "section": "Disjoint vs. complementary",
+    "text": "Disjoint vs. complementary\n\nDo the sum of probabilities of two disjoint events always add up to 1? Not necessarily, there may be more than 2 events in the sample space, e.g. party affiliation.\nDo the sum of probabilities of two complementary events always add up to 1? Yes, that’s the definition of complementary, e.g. heads and tails"
+  },
+  {
+    "objectID": "slides-10-01.html#product-rule-for-independent-events-2",
+    "href": "slides-10-01.html#product-rule-for-independent-events-2",
+    "title": "Probabilities",
+    "section": "Product rule for independent events",
+    "text": "Product rule for independent events\nKey points to remember:\n\nThe rule only applies when events are independent (the occurrence of one event doesn’t affect the probability of the other)\nIndependence must be verified before applying the product rule\nThis rule provides a simple way to calculate compound probabilities for independent events\n\nThe product rule is fundamental in probability theory and is used extensively in applications ranging from genetics to quality control in manufacturing."
+  },
+  {
+    "objectID": "slides-10-01.html#practice-15",
+    "href": "slides-10-01.html#practice-15",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nP(protects citizens) = 0.58\nP(protects citizens | White) = 0.67 ≠ P(protects citizens)\nP(protects citizens | Black) = 0.28 ≠ P(protects citizens)\nP(protects citizens | Hispanic) = 0.64 ≠ P(protects citizens)\nP(protects citizens) varies by race/ethnicity, therefore opinion on gun ownership and race ethnicity are most likely dependent"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-16",
+    "href": "slides-10-01.html#practice-16",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nA recent Gallup poll suggests that 25.5% of Texans do not have health insurance as of June 2012. Assuming that the uninsured rate stayed constant, what is the probability that two randomly selected Texans are both uninsured?\n\n\\(25.52\\)\n\\(0.255^2\\)\n\\(0.255 * 2\\)\n\\((1 - 0.255)^2\\)"
+  },
+  {
+    "objectID": "slides-10-01.html#independence-2",
+    "href": "slides-10-01.html#independence-2",
+    "title": "Probabilities",
+    "section": "Independence",
+    "text": "Independence\nIf probability that A occurs given that B is true equals the probability of A, then A and B are independent:\n\nP(A occurs, given that B is true) = P(A | B) = P(A)"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-17",
+    "href": "slides-10-01.html#practice-17",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\nA recent Gallup poll suggests that 25.5% of Texans do not have health insurance as of June 2012. Assuming that the uninsured rate stayed constant, what is the probability that two randomly selected Texans are both uninsured?\n\\(0.255^2\\)"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-18",
+    "href": "slides-10-01.html#practice-18",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\n\nA fair coin is flipped 3 times. What is the probability of getting heads on all three flips?\nA bag contains 5 red marbles and 5 blue marbles. If you draw 2 marbles with replacement, what is the probability of drawing 2 blue marbles?\nA six-sided die is rolled twice. What is the probability of rolling a 6 on the first roll AND an even number on the second roll?"
+  },
+  {
+    "objectID": "slides-10-01.html#practice-19",
+    "href": "slides-10-01.html#practice-19",
+    "title": "Probabilities",
+    "section": "Practice",
+    "text": "Practice\n\nA fair coin is flipped 3 times. What is the probability of getting heads on all three flips? \\(\\frac{1}{2}*\\frac{1}{2}*\\frac{1}{2} = \\frac{1}{8}\\)\nA bag contains 5 red marbles and 5 blue marbles. If you draw 2 marbles with replacement, what is the probability of drawing 2 blue marbles? \\(\\frac{1}{2}*\\frac{1}{2} = \\frac{1}{4}\\)\nA six-sided die is rolled twice. What is the probability of rolling a 6 on the first roll AND an even number on the second roll? \\(\\frac{1}{6}*\\frac{1}{2} = \\frac{1}{12}\\)"
+  },
+  {
+    "objectID": "slides-10-02.html#example",
+    "href": "slides-10-02.html#example",
+    "title": "Conditional Probabilities",
+    "section": "Example",
+    "text": "Example\nResearchers randomly assigned 72 chronic users of cocaine into three groups: desipramine (antidepressant), lithium (standard treatment for cocaine) and placebo. Results of the study are summarized below.\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\nhttp://www.oswego.edu/~srp/stats/2_way_tbl_1.htm"
+  },
+  {
+    "objectID": "slides-10-02.html#example-1",
+    "href": "slides-10-02.html#example-1",
+    "title": "Conditional Probabilities",
+    "section": "Example",
+    "text": "Example\nWhat is the probability that a patient relapsed?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipranine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72"
+  },
+  {
+    "objectID": "slides-10-02.html#example-2",
+    "href": "slides-10-02.html#example-2",
+    "title": "Conditional Probabilities",
+    "section": "Example",
+    "text": "Example\nWhat is the probability that a patient relapsed?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipranine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72"
+  },
+  {
+    "objectID": "slides-10-02.html#probabilities",
+    "href": "slides-10-02.html#probabilities",
+    "title": "Conditional Probabilities",
+    "section": "Probabilities",
+    "text": "Probabilities\n\nMarginal probability is the probability of an event occurring regardless of the outcomes of other random variables.\nJoint probability is the probability of two or more events occurring simultaneously. It represents the likelihood of the intersection of multiple events. For two events A and B, the joint probability is written as P(A ∩ B) or P(A, B).\nConditional probability is the probability of an event occurring given that another event has already occurred. It’s denoted as P(A|B), which reads as “the probability of A given B.”"
+  },
+  {
+    "objectID": "slides-10-02.html#marginal-probability",
+    "href": "slides-10-02.html#marginal-probability",
+    "title": "Conditional Probabilities",
+    "section": "Marginal probability",
+    "text": "Marginal probability\nWhat is the probability that a patient relapsed?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72"
+  },
+  {
+    "objectID": "slides-10-02.html#marginal-probability-1",
+    "href": "slides-10-02.html#marginal-probability-1",
+    "title": "Conditional Probabilities",
+    "section": "Marginal probability",
+    "text": "Marginal probability\nWhat is the probability that a patient relapsed?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\nP(relapsed) = 48 / 72 ~ 0.67"
+  },
+  {
+    "objectID": "slides-10-02.html#joint-probability",
+    "href": "slides-10-02.html#joint-probability",
+    "title": "Conditional Probabilities",
+    "section": "Joint probability",
+    "text": "Joint probability\nWhat is the probability that a patient received the antidepressant (desipramine) and relapsed?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72"
+  },
+  {
+    "objectID": "slides-10-02.html#joint-probability-1",
+    "href": "slides-10-02.html#joint-probability-1",
+    "title": "Conditional Probabilities",
+    "section": "Joint probability",
+    "text": "Joint probability\nWhat is the probability that a patient received the antidepressant (desipramine) and relapsed?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\nP(relapsed ∩ desipramine) = 10 / 72 ~ 0.14"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability",
+    "href": "slides-10-02.html#conditional-probability",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nThe conditional probability of the outcome of interest A given condition B is calculated as:\n\\(P(A|B) = \\frac{P(A \\cap B)}{P(B)}\\)"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability-1",
+    "href": "slides-10-02.html#conditional-probability-1",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nWhat is the probability that a patient relapses if we know they were given desipramine?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\n\\(P(relapse|desipramine) = \\frac{P(relapse \\cap desipramine)}{P(desipramine)}\\)\n\\(P(relapse|desipramine) = \\frac{10/72}{24/72} = 10/24 = 0.42\\)"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability-2",
+    "href": "slides-10-02.html#conditional-probability-2",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nWhat is the probability that a patient relapses if we know they were given lithium?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability-3",
+    "href": "slides-10-02.html#conditional-probability-3",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nWhat is the probability that a patient relapses if we know they were given lithium?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\n\\(P(relapse|lithium) = \\frac{18}{24} = 0.75\\)"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability-4",
+    "href": "slides-10-02.html#conditional-probability-4",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nWhat is the probability that a patient relapses if we know they were given placebo?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\n\\(P(relapse|placebo) = \\frac{20}{24} = 0.83\\)"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability-5",
+    "href": "slides-10-02.html#conditional-probability-5",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nIf we know that a patient relapsed, what is the probability that they received the antidepressant (desipramine)?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability-6",
+    "href": "slides-10-02.html#conditional-probability-6",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nIf we know that a patient relapsed, what is the probability that they received the antidepressant (desipramine)?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\n\\(P(desipramine|relapse) = \\frac{10}{48} = 0.21\\)"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability-7",
+    "href": "slides-10-02.html#conditional-probability-7",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nIf we know that a patient relapsed, what is the probability that they received lithium?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\n\\(P(lithium|relapse) = \\frac{18}{48} = 0.38\\)"
+  },
+  {
+    "objectID": "slides-10-02.html#conditional-probability-8",
+    "href": "slides-10-02.html#conditional-probability-8",
+    "title": "Conditional Probabilities",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nIf we know that a patient relapsed, what is the probability that they received placebo?\n\n\n\n\nrelapse\nno relapse\ntotal\n\n\n\n\ndesipramine\n10\n14\n24\n\n\nlithium\n18\n6\n24\n\n\nplacebo\n20\n4\n24\n\n\ntotal\n48\n24\n72\n\n\n\n\\(P(placebo|relapse) = \\frac{20}{48} = 0.42\\)"
+  },
+  {
+    "objectID": "slides-10-02.html#practice",
+    "href": "slides-10-02.html#practice",
+    "title": "Conditional Probabilities",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\nglasses\nno glasses\ntotal\n\n\n\n\nMale\n15\n35\n50\n\n\nFemale\n20\n30\n50\n\n\ntotal\n35\n65\n100\n\n\n\n\nWhat is the marginal probability of wearing glasses P(glasses)?\nWhat is the probability of being male AND wearing glasses P(male ∩ glasses)?\nWhat is the probability of a student wearing glasses if we know that the student is male P(glasses|male)?"
+  },
+  {
+    "objectID": "slides-10-02.html#practice-1",
+    "href": "slides-10-02.html#practice-1",
+    "title": "Conditional Probabilities",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\nglasses\nno glasses\ntotal\n\n\n\n\nMale\n15\n35\n50\n\n\nFemale\n20\n30\n50\n\n\ntotal\n35\n65\n100\n\n\n\n\nP(glasses) = 0.35\nP(male ∩ glasses) = 0.15\nP(glasses|male) = 15/50"
+  },
+  {
+    "objectID": "slides-10-02.html#product-rule-for-independent-events",
+    "href": "slides-10-02.html#product-rule-for-independent-events",
+    "title": "Conditional Probabilities",
+    "section": "Product rule for independent events",
+    "text": "Product rule for independent events\nThe Product Rule for Independent Events states that if two events A and B are independent, then the probability of both events occurring (their intersection) is equal to the product of their individual probabilities.\n\nP(A ∩ B) = P(A) × P(B)\n\n\nThe rule only applies when events are independent (the occurrence of one event doesn’t affect the probability of the other)\nIndependence must be verified before applying the product rule"
+  },
+  {
+    "objectID": "slides-10-02.html#product-rule-for-non-independent-events",
+    "href": "slides-10-02.html#product-rule-for-non-independent-events",
+    "title": "Conditional Probabilities",
+    "section": "Product rule for non-independent events",
+    "text": "Product rule for non-independent events\nIf the events are not believed to be independent, the joint probability is calculated slightly differently.\nIf A and B represent two outcomes or events, then:\n\nP(A ∩ B) = P(A | B) x P(B)\n\nNote that this formula is simply the conditional probability formula, rearranged."
   }
 ]
