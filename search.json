@@ -2952,5 +2952,40 @@
     "title": "Conditional Probabilities",
     "section": "Product rule for non-independent events",
     "text": "Product rule for non-independent events\nIf the events are not believed to be independent, the joint probability is calculated slightly differently.\nIf A and B represent two outcomes or events, then:\n\nP(A ∩ B) = P(A | B) x P(B)\n\nNote that this formula is simply the conditional probability formula, rearranged."
+  },
+  {
+    "objectID": "slides-10-02.html#independence-and-conditional-probabilities",
+    "href": "slides-10-02.html#independence-and-conditional-probabilities",
+    "title": "Conditional Probabilities",
+    "section": "Independence and conditional probabilities",
+    "text": "Independence and conditional probabilities\nConsider the following (hypothetical) distribution of gender and major of students in an introductory statistics class:\n\n\n\n\nsocial-sciences\nno social-sciences\ntotal\n\n\n\n\nMale\n30\n20\n50\n\n\nFemale\n30\n20\n50\n\n\ntotal\n60\n40\n100"
+  },
+  {
+    "objectID": "slides-10-02.html#independence-and-conditional-probabilities-1",
+    "href": "slides-10-02.html#independence-and-conditional-probabilities-1",
+    "title": "Conditional Probabilities",
+    "section": "Independence and conditional probabilities",
+    "text": "Independence and conditional probabilities\n\n\n\n\nsocial-sciences\nno social-sciences\ntotal\n\n\n\n\nMale\n30\n20\n50\n\n\nFemale\n30\n20\n50\n\n\ntotal\n60\n40\n100\n\n\n\n\nWhat is the probability that a randomly selected student is a social science major?\nWhat is the probability that a randomly selected student is a social science major given that they are female?"
+  },
+  {
+    "objectID": "slides-10-02.html#independence-and-conditional-probabilities-2",
+    "href": "slides-10-02.html#independence-and-conditional-probabilities-2",
+    "title": "Conditional Probabilities",
+    "section": "Independence and conditional probabilities",
+    "text": "Independence and conditional probabilities\n\n\n\n\nsocial-sciences\nno social-sciences\ntotal\n\n\n\n\nMale\n30\n20\n50\n\n\nFemale\n30\n20\n50\n\n\ntotal\n60\n40\n100\n\n\n\n\nWhat is the probability that a randomly selected student is a social science major? 60/100 = 0.6\nWhat is the probability that a randomly selected student is a social science major given that they are female? 30/50 = 0.6"
+  },
+  {
+    "objectID": "slides-10-02.html#independence-and-conditional-probabilities-3",
+    "href": "slides-10-02.html#independence-and-conditional-probabilities-3",
+    "title": "Conditional Probabilities",
+    "section": "Independence and conditional probabilities",
+    "text": "Independence and conditional probabilities\n\n\n\n\nsocial-sciences\nno social-sciences\ntotal\n\n\n\n\nMale\n30\n20\n50\n\n\nFemale\n30\n20\n50\n\n\ntotal\n60\n40\n100\n\n\n\nSince P(social science | male) also equals 0.6, major of students in this class does not depend on their gender: P(social science | female) = P(social science)."
+  },
+  {
+    "objectID": "slides-10-02.html#independence-and-conditional-probabilities-4",
+    "href": "slides-10-02.html#independence-and-conditional-probabilities-4",
+    "title": "Conditional Probabilities",
+    "section": "Independence and conditional probabilities",
+    "text": "Independence and conditional probabilities\nIn general, if P(A | B) = P(A) then the events A and B are said to be independent.\n\nConceptually: Giving B doesn’t tell us anything about A.\nMathematically: We know that if events A and B are independent, P(A and B) = P(A) x P(B). Then:\n\n\\(P(A | B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{P(A) * P(B)}{P(B)} = P(A)\\)"
   }
 ]

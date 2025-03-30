@@ -770,6 +770,157 @@
 <p>P(A ∩ B) = P(A | B) x P(B)</p>
 </blockquote>
 <p>Note that this formula is simply the conditional probability formula, rearranged.</p>
+</section>
+<section id="independence-and-conditional-probabilities" class="slide level2">
+<h2>Independence and conditional probabilities</h2>
+<p>Consider the following (hypothetical) distribution of gender and major of students in an introductory statistics class:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>social-sciences</th>
+<th>no social-sciences</th>
+<th>total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Male</td>
+<td>30</td>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>30</td>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>total</td>
+<td>60</td>
+<td>40</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="independence-and-conditional-probabilities-1" class="slide level2">
+<h2>Independence and conditional probabilities</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>social-sciences</th>
+<th>no social-sciences</th>
+<th>total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Male</td>
+<td>30</td>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>30</td>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>total</td>
+<td>60</td>
+<td>40</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>What is the probability that a randomly selected student is a social science major?</li>
+<li>What is the probability that a randomly selected student is a social science major given that they are female?</li>
+</ul>
+</section>
+<section id="independence-and-conditional-probabilities-2" class="slide level2">
+<h2>Independence and conditional probabilities</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>social-sciences</th>
+<th>no social-sciences</th>
+<th>total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Male</td>
+<td>30</td>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>30</td>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>total</td>
+<td>60</td>
+<td>40</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>What is the probability that a randomly selected student is a social science major? 60/100 = 0.6</li>
+<li>What is the probability that a randomly selected student is a social science major given that they are female? 30/50 = 0.6</li>
+</ul>
+</section>
+<section id="independence-and-conditional-probabilities-3" class="slide level2">
+<h2>Independence and conditional probabilities</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>social-sciences</th>
+<th>no social-sciences</th>
+<th>total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Male</td>
+<td>30</td>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>30</td>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>total</td>
+<td>60</td>
+<td>40</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>Since P(social science | male) also equals 0.6, major of students in this class does not depend on their gender: P(social science | female) = P(social science).</p>
+</section>
+<section id="independence-and-conditional-probabilities-4" class="slide level2">
+<h2>Independence and conditional probabilities</h2>
+<p>In general, if P(A | B) = P(A) then the events A and B are said to be independent.</p>
+<ul>
+<li>Conceptually: Giving B doesn’t tell us anything about A.</li>
+<li>Mathematically: We know that if events A and B are independent, P(A and B) = P(A) x P(B). Then:</li>
+</ul>
+<p><span class="math inline">\(P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) * P(B)}{P(B)} = P(A)\)</span></p>
 
 
 </section>
