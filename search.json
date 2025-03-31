@@ -2762,7 +2762,7 @@
     "href": "slides-10-01.html#product-rule-for-independent-events-2",
     "title": "Probabilities",
     "section": "Product rule for independent events",
-    "text": "Product rule for independent events\nKey points to remember:\n\nThe rule only applies when events are independent (the occurrence of one event doesn’t affect the probability of the other)\nIndependence must be verified before applying the product rule\nThis rule provides a simple way to calculate compound probabilities for independent events\n\nThe product rule is fundamental in probability theory and is used extensively in applications ranging from genetics to quality control in manufacturing."
+    "text": "Product rule for independent events\n\nThe rule only applies when events are independent (the occurrence of one event doesn’t affect the probability of the other)\nIndependence must be verified before applying the product rule\nThis rule provides a simple way to calculate compound probabilities for independent events\n\nThe product rule is fundamental in probability theory and is used extensively in applications ranging from genetics to quality control in manufacturing."
   },
   {
     "objectID": "slides-10-01.html#practice-15",
