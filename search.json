@@ -2573,7 +2573,7 @@
     "href": "modules.html#slides-8",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nProbabilities\nConditional Probabilities"
+    "text": "Slides\n\nProbabilities\nConditional Probabilities\nPractice\nCase Studies"
   },
   {
     "objectID": "slides-10-01.html#practice-4",
@@ -2636,7 +2636,7 @@
     "href": "slides-10-01.html#sample-space",
     "title": "Probabilities",
     "section": "Sample space",
-    "text": "Sample space\nSample space is the collection of all possible outcomes of an experiment\n\nI flip a coin once, what is the sample space for the outcomes? S = {H, T}\nI flip a coin once twice, what is the sample space for the outcomes?\nI flip a coin once three times, what is the sample space for the outcomes?"
+    "text": "Sample space\nSample space is the collection of all possible outcomes of an experiment\n\nI flip a fair coin once, what is the sample space for the outcomes? S = {H, T}\nI flip a fair coin twice, what is the sample space for the outcomes?\nI flip a fair coin three times, what is the sample space for the outcomes?"
   },
   {
     "objectID": "slides-10-01.html#sample-space-1",
@@ -2987,5 +2987,131 @@
     "title": "Conditional Probabilities",
     "section": "Independence and conditional probabilities",
     "text": "Independence and conditional probabilities\nIn general, if P(A | B) = P(A) then the events A and B are said to be independent.\n\nConceptually: Giving B doesn’t tell us anything about A.\nMathematically: We know that if events A and B are independent, P(A and B) = P(A) x P(B). Then:\n\n\\(P(A | B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{P(A) * P(B)}{P(B)} = P(A)\\)"
+  },
+  {
+    "objectID": "module-10-practice.html",
+    "href": "module-10-practice.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "In a standard deck of cards, what is the probability of drawing a king given that you’ve drawn a face card?\nIf you flip a fair coin 1000 times, what does the law of large numbers tell you about the proportion of heads?\nCalculate P(A ∪ B) when P(A) = 0.7, P(B) = 0.5, and P(A ∩ B) = 0.3.\nFor a six-sided die, describe the sample space and probability distribution.\n\n\n\nDrink Type  Day Type\nWeekday\nWeekend\nHoliday\nTotal (Drink)\n\n\n\n\nCoffee\n10\n5\n15\n30\n\n\nTea\n20\n10\n5\n35\n\n\nSpecialty Drink\n5\n20\n10\n35\n\n\nTotal (Day)\n35\n35\n30\n100"
+  },
+  {
+    "objectID": "slides-10-03.html#formulas",
+    "href": "slides-10-03.html#formulas",
+    "title": "Practice",
+    "section": "Formulas",
+    "text": "Formulas\nUnion of non-disjoint events:\n\nP(A \\(\\cup\\) B) = P(A) + P(B) - P(A \\(\\cap\\) B)\n\nProduct rule for independent events:\n\nP(A \\(\\cap\\) B) = P(A) × P(B)\n\nProduct rule for non-independent events:\n\nP(A \\(\\cap\\) B) = P(A | B) x P(B)\n\nConditional probability:\n\nP(A|B) = P(A \\(\\cap\\) B) / P(B)"
+  },
+  {
+    "objectID": "slides-10-03.html#join-classquestion",
+    "href": "slides-10-03.html#join-classquestion",
+    "title": "Practice",
+    "section": "Join classquestion",
+    "text": "Join classquestion\n\nGo to classquestion.com/students and click “Click here to register”. This link will allow you to register for the site.\nOnce you have registered, go to classquestion.com/students and sign in.\nClick “Add Class” at the bottom. Enter the Class Code for this class: FKGRK and then click “Add Class”.\nYour class will be added to the dropdown menu at the top. You can now click the “Sign In” button to log into your class!"
+  },
+  {
+    "objectID": "slides-10-04.html#data",
+    "href": "slides-10-04.html#data",
+    "title": "Case Study",
+    "section": "Data",
+    "text": "Data\nDownload the pokemon data and set up your analysis environment:\n\nlibrary(tidyverse)\npenguins &lt;- read_csv(\"data/penguins.csv\")"
+  },
+  {
+    "objectID": "slides-10-04.html#two-categorical-variables-contingency-table",
+    "href": "slides-10-04.html#two-categorical-variables-contingency-table",
+    "title": "Case Studies",
+    "section": "Two categorical variables – contingency table",
+    "text": "Two categorical variables – contingency table\n\nmy_penguin_table &lt;- table(penguins$species, penguins$island)\naddmargins(my_penguin_table)\n\n           \n            Biscoe Dream Torgersen Sum\n  Adelie        44    56        52 152\n  Chinstrap      0    68         0  68\n  Gentoo       124     0         0 124\n  Sum          168   124        52 344\n\n\n\nWhat is the probability of a randomly selected penguin being Adelie if we know the penguin is on Biscoe island?\nWhat is the probability of a randomly selected penguin being on Torgersen island if we know the penguin is Adelie?"
+  },
+  {
+    "objectID": "slides-10-04.html#conditional-probabilities",
+    "href": "slides-10-04.html#conditional-probabilities",
+    "title": "Case Studies",
+    "section": "Conditional probabilities",
+    "text": "Conditional probabilities\n\n\n           \n            Biscoe Dream Torgersen Sum\n  Adelie        44    56        52 152\n  Chinstrap      0    68         0  68\n  Gentoo       124     0         0 124\n  Sum          168   124        52 344\n\n\n\nWhat is the probability of a randomly selected penguin being Adelie if we know the penguin is on Biscoe island? P(Adelie|Biscoe) = P(Adelie \\(\\cap\\) Biscoe) / P(Biscoe) = 44/168 \nWhat is the probability of a randomly selected penguin being on Torgersen island if we know the penguin is Adelie? P(Torgersen|Adelie) = P(Adelie \\(\\cap\\) Torgersen) / P(Torgersen) = 52/52"
+  },
+  {
+    "objectID": "slides-10-04.html#penguins-data",
+    "href": "slides-10-04.html#penguins-data",
+    "title": "Case Studies",
+    "section": "Penguins Data",
+    "text": "Penguins Data\nDownload the penguin and set up your analysis environment:\n\nlibrary(tidyverse)\npenguins &lt;- read_csv(\"data/penguins.csv\")"
+  },
+  {
+    "objectID": "slides-10-04.html#palm-tree-data",
+    "href": "slides-10-04.html#palm-tree-data",
+    "title": "Case Studies",
+    "section": "Palm tree data",
+    "text": "Palm tree data\nDowload the palm tree data\n\npalmtrees &lt;- read_csv(\"data/palmtrees.csv\")\nmy_palmtree_table &lt;- table(palmtrees$climbing, palmtrees$stem_solitary)\naddmargins(my_palmtree_table)\n\n              \n               both non-solitary solitary  Sum\n  both            2            5        9   16\n  climbing      272         1108      428 1808\n  non-climbing   37           47      274  358\n  Sum           311         1160      711 2182\n\n\n\nWhat is the probability that a palm tree is only solitary?\nWhat is the probability that a palm tree is only solitary if we know the tree is a climbing tree?\nWhat is the probability of a palm tree being only solitary and only climbing?"
+  },
+  {
+    "objectID": "slides-10-04.html#probabilities",
+    "href": "slides-10-04.html#probabilities",
+    "title": "Case Studies",
+    "section": "Probabilities",
+    "text": "Probabilities\n\n\n              \n               both non-solitary solitary  Sum\n  both            2            5        9   16\n  climbing      272         1108      428 1808\n  non-climbing   37           47      274  358\n  Sum           311         1160      711 2182\n\n\n\nWhat is the probability that a palm tree is only solitary? P(solitary) = 711/2182\nWhat is the probability that a palm tree is only solitary if we know the tree is a climbing tree? P(solitary|climbing) = 428/1808\nWhat is the probability of a palm tree being only solitary and only climbing? P(solitary \\(\\cap\\) climbing) = 428/2182"
+  },
+  {
+    "objectID": "slides-10-04.html#email-data",
+    "href": "slides-10-04.html#email-data",
+    "title": "Case Studies",
+    "section": "Email data",
+    "text": "Email data\nDownload email data\n\nemail &lt;- read_csv(\"data/email.csv\")\nmy_email_table &lt;- table(email$spam, email$winner)\naddmargins(my_email_table)\n\n     \n        no  yes  Sum\n  0   3510   44 3554\n  1    347   20  367\n  Sum 3857   64 3921\n\n\n\nWhat is the probability of an email being spam if we know the word winner is not in the message?\nWhat is the probability of an email being spam if we know the word winner is in the message?"
+  },
+  {
+    "objectID": "slides-10-04.html#conditional-probabilities-1",
+    "href": "slides-10-04.html#conditional-probabilities-1",
+    "title": "Case Studies",
+    "section": "Conditional probabilities",
+    "text": "Conditional probabilities\n\n\n     \n        no  yes  Sum\n  0   3510   44 3554\n  1    347   20  367\n  Sum 3857   64 3921\n\n\n\nWhat is the probability of an email being spam if we know the word winner is not in the message? P(spam|winner) = 347/3857 = 0.0899663\nWhat is the probability of an email being spam if we know the word winner is in the message? P(spam|no winner) = 20/64 = 0.3125\nP(spam) = 367/3921 = 0.09359857"
+  },
+  {
+    "objectID": "slides-10-04.html#logistic-regression",
+    "href": "slides-10-04.html#logistic-regression",
+    "title": "Case Studies",
+    "section": "Logistic regression",
+    "text": "Logistic regression\n\n\n\nCall:\nglm(formula = spam ~ winner, family = binomial, data = email)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept) -2.31405    0.05627 -41.121  &lt; 2e-16 ***\nwinneryes    1.52559    0.27549   5.538 3.06e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 2437.2  on 3920  degrees of freedom\nResidual deviance: 2412.7  on 3919  degrees of freedom\nAIC: 2416.7\n\nNumber of Fisher Scoring iterations: 5\n\n\n\n winner effect\nwinner\n       no       yes \n0.0899663 0.3125000"
+  },
+  {
+    "objectID": "slides-10-04.html#multiclass-logistic-regression",
+    "href": "slides-10-04.html#multiclass-logistic-regression",
+    "title": "Case Studies",
+    "section": "Multiclass logistic regression",
+    "text": "Multiclass logistic regression\n\n\n# weights:  12 (6 variable)\ninitial  value 377.922627 \niter  10 value 184.355764\niter  20 value 181.998211\nfinal  value 181.975950 \nconverged\n\n\n\nisland effect (probability) for Adelie\nisland\n   Biscoe     Dream Torgersen \n0.2618842 0.4515092 0.9999974 \n\nisland effect (probability) for Chinstrap\nisland\n      Biscoe        Dream    Torgersen \n2.542366e-06 5.484908e-01 8.273478e-08 \n\nisland effect (probability) for Gentoo\nisland\n      Biscoe        Dream    Torgersen \n7.381133e-01 3.638939e-10 2.494737e-06"
+  },
+  {
+    "objectID": "module-10-practice-answers.html",
+    "href": "module-10-practice-answers.html",
+    "title": "STAT 230 – Module 10 practice exercises",
+    "section": "",
+    "text": "0 \\(\\le\\) P(A) \\(\\le\\) 1\nUnion of non-disjoint events: P(A \\(\\cup\\) B) = P(A) + P(B) - P(A \\(\\cap\\) B)\nProduct rule for independent events: P(A \\(\\cap\\) B) = P(A) × P(B)\nProduct rule for non-independent events: P(A \\(\\cap\\) B) = P(A | B) x P(B)\nConditional probability: P(A|B) = P(A \\(\\cap\\) B) / P(B)"
+  },
+  {
+    "objectID": "module-10-practice-answers.html#marginal-probabilities",
+    "href": "module-10-practice-answers.html#marginal-probabilities",
+    "title": "STAT 230 – Module 10 practice exercises",
+    "section": "Marginal Probabilities",
+    "text": "Marginal Probabilities\nWhat is the overall probability of each drink being ordered regardless of day?\n\nP(Coffee) 0.3\nP(Tea) 0.25\nP(Specialty Drink) 0.45"
+  },
+  {
+    "objectID": "module-10-practice-answers.html#joint-probabilities",
+    "href": "module-10-practice-answers.html#joint-probabilities",
+    "title": "STAT 230 – Module 10 practice exercises",
+    "section": "Joint Probabilities",
+    "text": "Joint Probabilities\nWhat is the probability of a specific drink being ordered and that order being on specific day type?\n\nP(Coffee \\(\\cap\\) Weekday) 0.10\nP(Coffee \\(\\cap\\) Weekend) 0.5\nP(Coffee \\(\\cap\\) Holiday) 0.15\nP(Tea \\(\\cap\\) Weekday) 0.5\nP(Tea \\(\\cap\\) Weekend) 0.1\nP(Tea \\(\\cap\\) Holiday) 0.1\nP(Specialty Drink \\(\\cap\\) Weekday) 0.1\nP(Specialty Drink \\(\\cap\\) Weekend) 0.2\nP(Specialty Drink \\(\\cap\\) Holiday) 0.15"
+  },
+  {
+    "objectID": "module-10-practice-answers.html#conditional-probabilities-1",
+    "href": "module-10-practice-answers.html#conditional-probabilities-1",
+    "title": "STAT 230 – Module 10 practice exercises",
+    "section": "Conditional Probabilities",
+    "text": "Conditional Probabilities\nWhat is the probability of a specific drink given the day type?\n\nP(Coffee | Weekday) 10/25\nP(Coffee | Weekend) 5/35\nP(Coffee | Holiday) 15/40\nP(Tea | Weekday) 5/25\nP(Tea | Weekend) 10/35\nP(Tea | Holiday) 10/40\nP(Specialty Drink | Weekday) 10/25\nP(Specialty Drink | Weekend) 20/35\nP(Specialty Drink | Holiday) 15/40"
+  },
+  {
+    "objectID": "module-10-practice-answers.html#union-of-non-disjoint-events",
+    "href": "module-10-practice-answers.html#union-of-non-disjoint-events",
+    "title": "STAT 230 – Module 10 practice exercises",
+    "section": "Union of non-disjoint events:",
+    "text": "Union of non-disjoint events:\nWhat is the probability of a specific drink being orderer or any drink being ordered in a specific day type?\n\nP(Coffee \\(\\cup\\) Weekday) (30 + 25 - 10)/100 = 45/100 = 0.45\n\n\nP(Coffee \\(\\cup\\) Weekend) (30 + 35 - 5)/100 = 60/100 = 0.6\nP(Coffee \\(\\cup\\) Holiday) (30 + 40 - 15)/100 = 55/100 = 0.55\nP(Tea \\(\\cup\\) Weekday) (25 + 25 - 5)/100 = 45/100 = 0.45\nP(Tea \\(\\cup\\) Weekend) (25 + 35 - 10)/100 = 50/100 = 0.5\nP(Tea \\(\\cup\\) Holiday) (25 + 40 - 10)/100 = 55/100 = 0.55\nP(Specialty Drink \\(\\cup\\) Weekday) (45 + 25 - 10)/100 = 60/100 = 0.6\nP(Specialty Drink \\(\\cup\\) Weekend) (45 + 35 - 20)/100 = 60/100 = 0.6\nP(Specialty Drink \\(\\cup\\) Holiday) (45 + 40 - 15)/100 = 70/100 = 0.7"
   }
 ]
