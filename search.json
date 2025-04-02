@@ -3113,5 +3113,187 @@
     "title": "STAT 230 – Module 10 practice exercises",
     "section": "Union of non-disjoint events:",
     "text": "Union of non-disjoint events:\nWhat is the probability of a specific drink being orderer or any drink being ordered in a specific day type?\n\nP(Coffee \\(\\cup\\) Weekday) (30 + 25 - 10)/100 = 45/100 = 0.45\n\n\nP(Coffee \\(\\cup\\) Weekend) (30 + 35 - 5)/100 = 60/100 = 0.6\nP(Coffee \\(\\cup\\) Holiday) (30 + 40 - 15)/100 = 55/100 = 0.55\nP(Tea \\(\\cup\\) Weekday) (25 + 25 - 5)/100 = 45/100 = 0.45\nP(Tea \\(\\cup\\) Weekend) (25 + 35 - 10)/100 = 50/100 = 0.5\nP(Tea \\(\\cup\\) Holiday) (25 + 40 - 10)/100 = 55/100 = 0.55\nP(Specialty Drink \\(\\cup\\) Weekday) (45 + 25 - 10)/100 = 60/100 = 0.6\nP(Specialty Drink \\(\\cup\\) Weekend) (45 + 35 - 20)/100 = 60/100 = 0.6\nP(Specialty Drink \\(\\cup\\) Holiday) (45 + 40 - 15)/100 = 70/100 = 0.7"
+  },
+  {
+    "objectID": "slides-10-03.html#contingency-table",
+    "href": "slides-10-03.html#contingency-table",
+    "title": "Practice",
+    "section": "Contingency Table",
+    "text": "Contingency Table\nHere’s the distribution of drinks (counts in thousands) and day types in the last few weeks for a coffee shop:\n\n\n\n\nWeekday\nWeekend\nHoliday\nTotal (Drink)\n\n\n\n\nCoffee\n10\n5\n15\n30\n\n\nTea\n5\n10\n10\n25\n\n\nSpecialty Drink\n10\n20\n15\n45\n\n\nTotal (Day)\n25\n35\n40\n100"
+  },
+  {
+    "objectID": "slides-11-01.html#why-is-data-visualization-important",
+    "href": "slides-11-01.html#why-is-data-visualization-important",
+    "title": "Data Visualization – principles",
+    "section": "Why is data visualization important?",
+    "text": "Why is data visualization important?\nAnscombe’s quartet highlights the importance of data visualization and warns against relying solely on summary statistics for data analysis:\n\nlibrary(tidyverse)\nanscombe &lt;- read_csv(\"data/anscombe.csv\")\n\n\nWhat’s in the mean and sd for x and y for each group?\nPlot a scatter plot of x and y for each group"
+  },
+  {
+    "objectID": "slides-11-01.html#visual-perception",
+    "href": "slides-11-01.html#visual-perception",
+    "title": "Data Visualization",
+    "section": "Visual Perception",
+    "text": "Visual Perception"
+  },
+  {
+    "objectID": "slides-11-01.html#edges-contrasts-and-colors",
+    "href": "slides-11-01.html#edges-contrasts-and-colors",
+    "title": "Data Visualization – principles",
+    "section": "Edges, contrasts, and colors",
+    "text": "Edges, contrasts, and colors\n\nOur visual system (i.e., all the visual processing models from our eyes to our brain) re-constructs what we are looking at\nOur visual system uses relative differences instead of absolute values for brightness and colors\nThis relativization of brightness is demonstrated in the image in the next slide, in which we perceive darker blobs where grid lines meet at the edge of our visual field"
+  },
+  {
+    "objectID": "slides-11-01.html#herman-grid-effect",
+    "href": "slides-11-01.html#herman-grid-effect",
+    "title": "Data Visualization – principles",
+    "section": "Herman grid effect",
+    "text": "Herman grid effect"
+  },
+  {
+    "objectID": "slides-11-01.html#mean-and-sd-per-group",
+    "href": "slides-11-01.html#mean-and-sd-per-group",
+    "title": "Data Visualization – principles",
+    "section": "Mean and sd per group",
+    "text": "Mean and sd per group\n\nanscombe |&gt;\n  group_by(group) |&gt;\n  summarize(mean_x = mean(x), \n            sd_x = sd(x),\n            mean_y = mean(y),\n            sd_y = sd(y))\n\n\n\n\n\ngroup\nmean_x\nsd_x\nmean_y\nsd_y\n\n\n\n\n1\n9\n3.316625\n7.500909\n2.031568\n\n\n2\n9\n3.316625\n7.500909\n2.031657\n\n\n3\n9\n3.316625\n7.500000\n2.030424\n\n\n4\n9\n3.316625\n7.500909\n2.030578"
+  },
+  {
+    "objectID": "slides-11-01.html#plots-per-group",
+    "href": "slides-11-01.html#plots-per-group",
+    "title": "Data Visualization – principles",
+    "section": "Plots per group",
+    "text": "Plots per group\n\nanscombe |&gt;\n  ggplot(aes(x = x, y = y)) +\n  geom_point() +\n  facet_wrap(~group)"
+  },
+  {
+    "objectID": "slides-11-01.html#herman-grid-effect-1",
+    "href": "slides-11-01.html#herman-grid-effect-1",
+    "title": "Data Visualization – principles",
+    "section": "Herman grid effect",
+    "text": "Herman grid effect\n\nAt the very center of the visual field, we see the lines as they are (just white).\nThe center is where our vision is really good\nOur ability to distinguish details decreases at the edges of our visual field (Ware, 2008)\nVisual illusions (like the image in the previous slide) are side effects of our visual system processing."
+  },
+  {
+    "objectID": "slides-11-01.html#contrast",
+    "href": "slides-11-01.html#contrast",
+    "title": "Data Visualization – principles",
+    "section": "Contrast",
+    "text": "Contrast\n\nAnother side effect of our visual system processing is perceiving the same shade as lighter or darker depending on the background behind shade\nIn the image on the next slide, the smaller squares are all the exact shade of gray\nWe perceive the gray to be lighter in darker backgrounds and darker in lighter backgrounds"
+  },
+  {
+    "objectID": "slides-11-01.html#contrast-1",
+    "href": "slides-11-01.html#contrast-1",
+    "title": "Data Visualization – principles",
+    "section": "Contrast",
+    "text": "Contrast"
+  },
+  {
+    "objectID": "slides-11-01.html#color",
+    "href": "slides-11-01.html#color",
+    "title": "Data Visualization – principles",
+    "section": "Color",
+    "text": "Color\nLet’s start with some definitions regarding color. “Color” refers to three components:\n\nHue refers to the dominant wavelength of the color (e.g., red, blue, purple)\nChroma refers to how intense of vivid the color is\nLuminance refers how bright a color is"
+  },
+  {
+    "objectID": "slides-11-01.html#color-1",
+    "href": "slides-11-01.html#color-1",
+    "title": "Data Visualization – principles",
+    "section": "Color",
+    "text": "Color\n\nColor schemes need to represent accurately differences in our data.\nFor example, changes from one level to next need to be perceive as having the same magnitude\nWe should be careful when picking colors for our variables in our data visualizations"
+  },
+  {
+    "objectID": "slides-11-01.html#color-2",
+    "href": "slides-11-01.html#color-2",
+    "title": "Data Visualization – principles",
+    "section": "Color",
+    "text": "Color\n\nGradients should be used as sequential scales from low to high to represent numeric continuous/ordered variables (e.g., population size). Light colors should represent low values, and dark colors high values."
+  },
+  {
+    "objectID": "slides-11-01.html#color-3",
+    "href": "slides-11-01.html#color-3",
+    "title": "Data Visualization – principles",
+    "section": "Color",
+    "text": "Color\n\nDiverging scales should be used where there is a neutral midpoint and then there is variance in ether direction from that neutral point (e.g., temperatures can be positive and negative)."
+  },
+  {
+    "objectID": "slides-11-01.html#color-4",
+    "href": "slides-11-01.html#color-4",
+    "title": "Data Visualization – principles",
+    "section": "Color",
+    "text": "Color\n\nQualitative palettes where each color has the same valence (i.e., no color dominates the other) should be used for unordered categorical variables (e.g., political parties, countries). Different colors in the palette should not imply differences in magnitude."
+  },
+  {
+    "objectID": "slides-11-01.html#color-5",
+    "href": "slides-11-01.html#color-5",
+    "title": "Data Visualization – principles",
+    "section": "Color",
+    "text": "Color\n\nWe also need to take into account people who are color-blind, and how they perceive colors"
+  },
+  {
+    "objectID": "slides-11-01.html#shape",
+    "href": "slides-11-01.html#shape",
+    "title": "Data Visualization – principles",
+    "section": "Shape",
+    "text": "Shape\n\nWe can also use shape as a channel to encode information\nThe color channel, however, is more salient, and shape can be used as a secondary channel."
+  },
+  {
+    "objectID": "slides-11-01.html#visual-search-and-pop-out-effect",
+    "href": "slides-11-01.html#visual-search-and-pop-out-effect",
+    "title": "Data Visualization – principles",
+    "section": "Visual Search and Pop-out Effect",
+    "text": "Visual Search and Pop-out Effect\nTry to find the type B data point in the three plots in the next slides"
+  },
+  {
+    "objectID": "slides-11-01.html#visual-search-and-pop-out-effect-1",
+    "href": "slides-11-01.html#visual-search-and-pop-out-effect-1",
+    "title": "Data Visualization – principles",
+    "section": "Visual Search and Pop-out Effect",
+    "text": "Visual Search and Pop-out Effect\nTry to find the type B"
+  },
+  {
+    "objectID": "slides-11-01.html#visual-search-and-pop-out-effect-2",
+    "href": "slides-11-01.html#visual-search-and-pop-out-effect-2",
+    "title": "Data Visualization – principles",
+    "section": "Visual Search and Pop-out Effect",
+    "text": "Visual Search and Pop-out Effect\nTry to find the type B"
+  },
+  {
+    "objectID": "slides-11-01.html#visual-search-and-pop-out-effect-3",
+    "href": "slides-11-01.html#visual-search-and-pop-out-effect-3",
+    "title": "Data Visualization – principles",
+    "section": "Visual Search and Pop-out Effect",
+    "text": "Visual Search and Pop-out Effect\nTry to find the type B"
+  },
+  {
+    "objectID": "slides-11-01.html#color-and-shape",
+    "href": "slides-11-01.html#color-and-shape",
+    "title": "Data Visualization – principles",
+    "section": "Color and shape",
+    "text": "Color and shape\n\nThe type B data point should have been easier to find in the first and last plots, and harder in the middle plot.\nColor is a channel that is easier to process than shape\nCombining both shape and color is at times a good strategy."
+  },
+  {
+    "objectID": "slides-11-01.html#color-and-shape-1",
+    "href": "slides-11-01.html#color-and-shape-1",
+    "title": "Data Visualization – principles",
+    "section": "Color and shape",
+    "text": "Color and shape\n\nEncoding multiple channels in the same visualization can overtax the viewer when the multiple channels are not highlighting some structure in the data\n\nsee the two plots on the next slides"
+  },
+  {
+    "objectID": "slides-11-01.html#color-and-shape-overtaxing",
+    "href": "slides-11-01.html#color-and-shape-overtaxing",
+    "title": "Data Visualization – principles",
+    "section": "Color and shape – overtaxing",
+    "text": "Color and shape – overtaxing"
+  },
+  {
+    "objectID": "slides-11-01.html#color-and-shape-overtaxing-1",
+    "href": "slides-11-01.html#color-and-shape-overtaxing-1",
+    "title": "Data Visualization – principles",
+    "section": "Color and shape – overtaxing",
+    "text": "Color and shape – overtaxing"
+  },
+  {
+    "objectID": "modules.html#slides-9",
+    "href": "modules.html#slides-9",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nData Visualization – principles"
   }
 ]
