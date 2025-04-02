@@ -321,6 +321,8 @@
 <section id="logistic-regression" class="slide level2">
 <h2>Logistic regression</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>email_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(spam <span class="sc">~</span> winner, <span class="at">data =</span> email, <span class="at">family =</span> binomial)</span>
+<span id="cb11-2"><a></a><span class="fu">summary</span>(email_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -341,6 +343,8 @@ AIC: 2416.7
 
 Number of Fisher Scoring iterations: 5</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(effects)</span>
+<span id="cb13-2"><a></a><span class="fu">effect</span>(<span class="st">"winner"</span>, email_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
  winner effect
@@ -353,6 +357,8 @@ winner
 <section id="multiclass-logistic-regression" class="slide level2">
 <h2>Multiclass logistic regression</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">library</span>(nnet)</span>
+<span id="cb15-2"><a></a>model_penguins <span class="ot">&lt;-</span> <span class="fu">multinom</span>(species <span class="sc">~</span> island, <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># weights:  12 (6 variable)
 initial  value 377.922627 
@@ -361,6 +367,7 @@ iter  20 value 181.998211
 final  value 181.975950 
 converged</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">effect</span>(<span class="st">"island"</span>, model_penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 island effect (probability) for Adelie

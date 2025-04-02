@@ -3070,14 +3070,14 @@
     "href": "slides-10-04.html#logistic-regression",
     "title": "Case Studies",
     "section": "Logistic regression",
-    "text": "Logistic regression\n\n\n\nCall:\nglm(formula = spam ~ winner, family = binomial, data = email)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept) -2.31405    0.05627 -41.121  &lt; 2e-16 ***\nwinneryes    1.52559    0.27549   5.538 3.06e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 2437.2  on 3920  degrees of freedom\nResidual deviance: 2412.7  on 3919  degrees of freedom\nAIC: 2416.7\n\nNumber of Fisher Scoring iterations: 5\n\n\n\n winner effect\nwinner\n       no       yes \n0.0899663 0.3125000"
+    "text": "Logistic regression\n\nemail_model &lt;- glm(spam ~ winner, data = email, family = binomial)\nsummary(email_model)\n\n\nCall:\nglm(formula = spam ~ winner, family = binomial, data = email)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept) -2.31405    0.05627 -41.121  &lt; 2e-16 ***\nwinneryes    1.52559    0.27549   5.538 3.06e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 2437.2  on 3920  degrees of freedom\nResidual deviance: 2412.7  on 3919  degrees of freedom\nAIC: 2416.7\n\nNumber of Fisher Scoring iterations: 5\n\nlibrary(effects)\neffect(\"winner\", email_model)\n\n\n winner effect\nwinner\n       no       yes \n0.0899663 0.3125000"
   },
   {
     "objectID": "slides-10-04.html#multiclass-logistic-regression",
     "href": "slides-10-04.html#multiclass-logistic-regression",
     "title": "Case Studies",
     "section": "Multiclass logistic regression",
-    "text": "Multiclass logistic regression\n\n\n# weights:  12 (6 variable)\ninitial  value 377.922627 \niter  10 value 184.355764\niter  20 value 181.998211\nfinal  value 181.975950 \nconverged\n\n\n\nisland effect (probability) for Adelie\nisland\n   Biscoe     Dream Torgersen \n0.2618842 0.4515092 0.9999974 \n\nisland effect (probability) for Chinstrap\nisland\n      Biscoe        Dream    Torgersen \n2.542366e-06 5.484908e-01 8.273478e-08 \n\nisland effect (probability) for Gentoo\nisland\n      Biscoe        Dream    Torgersen \n7.381133e-01 3.638939e-10 2.494737e-06"
+    "text": "Multiclass logistic regression\n\nlibrary(nnet)\nmodel_penguins &lt;- multinom(species ~ island, data = penguins)\n\n# weights:  12 (6 variable)\ninitial  value 377.922627 \niter  10 value 184.355764\niter  20 value 181.998211\nfinal  value 181.975950 \nconverged\n\neffect(\"island\", model_penguins)\n\n\nisland effect (probability) for Adelie\nisland\n   Biscoe     Dream Torgersen \n0.2618842 0.4515092 0.9999974 \n\nisland effect (probability) for Chinstrap\nisland\n      Biscoe        Dream    Torgersen \n2.542366e-06 5.484908e-01 8.273478e-08 \n\nisland effect (probability) for Gentoo\nisland\n      Biscoe        Dream    Torgersen \n7.381133e-01 3.638939e-10 2.494737e-06"
   },
   {
     "objectID": "module-10-practice-answers.html",
