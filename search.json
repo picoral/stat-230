@@ -3028,7 +3028,7 @@
     "href": "slides-10-04.html#conditional-probabilities",
     "title": "Case Studies",
     "section": "Conditional probabilities",
-    "text": "Conditional probabilities\n\n\n           \n            Biscoe Dream Torgersen Sum\n  Adelie        44    56        52 152\n  Chinstrap      0    68         0  68\n  Gentoo       124     0         0 124\n  Sum          168   124        52 344\n\n\n\nWhat is the probability of a randomly selected penguin being Adelie if we know the penguin is on Biscoe island? P(Adelie|Biscoe) = P(Adelie \\(\\cap\\) Biscoe) / P(Biscoe) = 44/168 \nWhat is the probability of a randomly selected penguin being on Torgersen island if we know the penguin is Adelie? P(Torgersen|Adelie) = P(Adelie \\(\\cap\\) Torgersen) / P(Torgersen) = 52/52"
+    "text": "Conditional probabilities\n\n\n           \n            Biscoe Dream Torgersen Sum\n  Adelie        44    56        52 152\n  Chinstrap      0    68         0  68\n  Gentoo       124     0         0 124\n  Sum          168   124        52 344\n\n\n\nWhat is the probability of a randomly selected penguin being Adelie if we know the penguin is on Biscoe island? P(Adelie|Biscoe) = P(Adelie \\(\\cap\\) Biscoe) / P(Biscoe) = 44/168 \nWhat is the probability of a randomly selected penguin being on Torgersen island if we know the penguin is Adelie? P(Torgersen|Adelie) = P(Adelie \\(\\cap\\) Torgersen) / P(Adelie) = 52/152"
   },
   {
     "objectID": "slides-10-04.html#penguins-data",
@@ -3161,7 +3161,7 @@
     "href": "slides-11-01.html#plots-per-group",
     "title": "Data Visualization – principles",
     "section": "Plots per group",
-    "text": "Plots per group\n\nanscombe |&gt;\n  ggplot(aes(x = x, y = y)) +\n  geom_point() +\n  facet_wrap(~group)"
+    "text": "Plots per group\n\nanscombe |&gt;\n  ggplot(aes(x = x, y = y)) +\n  geom_point(size = 3) +\n  facet_wrap(~group)"
   },
   {
     "objectID": "slides-11-01.html#herman-grid-effect-1",
