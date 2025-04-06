@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>STAT 230 Data Science and Statistics – Data Visualization – principles</title>
+  <title>STAT 230 Data Science and Statistics – Mappings</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,434 +191,174 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data Visualization – principles</h1>
+  <h1 class="title">Mappings</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="why-is-data-visualization-important" class="slide level2">
-<h2>Why is data visualization important?</h2>
-<p><a href="data/anscombe.csv">Anscombe’s quartet</a> highlights the importance of data visualization and warns against relying solely on summary statistics for data analysis:</p>
+<section id="mappings" class="slide level2">
+<h2>Mappings</h2>
+<p>Visualization mapping links variables in the data to things you can see in your plot.</p>
+<p>If you have not done so already, <a href="data/penguins.csv">download the penguin</a> and set up your analysis environment:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a>anscombe <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/anscombe.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a>penguins <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/penguins.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>We have a total of 8 variables. Take a moment to read whether each variable is a categorical or a numeric variable.</p>
+</section>
+<section id="axes-y-and-x" class="slide level2">
+<h2>Axes (y and x)</h2>
+<ul>
+<li>In general we always start with mapping which variable will be plotted onto <code>x</code> and <code>y</code> (our axes)</li>
+<li>Some plot types require you specify just an <code>x</code>, like histograms, because the <code>y</code> axis information is calculated by the histogram function itself</li>
+<li>For plots in which you need to specify both axes, you normally have at least one of the axes mapped to a numeric variable</li>
+</ul>
+</section>
+<section id="question" class="slide level2">
+<h2>Question</h2>
+<blockquote>
+<p>What is the relationship between <code>bill length</code> and <code>bill depth</code>?</p>
+</blockquote>
+<ul>
+<li>Two continuous numeric variables</li>
+<li>Hypothesis: there is a positive relationship between <code>bill length</code> and <code>bill depth</code></li>
+<li>As <code>bill length</code> increases so does <code>bill depth</code></li>
+</ul>
+<p>Note that these two variables are in the same unit of measure (i.e., length and depth are both given in <code>mm</code> or millimeters)</p>
+</section>
+<section id="plot" class="slide level2">
+<h2>Plot</h2>
+<p>Map variables to the two axes: <code>bill length</code> to <code>y</code> and <code>bill depth</code> to <code>x</code>.</p>
+<p>We start with our data, then we map our variables to our axes using the <code>ggplot()</code> and <code>aes()</code> (i.e., aesthetics) functions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb2-3"><a></a>             <span class="at">y =</span> bill_length_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="plot-1" class="slide level2">
+<h2>Plot</h2>
+<p>Let’s add the geometrics:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb3-3"><a></a>             <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="color-or-fill" class="slide level2">
+<h2>Color or fill</h2>
+<ul>
+<li>Mappings to axes are always required, so you need to decide what to map to <code>x</code> (and often also what to map to <code>y</code>) first. Then you build your other mappings.</li>
+<li>The scatter plot we generated seems to present clusters.</li>
+<li>Data can cluster (i.e., form distinct groups) by a categorical variable.</li>
+<li>In our case, the most obvious categorical variable that would represent cluster is <code>species</code>.</li>
+</ul>
+</section>
+<section id="color-or-fill-1" class="slide level2">
+<h2>Color or fill</h2>
+<p>For <code>geom_point</code> the mapping we need is <code>color</code>. Let’s add that to our aesthetics mapping (i.e., inside the <code>aes()</code> function, which in turn is inside the <code>ggplot()</code> function).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb4-3"><a></a>             <span class="at">y =</span> bill_length_mm,</span>
+<span id="cb4-4"><a></a>             <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb4-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
+<section id="color-or-fill-2" class="slide level2">
+<h2>Color or fill</h2>
+<p>Let’s see how <code>fill</code> would be used. For that, we need a different type of plot, such as a bar plot. We can use <code>geom_bar()</code> with only <code>x</code> mapped to <code>bill_depth_mm</code> (the values for <code>y</code> are calculate by the <code>geom_bar()</code> function, and the default stat is <code>count</code>). We will also keep the mapping of <code>species</code> to <code>color</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb5-3"><a></a>             <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
+<section id="color-or-fill-3" class="slide level2">
+<h2>Color or fill</h2>
+<p>The mapping <code>color</code> in a bar plot determines the outline color of each bar. To map to the fill color of the bars, you need to use the <code>fill</code> mapping.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb6-3"><a></a>             <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb6-4"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
+<section id="mapping-vs.-setting" class="slide level2">
+<h2>Mapping vs.&nbsp;setting</h2>
+<p>You can always set a fixed color using the <code>color</code> parameter in the geometrics (e.g., inside <code>geom_point()</code>) by <em>not</em> using the <code>aes()</code> function and naming a specific color. Let’s change the color of the dots in our first scatterplot:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb7-3"><a></a>             <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb7-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="384"></section>
+<section id="size-and-shape" class="slide level2">
+<h2>Size and shape</h2>
+<ul>
+<li>use <code>size</code> for numeric variable mappings</li>
+<li>use <code>shape</code> for categorical variable mappings</li>
+</ul>
+</section>
+<section id="size-and-shape-1" class="slide level2">
+<h2>Size and shape</h2>
+<p>Here’s the same scatter plot but with only <code>shape</code> mapped to the categorical variable <code>species</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb8-3"><a></a>             <span class="at">y =</span> bill_length_mm,</span>
+<span id="cb8-4"><a></a>             <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb8-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
+<section id="size-and-color" class="slide level2">
+<h2>Size and color</h2>
+<p>Let’s now map <code>shape</code> and <code>color</code> to the categorical variable <code>species</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb9-3"><a></a>             <span class="at">y =</span> bill_length_mm,</span>
+<span id="cb9-4"><a></a>             <span class="at">shape =</span> species,</span>
+<span id="cb9-5"><a></a>             <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb9-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
+<section id="size-and-color-1" class="slide level2">
+<h2>Size and color</h2>
+<ul>
+<li><code>size</code> is better mapped to numeric continuous variables, as opposed to categorical variables</li>
+</ul>
+<p>Let’s map <code>size</code> to <code>body_mass_g</code> (i.e., penguin body mass in grams).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb10-3"><a></a>             <span class="at">y =</span> bill_length_mm,</span>
+<span id="cb10-4"><a></a>             <span class="at">size =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb10-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="slides-11-03_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
+<section id="reflection" class="slide level2">
+<h2>Reflection</h2>
 <ol type="1">
-<li>What’s in the mean and sd for x and y for each group?</li>
-<li>Plot a scatter plot of x and y for each group</li>
+<li>Which scatter plot is clearer? Why?</li>
 </ol>
-</section>
-<section id="mean-and-sd-per-group" class="slide level2">
-<h2>Mean and sd per group</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>anscombe <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">group_by</span>(group) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x), </span>
-<span id="cb2-4"><a></a>            <span class="at">sd_x =</span> <span class="fu">sd</span>(x),</span>
-<span id="cb2-5"><a></a>            <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
-<span id="cb2-6"><a></a>            <span class="at">sd_y =</span> <span class="fu">sd</span>(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">group</th>
-<th style="text-align: right;">mean_x</th>
-<th style="text-align: right;">sd_x</th>
-<th style="text-align: right;">mean_y</th>
-<th style="text-align: right;">sd_y</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">3.316625</td>
-<td style="text-align: right;">7.500909</td>
-<td style="text-align: right;">2.031568</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">3.316625</td>
-<td style="text-align: right;">7.500909</td>
-<td style="text-align: right;">2.031657</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">3.316625</td>
-<td style="text-align: right;">7.500000</td>
-<td style="text-align: right;">2.030424</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">3.316625</td>
-<td style="text-align: right;">7.500909</td>
-<td style="text-align: right;">2.030578</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="plots-per-group" class="slide level2">
-<h2>Plots per group</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>anscombe <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb3-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb3-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Remember that some channels are better processed than others, with <code>color</code> being one of the best channels in terms of visual processing.</p>
 
-</div>
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="datasaurus" class="slide level2">
-<h2>dataSaurus</h2>
-<p><a href="data/datasaurus_dozen.csv">Dowload the datasaurus datat set</a> and set up your working environment.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb4-2"><a></a>datasaurus <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/datasaurus_dozen.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol type="1">
-<li>What is the mean and standard deviation of x and y by dataset group?</li>
-<li>Create a scatterplot for all dataset groups.</li>
-</ol>
-</section>
-<section id="descriptive-statistics" class="slide level2">
-<h2>Descriptive statistics</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>datasaurus <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a></a>  <span class="fu">group_by</span>(dataset) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
-<span id="cb5-4"><a></a>            <span class="at">sd_x =</span> <span class="fu">sd</span>(x),</span>
-<span id="cb5-5"><a></a>            <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
-<span id="cb5-6"><a></a>            <span class="at">sd_y =</span> <span class="fu">sd</span>(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">dataset</th>
-<th style="text-align: right;">mean_x</th>
-<th style="text-align: right;">sd_x</th>
-<th style="text-align: right;">mean_y</th>
-<th style="text-align: right;">sd_y</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">away</td>
-<td style="text-align: right;">54.26610</td>
-<td style="text-align: right;">16.76983</td>
-<td style="text-align: right;">47.83472</td>
-<td style="text-align: right;">26.93974</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">bullseye</td>
-<td style="text-align: right;">54.26873</td>
-<td style="text-align: right;">16.76924</td>
-<td style="text-align: right;">47.83082</td>
-<td style="text-align: right;">26.93573</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">circle</td>
-<td style="text-align: right;">54.26732</td>
-<td style="text-align: right;">16.76001</td>
-<td style="text-align: right;">47.83772</td>
-<td style="text-align: right;">26.93004</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">dino</td>
-<td style="text-align: right;">54.26327</td>
-<td style="text-align: right;">16.76514</td>
-<td style="text-align: right;">47.83225</td>
-<td style="text-align: right;">26.93540</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">dots</td>
-<td style="text-align: right;">54.26030</td>
-<td style="text-align: right;">16.76774</td>
-<td style="text-align: right;">47.83983</td>
-<td style="text-align: right;">26.93019</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">h_lines</td>
-<td style="text-align: right;">54.26144</td>
-<td style="text-align: right;">16.76590</td>
-<td style="text-align: right;">47.83025</td>
-<td style="text-align: right;">26.93988</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">high_lines</td>
-<td style="text-align: right;">54.26881</td>
-<td style="text-align: right;">16.76670</td>
-<td style="text-align: right;">47.83545</td>
-<td style="text-align: right;">26.94000</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">slant_down</td>
-<td style="text-align: right;">54.26785</td>
-<td style="text-align: right;">16.76676</td>
-<td style="text-align: right;">47.83590</td>
-<td style="text-align: right;">26.93610</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">slant_up</td>
-<td style="text-align: right;">54.26588</td>
-<td style="text-align: right;">16.76885</td>
-<td style="text-align: right;">47.83150</td>
-<td style="text-align: right;">26.93861</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">star</td>
-<td style="text-align: right;">54.26734</td>
-<td style="text-align: right;">16.76896</td>
-<td style="text-align: right;">47.83955</td>
-<td style="text-align: right;">26.93027</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">v_lines</td>
-<td style="text-align: right;">54.26993</td>
-<td style="text-align: right;">16.76996</td>
-<td style="text-align: right;">47.83699</td>
-<td style="text-align: right;">26.93768</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">wide_lines</td>
-<td style="text-align: right;">54.26692</td>
-<td style="text-align: right;">16.77000</td>
-<td style="text-align: right;">47.83160</td>
-<td style="text-align: right;">26.93790</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">x_shape</td>
-<td style="text-align: right;">54.26015</td>
-<td style="text-align: right;">16.76996</td>
-<td style="text-align: right;">47.83972</td>
-<td style="text-align: right;">26.93000</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="scatterplots" class="slide level2">
-<h2>Scatterplots</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>datasaurus <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb6-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb6-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section>
-<section id="visual-perception" class="title-slide slide level1 center">
-<h1>Visual Perception</h1>
 
 </section>
-<section id="edges-contrasts-and-colors" class="slide level2">
-<h2>Edges, contrasts, and colors</h2>
-<ul>
-<li>Our visual system (i.e., all the visual processing models from our eyes to our brain) re-constructs what we are looking at</li>
-<li>Our visual system uses relative differences instead of absolute values for brightness and colors</li>
-<li>This relativization of brightness is demonstrated in the image in the next slide, in which we perceive darker blobs where grid lines meet at the edge of our visual field</li>
-</ul>
-</section>
-<section id="herman-grid-effect" class="slide level2">
-<h2>Herman grid effect</h2>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-7-1.png" width="480" class="r-stretch"></section>
-<section id="herman-grid-effect-1" class="slide level2">
-<h2>Herman grid effect</h2>
-<ul>
-<li>At the very center of the visual field, we see the lines as they are (just white).</li>
-<li>The center is where our vision is really good</li>
-<li>Our ability to distinguish details decreases at the edges of our visual field (Ware, 2008)</li>
-<li>Visual illusions (like the image in the previous slide) are side effects of our visual system processing.</li>
-</ul>
-</section>
-<section id="contrast" class="slide level2">
-<h2>Contrast</h2>
-<ul>
-<li>Another side effect of our visual system processing is perceiving the same shade as lighter or darker depending on the background behind shade</li>
-<li>In the image on the next slide, the smaller squares are all the exact shade of gray</li>
-<li>We perceive the gray to be lighter in darker backgrounds and darker in lighter backgrounds</li>
-</ul>
-</section>
-<section id="contrast-1" class="slide level2">
-<h2>Contrast</h2>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-8-1.png" width="480" class="r-stretch"></section></section>
-<section>
-<section id="edges-colors-and-contrasts" class="title-slide slide level1 center">
-<h1>Edges, colors, and contrasts</h1>
-<ul>
-<li>Our visual system is not a physical light meter, what we perceive is different from actual values for colors and brightness</li>
-<li>Humans are better at seeing edge contrasts for monochrome images</li>
-<li>We are also better at distinguishing dark shades (compared to light shades)</li>
-</ul>
-</section>
-<section id="color" class="slide level2">
-<h2>Color</h2>
-<p>Let’s start with some definitions regarding color. “Color” refers to three components:</p>
-<ul>
-<li><em>Hue</em> refers to the dominant wavelength of the color (e.g., red, blue, purple)</li>
-<li><em>Chroma</em> or saturation refers to how intense of vivid the color is</li>
-<li><em>Luminance</em> refers how bright a color is</li>
-</ul>
-</section>
-<section id="hsl" class="slide level2">
-<h2>HSL</h2>
-
-<img data-src="images/hsl.jpeg" width="700" class="r-stretch"></section>
-<section id="color-1" class="slide level2">
-<h2>Color</h2>
-<ul>
-<li>Color schemes need to represent accurately differences in our data.</li>
-<li>For example, <strong>changes from one level to next need to be perceive as having the same magnitude</strong></li>
-<li>We should be careful when picking colors for our variables in our data visualizations</li>
-</ul>
-</section>
-<section id="order-these-colors" class="slide level2">
-<h2>Order these colors</h2>
-
-<img data-src="images/categorical_colors.png" class="r-stretch"></section>
-<section id="order-these-colors-1" class="slide level2">
-<h2>Order these colors</h2>
-
-<img data-src="images/gradient_colors.png" class="r-stretch"></section>
-<section id="color-2" class="slide level2">
-<h2>Color</h2>
-<ul>
-<li><strong>Gradients</strong> should be used as sequential scales from low to high to represent numeric continuous/ordered variables (e.g., population size). Light colors should represent low values, and dark colors high values.</li>
-</ul>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
-<section id="color-3" class="slide level2">
-<h2>Color</h2>
-<ul>
-<li><strong>Diverging scales</strong> should be used where there is a neutral midpoint and then there is variance in ether direction from that neutral point (e.g., temperatures can be positive and negative).</li>
-</ul>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<section id="color-4" class="slide level2">
-<h2>Color</h2>
-<ul>
-<li><strong>Qualitative palettes</strong> where each color has the same valence (i.e., no color dominates the other) should be used for unordered categorical variables (e.g., political parties, countries). Different colors in the palette should <strong>not</strong> imply differences in magnitude.</li>
-</ul>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
-<section id="color-5" class="slide level2">
-<h2>Color</h2>
-<ul>
-<li>We also need to take into account people who are color-blind, and how they perceive colors</li>
-</ul>
-</section>
-<section id="shape" class="slide level2">
-<h2>Shape</h2>
-<ul>
-<li>We can also use <strong>shape</strong> as a channel to encode information</li>
-<li>The color channel, however, is more salient, and shape can be used as a secondary channel.</li>
-</ul>
-</section>
-<section id="visual-search-and-pop-out-effect" class="slide level2">
-<h2>Visual Search and Pop-out Effect</h2>
-<p>Try to find the <code>type B</code> data point in the three plots in the next slides</p>
-</section>
-<section id="visual-search-and-pop-out-effect-1" class="slide level2">
-<h2>Visual Search and Pop-out Effect</h2>
-<p>Try to find the <code>type B</code></p>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
-<section id="visual-search-and-pop-out-effect-2" class="slide level2">
-<h2>Visual Search and Pop-out Effect</h2>
-<p>Try to find the <code>type B</code></p>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
-<section id="visual-search-and-pop-out-effect-3" class="slide level2">
-<h2>Visual Search and Pop-out Effect</h2>
-<p>Try to find the <code>type B</code></p>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
-<section id="color-and-shape" class="slide level2">
-<h2>Color and shape</h2>
-<ul>
-<li>The <code>type B</code> data point should have been easier to find in the first and last plots, and harder in the middle plot.</li>
-<li>Color is a channel that is easier to process than shape</li>
-<li>Combining both shape and color is at times a good strategy.</li>
-</ul>
-</section>
-<section id="color-and-shape-1" class="slide level2">
-<h2>Color and shape</h2>
-<ul>
-<li>Encoding multiple channels in the same visualization can overtax the viewer when the multiple channels are not highlighting some structure in the data</li>
-</ul>
-<p>see the two plots on the next slides</p>
-</section>
-<section id="color-and-shape-overtaxing" class="slide level2">
-<h2>Color and shape – overtaxing</h2>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
-<section id="color-and-shape-overtaxing-1" class="slide level2">
-<h2>Color and shape – overtaxing</h2>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
-<section id="encoding-channels" class="slide level2">
-<h2>Encoding channels</h2>
-<p>Other encoding channels that are even less easily processed than shape are:</p>
-<ul>
-<li>size</li>
-<li>elongation</li>
-<li>angle</li>
-<li>movement</li>
-</ul>
-</section>
-<section id="gestalt-principles" class="slide level2">
-<h2>Gestalt Principles</h2>
-<ul>
-<li>humans are extremely good at finding patterns, even when no pattern exists</li>
-<li>the ability to perceive different shapes and lines as a unified image rather than just a bunch of elements that are not related to each other follow what we call <em>Gestalt</em> principles (Healy, 2018).</li>
-</ul>
-</section>
-<section id="gestalt-principles-1" class="slide level2">
-<h2>Gestalt Principles</h2>
-<p>Visual elements are perceived as being related to each other when these elements are close to each other – i.e., <em>Proximity</em> principle:</p>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
-<section id="gestalt-principles-2" class="slide level2">
-<h2>Gestalt Principles</h2>
-<p>Visual elements are perceived as being related to each other when these elements are similar in shape, color and size – i.e., <em>Similarity</em> principle:</p>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
-<section id="gestalt-principles-3" class="slide level2">
-<h2>Gestalt Principles</h2>
-<p>Visual elements are perceived as being related to each other when these elements are similar in shape, color and size – i.e., <em>Similarity</em> principle:</p>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
-<section id="gestalt-principles-4" class="slide level2">
-<h2>Gestalt Principles</h2>
-<p>Visual elements are perceived as being related to each other when these elements are visually tied – i.e., <em>Connection</em> principle:</p>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
-<section id="gestalt-principles-5" class="slide level2">
-<h2>Gestalt Principles</h2>
-<p>Visual elements are perceived as being related to each other when these elements are perceived as being part paths, lines, curves, even when some elements are “hidden” – i.e., <em>Continuity</em> principle:</p>
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
-<section id="gestalt-principles-6" class="slide level2">
-<h2>Gestalt Principles</h2>
-<ol type="1">
-<li>not complete; we construct the incomplete form into familiar shapes – i.e., <em>Closure</em> principle</li>
-</ol>
-
-
-
-<img data-src="slides-11-01_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

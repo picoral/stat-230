@@ -3189,7 +3189,7 @@
     "href": "slides-11-01.html#color",
     "title": "Data Visualization – principles",
     "section": "Color",
-    "text": "Color\nLet’s start with some definitions regarding color. “Color” refers to three components:\n\nHue refers to the dominant wavelength of the color (e.g., red, blue, purple)\nChroma refers to how intense of vivid the color is\nLuminance refers how bright a color is"
+    "text": "Color\nLet’s start with some definitions regarding color. “Color” refers to three components:\n\nHue refers to the dominant wavelength of the color (e.g., red, blue, purple)\nChroma or saturation refers to how intense of vivid the color is\nLuminance refers how bright a color is"
   },
   {
     "objectID": "slides-11-01.html#color-1",
@@ -3294,6 +3294,335 @@
     "href": "modules.html#slides-9",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nData Visualization – principles"
+    "text": "Slides\n\nData Visualization – principles\nWhat makes a great visualization\nMappings"
+  },
+  {
+    "objectID": "slides-11-01.html#datasaurus",
+    "href": "slides-11-01.html#datasaurus",
+    "title": "Data Visualization – principles",
+    "section": "dataSaurus",
+    "text": "dataSaurus\nDowload the datasaurus datat set and set up your working environment.\n\nlibrary(tidyverse)\ndatasaurus &lt;- read_csv(\"data/datasaurus_dozen.csv\")\n\n\nWhat is the mean and standard deviation of x and y by dataset group?\nCreate a scatterplot for all dataset groups."
+  },
+  {
+    "objectID": "slides-11-01.html#descriptive-statistics",
+    "href": "slides-11-01.html#descriptive-statistics",
+    "title": "Data Visualization – principles",
+    "section": "Descriptive statistics",
+    "text": "Descriptive statistics\n\ndatasaurus |&gt; \n  group_by(dataset) |&gt;\n  summarize(mean_x = mean(x),\n            sd_x = sd(x),\n            mean_y = mean(y),\n            sd_y = sd(y))\n\n\n\n\n\ndataset\nmean_x\nsd_x\nmean_y\nsd_y\n\n\n\n\naway\n54.26610\n16.76983\n47.83472\n26.93974\n\n\nbullseye\n54.26873\n16.76924\n47.83082\n26.93573\n\n\ncircle\n54.26732\n16.76001\n47.83772\n26.93004\n\n\ndino\n54.26327\n16.76514\n47.83225\n26.93540\n\n\ndots\n54.26030\n16.76774\n47.83983\n26.93019\n\n\nh_lines\n54.26144\n16.76590\n47.83025\n26.93988\n\n\nhigh_lines\n54.26881\n16.76670\n47.83545\n26.94000\n\n\nslant_down\n54.26785\n16.76676\n47.83590\n26.93610\n\n\nslant_up\n54.26588\n16.76885\n47.83150\n26.93861\n\n\nstar\n54.26734\n16.76896\n47.83955\n26.93027\n\n\nv_lines\n54.26993\n16.76996\n47.83699\n26.93768\n\n\nwide_lines\n54.26692\n16.77000\n47.83160\n26.93790\n\n\nx_shape\n54.26015\n16.76996\n47.83972\n26.93000"
+  },
+  {
+    "objectID": "slides-11-01.html#scatterplots",
+    "href": "slides-11-01.html#scatterplots",
+    "title": "Data Visualization – principles",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\ndatasaurus |&gt; \n  ggplot(aes(x = x, y = y)) +\n  geom_point() +\n  facet_wrap(~dataset)"
+  },
+  {
+    "objectID": "slides-11-01.html#encoding-channels",
+    "href": "slides-11-01.html#encoding-channels",
+    "title": "Data Visualization – principles",
+    "section": "Encoding channels",
+    "text": "Encoding channels\nOther encoding channels that are even less easily processed than shape are:\n\nsize\nelongation\nangle\nmovement"
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles",
+    "href": "slides-11-01.html#gestalt-principles",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\n\nhumans are extremely good at finding patterns, even when no pattern exists\nthe ability to perceive different shapes and lines as a unified image rather than just a bunch of elements that are not related to each other follow what we call Gestalt principles (Healy, 2018)."
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles-1",
+    "href": "slides-11-01.html#gestalt-principles-1",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are close to each other – i.e., Proximity principle:"
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles-2",
+    "href": "slides-11-01.html#gestalt-principles-2",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are similar in shape, color and size – i.e., Similarity principle:"
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles-3",
+    "href": "slides-11-01.html#gestalt-principles-3",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are similar in shape, color and size – i.e., Similarity principle:"
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles-4",
+    "href": "slides-11-01.html#gestalt-principles-4",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are visually tied – i.e., Connection principle:"
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles-5",
+    "href": "slides-11-01.html#gestalt-principles-5",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\nVisual elements are perceived as being related to each other when these elements are perceived as being part paths, lines, curves, even when some elements are “hidden” – i.e., Continuity principle:"
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles-6",
+    "href": "slides-11-01.html#gestalt-principles-6",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\n\nnot complete; we construct the incomplete form into familiar shapes – i.e., Closure principle"
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles-7",
+    "href": "slides-11-01.html#gestalt-principles-7",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles\n\nperceived to be either in the foreground or in the background together – i.e., Figure and Ground principle"
+  },
+  {
+    "objectID": "slides-11-01.html#gestalt-principles-8",
+    "href": "slides-11-01.html#gestalt-principles-8",
+    "title": "Data Visualization – principles",
+    "section": "Gestalt Principles",
+    "text": "Gestalt Principles"
+  },
+  {
+    "objectID": "slides-11-02.html#what-makes-a-great-visualization",
+    "href": "slides-11-02.html#what-makes-a-great-visualization",
+    "title": "What makes a great visualization",
+    "section": "What makes a great visualization?",
+    "text": "What makes a great visualization?\n\nhonest information in a beautiful manner\neasy to read and interpret\n\nA great visualization is the result of:\n\nHonesty + Good Judgment"
+  },
+  {
+    "objectID": "slides-11-02.html#honesty-good-judgment",
+    "href": "slides-11-02.html#honesty-good-judgment",
+    "title": "What makes a great visualization",
+    "section": "Honesty + Good Judgment",
+    "text": "Honesty + Good Judgment\nIn the following sections, these two elements are broken down further. Most of this material is summarized from Kieran Healy’s book “Data Visualization: A Practical Introduction” (Healy, 2018), Chapter 1."
+  },
+  {
+    "objectID": "slides-11-02.html#good-aesthetics",
+    "href": "slides-11-02.html#good-aesthetics",
+    "title": "What makes a great visualization",
+    "section": "Good aesthetics",
+    "text": "Good aesthetics\nGood aesthetics (as opposed to bad taste) is hard to operationalize,\nSome general guidelines (that might be broken at times):\n\nMaximize data-to-ink ratio\nClean up typefaces (the fewer different typefaces, the better)\nAvoid extraneous colors and backgrounds\nSimplify, mute, or delete gridlines\nRemove superfluous axis marks and labels\nAvoid excessive decorative embellishments"
+  },
+  {
+    "objectID": "slides-11-02.html#good-aesthetics-1",
+    "href": "slides-11-02.html#good-aesthetics-1",
+    "title": "What makes a great visualization",
+    "section": "Good aesthetics",
+    "text": "Good aesthetics\nYou want to ensure that your visualizations are:\n\nbeautiful\neasy to read and interpret\nmemorable (i.e., visually distinctive)\n\nThese goals might conflict with each other at times and only practice will tell you how to balance all of these elements."
+  },
+  {
+    "objectID": "slides-11-02.html#no-substantive-issues",
+    "href": "slides-11-02.html#no-substantive-issues",
+    "title": "What makes a great visualization",
+    "section": "No substantive issues",
+    "text": "No substantive issues\nHere are two main general issues to avoid:\n\nBad data: ensure you are working with good quality data, and do your homework in terms of data checking and transforming (this process often takes a lot of time, but it is essential)"
+  },
+  {
+    "objectID": "slides-11-02.html#no-substantive-issues-1",
+    "href": "slides-11-02.html#no-substantive-issues-1",
+    "title": "What makes a great visualization?",
+    "section": "No substantive issues",
+    "text": "No substantive issues\n\nTricky scales: by simply choosing a line plot versus a bar plot, you scale for your axis might change, changing the perception of how big or small differences across years or groups are. When providing comparisons, make sure you are as transparent about your scales as possible. The easiest way is to be honest is to keep the same scale across different panels and/or plots and keep the full scale of the original data (e.g., if you are displaying percentages on the y scale, make sure your limits for the y axis are set for 0% to 100%)."
+  },
+  {
+    "objectID": "slides-11-02.html#no-substantive-issues-2",
+    "href": "slides-11-02.html#no-substantive-issues-2",
+    "title": "What makes a great visualization?",
+    "section": "No substantive issues",
+    "text": "No substantive issues\n\nPerceptual issues: Healy (2019) argues that “visualizations encode numbers in lines, shapes, and colors” (p. 11), whose interpretations rely on how our visual system and how we perceive geometric shapes and relationships. As such, some charts are more difficult to interpret than others. As such, some visualizations are are more difficult than others. Due to human perception, 3D plots are often harder to read and interpret differences between bars, for example. Stacked bars make general trends easier to read, but differences between subcategories are harder to interpret."
+  },
+  {
+    "objectID": "slides-11-02.html#no-substantive-issues-what-to-avoid",
+    "href": "slides-11-02.html#no-substantive-issues-what-to-avoid",
+    "title": "What makes a great visualization?",
+    "section": "No substantive issues – what to avoid",
+    "text": "No substantive issues – what to avoid\n\nPerceptual issues: Healy (2019) argues that “visualizations encode numbers in lines, shapes, and colors” (p. 11), whose interpretations rely on how our visual system and how we perceive geometric shapes and relationships. As such, some charts are more difficult to interpret than others. As such, some visualizations are are more difficult than others. Due to human perception, 3D plots are often harder to read and interpret differences between bars, for example. Stacked bars make general trends easier to read, but differences between subcategories are harder to interpret."
+  },
+  {
+    "objectID": "slides-11-02.html#no-substantive-issues-what-to-avoid-1",
+    "href": "slides-11-02.html#no-substantive-issues-what-to-avoid-1",
+    "title": "What makes a great visualization?",
+    "section": "No substantive issues – what to avoid",
+    "text": "No substantive issues – what to avoid\n\nPerceptual issues: Healy (2019) argues that “visualizations encode numbers in lines, shapes, and colors” (p. 11), whose interpretations rely on how our visual system and how we perceive geometric shapes and relationships. As such, some charts are more difficult to interpret than others. As such, some visualizations are are more difficult than others. Due to human perception, 3D plots are often harder to read and interpret differences between bars, for example. Stacked bars make general trends easier to read, but differences between subcategories are harder to interpret."
+  },
+  {
+    "objectID": "slides-11-02.html#reference",
+    "href": "slides-11-02.html#reference",
+    "title": "What makes a great visualization",
+    "section": "REFERENCE",
+    "text": "REFERENCE\nHealy, K. (2018). Data visualization: a practical introduction. Princeton University Press."
+  },
+  {
+    "objectID": "slides-11-02.html#what-to-avoid-tricky-scales",
+    "href": "slides-11-02.html#what-to-avoid-tricky-scales",
+    "title": "What makes a great visualization",
+    "section": "What to avoid: Tricky scales",
+    "text": "What to avoid: Tricky scales\n\nBy simply choosing a line plot versus a bar plot, you scale for your axis might change, changing the perception of how big or small differences across years or groups are\nWhen providing comparisons, make sure you are as transparent about your scales as possible\nThe easiest way is to be honest is to keep the same scale across different panels and/or plots and keep the full scale of the original data\nIf you are displaying percentages on the y scale, make sure your limits for the y axis are set for 0% to 100%"
+  },
+  {
+    "objectID": "slides-11-02.html#what-to-avoid-perceptual-issues",
+    "href": "slides-11-02.html#what-to-avoid-perceptual-issues",
+    "title": "What makes a great visualization",
+    "section": "What to avoid – Perceptual issues",
+    "text": "What to avoid – Perceptual issues\n\nVisualizations rely on our visual system and how we perceive geometric shapes and relationships\nSome plots/visualizations are more difficult to interpret than others\nDue to human perception, 3D plots are often harder to read and interpret differences between bars, for example\nStacked bars make general trends easier to read, but differences between subcategories are harder to interpret."
+  },
+  {
+    "objectID": "slides-11-02.html#pie-chart",
+    "href": "slides-11-02.html#pie-chart",
+    "title": "What makes a great visualization",
+    "section": "Pie chart",
+    "text": "Pie chart\nDiscuss with a partner: What principles does this violate?"
+  },
+  {
+    "objectID": "slides-11-02.html#bar-chart",
+    "href": "slides-11-02.html#bar-chart",
+    "title": "What makes a great visualization",
+    "section": "Bar? chart",
+    "text": "Bar? chart\nDiscuss with a partner: What principles does this violate?"
+  },
+  {
+    "objectID": "slides-11-02.html#bar-chart-1",
+    "href": "slides-11-02.html#bar-chart-1",
+    "title": "What makes a great visualization",
+    "section": "Bar chart",
+    "text": "Bar chart\nDiscuss with a partner: What principles is this respecting?"
+  },
+  {
+    "objectID": "slides-11-01.html#hsl",
+    "href": "slides-11-01.html#hsl",
+    "title": "Data Visualization – principles",
+    "section": "HSL",
+    "text": "HSL"
+  },
+  {
+    "objectID": "slides-11-01.html#order-these-colors",
+    "href": "slides-11-01.html#order-these-colors",
+    "title": "Data Visualization – principles",
+    "section": "Order these colors",
+    "text": "Order these colors"
+  },
+  {
+    "objectID": "slides-11-01.html#order-these-colors-1",
+    "href": "slides-11-01.html#order-these-colors-1",
+    "title": "Data Visualization – principles",
+    "section": "Order these colors",
+    "text": "Order these colors"
+  },
+  {
+    "objectID": "slides-11-03.html#mappings",
+    "href": "slides-11-03.html#mappings",
+    "title": "Mappings",
+    "section": "Mappings",
+    "text": "Mappings\nVisualization mapping links variables in the data to things you can see in your plot.\nIf you have not done so already, download the penguin and set up your analysis environment:\n\nlibrary(tidyverse)\npenguins &lt;- read_csv(\"data/penguins.csv\")\n\nWe have a total of 8 variables. Take a moment to read whether each variable is a categorical or a numeric variable."
+  },
+  {
+    "objectID": "slides-11-03.html#axes-y-and-x",
+    "href": "slides-11-03.html#axes-y-and-x",
+    "title": "Mappings",
+    "section": "Axes (y and x)",
+    "text": "Axes (y and x)\n\nIn general we always start with mapping which variable will be plotted onto x and y (our axes)\nSome plot types require you specify just an x, like histograms, because the y axis information is calculated by the histogram function itself\nFor plots in which you need to specify both axes, you normally have at least one of the axes mapped to a numeric variable"
+  },
+  {
+    "objectID": "slides-11-03.html#question",
+    "href": "slides-11-03.html#question",
+    "title": "Mappings",
+    "section": "Question",
+    "text": "Question\n\nWhat is the relationship between bill length and bill depth?\n\n\nTwo continuous numeric variables\nHypothesis: there is a positive relationship between bill length and bill depth\nAs bill length increases so does bill depth\n\nNote that these two variables are in the same unit of measure (i.e., length and depth are both given in mm or millimeters)"
+  },
+  {
+    "objectID": "slides-11-03.html#plot",
+    "href": "slides-11-03.html#plot",
+    "title": "Mappings",
+    "section": "Plot",
+    "text": "Plot\nMap variables to the two axes: bill length to y and bill depth to x.\nWe start with our data, then we map our variables to our axes using the ggplot() and aes() (i.e., aesthetics) functions.\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             y = bill_length_mm))"
+  },
+  {
+    "objectID": "slides-11-03.html#plot-1",
+    "href": "slides-11-03.html#plot-1",
+    "title": "Mappings",
+    "section": "Plot",
+    "text": "Plot\nLet’s add the geometrics:\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             y = bill_length_mm)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-11-03.html#color-or-fill",
+    "href": "slides-11-03.html#color-or-fill",
+    "title": "Mappings",
+    "section": "Color or fill",
+    "text": "Color or fill\n\nMappings to axes are always required, so you need to decide what to map to x (and often also what to map to y) first. Then you build your other mappings.\nThe scatter plot we generated seems to present clusters.\nData can cluster (i.e., form distinct groups) by a categorical variable.\nIn our case, the most obvious categorical variable that would represent cluster is species."
+  },
+  {
+    "objectID": "slides-11-03.html#color-or-fill-1",
+    "href": "slides-11-03.html#color-or-fill-1",
+    "title": "Mappings",
+    "section": "Color or fill",
+    "text": "Color or fill\nFor geom_point the mapping we need is color. Let’s add that to our aesthetics mapping (i.e., inside the aes() function, which in turn is inside the ggplot() function).\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             y = bill_length_mm,\n             color = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-11-03.html#color-or-fill-2",
+    "href": "slides-11-03.html#color-or-fill-2",
+    "title": "Mappings",
+    "section": "Color or fill",
+    "text": "Color or fill\nLet’s see how fill would be used. For that, we need a different type of plot, such as a bar plot. We can use geom_bar() with only x mapped to bill_depth_mm (the values for y are calculate by the geom_bar() function, and the default stat is count). We will also keep the mapping of species to color.\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             color = species)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides-11-03.html#color-or-fill-3",
+    "href": "slides-11-03.html#color-or-fill-3",
+    "title": "Mappings",
+    "section": "Color or fill",
+    "text": "Color or fill\nThe mapping color in a bar plot determines the outline color of each bar. To map to the fill color of the bars, you need to use the fill mapping.\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             fill = species)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides-11-03.html#mapping-vs.-setting",
+    "href": "slides-11-03.html#mapping-vs.-setting",
+    "title": "Mappings",
+    "section": "Mapping vs. setting",
+    "text": "Mapping vs. setting\nYou can always set a fixed color using the color parameter in the geometrics (e.g., inside geom_point()) by not using the aes() function and naming a specific color. Let’s change the color of the dots in our first scatterplot:\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             y = bill_length_mm)) +\n  geom_point(color = \"red\")"
+  },
+  {
+    "objectID": "slides-11-03.html#size-and-shape",
+    "href": "slides-11-03.html#size-and-shape",
+    "title": "Mappings",
+    "section": "Size and shape",
+    "text": "Size and shape\n\nuse size for numeric variable mappings\nuse shape for categorical variable mappings"
+  },
+  {
+    "objectID": "slides-11-03.html#size-and-shape-1",
+    "href": "slides-11-03.html#size-and-shape-1",
+    "title": "Mappings",
+    "section": "Size and shape",
+    "text": "Size and shape\nHere’s the same scatter plot but with only shape mapped to the categorical variable species.\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             y = bill_length_mm,\n             shape = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-11-03.html#size-and-color",
+    "href": "slides-11-03.html#size-and-color",
+    "title": "Mappings",
+    "section": "Size and color",
+    "text": "Size and color\nLet’s now map shape and color to the categorical variable species.\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             y = bill_length_mm,\n             shape = species,\n             color = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-11-03.html#size-and-color-1",
+    "href": "slides-11-03.html#size-and-color-1",
+    "title": "Mappings",
+    "section": "Size and color",
+    "text": "Size and color\n\nsize is better mapped to numeric continuous variables, as opposed to categorical variables\n\nLet’s map size to body_mass_g (i.e., penguin body mass in grams).\n\npenguins %&gt;%\n  ggplot(aes(x = bill_depth_mm,\n             y = bill_length_mm,\n             size = body_mass_g)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides-11-03.html#reflection",
+    "href": "slides-11-03.html#reflection",
+    "title": "Mappings",
+    "section": "Reflection",
+    "text": "Reflection\n\nWhich scatter plot is clearer? Why?\n\nRemember that some channels are better processed than others, with color being one of the best channels in terms of visual processing."
+  },
+  {
+    "objectID": "slides-11-02.html",
+    "href": "slides-11-02.html",
+    "title": "What makes a great visualization",
+    "section": "",
+    "text": "honest information in a beautiful manner\neasy to read and interpret\n\nA great visualization is the result of:\n\nHonesty + Good Judgment"
   }
 ]
