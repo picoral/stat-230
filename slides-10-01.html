@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>STAT 230 Data Science and Statistics – Probabilities</title>
+  <title>CSIT 360/557 Advanced Techniques in Data Science – Principles of Data Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +27,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-d57132fb69bd09b8e16d42784450680f.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -120,456 +185,328 @@
       margin-right: 0; 
     }
   </style>
+  <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Probabilities</h1>
+  <h1 class="title">Principles of Data Visualization</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section class="slide level2">
+<section id="why-is-data-visualization-important" class="slide level2">
+<h2>Why is data visualization important?</h2>
+<p><a href="data/anscombe.csv">Anscombe’s quartet</a> highlights the importance of data visualization and warns against relying solely on summary statistics for data analysis.</p>
+<ol type="1">
+<li>In a Python notebook (or not), read the data in.</li>
+<li>What’s the mean and sd for x and y for each group?</li>
+<li>Plot a scatter plot of x and y for each group</li>
+</ol>
+</section>
+<section id="anscombes-quartet" class="slide level2">
+<h2>Anscombe’s quartet</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-3"><a></a>anscombe <span class="op">=</span> pd.read_csv(<span class="st">"data/anscombe.csv"</span>)</span>
+<span id="cb1-4"><a></a>anscombe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   experiment  group   x      y
+0           A      1  10   8.04
+1           A      2  10   9.14
+2           A      3  10   7.46
+3           A      4   8   6.58
+4           B      1   8   6.95
+5           B      2   8   8.14
+6           B      3   8   6.77
+7           B      4   8   5.76
+8           C      1  13   7.58
+9           C      2  13   8.74
+10          C      3  13  12.74
+11          C      4   8   7.71
+12          D      1   9   8.81
+13          D      2   9   8.77
+14          D      3   9   7.11
+15          D      4   8   8.84
+16          E      1  11   8.33
+17          E      2  11   9.26
+18          E      3  11   7.81
+19          E      4   8   8.47
+20          F      1  14   9.96
+21          F      2  14   8.10
+22          F      3  14   8.84
+23          F      4   8   7.04
+24          G      1   6   7.24
+25          G      2   6   6.13
+26          G      3   6   6.08
+27          G      4   8   5.25
+28          H      1   4   4.26
+29          H      2   4   3.10
+30          H      3   4   5.39
+31          H      4  19  12.50
+32          I      1  12  10.84
+33          I      2  12   9.13
+34          I      3  12   8.15
+35          I      4   8   5.56
+36          J      1   7   4.82
+37          J      2   7   7.26
+38          J      3   7   6.42
+39          J      4   8   7.91
+40          K      1   5   5.68
+41          K      2   5   4.74
+42          K      3   5   5.73
+43          K      4   8   6.89</code></pre>
+</div>
+</div>
+</section>
+<section id="mean-and-sd-per-group" class="slide level2">
+<h2>Mean and sd per group</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>anscombe.groupby(<span class="st">'group'</span>).agg(</span>
+<span id="cb3-2"><a></a>    mean_x<span class="op">=</span>(<span class="st">'x'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb3-3"><a></a>    sd_x<span class="op">=</span>(<span class="st">'x'</span>, <span class="st">'std'</span>),</span>
+<span id="cb3-4"><a></a>    mean_y<span class="op">=</span>(<span class="st">'y'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb3-5"><a></a>    sd_y<span class="op">=</span>(<span class="st">'y'</span>, <span class="st">'std'</span>)</span>
+<span id="cb3-6"><a></a>).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   group  mean_x      sd_x    mean_y      sd_y
+0      1     9.0  3.316625  7.500909  2.031568
+1      2     9.0  3.316625  7.500909  2.031657
+2      3     9.0  3.316625  7.500000  2.030424
+3      4     9.0  3.316625  7.500909  2.030579</code></pre>
+</div>
+</div>
+</section>
+<section id="plots-per-group" class="slide level2">
+<h2>Plots per group</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>sns.FacetGrid(</span>
+<span id="cb5-2"><a></a>    anscombe, col<span class="op">=</span><span class="st">"group"</span>, col_wrap<span class="op">=</span><span class="dv">2</span>, height<span class="op">=</span><span class="dv">4</span></span>
+<span id="cb5-3"><a></a>    ).<span class="bu">map</span>(sns.scatterplot, <span class="st">"x"</span>, <span class="st">"y"</span>, s<span class="op">=</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-3-1.png" width="395"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-3-2.png" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="visual-perception" class="title-slide slide level1 center">
+<h1>Visual Perception</h1>
 
-<p><small>These slides are based on slides developed by Mine Çetinkaya-Rundel </small></p>
 </section>
-<section id="random-processes" class="slide level2">
-<h2>Random processes</h2>
+<section id="edges-contrasts-and-colors" class="slide level2">
+<h2>Edges, contrasts, and colors</h2>
 <ul>
-<li>A random process is a situation in which we know what outcomes could happen, but we don’t know which particular outcome will happen.</li>
-<li>Examples: coin tosses, die rolls</li>
+<li>Our visual system (i.e., all the visual processing models from our eyes to our brain) re-constructs what we are looking at</li>
+<li>Our visual system uses relative differences instead of absolute values for brightness and colors</li>
+<li>This relativization of brightness is demonstrated in the image in the next slide, in which we perceive darker blobs where grid lines meet at the edge of our visual field</li>
 </ul>
 </section>
-<section id="probability" class="slide level2">
-<h2>Probability</h2>
+<section id="herman-grid-effect" class="slide level2">
+<h2>Herman grid effect</h2>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-4-5.png" width="480" class="r-stretch"></section>
+<section id="herman-grid-effect-1" class="slide level2">
+<h2>Herman grid effect</h2>
 <ul>
-<li>There are several possible interpretations of probability but they (almost) completely agree on the mathematical rules probability must follow.
-<ul>
-<li>P(A) = Probability of event A</li>
-<li>0 ≤ P(A) ≤ 1</li>
-</ul></li>
+<li>At the very center of the visual field, we see the lines as they are (just white).</li>
+<li>The center is where our vision is really good</li>
+<li>Our ability to distinguish details decreases at the edges of our visual field (Ware, 2008)</li>
+<li>Visual illusions (like the image in the previous slide) are side effects of our visual system processing.</li>
 </ul>
 </section>
-<section id="frequentist-interpretation" class="slide level2">
-<h2>Frequentist interpretation</h2>
-<p>The probability of an outcome is the proportion of times the outcome would occur if we observed the random process an infinite number of times</p>
-</section>
-<section id="practice" class="slide level2">
-<h2>Practice</h2>
-<p>Which of the following events would you be most surprised by?</p>
-<ol type="1">
-<li>exactly 3 heads in 10 coin flips</li>
-<li>exactly 3 heads in 100 coin flips</li>
-<li>exactly 3 heads in 1000 coin flips</li>
-</ol>
-</section>
-<section id="practice-1" class="slide level2">
-<h2>Practice</h2>
-<p>Which of the following events would you be most surprised by?</p>
-<ol type="1">
-<li>exactly 3 heads in 10 coin flips</li>
-<li>exactly 3 heads in 100 coin flips</li>
-<li><strong>exactly 3 heads in 1000 coin flips</strong></li>
-</ol>
-</section>
-<section id="law-of-large-numbers" class="slide level2">
-<h2>Law of large numbers</h2>
-<p><strong>Law of large numbers</strong> states that as more observations are collected, the proportion of occurrences with a particular outcome, <code>p</code>, converges to the probability of that outcome, <code>p</code>.</p>
-</section>
-<section id="practice-2" class="slide level2">
-<h2>Practice</h2>
-<p>When tossing a fair coin, if heads comes up on each of the first 10 tosses, what do you think the chance is that another head will come up on the next toss?</p>
-<ol type="1">
-<li>0.5</li>
-<li>less than 0.5</li>
-<li>more than 0.5</li>
-</ol>
-</section>
-<section id="practice-3" class="slide level2">
-<h2>Practice</h2>
+<section id="contrast" class="slide level2">
+<h2>Contrast</h2>
 <ul>
-<li><p>The probability is still 0.5, or there is still a 50% chance that another head will come up on the next toss.</p></li>
-<li><p>P(H on 11th toss) = P(T on 11th toss) = 0.5</p></li>
-<li><p>The coin is not “due” for a tail</p></li>
+<li>Another side effect of our visual system processing is perceiving the same shade as lighter or darker depending on the background behind shade</li>
+<li>In the image on the next slide, the smaller squares are all the exact shade of gray</li>
+<li>We perceive the gray to be lighter in darker backgrounds and darker in lighter backgrounds</li>
 </ul>
 </section>
-<section id="gamblers-fallacy" class="slide level2">
-<h2>Gambler’s Fallacy</h2>
-<p>The common misunderstanding of the law of large numbers is that random processes are supposed to compensate for whatever happened in the past; this is just not true and is also called law of averages.</p>
-</section>
-<section id="disjoint-and-non-disjoint-outcomes" class="slide level2">
-<h2>Disjoint and non-disjoint outcomes</h2>
-<p>Disjoint (mutually exclusive) outcomes: Cannot happen at the same time.</p>
+<section id="contrast-1" class="slide level2">
+<h2>Contrast</h2>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-5-1.png" width="480" class="r-stretch"></section></section>
+<section>
+<section id="edges-colors-and-contrasts" class="title-slide slide level1 center">
+<h1>Edges, colors, and contrasts</h1>
 <ul>
-<li>The outcome of a single coin toss cannot be a head and a tail</li>
-<li>A student both cannot fail and pass a class</li>
-<li>A single card drawn from a deck cannot be an ace and a queen</li>
+<li>Our visual system is not a physical light meter, what we perceive is different from actual values for colors and brightness</li>
+<li>Humans are better at seeing edge contrasts for monochrome images</li>
+<li>We are also better at distinguishing dark shades (compared to light shades)</li>
 </ul>
 </section>
-<section id="disjoint-and-non-disjoint-outcomes-1" class="slide level2">
-<h2>Disjoint and non-disjoint outcomes</h2>
-<p>Non-disjoint outcomes: Can happen at the same time</p>
+<section id="color" class="slide level2">
+<h2>Color</h2>
+<p>Let’s start with some definitions regarding color. “Color” refers to three components:</p>
 <ul>
-<li>A student can get an A in Stats and A in Econ in the same semester</li>
+<li><em>Hue</em> refers to the dominant wavelength of the color (e.g., red, blue, purple)</li>
+<li><em>Chroma</em> refers to how intense of vivid the color is</li>
+<li><em>Luminance</em> refers how bright a color is</li>
 </ul>
 </section>
-<section id="union-of-non-disjoint-events" class="slide level2">
-<h2>Union of non-disjoint events</h2>
-<p>What is the probability of drawing a jack or a red card from a well shuffled <a href="https://intranet.missouriwestern.edu/cas/wp-content/uploads/sites/17/2020/05/Standard-Deck-of-Cards.pdf">full deck</a>?</p>
+<section id="hsl" class="slide level2">
+<h2>HSL</h2>
+
+<img data-src="images/hsl.jpeg" width="700" class="r-stretch"></section>
+<section id="color-1" class="slide level2">
+<h2>Color</h2>
 <ul>
-<li>There are 52 cards in a standard deck.</li>
-<li>There are 4 suits; Diamonds, Clubs, Hearts, Spades.</li>
-<li>Black cards include all Clubs and Spades.</li>
-<li>Red cards include all Hearts and Diamonds.</li>
+<li>Color schemes need to represent accurately differences in our data.</li>
+<li>For example, <strong>changes from one level to next need to be perceive as having the same magnitude</strong></li>
+<li>We should be careful when picking colors for our variables in our data visualizations</li>
 </ul>
 </section>
-<section id="union-of-non-disjoint-events-1" class="slide level2">
-<h2>Union of non-disjoint events</h2>
-<p>What is the probability of drawing a jack or a red card from a well shuffled full deck?</p>
-<blockquote>
-<p>P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</p>
-</blockquote>
+<section id="order-these-colors" class="slide level2">
+<h2>Order these colors</h2>
+
+<img data-src="images/categorical_colors.png" class="r-stretch"></section>
+<section id="order-these-colors-1" class="slide level2">
+<h2>Order these colors</h2>
+
+<img data-src="images/gradient_colors.png" class="r-stretch"></section>
+<section id="color-2" class="slide level2">
+<h2>Color</h2>
 <ul>
-<li>P(jack or red) = P(jack) + P(red) - P(jack and red)</li>
-<li>P(jack) = 4/52</li>
-<li>P(red) = 26/52</li>
-<li>P(jack and red) = 2/52</li>
-<li>28/52</li>
+<li><strong>Gradients</strong> should be used as sequential scales from low to high to represent numeric continuous/ordered variables (e.g., population size). Light colors should represent low values, and dark colors high values.</li>
+</ul>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="color-3" class="slide level2">
+<h2>Color</h2>
+<ul>
+<li><strong>Diverging scales</strong> should be used where there is a neutral midpoint and then there is variance in ether direction from that neutral point (e.g., temperatures can be positive and negative).</li>
+</ul>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="color-4" class="slide level2">
+<h2>Color</h2>
+<ul>
+<li><strong>Qualitative palettes</strong> where each color has the same valence (i.e., no color dominates the other) should be used for unordered categorical variables (e.g., political parties, countries). Different colors in the palette should <strong>not</strong> imply differences in magnitude.</li>
+</ul>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="color-5" class="slide level2">
+<h2>Color</h2>
+<ul>
+<li>We also need to take into account people who are color-blind, and how they perceive colors</li>
 </ul>
 </section>
-<section id="practice-4" class="slide level2">
-<h2>Practice</h2>
-<p>What is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Shares Parent’s View</th>
-<th>Doesn’t share</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>NO legalize</td>
-<td>40</td>
-<td>11</td>
-<td>51</td>
-</tr>
-<tr class="even">
-<td>YES legalize</td>
-<td>78</td>
-<td>36</td>
-<td>114</td>
-</tr>
-<tr class="odd">
-<td>Total</td>
-<td>118</td>
-<td>47</td>
-<td>165</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="practice-5" class="slide level2">
-<h2>Practice</h2>
-<p>What is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?</p>
-<blockquote>
-<p>P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</p>
-</blockquote>
-<p>P(YES legalize or agree with parents) = P(YES legalize) + P(agree with parents) - P(YES legalize and agree with parents)</p>
-</section>
-<section id="practice-6" class="slide level2">
-<h2>Practice</h2>
-<p>What is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?</p>
-<ol type="1">
-<li>(40 + 36 - 78) / 165</li>
-<li>(114 + 118 - 78) / 165</li>
-<li>78 / 165</li>
-<li>78 / 188</li>
-<li>11 / 47</li>
-</ol>
-</section>
-<section id="practice-7" class="slide level2">
-<h2>Practice</h2>
-<p>What is the probability that a randomly sampled student thinks marijuana should be legalized or they agree with their parents’ political views?</p>
-<ol type="1">
-<li>(40 + 36 - 78) / 165</li>
-<li><strong>(114 + 118 - 78) / 165</strong></li>
-<li>78 / 165</li>
-<li>78 / 188</li>
-<li>11 / 47</li>
-</ol>
-</section>
-<section id="union-of-non-disjoint-events-2" class="slide level2">
-<h2>Union of non-disjoint events</h2>
-<p>General rule:</p>
-<blockquote>
-<p>P(A or B) = P(A) + P(B) - P(A and B)</p>
-</blockquote>
-</section>
-<section id="in-class-activity" class="slide level2">
-<h2>In-class activity</h2>
-<p>Go to <a href="https://www.gradescope.com/courses/954710/assignments/6008961">gradescope and answer the questions about the union of non-disjoint events</a></p>
-</section>
-<section id="probability-distributions" class="slide level2">
-<h2>Probability Distributions</h2>
-<p>A probability distribution lists all possible events and the probabilities with which they occur.</p>
-<p>The probability distribution a coin toss:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Head</th>
-<th>Tail</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Probability</td>
-<td>0.50</td>
-<td>0.50</td>
-</tr>
-</tbody>
-</table>
-<p>Rules for probability distributions:</p>
-<ol type="1">
-<li>The events listed must be disjoint</li>
-<li>Each probability must be between 0 and 1</li>
-<li>The probabilities must total 1</li>
-</ol>
-</section>
-<section id="probability-distributions-1" class="slide level2">
-<h2>Probability Distributions</h2>
-<p>Rules for probability distributions:</p>
-<ol type="1">
-<li>The events listed must be disjoint</li>
-<li>Each probability must be between 0 and 1</li>
-<li>The probabilities must total 1</li>
-</ol>
-<p>The probability distribution two coin tossess:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Head Head</th>
-<th>Head Tail</th>
-<th>Tail Head</th>
-<th>Tail Tail</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Prob.</td>
-<td>0.25</td>
-<td>0.25</td>
-<td>0.25</td>
-<td>0.25</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sample-space" class="slide level2">
-<h2>Sample space</h2>
-<p>Sample space is the collection of all possible outcomes of an experiment</p>
+<section id="shape" class="slide level2">
+<h2>Shape</h2>
 <ul>
-<li>I flip a coin once, what is the sample space for the outcomes? <code>S = {H, T}</code></li>
-<li>I flip a coin once twice, what is the sample space for the outcomes?</li>
-<li>I flip a coin once three times, what is the sample space for the outcomes?</li>
+<li>We can also use <strong>shape</strong> as a channel to encode information</li>
+<li>The color channel, however, is more salient, and shape can be used as a secondary channel.</li>
 </ul>
 </section>
-<section id="sample-space-1" class="slide level2">
-<h2>Sample space</h2>
-<p>Sample space is the collection of all possible outcomes of an experiment</p>
+<section id="visual-search-and-pop-out-effect" class="slide level2">
+<h2>Visual Search and Pop-out Effect</h2>
+<p>Try to find the <code>type B</code> data point in the three plots in the next slides</p>
+</section>
+<section id="visual-search-and-pop-out-effect-1" class="slide level2">
+<h2>Visual Search and Pop-out Effect</h2>
+<p>Try to find the <code>type B</code></p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="visual-search-and-pop-out-effect-2" class="slide level2">
+<h2>Visual Search and Pop-out Effect</h2>
+<p>Try to find the <code>type B</code></p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="visual-search-and-pop-out-effect-3" class="slide level2">
+<h2>Visual Search and Pop-out Effect</h2>
+<p>Try to find the <code>type B</code></p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="color-and-shape" class="slide level2">
+<h2>Color and shape</h2>
 <ul>
-<li>I flip a coin once, what is the sample space for the outcomes? <code>S = {H, T}</code></li>
-<li>I flip a coin once twice, what is the sample space for the outcomes? <code>S = {HH, HT, TT, TH}</code></li>
-<li>I flip a coin once three times, what is the sample space for the outcomes?</li>
+<li>The <code>type B</code> data point should have been easier to find in the first and last plots, and harder in the middle plot.</li>
+<li>Color is a channel that is easier to process than shape</li>
+<li>Combining both shape and color is at times a good strategy.</li>
 </ul>
 </section>
-<section id="sample-space-2" class="slide level2">
-<h2>Sample space</h2>
-<p>Sample space is the collection of all possible outcomes of an experiment</p>
+<section id="color-and-shape-1" class="slide level2">
+<h2>Color and shape</h2>
 <ul>
-<li>I flip a coin once, what is the sample space for the outcomes? <code>S = {H, T}</code></li>
-<li>I flip a coin once twice, what is the sample space for the outcomes? <code>S = {HH, HT, TT, TH}</code></li>
-<li>I flip a coin once three times, what is the sample space for the outcomes? <code>S = {HHH, HHT, HTH, HTT, THH, TTH, TTH, TTT}</code></li>
+<li>Encoding multiple channels in the same visualization can overtax the viewer when the multiple channels are not highlighting some structure in the data</li>
+</ul>
+<p>see the two plots on the next slides</p>
+</section>
+<section id="color-and-shape-overtaxing" class="slide level2">
+<h2>Color and shape – overtaxing</h2>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="color-and-shape-overtaxing-1" class="slide level2">
+<h2>Color and shape – overtaxing</h2>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="encoding-channels" class="slide level2">
+<h2>Encoding channels</h2>
+<p>Other encoding channels that are even less easily processed than shape are:</p>
+<ul>
+<li>size</li>
+<li>elongation</li>
+<li>angle</li>
+<li>movement</li>
 </ul>
 </section>
-<section id="practice-8" class="slide level2">
-<h2>Practice</h2>
-<p>In a survey, 52% of respondents said they are Democrats. What is the probability that a randomly selected respondent from this sample is a Republican?</p>
-<ol type="1">
-<li>0.48</li>
-<li>more than 0.48</li>
-<li>less than 0.48</li>
-<li>cannot calculate using only the information given</li>
-</ol>
-</section>
-<section id="practice-9" class="slide level2">
-<h2>Practice</h2>
-<p>In a survey, 52% of respondents said they are Democrats. What is the probability that a randomly selected respondent from this sample is a Republican?</p>
-<ol type="1">
-<li>0.48</li>
-<li>more than 0.48</li>
-<li>less than 0.48</li>
-<li><strong>cannot calculate using only the information given</strong></li>
-</ol>
-</section>
-<section id="practice-10" class="slide level2">
-<h2>Practice</h2>
-<p>If the only two political parties were Republican and Democrat, then <code>1</code> would be possible. However it is also possible that some people do not affiliate with a political party or affiliate with a party other than these two. Then <code>3</code> is also possible. However <code>2</code> is definitely not possible since it would result in the total probability for the sample space being above 1.</p>
-</section>
-<section id="complementary-events" class="slide level2">
-<h2>Complementary events</h2>
-<p>Complementary events are two mutually exclusive events where one event consists of all outcomes that are not in the other event (the two probabilities add to 1).</p>
-<p>Example: Rolling a Six-Sided Die</p>
-<p>The sample space for rolling a standard six-sided die is: <code>S = {1, 2, 3, 4, 5, 6}</code></p>
+<section id="gestalt-principles" class="slide level2">
+<h2>Gestalt Principles</h2>
 <ul>
-<li>I roll a die once. If we know that I didn’t roll an even number, what are the possible outcomes? <code>{1, 3, 5}</code></li>
+<li>humans are extremely good at finding patterns, even when no pattern exists</li>
+<li>the ability to perceive different shapes and lines as a unified image rather than just a bunch of elements that are not related to each other follow what we call <em>Gestalt</em> principles (Healy, 2018).</li>
 </ul>
 </section>
-<section id="practice-11" class="slide level2">
-<h2>Practice</h2>
+<section id="gestalt-principles-1" class="slide level2">
+<h2>Gestalt Principles</h2>
+<p>Visual elements are perceived as being related to each other when these elements are close to each other – i.e., <em>Proximity</em> principle:</p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<section id="gestalt-principles-2" class="slide level2">
+<h2>Gestalt Principles</h2>
+<p>Visual elements are perceived as being related to each other when these elements are similar in shape, color and size – i.e., <em>Similarity</em> principle:</p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
+<section id="gestalt-principles-3" class="slide level2">
+<h2>Gestalt Principles</h2>
+<p>Visual elements are perceived as being related to each other when these elements are similar in shape, color and size – i.e., <em>Similarity</em> principle:</p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<section id="gestalt-principles-4" class="slide level2">
+<h2>Gestalt Principles</h2>
+<p>Visual elements are perceived as being related to each other when these elements are visually tied – i.e., <em>Connection</em> principle:</p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<section id="gestalt-principles-5" class="slide level2">
+<h2>Gestalt Principles</h2>
+<p>Visual elements are perceived as being related to each other when these elements are perceived as being part paths, lines, curves, even when some elements are “hidden” – i.e., <em>Continuity</em> principle:</p>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
+<section id="gestalt-principles-6" class="slide level2">
+<h2>Gestalt Principles</h2>
 <ol type="1">
-<li>If the probability of rain tomorrow is 0.3, what is the probability that it will NOT rain tomorrow?</li>
-<li>In a standard deck of 52 playing cards, what is the probability of NOT drawing a diamond?</li>
-<li>A fair die is rolled once. If event A is “rolling a number less than 4,” what is the probability of the complementary event A’?</li>
-<li>In a class of 40 students, 25 students passed a math test. What is the probability that a randomly selected student did NOT pass the test?</li>
-</ol>
-</section>
-<section id="practice-12" class="slide level2">
-<h2>Practice</h2>
-<ol type="1">
-<li>If the probability of rain tomorrow is 0.3, what is the probability that it will NOT rain tomorrow? <code>0.7</code></li>
-<li>In a standard deck of 52 playing cards, what is the probability of NOT drawing a diamond? <code>3/4</code></li>
-<li>A fair die is rolled once. If event A is “rolling a number less than 4,” what is the probability of the complementary event A’? <code>1/2</code></li>
-<li>In a class of 40 students, 25 students passed a math test. What is the probability that a randomly selected student did NOT pass the test? <code>15/40</code>, <code>3/8</code></li>
-</ol>
-</section>
-<section id="independence" class="slide level2">
-<h2>Independence</h2>
-<p>Two processes are independent if knowing the outcome of one provides no useful information about the outcome of the other.</p>
-<ul>
-<li>Knowing that the coin landed on a head on the first toss does not provide any useful information for determining what the coin will land on in the second toss.
-<ul>
-<li>Outcomes of two tosses of a coin are independent.</li>
-</ul></li>
-</ul>
-</section>
-<section id="independence-1" class="slide level2">
-<h2>Independence</h2>
-<ul>
-<li>Knowing that the first card drawn from a deck is an ace does provide useful information for determining the probability of drawing an ace in the second draw.
-<ul>
-<li>Outcomes of two draws from a deck of cards (without replacement) are dependent.</li>
-</ul></li>
-</ul>
-</section>
-<section id="independence-2" class="slide level2">
-<h2>Independence</h2>
-<p>If probability that A occurs given that B is true equals the probability of A, then A and B are independent:</p>
-<blockquote>
-<p>P(A occurs, given that B is true) = P(A | B) = P(A)</p>
-</blockquote>
-</section>
-<section id="practice-13" class="slide level2">
-<h2>Practice</h2>
-<p>Between January 9-12, 2013, SurveyUSA interviewed a random sample of 500 NC residents asking them whether they think widespread gun ownership protects law abiding citizens from crime, or makes society more dangerous. 58% of all respondents said it protects citizens. 67% of White respondents, 28% of Black respondents, and 64% of Hispanic respondents shared this view.</p>
-<p><small><a href="http://www.surveyusa.com/client/PollReport.aspx?g=a5f460ef-bba9-484b-8579-1101ea26421b" class="uri">http://www.surveyusa.com/client/PollReport.aspx?g=a5f460ef-bba9-484b-8579-1101ea26421b</a></small></p>
-</section>
-<section id="practice-14" class="slide level2">
-<h2>Practice</h2>
-<p>P(protects citizens) = 0.58</p>
-<p>P(protects citizens | White) = 0.67</p>
-<p>P(protects citizens | Black) = 0.28</p>
-<p>P(protects citizens | Hispanic) = 0.64</p>
-</section>
-<section id="practice-15" class="slide level2">
-<h2>Practice</h2>
-<p>P(protects citizens) = 0.58</p>
-<p>P(protects citizens | White) = 0.67 ≠ P(protects citizens)</p>
-<p>P(protects citizens | Black) = 0.28 ≠ P(protects citizens)</p>
-<p>P(protects citizens | Hispanic) = 0.64 ≠ P(protects citizens)</p>
-<p>P(protects citizens) varies by race/ethnicity, therefore opinion on gun ownership and race ethnicity are most likely <strong>dependent</strong></p>
-</section>
-<section id="product-rule-for-independent-events" class="slide level2">
-<h2>Product rule for independent events</h2>
-<p>The Product Rule for Independent Events states that if two events A and B are independent, then the probability of both events occurring (their intersection) is equal to the product of their individual probabilities.</p>
-<blockquote>
-<p>P(A and B) = P(A) x P(B)</p>
-</blockquote>
-<blockquote>
-<p>P(A ∩ B) = P(A) × P(B)</p>
-</blockquote>
-</section>
-<section id="product-rule-for-independent-events-1" class="slide level2">
-<h2>Product rule for independent events</h2>
-<p>P(A ∩ B) = P(A) x P(B)</p>
-<blockquote>
-<p>You toss a coin twice, what is the probability of getting two tails in a row?</p>
-</blockquote>
-<p>P(T₁ ∩ T₂) = P(T₁) × P(T₂) = 1/2 × 1/2 = 1/4</p>
-</section>
-<section id="product-rule-for-independent-events-2" class="slide level2">
-<h2>Product rule for independent events</h2>
-<ul>
-<li>The rule only applies when events are independent (the occurrence of one event doesn’t affect the probability of the other)</li>
-<li>Independence must be verified before applying the product rule</li>
-<li>This rule provides a simple way to calculate compound probabilities for independent events</li>
-</ul>
-<p>The product rule is fundamental in probability theory and is used extensively in applications ranging from genetics to quality control in manufacturing.</p>
-</section>
-<section id="practice-16" class="slide level2">
-<h2>Practice</h2>
-<p>A recent Gallup poll suggests that 25.5% of Texans do not have health insurance as of June 2012. Assuming that the uninsured rate stayed constant, what is the probability that two randomly selected Texans are both uninsured?</p>
-<ol type="1">
-<li><span class="math inline">\(25.52\)</span></li>
-<li><span class="math inline">\(0.255^2\)</span></li>
-<li><span class="math inline">\(0.255 * 2\)</span></li>
-<li><span class="math inline">\((1 - 0.255)^2\)</span></li>
-</ol>
-</section>
-<section id="practice-17" class="slide level2">
-<h2>Practice</h2>
-<p>A recent Gallup poll suggests that 25.5% of Texans do not have health insurance as of June 2012. Assuming that the uninsured rate stayed constant, what is the probability that two randomly selected Texans are both uninsured?</p>
-<p><span class="math inline">\(0.255^2\)</span></p>
-</section>
-<section id="practice-18" class="slide level2">
-<h2>Practice</h2>
-<ol type="1">
-<li>A fair coin is flipped 3 times. What is the probability of getting heads on all three flips?</li>
-<li>A bag contains 5 red marbles and 5 blue marbles. If you draw 2 marbles with replacement, what is the probability of drawing 2 blue marbles?</li>
-<li>A six-sided die is rolled twice. What is the probability of rolling a 6 on the first roll AND an even number on the second roll?</li>
-</ol>
-</section>
-<section id="practice-19" class="slide level2">
-<h2>Practice</h2>
-<ol type="1">
-<li>A fair coin is flipped 3 times. What is the probability of getting heads on all three flips? <span class="math inline">\(\frac{1}{2}*\frac{1}{2}*\frac{1}{2} = \frac{1}{8}\)</span></li>
-<li>A bag contains 5 red marbles and 5 blue marbles. If you draw 2 marbles with replacement, what is the probability of drawing 2 blue marbles? <span class="math inline">\(\frac{1}{2}*\frac{1}{2} = \frac{1}{4}\)</span></li>
-<li>A six-sided die is rolled twice. What is the probability of rolling a 6 on the first roll AND an even number on the second roll? <span class="math inline">\(\frac{1}{6}*\frac{1}{2} = \frac{1}{12}\)</span></li>
-</ol>
-</section>
-<section id="disjoint-vs.-complementary" class="slide level2">
-<h2>Disjoint vs.&nbsp;complementary</h2>
-<ol type="1">
-<li>Do the sum of probabilities of two disjoint events always add up to 1?</li>
-<li>Do the sum of probabilities of two complementary events always add up to 1?</li>
-</ol>
-</section>
-<section id="disjoint-vs.-complementary-1" class="slide level2">
-<h2>Disjoint vs.&nbsp;complementary</h2>
-<ol type="1">
-<li><p>Do the sum of probabilities of two disjoint events always add up to 1? <em>Not necessarily, there may be more than 2 events in the sample space, e.g.&nbsp;party affiliation.</em></p></li>
-<li><p>Do the sum of probabilities of two complementary events always add up to 1? <em>Yes, that’s the definition of complementary, e.g.&nbsp;heads and tails</em></p></li>
+<li>not complete; we construct the incomplete form into familiar shapes – i.e., <em>Closure</em> principle</li>
 </ol>
 
 
-</section>
+
+<img data-src="slides-10-01_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -785,6 +722,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
