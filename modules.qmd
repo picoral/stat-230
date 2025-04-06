@@ -1,0 +1,176 @@
+---
+title: "Modules"
+---
+
+```{r}
+#| echo: false
+#| eval: true
+#| message: false
+#| warning: false
+library(tidyverse)
+topics <- read_csv("topics.csv")
+```
+
+# Textbooks
+
+* [Introduction to Modern Statistics 2nd Edition](https://openintro-ims.netlify.app/)
+* [R for Data Science](https://r4ds.hadley.nz/)
+
+# Week 01 -- `r topics %>% filter(week == "01") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "01") %>% pull(topic)`
+
+## Reading
+
+* [Chapter 1. Introduction to Data](https://openintro-ims.netlify.app/data-hello)
+
+## Slides
+
+* [Course Introduction](slides-01-00.html)
+* [Why statistics?](slides-01-01.html)
+* [Variables](slides-01-02.html)
+* [Data](slides-01-03.html)
+
+## Assignments
+
+Complete the quarto markdown file linked below with your answers, and submit it to canvas.
+
+* [Assignment 01](assignments/assignment-01.qmd)
+
+To open and edit this file, [download and install R and RStudio](https://posit.co/download/rstudio-desktop/) or if you are unable to install software on your devise use [Posit Cloud](https://posit.cloud/)
+
+[If you need help with this, you can follow these instructions](getting-started.html)
+
+# Week 02 -- `r topics %>% filter(week == "02") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "02") %>% pull(topic)`
+
+## Reading
+
+* [Data visualisation](https://r4ds.hadley.nz/data-visualize)
+
+## Tutorials
+
+* [Getting Started with R](slides-02-01.html)
+* [Case Study 1](slides-02-02.html)
+
+# Week 03 -- `r topics %>% filter(week == "03") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "03") %>% pull(topic)`
+
+## Reading
+
+* [Exploring categorical data](https://openintro-ims.netlify.app/explore-categorical)
+* [Exploring numerical data](https://openintro-ims.netlify.app/explore-numerical)
+* [Exploratory Data Analysis in R](https://r4ds.had.co.nz/exploratory-data-analysis.html)
+
+## Slides
+
+* [Descriptive Statistics](slides-03-01.html) -- [code](code/STAT-230-descriptive.zip)
+* [Exploring Categorical Data](slides-03-02.html)
+
+## Practice
+
+* [Module 3 Practice](practice/STAT230-practice-module3.zip)
+
+## Assignment
+
+* [Assignment 2](assignments/STAT230-assignment-02.zip)
+
+# Week 04 -- `r topics %>% filter(week == "04") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "04") %>% pull(topic)`
+
+## Slides
+
+* [Summarizing Data](slides-04-01.html)  -- [code](code/STAT-230-temperature-analysis.zip)
+* [Counting Categorical Data](slides-04-02.html)
+
+## Assignment
+
+* [Assignment 3](assignments/assignment-03.zip)
+
+# Week 05 -- `r topics %>% filter(week == "05") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "05") %>% pull(topic)`
+
+## Slides
+
+* [Sampling](slides-05-01.html)
+* [Case Study](slides-05-02.html)
+* [Introduction to Inference](slides-05-03.html)
+
+# Week 06 -- `r topics %>% filter(week == "06") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "06") %>% pull(topic)`
+
+## Slides
+
+* [Hypothesis Testing](slides-06-01.html)
+* [Bivariate Analysis](slides-06-02.html)
+* [Two Categorical Variables](slides-06-03.html)
+
+## Assignment
+
+* [Assignment 4](assignments/stat230-assignment-04.zip)
+
+# Week 07 -- `r topics %>% filter(week == "07") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "07") %>% pull(topic)`
+
+## Slides
+
+* [Linear Regression](slides-07-01.html)
+* [Case Studies](slides-07-02.html)
+
+# Week 08 -- `r topics %>% filter(week == "08") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "08") %>% pull(topic)`
+
+## Slides
+
+* [Review](slides-08-01.html)
+* [Multivariate Analysis](slides-08-02.html)
+
+# Week 09 -- `r topics %>% filter(week == "09") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "09") %>% pull(topic)`
+
+## Slides
+
+* [More Regression](slides-09-01.html)
+* [Case Study - Logistic Regression](slides-09-02.html)
+* [Full Case Study - spam](slides-09-03.html)
+
+## Assignment
+
+* [Assignment 5](assignments/STAT230-assignment-05.zip) -- deadline March 31st
+
+# Week 10 -- `r topics %>% filter(week == "10") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "10") %>% pull(topic)`
+
+## Slides
+
+* [Probabilities](slides-10-01.html)
+* [Conditional Probabilities](slides-10-02.html)
+* [Practice](slides-10-03.html)
+* [Case Studies](slides-10-04.html)
+
+# Week 11 -- `r topics %>% filter(week == "11") %>% pull(start_date)`
+
+Topic: `r topics %>% filter(week == "11") %>% pull(topic)`
+
+## Slides
+
+* [Data Visualization -- principles](slides-11-01.html)
+* [What makes a great visualization](slides-11-02.html)
+* [Mappings](slides-11-03.html)
+
+# Final Project
+
+Deadline for all deliverables: May 2, Friday, 11:59pm
+
+You are to submit your link to your GitHub repository to Canvas.
+
+[Instructions for Final Project](final-project.html)
