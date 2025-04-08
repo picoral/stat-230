@@ -3294,7 +3294,7 @@
     "href": "modules.html#slides-9",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nData Visualization – principles\nWhat makes a great visualization\nMappings"
+    "text": "Slides\n\nData Visualization – principles\nWhat makes a great visualization\nMappings\nPlotting Maps"
   },
   {
     "objectID": "slides-11-01.html#datasaurus",
@@ -3631,5 +3631,103 @@
     "title": "Data Visualization – principles",
     "section": "Color and shape",
     "text": "Color and shape"
+  },
+  {
+    "objectID": "slides-11-04.html#data",
+    "href": "slides-11-04.html#data",
+    "title": "Plotting Maps",
+    "section": "Data",
+    "text": "Data\nDownload the data on average cost of undergraduate student by state USA and set up your working environment. Make sure all columns names are lowercased.\n\nlibrary(tidyverse)\nlibrary(janitor)\n\ncollege_cost &lt;- read_csv(\"data/nces330_20.csv\") |&gt;\n  clean_names()"
+  },
+  {
+    "objectID": "slides-11-04.html#questions",
+    "href": "slides-11-04.html#questions",
+    "title": "Plotting Maps",
+    "section": "Questions",
+    "text": "Questions\n\nWhat affects college cost?\n\n\nHow does college cost vary by state?"
+  },
+  {
+    "objectID": "slides-11-04.html#modeling-the-data",
+    "href": "slides-11-04.html#modeling-the-data",
+    "title": "Plotting Maps",
+    "section": "Modeling the data",
+    "text": "Modeling the data\nWe will run linear regression with value as our response variable, and the other variables are predictors\n\nmodel &lt;- lm(value ~ state + year + expense + type + length,\n            data = college_cost)\nsummary(model)\n\n\nCall:\nlm(formula = value ~ state + year + expense + type + length, \n    data = college_cost)\n\nResiduals:\n   Min     1Q Median     3Q    Max \n-14624  -3355   -488   3134  19403 \n\nCoefficients:\n                            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)               -8.996e+05  6.459e+04 -13.927  &lt; 2e-16 ***\nstateAlaska               -4.559e+02  8.421e+02  -0.541 0.588306    \nstateArizona              -1.668e+02  8.164e+02  -0.204 0.838139    \nstateArkansas             -1.129e+03  8.164e+02  -1.383 0.166797    \nstateCalifornia            3.834e+03  8.164e+02   4.696 2.75e-06 ***\nstateColorado              2.154e+03  8.164e+02   2.639 0.008352 ** \nstateConnecticut           6.072e+03  8.164e+02   7.438 1.28e-13 ***\nstateDelaware              1.502e+03  8.495e+02   1.768 0.077065 .  \nstateDistrict of Columbia  1.834e+03  1.007e+03   1.820 0.068845 .  \nstateFlorida              -6.634e+00  8.164e+02  -0.008 0.993517    \nstateGeorgia               1.200e+03  8.164e+02   1.470 0.141581    \nstateHawaii                1.162e+03  8.164e+02   1.423 0.154864    \nstateIdaho                -2.754e+03  8.164e+02  -3.373 0.000752 ***\nstateIllinois              3.805e+03  8.164e+02   4.661 3.27e-06 ***\nstateIndiana               2.704e+03  8.164e+02   3.312 0.000936 ***\nstateIowa                  1.041e+03  8.164e+02   1.275 0.202341    \nstateKansas               -7.733e+02  8.164e+02  -0.947 0.343598    \nstateKentucky              1.579e+03  8.164e+02   1.934 0.053239 .  \nstateLouisiana             1.993e+03  8.164e+02   2.441 0.014691 *  \nstateMaine                 3.016e+03  8.164e+02   3.695 0.000224 ***\nstateMaryland              3.970e+03  8.164e+02   4.863 1.21e-06 ***\nstateMassachusetts         5.919e+03  8.164e+02   7.251 5.07e-13 ***\nstateMichigan              2.519e+03  8.164e+02   3.086 0.002046 ** \nstateMinnesota             1.280e+03  8.164e+02   1.567 0.117113    \nstateMississippi          -1.706e+03  8.164e+02  -2.089 0.036756 *  \nstateMissouri             -1.880e+02  8.164e+02  -0.230 0.817894    \nstateMontana               2.962e+02  8.164e+02   0.363 0.716745    \nstateNebraska             -6.609e+02  8.164e+02  -0.810 0.418234    \nstateNevada                8.436e+02  8.351e+02   1.010 0.312505    \nstateNew Hampshire         5.198e+03  8.164e+02   6.367 2.18e-10 ***\nstateNew Jersey            4.496e+03  8.164e+02   5.507 3.90e-08 ***\nstateNew Mexico           -1.248e+03  8.164e+02  -1.529 0.126366    \nstateNew York              3.921e+03  8.164e+02   4.802 1.63e-06 ***\nstateNorth Carolina        1.481e+03  8.164e+02   1.814 0.069718 .  \nstateNorth Dakota         -2.135e+03  8.164e+02  -2.615 0.008955 ** \nstateOhio                  2.258e+03  8.164e+02   2.766 0.005705 ** \nstateOklahoma             -1.475e+02  8.164e+02  -0.181 0.856623    \nstateOregon                4.171e+03  8.164e+02   5.109 3.41e-07 ***\nstatePennsylvania          5.006e+03  8.164e+02   6.132 9.63e-10 ***\nstateRhode Island          5.339e+03  8.164e+02   6.540 7.06e-11 ***\nstateSouth Carolina        2.084e+03  8.164e+02   2.553 0.010727 *  \nstateSouth Dakota         -1.716e+03  8.164e+02  -2.102 0.035661 *  \nstateTennessee             2.120e+03  8.164e+02   2.597 0.009437 ** \nstateTexas                 1.234e+03  8.164e+02   1.511 0.130841    \nstateUtah                 -2.444e+03  8.164e+02  -2.994 0.002773 ** \nstateVermont               7.234e+03  8.164e+02   8.861  &lt; 2e-16 ***\nstateVirginia              2.825e+03  8.164e+02   3.460 0.000546 ***\nstateWashington            3.367e+03  8.164e+02   4.125 3.80e-05 ***\nstateWest Virginia        -1.282e+03  8.164e+02  -1.571 0.116294    \nstateWisconsin             1.137e+03  8.164e+02   1.392 0.163906    \nstateWyoming              -1.676e+03  8.615e+02  -1.946 0.051760 .  \nyear                       4.508e+02  3.202e+01  14.079  &lt; 2e-16 ***\nexpenseRoom/Board         -9.711e+03  1.886e+02 -51.475  &lt; 2e-16 ***\ntypePublic In-State       -8.319e+03  2.219e+02 -37.496  &lt; 2e-16 ***\ntypePublic Out-of-State   -2.061e+03  2.194e+02  -9.394  &lt; 2e-16 ***\nlength4-year               1.229e+04  2.234e+02  55.015  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4864 on 3492 degrees of freedom\nMultiple R-squared:  0.6947,    Adjusted R-squared:  0.6899 \nF-statistic: 144.5 on 55 and 3492 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "slides-11-04.html#effect-of-state-in-our-model",
+    "href": "slides-11-04.html#effect-of-state-in-our-model",
+    "title": "Plotting Maps",
+    "section": "Effect of state in our model",
+    "text": "Effect of state in our model\nLet’s save the effect of state to a data frame, so we can plot the results:\n\nlibrary(effects)\n\nby_state &lt;- effect(\"state\", model) |&gt;\n  data.frame()"
+  },
+  {
+    "objectID": "slides-11-04.html#plotting-a-map",
+    "href": "slides-11-04.html#plotting-a-map",
+    "title": "Plotting Maps",
+    "section": "Plotting a map",
+    "text": "Plotting a map\nFirst we need to load the usmap library (run install.packages(\"usmap\") to install it).\n\nlibrary(usmap)\n\nThen we can plot our results:\n\nplot_usmap(data = by_state, \n           values = \"fit\")"
+  },
+  {
+    "objectID": "slides-11-04.html#improving-our-map-plot",
+    "href": "slides-11-04.html#improving-our-map-plot",
+    "title": "Plotting Maps",
+    "section": "Improving our map plot",
+    "text": "Improving our map plot\nWe can move the legend to the right:\n\nplot_usmap(data = by_state, \n           values = \"fit\") +\n  theme(legend.position = \"right\")"
+  },
+  {
+    "objectID": "slides-11-04.html#what-issues-do-we-have-with-this-plot",
+    "href": "slides-11-04.html#what-issues-do-we-have-with-this-plot",
+    "title": "Plotting Maps",
+    "section": "What issues do we have with this plot?",
+    "text": "What issues do we have with this plot?"
+  },
+  {
+    "objectID": "slides-11-04.html#improving-our-map-plot-1",
+    "href": "slides-11-04.html#improving-our-map-plot-1",
+    "title": "Plotting Maps",
+    "section": "Improving our map plot",
+    "text": "Improving our map plot\nWe can add a light color for low numbers, and a dark color for high values:\n\nplot_usmap(data = by_state, \n           values = \"fit\") +\n  theme(legend.position = \"right\") +\n  scale_fill_continuous(name = \"US Dollars\",\n                        low = \"#dcfae7\", \n                        high = \"#005721\")"
+  },
+  {
+    "objectID": "slides-11-04.html#improving-our-map-plot-2",
+    "href": "slides-11-04.html#improving-our-map-plot-2",
+    "title": "Plotting Maps",
+    "section": "Improving our map plot",
+    "text": "Improving our map plot\nWe can add a title:\n\nplot_usmap(data = by_state, \n           values = \"fit\") +\n  theme(legend.position = \"right\") +\n  scale_fill_continuous(name = \"US Dollars\",\n                        low = \"#dcfae7\", \n                        high = \"#005721\") +\n  labs(title = \"Average college cost in US dollars\")"
+  },
+  {
+    "objectID": "slides-11-04.html#improving-our-map-plot-3",
+    "href": "slides-11-04.html#improving-our-map-plot-3",
+    "title": "Plotting Maps",
+    "section": "Improving our map plot",
+    "text": "Improving our map plot\nAdding labels – we need to get centroids first.\n\ncentroid_labels &lt;- usmapdata::centroid_labels(\"states\") |&gt;\n  rename(\"state\" = full)\nby_state_labels &lt;- merge(centroid_labels, by_state, by = \"state\")\n\nThen we plot it:\n\nplot_usmap(data = by_state_labels, \n           values = \"fit\") +\n  theme(legend.position = \"right\") +\n  scale_fill_continuous(name = \"US Dollars\",\n                        low = \"#dcfae7\", \n                        high = \"#005721\") +\n  geom_sf_text(aes(label = round(fit/1000))) +\n  labs(title = \"Average college cost in thousands of US dollars\")"
+  },
+  {
+    "objectID": "slides-11-04.html#improving-our-map-plot-4",
+    "href": "slides-11-04.html#improving-our-map-plot-4",
+    "title": "Plotting Maps",
+    "section": "Improving our map plot",
+    "text": "Improving our map plot"
+  },
+  {
+    "objectID": "slides-11-04.html#improving-our-map-plot-5",
+    "href": "slides-11-04.html#improving-our-map-plot-5",
+    "title": "Plotting Maps",
+    "section": "Improving our map plot",
+    "text": "Improving our map plot\n\nplot_usmap(data = by_state, \n           values = \"fit\", include = c(\"MA\", \"CT\", \"RI\", \"NJ\", \"NY\", \"PA\")) +\n  theme(legend.position = \"right\") +\n  scale_fill_continuous(name = \"US Dollars\",\n                        low = \"#dcfae7\", \n                        high = \"#005721\") +\n  geom_sf_text(aes(label = round(fit/1000))) +\n  labs(title = \"Average college cost in thousands of US dollars\")"
+  },
+  {
+    "objectID": "slides-11-04.html#case-study",
+    "href": "slides-11-04.html#case-study",
+    "title": "Plotting Maps",
+    "section": "Case study",
+    "text": "Case study\nUS breweries"
+  },
+  {
+    "objectID": "slides-11-04.html#case-study-1",
+    "href": "slides-11-04.html#case-study-1",
+    "title": "Plotting Maps",
+    "section": "Case Study",
+    "text": "Case Study\nUS accidents"
   }
 ]
