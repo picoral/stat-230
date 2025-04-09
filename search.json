@@ -3729,5 +3729,33 @@
     "title": "Plotting Maps",
     "section": "Case Study",
     "text": "Case Study\nUS accidents"
+  },
+  {
+    "objectID": "slides-11-04.html#tile-maps",
+    "href": "slides-11-04.html#tile-maps",
+    "title": "Plotting Maps",
+    "section": "Tile maps",
+    "text": "Tile maps\n\nlibrary(tilemaps)\nlibrary(sf)\nlibrary(dplyr)\nlibrary(ggplot2)\n\nfull_data &lt;- governors |&gt;\n  mutate(tile_map = generate_map(geometry, square = FALSE, flat_topped = TRUE))  |&gt;\n  full_join(statepop, by = join_by(abbreviation == abbr)) |&gt;\n  rename(\"state\" = full) \n\nfull_data &lt;- by_state |&gt;\n  left_join(full_data)\n\nfull_data |&gt; \n  ggplot(aes(geometry = tile_map, label = paste(abbreviation,round(fit/1000)),\n             fill = fit)) +\n  geom_sf() +\n  geom_sf_text(fun.geometry = function(x) st_centroid(x)) +\n  scale_fill_continuous(name = \"US Dollars\",\n                        low = \"#dcfae7\", \n                        high = \"#005721\") +\n  theme_void()"
+  },
+  {
+    "objectID": "slides-11-04.html#tile-maps-1",
+    "href": "slides-11-04.html#tile-maps-1",
+    "title": "Plotting Maps",
+    "section": "Tile maps",
+    "text": "Tile maps"
+  },
+  {
+    "objectID": "slides-11-04.html#world-map",
+    "href": "slides-11-04.html#world-map",
+    "title": "Plotting Maps",
+    "section": "World Map",
+    "text": "World Map\n\nworld &lt;- map_data(\"world\")\n\nworld %&gt;%\n  ggplot(aes(x = long,\n               y = lat,\n               map_id = region)) + \n  geom_map(map = world)"
+  },
+  {
+    "objectID": "slides-11-04.html#gapminder",
+    "href": "slides-11-04.html#gapminder",
+    "title": "Plotting Maps",
+    "section": "Gapminder",
+    "text": "Gapminder\nDifferent indicators per country"
   }
 ]
