@@ -416,24 +416,25 @@ F-statistic: 144.5 on 55 and 3492 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h2>Tile maps</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(tilemaps)</span>
-<span id="cb13-2"><a></a></span>
-<span id="cb13-3"><a></a>full_data <span class="ot">&lt;-</span> governors <span class="sc">|&gt;</span></span>
-<span id="cb13-4"><a></a>  <span class="fu">mutate</span>(<span class="at">tile_map =</span> <span class="fu">generate_map</span>(geometry, <span class="at">square =</span> <span class="cn">FALSE</span>, <span class="at">flat_topped =</span> <span class="cn">TRUE</span>))  <span class="sc">|&gt;</span></span>
-<span id="cb13-5"><a></a>  <span class="fu">full_join</span>(statepop, <span class="at">by =</span> <span class="fu">join_by</span>(abbreviation <span class="sc">==</span> abbr)) <span class="sc">|&gt;</span></span>
-<span id="cb13-6"><a></a>  <span class="fu">rename</span>(<span class="st">"state"</span> <span class="ot">=</span> full) </span>
-<span id="cb13-7"><a></a></span>
-<span id="cb13-8"><a></a>full_data <span class="ot">&lt;-</span> by_state <span class="sc">|&gt;</span></span>
-<span id="cb13-9"><a></a>  <span class="fu">left_join</span>(full_data)</span>
-<span id="cb13-10"><a></a></span>
-<span id="cb13-11"><a></a>full_data <span class="sc">|&gt;</span> </span>
-<span id="cb13-12"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">geometry =</span> tile_map, <span class="at">label =</span> <span class="fu">paste</span>(abbreviation,<span class="fu">round</span>(fit<span class="sc">/</span><span class="dv">1000</span>)),</span>
-<span id="cb13-13"><a></a>             <span class="at">fill =</span> fit)) <span class="sc">+</span></span>
-<span id="cb13-14"><a></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
-<span id="cb13-15"><a></a>  <span class="fu">geom_sf_text</span>(<span class="at">fun.geometry =</span> <span class="cf">function</span>(x) <span class="fu">st_centroid</span>(x)) <span class="sc">+</span></span>
-<span id="cb13-16"><a></a>  <span class="fu">scale_fill_continuous</span>(<span class="at">name =</span> <span class="st">"US Dollars"</span>,</span>
-<span id="cb13-17"><a></a>                        <span class="at">low =</span> <span class="st">"#dcfae7"</span>, </span>
-<span id="cb13-18"><a></a>                        <span class="at">high =</span> <span class="st">"#005721"</span>) <span class="sc">+</span></span>
-<span id="cb13-19"><a></a>  <span class="fu">theme_void</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-2"><a></a><span class="fu">library</span>(sf)</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a>full_data <span class="ot">&lt;-</span> governors <span class="sc">|&gt;</span></span>
+<span id="cb13-5"><a></a>  <span class="fu">mutate</span>(<span class="at">tile_map =</span> <span class="fu">generate_map</span>(geometry, <span class="at">square =</span> <span class="cn">FALSE</span>, <span class="at">flat_topped =</span> <span class="cn">TRUE</span>))  <span class="sc">|&gt;</span></span>
+<span id="cb13-6"><a></a>  <span class="fu">full_join</span>(statepop, <span class="at">by =</span> <span class="fu">join_by</span>(abbreviation <span class="sc">==</span> abbr)) <span class="sc">|&gt;</span></span>
+<span id="cb13-7"><a></a>  <span class="fu">rename</span>(<span class="st">"state"</span> <span class="ot">=</span> full) </span>
+<span id="cb13-8"><a></a></span>
+<span id="cb13-9"><a></a>full_data <span class="ot">&lt;-</span> by_state <span class="sc">|&gt;</span></span>
+<span id="cb13-10"><a></a>  <span class="fu">left_join</span>(full_data)</span>
+<span id="cb13-11"><a></a></span>
+<span id="cb13-12"><a></a>full_data <span class="sc">|&gt;</span> </span>
+<span id="cb13-13"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">geometry =</span> tile_map, <span class="at">label =</span> <span class="fu">paste</span>(abbreviation,<span class="fu">round</span>(fit<span class="sc">/</span><span class="dv">1000</span>)),</span>
+<span id="cb13-14"><a></a>             <span class="at">fill =</span> fit)) <span class="sc">+</span></span>
+<span id="cb13-15"><a></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
+<span id="cb13-16"><a></a>  <span class="fu">geom_sf_text</span>(<span class="at">fun.geometry =</span> <span class="cf">function</span>(x) <span class="fu">st_centroid</span>(x)) <span class="sc">+</span></span>
+<span id="cb13-17"><a></a>  <span class="fu">scale_fill_continuous</span>(<span class="at">name =</span> <span class="st">"US Dollars"</span>,</span>
+<span id="cb13-18"><a></a>                        <span class="at">low =</span> <span class="st">"#dcfae7"</span>, </span>
+<span id="cb13-19"><a></a>                        <span class="at">high =</span> <span class="st">"#005721"</span>) <span class="sc">+</span></span>
+<span id="cb13-20"><a></a>  <span class="fu">theme_void</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="tile-maps-1" class="slide level2">
