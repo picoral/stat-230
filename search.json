@@ -3868,7 +3868,7 @@
     "href": "modules.html#slides-10",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nInteractive Plots"
+    "text": "Slides\n\nInteractive Plots\nCase Study"
   },
   {
     "objectID": "slides-12-01.html#case-study",
@@ -3876,5 +3876,12 @@
     "title": "Interactive Plots",
     "section": "Case Study",
     "text": "Case Study\nDownload the number of drivers per state data and plot an interactive map."
+  },
+  {
+    "objectID": "slides-12-02.html#data",
+    "href": "slides-12-02.html#data",
+    "title": "Case Study",
+    "section": "Data",
+    "text": "Data\nThis lecture’s study case is a tidytuesday data set"
   }
 ]
