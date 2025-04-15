@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>STAT 230 Data Science and Statistics – Case Study</title>
+  <title>STAT 230 Data Science and Statistics – How not to lie with statistics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -126,16 +126,419 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Case Study</h1>
+  <h1 class="title">How not to lie with statistics</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="data" class="slide level2">
-<h2>Data</h2>
-<p>This lecture’s study case is a <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-04-08/readme.md">tidytuesday data set</a></p>
-<p>Submit your rendered html file to canvas, assignment titled <code>Timely and Effective Care by US State</code></p>
+<section id="small-sample-size-or-sample-bias" class="slide level2">
+<h2>Small Sample Size or Sample Bias</h2>
+<ul>
+<li>Beware of inaccurate generalizations</li>
+<li>Small sample size might not represent the entire population</li>
+<li>Sampling choice might favor certain groups</li>
+</ul>
+</section>
+<section id="data-context" class="slide level2">
+<h2>Data Context</h2>
+<ul>
+<li>Timeframe of the data – “trends”, “recently” – when? what period of time?</li>
+<li>Who collected the data? What was the purpose of data collection?</li>
+</ul>
+</section>
+<section id="data-quality" class="slide level2">
+<h2>Data Quality</h2>
+<ul>
+<li>Data collection bias – Which one of these do you prefer? vs.&nbsp;Do you think X is better?</li>
+<li>Data processing bias – selecting data that supports hypothesis</li>
+<li>Wrangling bias or errors – how were variables coded?</li>
+</ul>
+</section>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
+<p>Download the <a href="https://www.kaggle.com/datasets/rahul2312kaggle/fashion-dataset/data">Fashion Dataset</a>, inspect it, and answer the following questions:</p>
+<ul>
+<li>Who collected the data?</li>
+<li>How was the data collected?</li>
+<li>When was the data collected?</li>
+<li>Who is represented in the data? (what is the population this was sampled from?)</li>
+<li>Are there any outliers? What do they mean?</li>
+</ul>
+</section>
+<section id="practice-1" class="slide level2">
+<h2>Practice</h2>
+<p>Who is represented in the data?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18–24</td>
+<td style="text-align: right;">132</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">25–34</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">35–44</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">45+</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Under 18</td>
+<td style="text-align: right;">11</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="practice-2" class="slide level2">
+<h2>Practice</h2>
+<p>Who is represented in the data?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gender</th>
+<th style="text-align: right;">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Female</td>
+<td style="text-align: right;">67</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Male</td>
+<td style="text-align: right;">83</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="practice-3" class="slide level2">
+<h2>Practice</h2>
+<p>Who is represented in the data?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Profession</th>
+<th style="text-align: right;">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Freelancer</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Office Worker</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Student</td>
+<td style="text-align: right;">140</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="practice-4" class="slide level2">
+<h2>Practice</h2>
+<p>Who is represented in the data?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: left;">Profession</th>
+<th style="text-align: right;">Female</th>
+<th style="text-align: right;">Male</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18–24</td>
+<td style="text-align: left;">Student</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">67</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">25–34</td>
+<td style="text-align: left;">Office Worker</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25–34</td>
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">35–44</td>
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Under 18</td>
+<td style="text-align: left;">Student</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">18–24</td>
+<td style="text-align: left;">Freelancer</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18–24</td>
+<td style="text-align: left;">Office Worker</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">18–24</td>
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25–34</td>
+<td style="text-align: left;">Student</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">45+</td>
+<td style="text-align: left;">Freelancer</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="descriptive-stats" class="slide level2">
+<h2>Descriptive Stats</h2>
+<ul>
+<li>Measures of centrality (mean, median, mode) might differ, showing different aspects of the data</li>
+<li>Measures of variability (standard deviation) can give us more information that measures of centrality alone cannot</li>
+<li>Question to ask: Why were the measures displayed chosen?</li>
+</ul>
+</section>
+<section id="descriptive-stats-practice" class="slide level2">
+<h2>Descriptive Stats – practice</h2>
+<p>What are the problems with the table below? How would you fix it?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Clothing style reflect your personality? (1-10)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18–24</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">25–34</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">35–44</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">45+</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Under 18</td>
+<td style="text-align: right;">8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="inferential-stats" class="slide level2">
+<h2>Inferential Stats</h2>
+<ul>
+<li>What tests and models were run?</li>
+<li>How many tests and models were run?</li>
+</ul>
+<p>The more statistical tests are run, the greater the probability of finding false positives (Type I errors) just by chance.</p>
+</section>
+<section id="inferential-stats-1" class="slide level2">
+<h2>Inferential Stats</h2>
+<p>Remember that for the standard p-value threshold (alpha) of 0.05, we are accepting a 5% chance of finding a significant result when there isn’t one. If we run 20 independent tests, our probability of getting no false positives for all 20 tests is 36%.</p>
+<ul>
+<li>P(getting a false positive for one test) = 0.05</li>
+<li>P(not getting a false positive for one test) = 1 - 0.05 = 0.95</li>
+<li>P(no false positives for all 20 tests) = <span class="math inline">\(0.95^{20}\)</span> = 0.36</li>
+</ul>
+</section>
+<section id="inferential-stats-issues" class="slide level2">
+<h2>Inferential Stats – issues</h2>
+<ul>
+<li>P-hacking: Running many tests until finding a statistically significant result</li>
+<li>Cherry-Picking: Selecting and reporting only whatever supports their hypothesis</li>
+<li>HARKing: Hypothesizing After Results are Known</li>
+<li>Data dredging: Exploring data without pre-specified hypotheses</li>
+<li>Fishing Expeditions: Examining associations between different combinations of variables with the hope of finding something that is statistically significant</li>
+</ul>
+</section>
+<section id="inferential-stats-fixes" class="slide level2">
+<h2>Inferential Stats – fixes</h2>
+<ul>
+<li>Bonferroni correction – calculate new α (alpha) by dividing original α by the number of tests (n) ran (more conservative)</li>
+<li>Benjamini-Hochberg – order all p-values from smallest to largest, calculate critical value of each p-value, find the largest p-value that is less than its critical value (less conservative)</li>
+</ul>
+</section>
+<section id="visualizations" class="slide level2">
+<h2>Visualizations</h2>
+<ul>
+<li>Different scales for comparison across different plots</li>
+<li>Different baselines</li>
+<li>Stretching or shrinking the scale to minimize or highlight changes</li>
+<li>Percentages do not indicate actual counts or raw numbers</li>
+<li>Percentages of percentages (nested percentages)</li>
+</ul>
+</section>
+<section id="visualizations-find-the-issues" class="slide level2">
+<h2>Visualizations – find the issues</h2>
+
+<img data-src="slides-13-01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="visualizations-find-the-issues-1" class="slide level2">
+<h2>Visualizations – find the issues</h2>
+
+<img data-src="slides-13-01_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="results" class="slide level2">
+<h2>Results</h2>
+<ul>
+<li>Effect size vs.&nbsp;significance</li>
+<li>Correlation is not Causation</li>
+</ul>
+</section>
+<section id="results-find-the-issues" class="slide level2">
+<h2>Results – find the issues</h2>
+<p>Multinomial logistic regression was run with age as the response variable and footwear as a predicting variable. Here are the conditional probabilities:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">footwear</th>
+<th style="text-align: right;">18 24</th>
+<th style="text-align: right;">25 34</th>
+<th style="text-align: right;">35 44</th>
+<th style="text-align: right;">Under 18</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Boots</td>
+<td style="text-align: right;">0.92</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Heels/Loafers</td>
+<td style="text-align: right;">0.83</td>
+<td style="text-align: right;">0.17</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">0.88</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sandals/Flats</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sneakers</td>
+<td style="text-align: right;">0.90</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.08</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="results-find-the-issues-1" class="slide level2">
+<h2>Results – find the issues</h2>
+
+<img data-src="slides-13-01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="practice-5" class="slide level2">
+<h2>Practice</h2>
+<p>What are the issues with these analysis results from the 2020 US presidential elections?</p>
+
+<img data-src="images/2020-election.png" class="r-stretch"></section>
+<section id="practice-6" class="slide level2">
+<h2>Practice</h2>
+<p>What are the issues with these analysis results?</p>
+<p><a href="https://www.instagram.com/spotifyforartists/p/C4sYBk2rSBG/?img_index=3">Spotify Visualization</a></p>
+<p><a href="https://sinch.com/blog/most-popular-messaging-apps-in-the-world/">The Meta dynasty</a></p>
+<p><a href="https://www.panish.law/nevada/deaths-in-us-national-parks/">An Analysis of Deaths in U.S. National Parks</a></p>
+</section>
+<section id="final-advice" class="slide level2">
+<h2>Final advice</h2>
+<ul>
+<li>Be skeptical about other people’s results</li>
+<li>Be honest about your results</li>
+</ul>
 
 
 </section>
@@ -354,6 +757,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

@@ -3882,6 +3882,209 @@
     "href": "slides-12-02.html#data",
     "title": "Case Study",
     "section": "Data",
-    "text": "Data\nThis lecture’s study case is a tidytuesday data set"
+    "text": "Data\nThis lecture’s study case is a tidytuesday data set\nSubmit your rendered html file to canvas, assignment titled Timely and Effective Care by US State"
+  },
+  {
+    "objectID": "slides-13-01.html#small-sample-size-or-sample-bias",
+    "href": "slides-13-01.html#small-sample-size-or-sample-bias",
+    "title": "How not to lie with statistics",
+    "section": "Small Sample Size or Sample Bias",
+    "text": "Small Sample Size or Sample Bias\n\nBeware of inaccurate generalizations\nSmall sample size might not represent the entire population\nSampling choice might favor certain groups"
+  },
+  {
+    "objectID": "slides-13-01.html#data-context",
+    "href": "slides-13-01.html#data-context",
+    "title": "How not to lie with statistics",
+    "section": "Data Context",
+    "text": "Data Context\n\nTimeframe of the data – “trends”, “recently” – when? what period of time?\nWho collected the data? What was the purpose of data collection?"
+  },
+  {
+    "objectID": "slides-13-01.html#data-quality",
+    "href": "slides-13-01.html#data-quality",
+    "title": "How not to lie with statistics",
+    "section": "Data Quality",
+    "text": "Data Quality\n\nData collection bias – Which one of these do you prefer? vs. Do you think X is better?\nData processing bias – selecting data that supports hypothesis\nWrangling bias or errors – how were variables coded?"
+  },
+  {
+    "objectID": "slides-13-01.html#questions-to-ask-about-the-data",
+    "href": "slides-13-01.html#questions-to-ask-about-the-data",
+    "title": "How not to be fooled by statistics",
+    "section": "Questions to ask about the data",
+    "text": "Questions to ask about the data\n\nWho collected the data?\nHow was the data collected?\nWhat was deleted/discarded/ommitted from the data?\nWere there any outliers? What did they mean? How were outliers dealt with?"
+  },
+  {
+    "objectID": "slides-13-01.html#descriptive-stats",
+    "href": "slides-13-01.html#descriptive-stats",
+    "title": "How not to lie with statistics",
+    "section": "Descriptive Stats",
+    "text": "Descriptive Stats\n\nMeasures of centrality (mean, median, mode) might differ, showing different aspects of the data\nMeasures of variability (standard deviation) can give us more information that measures of centrality alone cannot\nQuestion to ask: Why were the measures displayed chosen?"
+  },
+  {
+    "objectID": "slides-13-01.html#inferential-stats",
+    "href": "slides-13-01.html#inferential-stats",
+    "title": "How not to lie with statistics",
+    "section": "Inferential Stats",
+    "text": "Inferential Stats\n\nWhat tests and models were run?\nHow many tests and models were run?\n\nThe more statistical tests are run, the greater the probability of finding false positives (Type I errors) just by chance."
+  },
+  {
+    "objectID": "slides-13-01.html#visualizations",
+    "href": "slides-13-01.html#visualizations",
+    "title": "How not to lie with statistics",
+    "section": "Visualizations",
+    "text": "Visualizations\n\nDifferent scales for comparison across different plots\nDifferent baselines\nStretching or shrinking the scale to minimize or highlight changes\nPercentages do not indicate actual counts or raw numbers\nPercentages of percentages (nested percentages)"
+  },
+  {
+    "objectID": "slides-13-01.html#results",
+    "href": "slides-13-01.html#results",
+    "title": "How not to lie with statistics",
+    "section": "Results",
+    "text": "Results\n\nEffect size vs. significance\nCorrelation is not Causation"
+  },
+  {
+    "objectID": "slides-13-01.html#final-advice",
+    "href": "slides-13-01.html#final-advice",
+    "title": "How not to lie with statistics",
+    "section": "Final advice",
+    "text": "Final advice\n\nBe skeptical about other people’s results\nBe honest about your results"
+  },
+  {
+    "objectID": "modules.html#slides-11",
+    "href": "modules.html#slides-11",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nHow not to lie with statistics"
+  },
+  {
+    "objectID": "modules.html#final-project",
+    "href": "modules.html#final-project",
+    "title": "Modules",
+    "section": "Final Project",
+    "text": "Final Project\nDeadline for all deliverables: May 2, Friday, 11:59pm\nYou are to submit your link to your GitHub repository to Canvas.\nInstructions for Final Project"
+  },
+  {
+    "objectID": "slides-13-01.html#practice",
+    "href": "slides-13-01.html#practice",
+    "title": "How not to lie with statistics",
+    "section": "Practice",
+    "text": "Practice\nDownload the Fashion Dataset, inspect it, and answer the following questions:\n\nWho collected the data?\nHow was the data collected?\nWhen was the data collected?\nWho is represented in the data? (what is the population this was sampled from?)\nAre there any outliers? What do they mean?"
+  },
+  {
+    "objectID": "slides-13-01.html#practice-1",
+    "href": "slides-13-01.html#practice-1",
+    "title": "How not to lie with statistics",
+    "section": "Practice",
+    "text": "Practice\nWho is represented in the data?\n\n\n\n\n\n\nAge Group\nn\n\n\n\n\n18–24\n132\n\n\n25–34\n5\n\n\n35–44\n1\n\n\n45+\n1\n\n\nUnder 18\n11"
+  },
+  {
+    "objectID": "slides-13-01.html#practice-2",
+    "href": "slides-13-01.html#practice-2",
+    "title": "How not to lie with statistics",
+    "section": "Practice",
+    "text": "Practice\nWho is represented in the data?\n\n\n\n\n\n\nGender\nn\n\n\n\n\nFemale\n67\n\n\nMale\n83"
+  },
+  {
+    "objectID": "slides-13-01.html#practice-3",
+    "href": "slides-13-01.html#practice-3",
+    "title": "How not to lie with statistics",
+    "section": "Practice",
+    "text": "Practice\nWho is represented in the data?\n\n\n\n\n\n\nProfession\nn\n\n\n\n\nFreelancer\n2\n\n\nOffice Worker\n4\n\n\nOther\n4\n\n\nStudent\n140"
+  },
+  {
+    "objectID": "slides-13-01.html#practice-4",
+    "href": "slides-13-01.html#practice-4",
+    "title": "How not to lie with statistics",
+    "section": "Practice",
+    "text": "Practice\nWho is represented in the data?\n\n\n\n\n\n\nAge Group\nProfession\nFemale\nMale\n\n\n\n\n18–24\nStudent\n61\n67\n\n\n25–34\nOffice Worker\n1\n1\n\n\n25–34\nOther\n2\n0\n\n\n35–44\nOther\n1\n0\n\n\nUnder 18\nStudent\n2\n9\n\n\n18–24\nFreelancer\n0\n1\n\n\n18–24\nOffice Worker\n0\n2\n\n\n18–24\nOther\n0\n1\n\n\n25–34\nStudent\n0\n1\n\n\n45+\nFreelancer\n0\n1"
+  },
+  {
+    "objectID": "slides-13-01.html#descriptive-stats-practice",
+    "href": "slides-13-01.html#descriptive-stats-practice",
+    "title": "How not to lie with statistics",
+    "section": "Descriptive Stats – practice",
+    "text": "Descriptive Stats – practice\nWhat are the problems with the table below? How would you fix it?\n\n\n\n\n\n\nAge Group\nClothing style reflect your personality? (1-10)\n\n\n\n\n18–24\n7\n\n\n25–34\n8\n\n\n35–44\n4\n\n\n45+\n0\n\n\nUnder 18\n8"
+  },
+  {
+    "objectID": "slides-13-01.html#inferential-stats-issues",
+    "href": "slides-13-01.html#inferential-stats-issues",
+    "title": "How not to lie with statistics",
+    "section": "Inferential Stats – issues",
+    "text": "Inferential Stats – issues\n\nP-hacking: Running many tests until finding a statistically significant result\nCherry-Picking: Selecting and reporting only whatever supports their hypothesis\nHARKing: Hypothesizing After Results are Known\nData dredging: Exploring data without pre-specified hypotheses\nFishing Expeditions: Examining associations between different combinations of variables with the hope of finding something that is statistically significant"
+  },
+  {
+    "objectID": "slides-13-01.html#inferential-stats-1",
+    "href": "slides-13-01.html#inferential-stats-1",
+    "title": "How not to lie with statistics",
+    "section": "Inferential Stats",
+    "text": "Inferential Stats\nRemember that for the standard p-value threshold (alpha) of 0.05, we are accepting a 5% chance of finding a significant result when there isn’t one. If we run 20 independent tests, our probability of getting no false positives for all 20 tests is 36%.\n\nP(getting a false positive for one test) = 0.05\nP(not getting a false positive for one test) = 1 - 0.05 = 0.95\nP(no false positives for all 20 tests) = \\(0.95^{20}\\) = 0.36"
+  },
+  {
+    "objectID": "slides-13-01.html#inferential-stats-fixes",
+    "href": "slides-13-01.html#inferential-stats-fixes",
+    "title": "How not to lie with statistics",
+    "section": "Inferential Stats – fixes",
+    "text": "Inferential Stats – fixes\n\nBonferroni correction – calculate new α (alpha) by dividing original α by the number of tests (n) ran (more conservative)\nBenjamini-Hochberg – order all p-values from smallest to largest, calculate critical value of each p-value, find the largest p-value that is less than its critical value (less conservative)"
+  },
+  {
+    "objectID": "slides-13-01.html",
+    "href": "slides-13-01.html",
+    "title": "How not to lie with statistics",
+    "section": "",
+    "text": "Beware of inaccurate generalizations\nSmall sample size might not represent the entire population\nSampling choice might favor certain groups"
+  },
+  {
+    "objectID": "slides-13-01.html#visualizations-find-the-issues",
+    "href": "slides-13-01.html#visualizations-find-the-issues",
+    "title": "How not to lie with statistics",
+    "section": "Visualizations – find the issues",
+    "text": "Visualizations – find the issues"
+  },
+  {
+    "objectID": "slides-13-01.html#visualizations-find-the-issues-1",
+    "href": "slides-13-01.html#visualizations-find-the-issues-1",
+    "title": "How not to lie with statistics",
+    "section": "Visualizations – find the issues",
+    "text": "Visualizations – find the issues"
+  },
+  {
+    "objectID": "slides-13-01.html#results-practice",
+    "href": "slides-13-01.html#results-practice",
+    "title": "How not to lie with statistics",
+    "section": "Results – practice",
+    "text": "Results – practice\nMultinomial logistic regression was run with age as the response variable and footwear as a predicting variable. Here are the conditional probabilities:\n\n\n\n\n\n\nfootwear\n18 24\n25 34\n35 44\nUnder 18\n\n\n\n\nBoots\n0.92\n0.08\n0.00\n0.00\n\n\nHeels/Loafers\n0.83\n0.17\n0.00\n0.00\n\n\nOther\n0.88\n0.00\n0.00\n0.12\n\n\nSandals/Flats\n0.80\n0.07\n0.07\n0.07\n\n\nSneakers\n0.90\n0.02\n0.00\n0.08"
+  },
+  {
+    "objectID": "slides-13-01.html#results-practice-1",
+    "href": "slides-13-01.html#results-practice-1",
+    "title": "How not to lie with statistics",
+    "section": "Results – practice",
+    "text": "Results – practice"
+  },
+  {
+    "objectID": "slides-13-01.html#results-find-the-issues",
+    "href": "slides-13-01.html#results-find-the-issues",
+    "title": "How not to lie with statistics",
+    "section": "Results – find the issues",
+    "text": "Results – find the issues\nMultinomial logistic regression was run with age as the response variable and footwear as a predicting variable. Here are the conditional probabilities:\n\n\n\n\n\n\nfootwear\n18 24\n25 34\n35 44\nUnder 18\n\n\n\n\nBoots\n0.92\n0.08\n0.00\n0.00\n\n\nHeels/Loafers\n0.83\n0.17\n0.00\n0.00\n\n\nOther\n0.88\n0.00\n0.00\n0.12\n\n\nSandals/Flats\n0.80\n0.07\n0.07\n0.07\n\n\nSneakers\n0.90\n0.02\n0.00\n0.08"
+  },
+  {
+    "objectID": "slides-13-01.html#results-find-the-issues-1",
+    "href": "slides-13-01.html#results-find-the-issues-1",
+    "title": "How not to lie with statistics",
+    "section": "Results – find the issues",
+    "text": "Results – find the issues"
+  },
+  {
+    "objectID": "slides-13-01.html#practice-5",
+    "href": "slides-13-01.html#practice-5",
+    "title": "How not to lie with statistics",
+    "section": "Practice",
+    "text": "Practice\nWhat are the issues with these analysis results from the 2020 US presidential elections?"
+  },
+  {
+    "objectID": "slides-13-01.html#practice-6",
+    "href": "slides-13-01.html#practice-6",
+    "title": "How not to lie with statistics",
+    "section": "Practice",
+    "text": "Practice\nWhat are the issues with these analysis results?\nSpotify Visualization\nThe Meta dynasty\nAn Analysis of Deaths in U.S. National Parks"
   }
 ]
