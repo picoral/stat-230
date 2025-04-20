@@ -4086,5 +4086,54 @@
     "title": "How not to lie with statistics",
     "section": "Practice",
     "text": "Practice\nWhat are the issues with these analysis results?\nSpotify Visualization\nThe Meta dynasty\nAn Analysis of Deaths in U.S. National Parks"
+  },
+  {
+    "objectID": "slides-13-01.html#log-scale",
+    "href": "slides-13-01.html#log-scale",
+    "title": "How not to lie with statistics",
+    "section": "Log Scale",
+    "text": "Log Scale"
+  },
+  {
+    "objectID": "slides-13-01.html#log-scale-concentration",
+    "href": "slides-13-01.html#log-scale-concentration",
+    "title": "How not to lie with statistics",
+    "section": "Log Scale – concentration",
+    "text": "Log Scale – concentration\npH scale is logarithmic: an increase or decrease of an integer value changes the concentration by a tenfold"
+  },
+  {
+    "objectID": "slides-13-01.html#non-log-scale-ph-values",
+    "href": "slides-13-01.html#non-log-scale-ph-values",
+    "title": "How not to lie with statistics",
+    "section": "Non-Log Scale – pH values",
+    "text": "Non-Log Scale – pH values\npH scale is logarithmic: an increase or decrease of an integer value changes the concentration by a tenfold"
+  },
+  {
+    "objectID": "slides-13-01.html#non-log-scale-concentration",
+    "href": "slides-13-01.html#non-log-scale-concentration",
+    "title": "How not to lie with statistics",
+    "section": "Non-Log Scale – concentration",
+    "text": "Non-Log Scale – concentration\npH scale is logarithmic: an increase or decrease of an integer value changes the concentration by a tenfold"
+  },
+  {
+    "objectID": "slides-13-01.html#log-scale-ph-values",
+    "href": "slides-13-01.html#log-scale-ph-values",
+    "title": "How not to lie with statistics",
+    "section": "Log Scale – pH values",
+    "text": "Log Scale – pH values\npH scale is logarithmic: an increase or decrease of an integer value changes the concentration by a tenfold"
+  },
+  {
+    "objectID": "slides-13-01.html#linear-scale-concentration",
+    "href": "slides-13-01.html#linear-scale-concentration",
+    "title": "How not to lie with statistics",
+    "section": "Linear Scale – concentration",
+    "text": "Linear Scale – concentration\npH scale is logarithmic: an increase or decrease of an integer value changes the concentration by a tenfold"
+  },
+  {
+    "objectID": "slides-13-01.html#log-scales",
+    "href": "slides-13-01.html#log-scales",
+    "title": "How not to lie with statistics",
+    "section": "Log scales",
+    "text": "Log scales\nThe Public May Not Understand Logarithmic Graphs Used to Depict COVID-19"
   }
 ]
